@@ -1,0 +1,48 @@
+[user]
+  name = Michelle D Zhang
+  email = zhang.michelle.d@gmail.com
+[core]
+  editor = subl -w
+[alias]
+  a = add --all
+  st = status
+  br = branch
+
+  c = commit
+  cm = commit -m
+  ca = commit -a
+  cd = commit --amend
+  cad = commit -a --amend
+
+  d = diff
+  dc = diff --cached
+
+  f = fetch
+
+  g = grep -p
+
+  co = checkout
+
+  ps = push
+  psf = push -f
+  pso = push origin
+  psfo = push -f origin
+  psom = push origin master
+  psfom = push -f origin master
+
+  pl = pull
+
+  rb = rebase
+  rbc = rebase --continue
+
+  reh = reset --hard
+
+  unstage = reset HEAD --
+  last = log -1 --pretty=format:\"%h %an, %ar : %s\" HEAD
+  llog = log -20 --decorate --pretty=format:\"%h %an, %ar : %s\" HEAD
+
+  # Find commits by commit message
+  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+
+  # Find commits by source code
+  fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"

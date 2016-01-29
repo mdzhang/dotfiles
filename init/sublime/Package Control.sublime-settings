@@ -1,0 +1,28 @@
+{
+  "bootstrapped": true,
+  "in_process_packages":
+  [
+  ],
+  "installed_packages":
+  [
+    "Alignment",
+    "All Autocomplete",
+    "BracketHighlighter",
+    "DocBlockr",
+    "GitGutter",
+    "Package Control",
+    "SideBarEnhancements",
+    "Theme - Asphalt",
+    // SFTP
+
+    // "AngularJS",
+    // "EJS",
+    // "JsFormat",
+    // "JSHint",
+    // "JSHint Gutter",
+    // "JSLint",
+    // "Markdown Extended",
+    // "Sass",
+    // "Stylus"
+  ]
+}

@@ -1,0 +1,4 @@
+secrets
+tmp
+*.log
+*.sublime-workspace
