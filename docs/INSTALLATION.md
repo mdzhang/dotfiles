@@ -23,6 +23,7 @@ Grab this repo and run the installation script.
 * Don't slightly dim the display when on battery power
 * Don't automatically adjust brightness
 * Set default applications for file types
+* No guest account
 * Terminal
     * choose Pro as Terminal theme
 * Menubar

@@ -26,6 +26,7 @@ brew cask install calibre
 # brew cask install steam
 # brew cask install filezilla
 # brew cask install sequel-pro
+# brew cask install slack
 brew cask install flux
 
 # uTorrent doesn't symlink?
