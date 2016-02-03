@@ -6,9 +6,14 @@ Grab this repo and run the installation script.
 * `cd dotfiles-master`
 * `./install.sh`
 
+# TODO
+
+* run .osx as part of install script
+* run brew.sh as part of install script
+* use Applescript for some of the post-intallation items
+
 ### Post-installation Checklist
 
-* TODO: script some of the below
 * Installed apps to setup (in order):
     * Dropbox
     * 1Password
@@ -19,27 +24,24 @@ Grab this repo and run the installation script.
         * `pbcopy < ~/.ssh/id_rsa.pub`
     * Calibre
         * use `~/Library/Application Support/Calibre/Library` to store books
+    * Sublime Text
+        * copy over user preferences out of Dropbox
+    * tunnelblick
     * everything else
+* Apps that can't be installed w/ Brew
+    * BetterSnapTool
 * Don't slightly dim the display when on battery power
 * Don't automatically adjust brightness
 * Set default applications for file types
 * No guest account
-* Terminal
-    * choose Pro as Terminal theme
-* Menubar
-    * display time with seconds and full date
-* Keyboard
-    * backlights off
-    * enable US - International PC and Japanese keyboards
-* Finder
-    * setup favorite items
-        * `~`
-        * `~/Code`
-* Dock
-    * customize dock items (
-        * TODO: com.apple.dock, persistent-apps)
-        * https://github.com/hjuutilainen/dotfiles/blob/master/bin/setup-dock.py
-* Apps
-    * BetterSnapTool
-* Setup user login items
+* choose Pro as Terminal theme
+* keyboard backlights off
+* enable US - International PC and Japanese keyboards
+* set finder favorite items
+    * `~`
+    * `~/Code`
+* customize dock items
+    * com.apple.dock, persistent-apps
+    * https://github.com/hjuutilainen/dotfiles/blob/master/bin/setup-dock.py
+* setup user login items
     * BetterSnapTool
