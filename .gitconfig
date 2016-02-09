@@ -8,6 +8,9 @@
   st = status
   br = branch
 
+  sh = stash
+  shp = stash pop
+
   c = commit
   cm = commit -m
   ca = commit -a
