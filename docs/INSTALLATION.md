@@ -32,6 +32,7 @@ Grab this repo and run the installation script.
     * BetterSnapTool
 * Don't slightly dim the display when on battery power
 * Don't automatically adjust brightness
+* Show volume in menubar
 * Set default applications for file types
 * No guest account
 * choose Pro as Terminal theme
@@ -44,4 +45,5 @@ Grab this repo and run the installation script.
     * com.apple.dock, persistent-apps
     * https://github.com/hjuutilainen/dotfiles/blob/master/bin/setup-dock.py
 * setup user login items
-    * BetterSnapTool
+* install preferred font: ource code pro
+* Setup user login items
