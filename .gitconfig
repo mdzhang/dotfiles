@@ -14,6 +14,7 @@
   c = commit
   cm = commit -m
   ca = commit -a
+  cam = commit -am
   cd = commit --amend
   cad = commit -a --amend
 
@@ -49,3 +50,6 @@
 
   # Find commits by source code
   fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+
+  # Diff of last 2 commits
+  ch = diff HEAD^ HEAD
