@@ -27,3 +27,5 @@ if [ -f /usr/local/bin/brew ]; then
   # symlink to /Applications
   export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 fi
+
+eval "$(rbenv init -)"

@@ -3,7 +3,7 @@
 # install homebrew package manager
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew install git wget mysql
+brew install git wget mysql npm rbenv ruby-build s3cmd
 
 # for installing os x apps
 brew install caskroom/cask/brew-cask
@@ -29,7 +29,7 @@ brew cask install calibre
 # brew cask install slack
 # brew cask install dash
 # brew cask install tunnelblick
-# brew cask install gimp
+brew cask install gimp
 # brew cask install mobile-mouse-server
 brew cask install flux
 

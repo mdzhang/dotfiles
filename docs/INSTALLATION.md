@@ -47,3 +47,4 @@ Grab this repo and run the installation script.
 * setup user login items
 * install preferred font: ource code pro
 * Setup user login items
+* Profile pic
