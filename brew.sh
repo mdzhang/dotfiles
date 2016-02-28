@@ -79,3 +79,6 @@ done
 
 # uTorrent doesn't symlink?
 # ln -s /opt/homebrew-cask/Caskroom/utorrent/latest/uTorrent.app/ uTorrent.app
+
+# move tunnelblick over for security purposes
+# mv -f $(readlink /Applications/Tunnelblick.app) /Applications/Tunnelblick.app
