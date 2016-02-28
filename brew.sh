@@ -39,6 +39,7 @@ done
 
 # other useful brew taps
 brew tap caskroom/versions
+brew tap caskroom/fonts
 
 # symlink casks to /Applications
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -61,6 +62,9 @@ BREW_CASKS=(
   # dash
   # tunnelblick
   # mobile-mouse-server
+
+  # fonts
+  font-source-code-pro
 )
 CASK_COUNT=${#BREW_CASKS[@]}
 
@@ -82,7 +86,3 @@ done
 
 # move tunnelblick over for security purposes
 # mv -f $(readlink /Applications/Tunnelblick.app) /Applications/Tunnelblick.app
-
-# install fonts
-brew tap caskroom/fonts
-brew cask install font-source-code-pro
