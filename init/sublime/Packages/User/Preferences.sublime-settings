@@ -1,0 +1,60 @@
+{
+    "always_prompt_for_file_reload": false,
+    "always_show_minimap_viewport": true,
+    "auto_complete_commit_on_tab": true,
+    "auto_find_in_selection": true,
+    "auto_indent": true,
+    "auto_match_enabled": true,
+    "bold_folder_labels": true,
+    "caret_style": "wide",
+    "close_windows_when_empty": false,
+    // "color_scheme": "Packages/Theme - Asphalt/Asphalt.tmTheme",
+    "detect_indentation": true,
+    "dictionary": "Packages/Language - English/en_US.dic",
+    "drag_text": false,
+    "draw_minimap_border": true,
+    "draw_white_space": "all",
+    "fade_fold_buttons": false,
+    "find_selected_text": true,
+    "findreplace_small": true,
+    "folder_exclude_patterns":
+    [
+        ".svn",
+        ".hg",
+        "CVS"
+    ],
+    "font_face": "Monaco",
+    "font_size": 12.0,
+    "gutter": true,
+    "highlight_line": true,
+    "highlight_modified_tabs": true,
+    "ignored_packages":
+    [
+        "Github Tools"
+    ],
+    "indent_subsequent_lines": true,
+    "indent_to_bracket": true,
+    "line_numbers": true,
+    "margin": 1,
+    "match_brackets_angle": true,
+    "rulers":
+    [
+        100
+    ],
+    "save_on_focus_lost": false,
+    "scroll_speed": 2.0,
+    "shift_tab_unindent": true,
+    "show_full_path": true,
+    "spell_check": true,
+    "tab_size": 2,
+    "tab_small": true,
+    "tabs_small": true,
+    // "theme": "Asphalt-blue.sublime-theme",
+    "theme_asphalt_show_dirty_tabs": true,
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true,
+    "use_tab_stops": true,
+    "vintage_start_in_command_mode": false,
+    "wide_caret": true,
+    "word_wrap": "true"
+}

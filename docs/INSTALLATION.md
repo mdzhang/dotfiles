@@ -4,7 +4,8 @@ Grab this repo and run the installation script.
 * `curl -LOk https://github.com/mdzhang/dotfiles/archive/master.zip`
 * `unzip master.zip`
 * `cd dotfiles-master`
-* `./install.sh`
+* Update dotfile: `make dotfiles`
+* Setup Sublime: `make sublime`
 
 # TODO
 

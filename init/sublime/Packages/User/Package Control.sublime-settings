@@ -10,19 +10,11 @@
     "BracketHighlighter",
     "DocBlockr",
     "GitGutter",
+    "Markdown Extended",
     "Package Control",
+    "Sass",
     "SideBarEnhancements",
-    "Theme - Asphalt",
-    // SFTP
-
-    // "AngularJS",
-    // "EJS",
-    // "JsFormat",
-    // "JSHint",
-    // "JSHint Gutter",
-    // "JSLint",
-    // "Markdown Extended",
-    // "Sass",
-    // "Stylus"
+    "SFTP",
+    "Theme - Asphalt"
   ]
 }
