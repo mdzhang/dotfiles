@@ -1,37 +1,81 @@
 #!/bin/bash
 
-# install homebrew package manager
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# install/update homebrew package manager
+which -s brew
+if [[ $? != 0 ]] ; then
+  echo "Installing brew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+  echo "Updating brew..."
+  brew update
+fi
 
-brew install git wget mysql npm rbenv ruby-build s3cmd
+# install brew packages
+BREW_PKGS=(
+  git
+  wget
+  mysql
+  npm
+  rbenv
+  ruby-build
+  s3cmd
+  # brew casks for application installs
+  brew-cask
+)
+PKG_COUNT=${#BREW_PKGS[@]}
 
-# for installing os x apps
-brew install caskroom/cask/brew-cask
+for (( i=0;i<$PKG_COUNT;i++)); do
+  pkg=${BREW_PKGS[${i}]}
 
-# alternate brew cask versions
+  if brew list -1 | grep -q "^${pkg}\$"; then
+    echo "Package '$pkg' is installed"
+    brew upgrade "${pkg}"
+  else
+    echo "Package '$pkg' is not installed"
+    brew install "${pkg}"
+  fi
+
+done
+
+# other useful brew taps
 brew tap caskroom/versions
 
-# just to make sure
+# symlink casks to /Applications
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+BREW_CASKS=(
+  sublime-text3
+  1password
+  google-chrome
+  google-drive
+  dropbox
+  utorrent
+  vlc
+  calibre
+  flux
+  # gimp
+  # steam
+  # filezilla
+  # sequel-pro
+  # slack
+  # dash
+  # tunnelblick
+  # mobile-mouse-server
+)
+CASK_COUNT=${#BREW_CASKS[@]}
+
 # install favorite apps
-brew cask install sublime-text3
-brew cask install 1password
-brew cask install google-chrome
-brew cask install google-drive
-brew cask install dropbox
-brew cask install utorrent
-brew cask install vlc
-brew cask install calibre
-# brew cask install steam
-# brew cask install filezilla
-# brew cask install sequel-pro
-# brew cask install slack
-# brew cask install dash
-# brew cask install tunnelblick
-brew cask install gimp
-# brew cask install mobile-mouse-server
-brew cask install flux
+for (( i=0;i<$CASK_COUNT;i++)); do
+  cask=${BREW_CASKS[${i}]}
+
+  if brew cask list -1 | grep -q "^${cask}\$"; then
+    echo "Cask '$cask' is installed...continuing"
+  else
+    echo "Cask '$cask' is not installed"
+    brew cask install "${cask}"
+  fi
+
+done
 
 # uTorrent doesn't symlink?
-ln -s /opt/homebrew-cask/Caskroom/utorrent/latest/uTorrent.app/ uTorrent.app
+# ln -s /opt/homebrew-cask/Caskroom/utorrent/latest/uTorrent.app/ uTorrent.app

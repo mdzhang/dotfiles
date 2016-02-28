@@ -136,16 +136,6 @@ defaults write com.google.Chrome DisablePrintPreview -bool true
 # Expand the print dialog by default
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 
-# mkdir ~/Pictures/Screenshots
-# mkdir ~/Code
-# mkdir ~/.vim
-# mkdir ~/.vim/backups
-# mkdir ~/.vim/swaps
-# mkdir ~/.vim/undo
-
-# # Install Sublime Text settings
-# cp init/sublime/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
-
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
