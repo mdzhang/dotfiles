@@ -1,11 +1,11 @@
-default: dotfiles
+default: all
 
-all: osx brew dotfiles sublime
+all: brew osx dotfiles sublime
 
 # overwrite AppleScript defaults
 osx:
 	mkdir -p ~/Pictures/Screenshots && \
-	mkdir -p ~/Code									&& \
+	mkdir -p ~/Code                 && \
 	./scripts/osx.sh
 
 # install/update brew packages and casks
@@ -14,10 +14,10 @@ brew:
 
 # just update dotfiles
 dotfiles:
-	mkdir -p ~/.vim						&& \
-	mkdir -p ~/.vim/backups		&& \
-	mkdir -p ~/.vim/swaps			&& \
-	mkdir -p ~/.vim/undo			&& \
+	mkdir -p ~/.vim           && \
+	mkdir -p ~/.vim/backups   && \
+	mkdir -p ~/.vim/swaps     && \
+	mkdir -p ~/.vim/undo      && \
 	./scripts/dotfiles.sh
 
 # update sublime preferences & packages
