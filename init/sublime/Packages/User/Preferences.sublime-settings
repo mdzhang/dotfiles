@@ -23,7 +23,8 @@
         ".hg",
         "CVS"
     ],
-    "font_face": "Monaco",
+    // make sure you install this font first w/ brew.sh
+    "font_face": "Source Code Pro",
     "font_size": 12.0,
     "gutter": true,
     "highlight_line": true,

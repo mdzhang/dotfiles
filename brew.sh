@@ -82,3 +82,7 @@ done
 
 # move tunnelblick over for security purposes
 # mv -f $(readlink /Applications/Tunnelblick.app) /Applications/Tunnelblick.app
+
+# install fonts
+brew tap caskroom/fonts
+brew cask install font-source-code-pro
