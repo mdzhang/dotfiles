@@ -4,14 +4,11 @@ Grab this repo and run the installation script.
 * `curl -LOk https://github.com/mdzhang/dotfiles/archive/master.zip`
 * `unzip master.zip`
 * `cd dotfiles-master`
-* Update dotfile: `make dotfiles`
-* Setup Sublime: `make sublime`
+* `make`
 
-# TODO
+### TODO
 
-* run .osx as part of install script
-* run brew.sh as part of install script
-* use Applescript for some of the post-intallation items
+* use Applescript for some of the post-installation items
 
 ### Post-installation Checklist
 
@@ -25,8 +22,6 @@ Grab this repo and run the installation script.
         * `pbcopy < ~/.ssh/id_rsa.pub`
     * Calibre
         * use `~/Library/Application Support/Calibre/Library` to store books
-    * Sublime Text
-        * copy over user preferences out of Dropbox
     * tunnelblick
     * everything else
 * Apps that can't be installed w/ Brew
@@ -46,6 +41,6 @@ Grab this repo and run the installation script.
     * com.apple.dock, persistent-apps
     * https://github.com/hjuutilainen/dotfiles/blob/master/bin/setup-dock.py
 * setup user login items
-* install preferred font: ource code pro
+* install preferred font: source code pro
 * Setup user login items
 * Profile pic
