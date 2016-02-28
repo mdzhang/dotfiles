@@ -28,6 +28,13 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 ###############################################################################
+# Terminal
+###############################################################################
+
+defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
+
+###############################################################################
 # Trackpad, keyboard  												  		  #
 ###############################################################################
 

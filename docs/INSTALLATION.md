@@ -32,7 +32,6 @@ Grab this repo and run the installation script.
 * Show volume in menubar
 * Set default applications for file types
 * No guest account
-* choose Pro as Terminal theme
 * keyboard backlights off
 * enable US - International PC and Japanese keyboards
 * set finder favorite items
