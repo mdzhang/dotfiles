@@ -31,6 +31,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 # Terminal
 ###############################################################################
 
+# TODO: not really working
 defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
 
@@ -68,6 +69,13 @@ defaults write com.apple.dock orientation left && killall -HUP Dock
 
 # Dark Menubar and Dock
 defaults write NSGlobalDomain AppleInterfaceStyle Dark
+
+defaults write com.apple.systemuiserver menuExtras -array \
+  "/System/Library/CoreServices/Menu Extras/Volume.menu" \
+  "/System/Library/CoreServices/Menu Extras/TextInput.menu" \
+  "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+  "/System/Library/CoreServices/Menu Extras/Battery.menu" \
+  "/System/Library/CoreServices/Menu Extras/Clock.menu" \
 
 # Setup the menubar date format
 defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  h:mm a"
