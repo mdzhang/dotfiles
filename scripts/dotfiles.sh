@@ -39,7 +39,7 @@ fi"
 }
 
 # copy over dotfiles to $HOME
-for path in ./.{bash_aliases,bash_completion,bash_exports,bash_functions,bash_prompt,bashrc,gitconfig,profile,vimrc}; do
+for path in ./.{bash_aliases,bash_completion,bash_exports,bash_functions,bash_prompt,bashrc,gitconfig,gitignore_global,profile,vimrc}; do
   file=${path:2}
   replace_file $path $file
 done

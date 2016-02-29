@@ -1,0 +1,9 @@
+# Numerous always-ignore extensions
+*.diff
+*.log
+*.swp
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
