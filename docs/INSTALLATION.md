@@ -39,5 +39,4 @@ Grab this repo and run the installation script.
 * customize dock items
     * com.apple.dock, persistent-apps
     * https://github.com/hjuutilainen/dotfiles/blob/master/bin/setup-dock.py
-* setup user login items
 * Profile pic

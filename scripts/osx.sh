@@ -27,6 +27,13 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
+osascript -e 'tell application "System Events" to delete every login item'
+osascript -e 'tell application "System Events" to make new login item at end with properties {path:"/Applications/BetterSnapTool.app", name:"BetterSnapTool", hidden:false}'
+osascript -e 'tell application "System Events" to make new login item at end with properties {path:"/Applications/Dropbox.app", name:"Dropbox", hidden:false}'
+osascript -e 'tell application "System Events" to make new login item at end with properties {path:"/Applications/Google Drive.app", name:"Google Drive", hidden:false}'
+osascript -e 'tell application "System Events" to make new login item at end with properties {path:"/Applications/Flux.app", name:"Flux", hidden:false}'
+
+
 ###############################################################################
 # Terminal
 ###############################################################################
