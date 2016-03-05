@@ -19,6 +19,7 @@ BREW_PKGS=(
   rbenv
   ruby-build
   s3cmd
+  coreutils
   # brew casks for application installs
   brew-cask
 )
