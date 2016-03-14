@@ -42,6 +42,9 @@ done
 brew tap caskroom/versions
 brew tap caskroom/fonts
 
+brew tap eqnxio/jhalickman
+brew install newsql
+
 # symlink casks to /Applications
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
