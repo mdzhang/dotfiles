@@ -10,11 +10,14 @@
     "BracketHighlighter",
     "DocBlockr",
     "GitGutter",
+    "JsFormat",
     "Markdown Extended",
     "Package Control",
     "Sass",
     "SideBarEnhancements",
     "SFTP",
+    "SublimeLinter",
+    "SublimeLinter-jshint",
     "Theme - Asphalt"
   ]
 }
