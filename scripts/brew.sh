@@ -20,6 +20,7 @@ BREW_PKGS=(
   ruby-build
   s3cmd
   coreutils
+  # vault
   # brew casks for application installs
   brew-cask
 )
@@ -58,6 +59,7 @@ BREW_CASKS=(
   vlc
   calibre
   flux
+  # yubikey-personalization-gui
   # gimp
   # steam
   # filezilla
@@ -66,9 +68,11 @@ BREW_CASKS=(
   # dash
   # tunnelblick
   # mobile-mouse-server
+  # ynab
 
   # fonts
   font-source-code-pro
+  # java
 )
 CASK_COUNT=${#BREW_CASKS[@]}
 
@@ -87,6 +91,9 @@ done
 
 # uTorrent doesn't symlink?
 # ln -s /opt/homebrew-cask/Caskroom/utorrent/latest/uTorrent.app/ uTorrent.app
+
+# open yubikey installer
+# open /opt/homebrew-cask/Caskroom/yubikey-personalization-gui/{version}/
 
 # move tunnelblick over for security purposes
 # mv -f $(readlink /Applications/Tunnelblick.app) /Applications/Tunnelblick.app
