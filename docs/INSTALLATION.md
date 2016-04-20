@@ -40,3 +40,4 @@ Grab this repo and run the installation script.
     * com.apple.dock, persistent-apps
     * https://github.com/hjuutilainen/dotfiles/blob/master/bin/setup-dock.py
 * Profile pic
+* Keyboard access - all controls
