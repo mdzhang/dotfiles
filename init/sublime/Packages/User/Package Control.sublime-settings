@@ -9,6 +9,7 @@
     "All Autocomplete",
     "BracketHighlighter",
     "DocBlockr",
+    "EsFormatter",
     "GitGutter",
     "JsFormat",
     "Markdown Extended",
@@ -17,7 +18,7 @@
     "SideBarEnhancements",
     "SFTP",
     "SublimeLinter",
-    "SublimeLinter-jshint",
+    "SublimeLinter-contrib-eslint",
     "Theme - Asphalt"
   ]
 }

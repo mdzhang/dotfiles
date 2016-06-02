@@ -7,10 +7,10 @@
         "gutter_theme_excludes": [],
         "lint_mode": "background",
         "linters": {
-            "jshint": {
+            "eslint": {
                 "@disable": false,
                 "args": [
-                    "${project}/.jshintrc"
+                    "${project}/.eslintrc.json"
                 ],
                 "excludes": []
             }
