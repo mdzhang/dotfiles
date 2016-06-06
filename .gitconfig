@@ -3,6 +3,10 @@
   email = zhang.michelle.d@gmail.com
 [core]
   editor = subl -w
+[pull]
+  rebase = true
+[push]
+  default = current
 [alias]
   a = add --all
   st = status
