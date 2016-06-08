@@ -59,6 +59,7 @@ BREW_CASKS=(
   vlc
   calibre
   flux
+  sourcetree
   # yubikey-personalization-gui
   # gimp
   # steam
