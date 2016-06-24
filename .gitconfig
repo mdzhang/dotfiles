@@ -39,9 +39,12 @@
   psfom = push -f origin master
 
   pl = pull
+  plr = pull --rebase
 
   rb = rebase
   rbc = rebase --continue
+  rbs = rebase --skip
+  rbm = rebase master
 
   reh = reset --hard
 

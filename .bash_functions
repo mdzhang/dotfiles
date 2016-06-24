@@ -42,3 +42,7 @@ function mans() {
 function tl() {
   tail -n "$1" -F "$2"
 }
+
+function port_hog() {
+  sudo netstat -lpn | grep :"$1"
+}
