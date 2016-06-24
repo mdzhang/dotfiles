@@ -3,7 +3,11 @@
 *.log
 *.swp
 *~
-*.sass-cache
+/.sass-cache
+/node_modules
+/bower_components
+.idea/*
+*.iml
 
 # OS or Editor folders
 .DS_Store
