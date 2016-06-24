@@ -3,6 +3,7 @@
   email = zhang.michelle.d@gmail.com
 [core]
   editor = subl -w
+  excludesfile = /Users/michelle.zhang/.gitignore_global
 [pull]
   rebase = true
 [push]
