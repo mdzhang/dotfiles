@@ -8,6 +8,7 @@
 /bower_components
 .idea/*
 *.iml
+*.sublime-workspace
 
 # OS or Editor folders
 .DS_Store
