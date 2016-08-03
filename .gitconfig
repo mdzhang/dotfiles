@@ -15,6 +15,7 @@
 
   sh = stash
   shp = stash pop
+  shd = stash drop
 
   c = commit
   cm = commit -m
@@ -44,8 +45,10 @@
 
   rb = rebase
   rbc = rebase --continue
-  rbs = rebase --skip
+  rbd = rebase development
+  rbi = rebase -i
   rbm = rebase master
+  rbs = rebase --skip
 
   reh = reset --hard
 
