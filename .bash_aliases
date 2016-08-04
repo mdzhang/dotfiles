@@ -37,3 +37,4 @@ alias egrep='egrep --color=auto'
 
 # IP address
 alias ip='ipconfig getifaddr en1'
+alias be='bundle exec'

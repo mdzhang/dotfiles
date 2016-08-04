@@ -13,6 +13,7 @@ fi
 # install brew packages
 BREW_PKGS=(
   git
+  gpg
   wget
   mysql
   npm

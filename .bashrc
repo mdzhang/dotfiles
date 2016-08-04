@@ -29,3 +29,4 @@ if [ -f /usr/local/bin/brew ]; then
 fi
 
 eval "$(rbenv init -)"
+eval "$(docker-machine env)"
