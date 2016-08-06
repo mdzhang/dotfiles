@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# TODO: move aliases per suite to associated ~/.bash_configs/ file
+
 alias root='sudo su'
 
 # Prevents accidentally clobbering files

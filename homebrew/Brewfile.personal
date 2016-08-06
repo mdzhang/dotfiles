@@ -1,0 +1,11 @@
+cask_args appdir: '/Applications'
+
+cask 'calibre'                      # ebook manager
+cask 'gimp'                         # image editor
+cask 'mobile-mouse-server'
+cask 'origin'
+cask 'spotify'
+cask 'steam'                        # game manager
+cask 'utorrent'                     # torrent client
+cask 'vlc'                          # media player
+cask 'yubikey-personalization-gui'

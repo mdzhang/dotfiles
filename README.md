@@ -1,5 +1,17 @@
-## [Dotfiles](https://dotfiles.github.io/)
+# [Dotfiles](https://dotfiles.github.io/)
 
-See [Install Guide](https://github.com/mdzhang/dotfiles/blob/master/docs/INSTALLATION.md)
+Personal dotfiles. Last confirmed with OS X El Capitan.
 
-Still a WIP.
+## Installation
+
+Grab this repo and run the installation script.
+* `curl -LOk https://github.com/mdzhang/dotfiles/archive/master.zip`
+* `unzip master.zip`
+* `cd dotfiles-master`
+* update your name and email in `.gitconfig`
+* `make all`
+
+## Post-Installation
+
+See [Post-Installation Guide](https://github.com/mdzhang/dotfiles/blob/master/docs/POST_INSTALLATION.md)
+
