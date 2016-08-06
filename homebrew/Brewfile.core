@@ -1,0 +1,22 @@
+cask_args appdir: '/Applications'
+
+# Core Utilities
+brew 'gpg'
+brew 'keybase'
+brew 'mas'                          # Mac App Store
+brew 'wget'
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+tap 'caskroom/fonts'
+
+# Applications
+cask '1password'                    # password manager
+cask 'dropbox'                      # cloud storage
+cask 'filezilla'                    # ftp client
+cask 'flux'                         # screen dimmer
+cask 'google-chrome'                # browser
+cask 'google-drive'                 # cloud storage
+cask 'sublime-text3'                # editor
+
+# Fonts
+cask 'font-source-code-pro'

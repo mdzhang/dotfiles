@@ -1,27 +1,18 @@
-default: all
+# TODO: homebrew must be run first; sublime unstable; osx unstable
+SUITES = homebrew git ruby node secrets docker mysql vim osx
+start = printf "\n========================\nRunning suite: $(SUITE)\n";
+end = printf "\nFinished suite: $(SUITE)\n========================\n";
+run_suite =  $(start) $(MAKE) --directory=./$(SUITE); $(end)
 
-all: brew osx dotfiles sublime
+default:
+	echo "Not implemented"
 
-# overwrite AppleScript defaults
-osx:
-	mkdir -p ~/Pictures/Screenshots && \
-	mkdir -p ~/Code                 && \
-	./scripts/osx.sh
+all:
+	$(foreach SUITE, $(SUITES), $(run_suite))
 
-# install/update brew packages and casks
-brew:
-	./scripts/brew.sh
+# example usage:
+#   make suite SUITE=node
+suite:
+	$(run_suite)
 
-# just update dotfiles
-dotfiles:
-	mkdir -p ~/.vim           && \
-	mkdir -p ~/.vim/backups   && \
-	mkdir -p ~/.vim/swaps     && \
-	mkdir -p ~/.vim/undo      && \
-	./scripts/dotfiles.sh
-
-# update sublime preferences & packages
-sublime:
-	./scripts/sublime.sh
-
-.PHONY: all osx brew dotfiles sublime
+.PHONY: default all suite
