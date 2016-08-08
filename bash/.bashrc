@@ -22,5 +22,6 @@ shopt -s checkwinsize
 shopt -s histappend
 
 for file in ~/.bash_configs/*.sh; do
+  [ -f "$file" ] || break
   source "$file"
 done

@@ -37,6 +37,9 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+alias dc="docker-compose"
+alias dr="docker"
+
 # IP address
 alias ip='ipconfig getifaddr en1'
 alias be='bundle exec'

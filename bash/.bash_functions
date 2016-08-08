@@ -17,7 +17,7 @@ function extract () {
         *.Z)         uncompress $1  ;;
         *.7z)        7z x $1        ;;
         *)           echo "'$1' cannot be extracted via extract()" ;;
-    esac  
+    esac
   else
     echo "'$1' is not a valid file"
   fi
@@ -45,4 +45,8 @@ function tl() {
 
 function port_hog() {
   sudo netstat -lpn | grep :"$1"
+}
+
+function dock_bash() {
+  docker exec -it "$1" /bin/bash
 }
