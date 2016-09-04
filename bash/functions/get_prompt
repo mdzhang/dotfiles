@@ -1,0 +1,11 @@
+function get_prompt {
+  local env
+
+  # don't show host unless we're ssh'ed to something else
+  if [ -n "$SSH_CLIENT" ]; then
+    env="@\h"
+  fi
+
+  # just shows user and path
+  echo "${GREEN}[\T] ${RED}\u${env}:${ORANGE}\w ${BLUE}\$ "
+}
