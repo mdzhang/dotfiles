@@ -7,5 +7,5 @@ function get_prompt {
   fi
 
   # just shows user and path
-  echo "${GREEN}[\T] ${RED}\u${env}:${ORANGE}\w ${BLUE}\$ "
+  echo "${GREEN}[\T] ${RED}\u${env}:${ORANGE}\w ${PURPLE}\$git_branch ${BLUE}\$ "
 }
