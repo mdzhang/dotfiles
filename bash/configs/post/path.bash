@@ -9,3 +9,7 @@ fi
 if which docker-machine > /dev/null; then
   eval "$(docker-machine env)"
 fi
+
+if which direnv > /dev/null; then
+  eval "$(direnv hook bash)"
+fi
