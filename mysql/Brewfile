@@ -1,4 +1,0 @@
-cask_args appdir: '/Applications'
-
-brew 'mysql'
-cask 'sequel-pro'                   # database gui

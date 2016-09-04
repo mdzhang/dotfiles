@@ -1,0 +1,5 @@
+# adds CSI \e to start ANSI escape sequence
+# surround colors codes with \[ \]
+function escape_color {
+  echo "\[\e$1\]"
+}

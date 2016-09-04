@@ -1,7 +1,0 @@
-cask_args appdir: '/Applications'
-
-# brew 'redis'
-# brew 's3cmd'
-
-cask 'dash'                         # offline docs
-cask 'sourcetree'                   # diff viewer, merge tool

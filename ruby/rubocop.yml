@@ -1,14 +1,17 @@
-inherit_from: .rubocop_todo.yml
-
 AllCops:
   TargetRubyVersion: 2.3
   Include:
-    - '**/config.ru'
-    - '**/Rakefile'
+    - '**/*.rake'
+    - '**/*.rb'
+    - '**/*.ru'
     - '**/Gemfile'
+    - '**/Rakefile'
 
 Metrics/LineLength:
   Max: 120
 
 Metrics/MethodLength:
   Max: 60
+
+Style/Documentation:
+  Enabled: false

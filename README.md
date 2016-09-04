@@ -1,17 +1,52 @@
 # [Dotfiles](https://dotfiles.github.io/)
 
-Personal dotfiles. Last confirmed with OS X El Capitan.
+Personal dotfiles. Uses Thoughbot's [rcm](https://github.com/thoughtbot/rcm)
+
+## Pre-installation
+
+Optionally, follow [laptop setup here][laptop].
+
+[laptop]: https://github.com/mdzhang/laptop
+
+Else, just make sure you have [Homebrew](http://brew.sh/) and [git](https://git-scm.com/) installed.
 
 ## Installation
 
-Grab this repo and run the installation script.
-* `curl -LOk https://github.com/mdzhang/dotfiles/archive/master.zip`
-* `unzip master.zip`
-* `cd dotfiles-master`
-* update your name and email in `.gitconfig`
-* `make all`
+Clone onto your laptop:
 
-## Post-Installation
+```
+git clone git://github.com/mdzhang/dotfiles.git ~/dotfiles
+```
 
-See [Post-Installation Guide](https://github.com/mdzhang/dotfiles/blob/master/docs/POST_INSTALLATION.md)
+Install rcm:
 
+```
+brew tap thoughtbot/formulae
+brew install rcm
+```
+
+Install the dotfiles:
+
+```
+env RCRC=$HOME/dotfiles/rcrc rcup
+```
+
+Can run `rcup` later to update:
+
+```
+rcup
+```
+
+### Customization
+
+Add personal overrides in `~/dotfiles-local` or in `~/dotfiles` with a `*.local` suffix
+
+## Authors
+
+**Michelle D. Zhang**
+
+  * <http://github.com/mdzhang>
+
+## License
+
+Copyright (c) 2013-2016 Michelle D. Zhang. MIT Licensed, see [LICENSE](LICENSE.md) for details.
