@@ -39,7 +39,11 @@ rcup
 
 ### Customization
 
-Add personal overrides in `~/dotfiles-local` or in `~/dotfiles` with a `*.local` suffix
+You _can_ add personal overrides in `~/dotfiles-local` or in `~/dotfiles` with a `*.local` suffix, but you should probably just fork this repo and commit your personalizations.
+
+### Sensitive Information
+
+Add to `bash/configs/secrets.sh`
 
 ## Authors
 
