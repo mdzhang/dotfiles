@@ -1,0 +1,28 @@
+gemfile: Gemfile
+
+PreCommit:
+  # Dependency Check
+  BundleCheck:
+    enabled: true
+    on_warn: fail
+
+  # Ruby lint
+  RuboCop:
+    enabled: true
+    command: ['bundle', 'exec', 'rubocop']
+    problem_on_unmodified_line: warn
+
+PrePush:
+  BundleInstall:
+    enabled: true
+    on_warn: fail
+
+  ProtectedBranches:
+    enabled: false
+    branches: ['master', 'development']
+
+  # Unit & Integration tests
+  RSpec:
+    enabled: false
+    command: ['bundle', 'exec', 'rspec']
+    on_warn: fail
