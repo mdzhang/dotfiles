@@ -2,6 +2,7 @@
 
 *.diff
 *.log
+.envrc
 
 # OS
 .DS_Store
@@ -10,6 +11,7 @@
 .idea/*
 *.iml
 *.sublime-workspace
+*.sublime-project
 *.swp
 *~
 
