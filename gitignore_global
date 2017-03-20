@@ -2,7 +2,12 @@
 
 *.diff
 *.log
+*.dump
+*.pem
 .envrc
+.env
+tmp
+dist
 
 # OS
 .DS_Store
