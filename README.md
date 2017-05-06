@@ -4,9 +4,11 @@ Personal dotfiles. Uses Thoughbot's [rcm][rcm]
 
 ## Pre-installation
 
-Optionally, follow [laptop setup here][laptop].
+1. Follow [laptop setup here][laptop]
 
-Else, just make sure you have [Homebrew](http://brew.sh/) and [git](https://git-scm.com/) installed.
+OR
+
+1. Install [Homebrew](http://brew.sh/) and [git](https://git-scm.com/)
 
 ## Installation
 
