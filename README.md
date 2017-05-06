@@ -1,45 +1,38 @@
 # [Dotfiles](https://dotfiles.github.io/)
 
-Personal dotfiles. Uses Thoughbot's [rcm](https://github.com/thoughtbot/rcm)
+Personal dotfiles. Uses Thoughbot's [rcm][rcm]
 
 ## Pre-installation
 
 Optionally, follow [laptop setup here][laptop].
 
-[laptop]: https://github.com/mdzhang/laptop
-
 Else, just make sure you have [Homebrew](http://brew.sh/) and [git](https://git-scm.com/) installed.
 
 ## Installation
 
-Clone onto your laptop:
+1. Grab source code
 
-```
-git clone git://github.com/mdzhang/dotfiles.git ~/dotfiles
-```
+    ```
+    git clone git://github.com/mdzhang/dotfiles.git ~/dotfiles
+    ```
 
-Install rcm:
+1. Install [rcm][rcm]
 
-```
-brew tap thoughtbot/formulae
-brew install rcm
-```
+    ```
+    brew tap thoughtbot/formulae
+    brew install rcm
+    ```
 
-Install the dotfiles:
+1. Install dotfiles
 
-```
-env RCRC=$HOME/dotfiles/rcrc rcup
-```
+    ```
+    # from $HOME
+    env RCRC=$HOME/dotfiles/rcrc rcup
+    ```
 
-Can run `rcup` later to update:
+## Customization
 
-```
-rcup
-```
-
-### Customization
-
-You _can_ add personal overrides in `~/dotfiles-local` or in `~/dotfiles` with a `*.local` suffix, but you should probably just fork this repo and commit your personalizations.
+After updating dotfiles locally, run `rcup` again to update
 
 ### Sensitive Information
 
@@ -54,3 +47,6 @@ Add to `bash/configs/secrets.sh`
 ## License
 
 Copyright (c) 2013-2016 Michelle D. Zhang. MIT Licensed, see [LICENSE](LICENSE.md) for details.
+
+[laptop]: https://github.com/mdzhang/laptop
+[rcm]: https://github.com/thoughtbot/rcm
