@@ -1,6 +1,8 @@
 [user]
   name = Michelle D Zhang
   email = zhang.michelle.d@gmail.com
+[commit]
+  gpgsign = true
 [core]
   editor = subl -w
   excludesfile = ~/.gitignore_global
