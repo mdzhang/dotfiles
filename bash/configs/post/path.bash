@@ -24,3 +24,6 @@ if which jenv > /dev/null; then
   export PATH="$HOME/.jenv/bin:$PATH"
 fi
 
+if [ -f /usr/local/etc/profile.d/z.sh ]; then
+  . /usr/local/etc/profile.d/z.sh
+fi
