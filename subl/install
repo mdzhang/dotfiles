@@ -1,0 +1,7 @@
+#!/bin/sh
+
+rm -rf ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
+
+mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
+
+ln -s ~/dotfiles/subl/User/ ~/Library/Application\ Support/Sublime\ Text\ 3/Packages

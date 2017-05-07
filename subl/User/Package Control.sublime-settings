@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"All Autocomplete",
+		"BracketHighlighter",
+		"GitGutter",
+		"Package Control",
+		"SFTP",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"Theme - Asphalt"
+	]
+}
