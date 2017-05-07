@@ -37,7 +37,7 @@ After updating dotfiles locally, run `rcup` again to update
 
 ### Sensitive Information
 
-Add to `bash/configs/secrets.sh`
+Add to `configs/bash/configs/secrets.sh`
 
 ## Authors
 
