@@ -1,2 +1,2 @@
-EXCLUDES="README.md LICENSE node ruby"
-DOTFILES_DIRS="$HOME/dotfiles-local $HOME/dotfiles"
+EXCLUDES="README.md LICENSE configs"
+DOTFILES_DIRS="$HOME/.dotfiles"

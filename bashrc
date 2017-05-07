@@ -1,9 +1,9 @@
 # load custom executable functions
-for function in ~/.bash/functions/*; do
+for function in ~/.dotfiles/configs/bash/functions/*; do
   source $function
 done
 
-# extra files in ~/.bash/configs/pre , ~/.bash/configs , and ~/.bash/configs/post
+# extra files in bash/configs/pre , bash/configs , and bash/configs/post
 # these are loaded first, second, and third, respectively.
 _load_settings() {
   _dir="$1"
@@ -31,7 +31,7 @@ _load_settings() {
     done
   fi
 }
-_load_settings "$HOME/.bash/configs"
+_load_settings "$HOME/.dotfiles/configs/bash/configs"
 
 # Local config
 [[ -f ~/.bashrc.local ]] && source ~/.bashrc.local

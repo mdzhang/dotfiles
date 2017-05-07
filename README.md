@@ -15,7 +15,7 @@ OR
 1. Grab source code
 
     ```
-    git clone git://github.com/mdzhang/dotfiles.git ~/dotfiles
+    git clone git://github.com/mdzhang/dotfiles.git ~/.dotfiles
     ```
 
 1. Install [rcm][rcm]
@@ -28,8 +28,7 @@ OR
 1. Install dotfiles
 
     ```
-    # from $HOME
-    env RCRC=$HOME/dotfiles/rcrc rcup
+    env RCRC=$HOME/.dotfiles/rcrc rcup
     ```
 
 ## Customization

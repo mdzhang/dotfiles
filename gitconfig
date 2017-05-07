@@ -5,7 +5,7 @@
   gpgsign = true
 [core]
   editor = subl -w
-  excludesfile = ~/.gitignore_global
+	excludesfile = /Users/mdzhang/.gitignore_global
 [pull]
   rebase = true
 [push]
@@ -68,3 +68,9 @@
 
   # Diff of last 2 commits
   ch = diff HEAD^ HEAD
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
