@@ -1,2 +1,6 @@
 #!/bin/bash
 echo 'Running rcm post-up hook'
+
+if [ -f ~/.osx ]; then
+  . ~/.osx
+fi
