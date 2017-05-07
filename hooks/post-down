@@ -1,0 +1,2 @@
+#!/bin/bash
+echo 'Running rcm post-down hook'
