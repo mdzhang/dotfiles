@@ -47,7 +47,7 @@ Add to `configs/bash/configs/secrets.sh`
 
 ## License
 
-Copyright (c) 2013-2016 Michelle D. Zhang. MIT Licensed, see [LICENSE](LICENSE.md) for details.
+Copyright (c) 2013-2017 Michelle D. Zhang. MIT Licensed, see [LICENSE](LICENSE.md) for details.
 
 [laptop]: https://github.com/mdzhang/laptop
 [rcm]: https://github.com/thoughtbot/rcm

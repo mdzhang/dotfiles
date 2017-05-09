@@ -59,7 +59,7 @@
 	"line_numbers": true,
 	"margin": 0,
 	"open_files_in_new_window": false,
-	"preview_on_click": false,
+	"preview_on_click": true,
 	"rulers":
 	[
 		80,
