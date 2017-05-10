@@ -12,6 +12,8 @@ OR
 
 ## Installation
 
+### Manual
+
 1. Grab source code
 
     ```
@@ -30,6 +32,13 @@ OR
     ```
     env RCRC=$HOME/.dotfiles/rcrc rcup
     ```
+
+### Using Homebrew
+
+```
+brew tap mdzhang/formulae
+brew install mdzhang/formulae/dotfiles
+```
 
 ## Customization
 

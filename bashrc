@@ -1,5 +1,7 @@
+export DOT_PATH=${DOT_PATH:-$(brew --prefix mdzhang/formulae/dotfiles)}
+
 # load custom executable functions
-for function in ~/.dotfiles/configs/bash/functions/*; do
+for function in $DOT_PATH/configs/bash/functions/*; do
   source $function
 done
 
@@ -31,7 +33,7 @@ _load_settings() {
     done
   fi
 }
-_load_settings "$HOME/.dotfiles/configs/bash/configs"
+_load_settings "$DOT_PATH/configs/bash/configs"
 
 # Local config
 [[ -f ~/.bashrc.local ]] && source ~/.bashrc.local

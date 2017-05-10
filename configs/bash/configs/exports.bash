@@ -1,1 +1,1 @@
-export RCRC=$HOME/.dotfiles/rcrc
+export RCRC=$DOT_PATH/rcrc
