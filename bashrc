@@ -1,4 +1,8 @@
-export DOT_PATH=${DOT_PATH:-$(brew --prefix mdzhang/formulae/dotfiles)}
+if brew ls --versions mdzhang/formulae/dotfiles > /dev/null; then
+  export DOT_PATH=${DOT_PATH:-$(brew --prefix mdzhang/formulae/dotfiles)}
+else
+  export DOT_PATH=$HOME/.dotfiles
+fi
 
 # load custom executable functions
 for function in $DOT_PATH/configs/bash/functions/*; do

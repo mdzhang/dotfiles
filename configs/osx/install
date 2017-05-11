@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
@@ -41,7 +43,7 @@ defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
 
 ###############################################################################
-# Trackpad, keyboard  												  		  #
+# Trackpad, keyboard                                                          #
 ###############################################################################
 
 # Trackpad: enable tap to click for this user and for the login screen
@@ -63,7 +65,7 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
 
 ###############################################################################
-# Dock 								                                          #
+# Dock                                                                        #
 ###############################################################################
 
 # Set the icon size of Dock items to 36 pixels
@@ -147,7 +149,7 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 
 ###############################################################################
-# Google Chrome                                        						  #
+# Google Chrome                                                               #
 ###############################################################################
 
 # Use the system-native print preview dialog
@@ -161,5 +163,5 @@ defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 ###############################################################################
 
 for app in "Activity Monitor" "Dock" "Finder" "SystemUIServer" "Terminal" ; do
-	killall "${app}" &> /dev/null
+    killall "${app}" &> /dev/null
 done
