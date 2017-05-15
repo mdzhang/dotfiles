@@ -6,6 +6,10 @@ if which nodenv > /dev/null; then
   eval "$(nodenv init -)";
 fi
 
+if which goenv > /dev/null; then
+  eval "$(goenv init -)";
+fi
+
 if which direnv > /dev/null; then
   eval "$(direnv hook bash)"
 fi
