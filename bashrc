@@ -1,4 +1,4 @@
-if brew ls --versions mdzhang/formulae/dotfiles > /dev/null; then
+if brew ls --versions mdzhang/formulae/dotfiles 2> /dev/null; then
   export DOT_PATH=${DOT_PATH:-$(brew --prefix mdzhang/formulae/dotfiles)}
 else
   export DOT_PATH=$HOME/.dotfiles
