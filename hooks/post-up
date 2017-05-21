@@ -4,3 +4,7 @@ echo 'Running rcm post-up hook'
 if [ -f ~/.duti ]; then
   duti ~/.duti
 fi
+
+if [ ! -z "${GOPATH}" ]; then
+  mkdir -p $HOME/Code/mdzhang/go/src/github.com/mdzhang
+fi

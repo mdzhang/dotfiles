@@ -8,6 +8,8 @@ fi
 
 if which goenv > /dev/null; then
   eval "$(goenv init -)";
+  export GOPATH=$HOME/Code/mdzhang/go
+  export PATH=$PATH:$(go env GOPATH)/bin
 fi
 
 if which direnv > /dev/null; then
@@ -30,4 +32,12 @@ fi
 
 if [ -f /usr/local/etc/profile.d/z.sh ]; then
   . /usr/local/etc/profile.d/z.sh
+fi
+
+if [ -f /usr/local/opt/openssl/bin ]; then
+  export PATH="/usr/local/opt/openssl/bin:$PATH"
+fi
+
+if [ -f /usr/local/opt/sqlite/bin ]; then
+  export PATH="/usr/local/opt/sqlite/bin:$PATH"
 fi
