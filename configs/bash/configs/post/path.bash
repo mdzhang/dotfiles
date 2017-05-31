@@ -1,4 +1,5 @@
 if which rbenv > /dev/null; then
+  # export RUBY_CONFIGURE_OPTS="--with-readline-dir=`brew --prefix readline` --with-openssl-dir=`brew --prefix openssl`"
   eval "$(rbenv init -)";
 fi
 
@@ -34,10 +35,10 @@ if [ -f /usr/local/etc/profile.d/z.sh ]; then
   . /usr/local/etc/profile.d/z.sh
 fi
 
-if [ -f /usr/local/opt/openssl/bin ]; then
+if [ -d /usr/local/opt/openssl/bin ]; then
   export PATH="/usr/local/opt/openssl/bin:$PATH"
 fi
 
-if [ -f /usr/local/opt/sqlite/bin ]; then
+if [ -d /usr/local/opt/sqlite/bin ]; then
   export PATH="/usr/local/opt/sqlite/bin:$PATH"
 fi
