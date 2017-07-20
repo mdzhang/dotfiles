@@ -25,3 +25,6 @@ dist
 node_modules
 bower_components
 __pycache__
+
+# Tmp DBs
+*.sqbpro

@@ -1,4 +1,4 @@
-ulimit -u 256
+ulimit -u 512
 
 # default permissions
 umask 0077
