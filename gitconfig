@@ -33,6 +33,9 @@
 
   g = grep -p
 
+  ig = update-index --assume-unchanged
+  uig = update-index --no-assume-unchanged
+
   co = checkout
   com = checkout master
   cod = checkout development
