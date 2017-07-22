@@ -1,0 +1,7 @@
+brew_update() {
+  brew doctor
+  brew update
+  brew upgrade --cleanup
+  brew cleanup
+  brew cask cleanup
+}
