@@ -22,8 +22,10 @@ if which pyenv > /dev/null; then
   eval "$(pyenv init -)";
 fi
 
-if which pyenv-virtualenv > /dev/null; then
-  eval "$(pyenv virtualenv-init -)";
+if command -v brew > /dev/null; then
+  if brew ls --versions pyenv-virtualenv > /dev/null; then
+    eval "$(pyenv virtualenv-init -)";
+  fi
 fi
 
 if which jenv > /dev/null; then
@@ -41,4 +43,9 @@ fi
 
 if [ -d /usr/local/opt/sqlite/bin ]; then
   export PATH="/usr/local/opt/sqlite/bin:$PATH"
+fi
+
+ssh-add -l | grep "The agent has no identities" > /dev/null
+if [ $? -eq 0 ]; then
+  ssh-add
 fi
