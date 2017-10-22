@@ -3,3 +3,7 @@ echo 'Running rcm pre-up hook'
 
 rm -f ~/.vim
 ln -s $DOT_PATH/configs/vim ~/.vim
+
+# Grab Vundle source code
+git submodule init
+git submodule update

@@ -1,0 +1,4 @@
+[submodule "configs/vim/bundle/Vundle.vim"]
+    path = configs/vim/bundle/Vundle.vim
+    url = git@github.com:VundleVim/Vundle.vim.git
+
