@@ -44,7 +44,7 @@ Plugin 'vim-airline/vim-airline'
 " show git diff (added, mod'd, removed) in the gutter
 Plugin 'mhinz/vim-signify'
 " code completion
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 " show file content outline
 Plugin 'majutsushi/tagbar'
 " vim themes
@@ -225,7 +225,7 @@ nmap nt :NERDTreeToggle
 autocmd vimenter * NERDTree
 
 " autofocus last opened window
-autocmd vimenter * wincmd p
+" autocmd vimenter * wincmd p
 
 " close vim if only a NERDTree is left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
