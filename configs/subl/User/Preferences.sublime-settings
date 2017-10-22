@@ -44,7 +44,7 @@
 		"CVS",
 		"node_modules"
 	],
-	"font_face": "Monoid",
+	"font_face": "Hack",
 	"gutter": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
