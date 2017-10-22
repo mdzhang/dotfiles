@@ -1,6 +1,8 @@
 #!/bin/bash
 echo 'Running rcm post-up hook'
 
+# vim +PluginInstall +qall
+
 if [ -f ~/.duti ]; then
   duti ~/.duti
 fi

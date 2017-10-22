@@ -1,4 +1,5 @@
 #!/bin/bash
 echo 'Running rcm pre-up hook'
 
-mkdir -p ~/.vim ~/.vim/backups ~/.vim/swaps ~/.vim/undo
+rm -f ~/.vim
+ln -s $DOT_PATH/configs/vim ~/.vim
