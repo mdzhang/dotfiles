@@ -1,8 +1,6 @@
 #!/bin/bash
 echo 'Running rcm post-up hook'
 
-# vim +PluginInstall +qall
-
 if [ -f ~/.duti ]; then
   duti ~/.duti
 fi
@@ -10,3 +8,6 @@ fi
 if [ ! -z "${GOPATH}" ]; then
   mkdir -p $HOME/Code/mdzhang/go/src/github.com/mdzhang
 fi
+
+# NB: causes CLI to freeze up
+vim +PluginInstall +qall
