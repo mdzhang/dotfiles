@@ -59,6 +59,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'terryma/vim-expand-region'
 " syntax checker
 Plugin 'vim-syntastic/syntastic'
+" global search tool
+Plugin 'mileszs/ack.vim'
 
 " vundle plugins must be added before this line
 call vundle#end()
@@ -241,6 +243,11 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " left-align comment delimiters (instead of aligning w/ code)
 let g:NERDDefaultAlign = 'left'
+
+" use the silver searcher for faster searching if available
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 set foldmethod=syntax
 
