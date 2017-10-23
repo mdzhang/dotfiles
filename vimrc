@@ -13,6 +13,7 @@
 "    -> Files and backups
 "    -> Text, tab and indent related
 "    -> Moving around, tabs and buffers
+"    -> Editing mappings
 "    -> Status line
 "    -> Helper functions
 "
@@ -59,8 +60,20 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'terryma/vim-expand-region'
 " syntax checker
 Plugin 'vim-syntastic/syntastic'
-" global search tool
+" code search tool
 Plugin 'mileszs/ack.vim'
+" git integration
+Plugin 'tpope/vim-fugitive'
+" search everything
+Plugin 'kien/ctrlp.vim'
+
+" Python specific
+" code folding
+Plugin 'tmhedberg/SimpylFold'
+" auto indentation
+Plugin 'vim-scripts/indentpython.vim'
+" auto completion
+Plugin 'davidhalter/jedi-vim'
 
 " vundle plugins must be added before this line
 call vundle#end()
@@ -84,8 +97,7 @@ set ffs=unix,dos,mac
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
+set fileformat=unix
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -187,6 +199,9 @@ endtry
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" use system clipboard
+set clipboard=unnamed
+
 " replace tab with spaces, except for makefiles
 set expandtab
 
@@ -196,6 +211,10 @@ set smarttab
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=79
+set autoindent
 
 " Linebreak on 500 characters
 set lbr
@@ -219,9 +238,6 @@ set list
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-nmap <Leader>tt :TagbarToggle
-nmap nt :NERDTreeToggle
 
 " open up NERDTree automatically
 autocmd vimenter * NERDTree
@@ -249,7 +265,18 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+" enable code folding
 set foldmethod=syntax
+set foldlevel=99
+
+""""""""""""""""""""""""""""""
+" => Editing mappings
+""""""""""""""""""""""""""""""
+
+nmap <Leader>tt :TagbarToggle
+nmap nt :NERDTreeToggle
+
+nnoremap <space> za
 
 """"""""""""""""""""""""""""""
 " => Status line
