@@ -1,9 +1,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Maintainer: 
+" Maintainer:
 "       Michelle Zhang
 "       http://mdzhang.com - zhang.michelle.d@gmail.com
 "
-" Raw_version: 
+" Raw_version:
 "       http://github.com/mdzhang/dotfiles/blob/master/vimrc
 "
 " Sections:
@@ -74,6 +74,8 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 " auto completion
 Plugin 'davidhalter/jedi-vim'
+" improved syntax highlighting
+Plugin 'vim-python/python-syntax'
 
 " vundle plugins must be added before this line
 call vundle#end()
@@ -107,7 +109,9 @@ set fileformat=unix
 set scrolloff=7
 
 " show the cursor position all the time
-set ruler         
+set ruler
+
+set colorcolumn=80
 
 " height of the command bar
 set cmdheight=2
@@ -117,13 +121,13 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 " ignore case when searching
-set ignorecase    
+set ignorecase
 " when searching, be smart about case
 set smartcase
 " highlight search results
-set hlsearch      
+set hlsearch
 " do incremental searching i.e. highlight as pattern typed
-set incsearch     
+set incsearch
 
 " use magic for regular expressions
 set magic
@@ -134,7 +138,7 @@ set showmatch
 set mat=2
 
 " no annoying sound on errors
-set noerrorbells  
+set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
@@ -158,8 +162,6 @@ set showcmd
 " enable syntax highlighting
 syntax enable
 
-" treat files with .es6 extension as JS files
-au BufNewFile,BufRead *.es6 set filetype=javascript
 
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
@@ -167,7 +169,11 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 " set background=dark
-colorscheme monokai
+try
+    colorscheme monokai
+catch
+endtry
+
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -177,12 +183,25 @@ if has("gui_running")
     set guitablabel=%M\ %t
 endif
 
+" Javascript specific
+
+" treat files with .es6 extension as JS files
+au BufNewFile,BufRead *.es6 set filetype=javascript
+
+" Python specific
+
+" prefer more highlighting
+let g:python_highlight_all = 1
+
+" prefer flake8/pep8 over pylint
+let g:syntastic_python_checkers = ['flake8', 'pep8']
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " do not keep backup files
-set nobackup      
+set nobackup
 set nowb
 set noswapfile
 
@@ -225,7 +244,7 @@ set ai
 " smart indent
 set si
 " wrap lines
-set wrap 
+set wrap
 
 " have indentLine plugin show leading spaces
 let g:indentLine_leadingSpaceEnabled = 1
@@ -234,6 +253,9 @@ let g:indentLine_leadingSpaceChar = '.'
 " show trailing spaces
 set listchars=trail:.
 set list
+
+" trim trailing whitespace
+autocmd BufWritePre * :call TrimWhitespace()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
@@ -247,6 +269,9 @@ autocmd vimenter * NERDTree
 
 " close vim if only a NERDTree is left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" don't display these in file directory
+let NERDTreeIgnore = ['\.pyc$', '\.egg-info$']
 
 " add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -304,3 +329,9 @@ function! HasPaste()
     endif
     return ''
 endfunction
+
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    %s/\s\+$//e
+    call winrestview(l:save)
+endfun
