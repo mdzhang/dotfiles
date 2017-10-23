@@ -8,11 +8,15 @@ fi
 
 mkdir -p ~/media/data/movies
 mkdir -p ~/media/data/tv
+mkdir -p ~/media/data/books
 
 mkdir -p ~/media/configs/plex
 mkdir -p ~/media/configs/sickrage
 mkdir -p ~/media/configs/couchpotato
 mkdir -p ~/media/configs/transmission
+
+# Create GPG directories
+gpg --list-keys
 
 # Grab Vundle source code
 git submodule init

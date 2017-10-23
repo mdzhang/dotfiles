@@ -6,18 +6,13 @@ Personal dotfiles. Uses Thoughbot's [rcm][rcm]
 
 1. Follow [laptop setup here][laptop]
 
-OR
-
-1. Install [Homebrew](http://brew.sh/) and [git](https://git-scm.com/)
-
 ## Installation
 
 ### Manual
 
-1. Grab source code
-
-    ```
-    git clone git://github.com/mdzhang/dotfiles.git ~/.dotfiles
+1. Grab source code 
+    ```sh
+    git clone git@github.com:mdzhang/dotfiles.git
     ```
 
 1. Install [rcm][rcm]
@@ -30,15 +25,8 @@ OR
 1. Install dotfiles
 
     ```
-    env RCRC=$HOME/.dotfiles/rcrc rcup
+    env DOT_PATH=$HOME/.dotfiles env RCRC=$HOME/.dotfiles/rcrc rcup
     ```
-
-### Using Homebrew
-
-```
-brew tap mdzhang/formulae
-brew install mdzhang/formulae/dotfiles
-```
 
 ## Customization
 
