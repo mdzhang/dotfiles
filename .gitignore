@@ -1,3 +1,4 @@
+vimrc.local
 configs/bash/configs/secrets.bash
 configs/vim/undo
 configs/vim/bundle

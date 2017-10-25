@@ -9,6 +9,7 @@
 .envrc
 .env
 *.pem
+secrets/
 
 # Generic ignore directories
 tmp/

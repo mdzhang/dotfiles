@@ -9,5 +9,5 @@ if [ ! -z "${GOPATH}" ]; then
   mkdir -p $HOME/Code/mdzhang/go/src/github.com/mdzhang
 fi
 
-# NB: causes CLI to freeze up
-vim +PluginInstall +qall
+# NB: causes cli to freeze up
+~/.vim/bin/install

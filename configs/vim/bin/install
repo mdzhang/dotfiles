@@ -1,0 +1,12 @@
+#!/bin/bash
+cd ~/.vim
+
+if !(grep --quiet --no-messages lazy_load ~/.vim/bundle/Vundle.vim/autoload/vundle.vim); then
+  echo "Installing Vundle..."
+  echo ""
+  rm -rf ~/.vim/bundle/Vundle.vim
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
+
+vim -c VundleInstall -c quitall
+
