@@ -67,6 +67,13 @@ else
     " improved syntax highlighting
     Plugin 'vim-python/python-syntax'
 
+    "
+    " Javascript
+    "
+
+    Plugin 'pangloss/vim-javascript'
+    Plugin 'mxw/vim-jsx'
+
     " vundle plugins must be added before this line
     call vundle#end()
 
