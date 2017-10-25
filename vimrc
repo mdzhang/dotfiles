@@ -271,7 +271,23 @@ autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " don't display these in file directory
-let NERDTreeIgnore = ['\.pyc$', '\.egg-info$']
+let NERDTreeIgnore = [
+    \'\.pyc$',
+    \'\.egg-info$',
+    \'__pycache__$',
+    \'.ropeproject',
+    \'sdist',
+    \'\.eggs',
+    \'\.tox',
+    \'node_modules$',
+    \'\.coverage$',
+    \'\.cache$',
+    \'dist',
+    \'build',
+    \'.idea',
+    \'\.DS_Store'
+    \]
+
 
 " show dot/hidden files in file directory
 let NERDTreeShowHidden=1

@@ -5,7 +5,7 @@
   gpgsign = true
 [core]
   editor = vim
-	excludesfile = /Users/mdzhang/.gitignore_global
+	excludesfile = /Users/mdzhang/.ignore
 [pull]
   rebase = true
 [push]
@@ -73,7 +73,7 @@
   ch = diff HEAD^ HEAD
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
