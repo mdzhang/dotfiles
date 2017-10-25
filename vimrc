@@ -273,6 +273,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " don't display these in file directory
 let NERDTreeIgnore = ['\.pyc$', '\.egg-info$']
 
+" show dot/hidden files in file directory
+let NERDTreeShowHidden=1
+
 " add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 
