@@ -1,8 +1,12 @@
 #!/bin/bash
 echo 'Running rcm post-up hook'
 
-if [ -f ~/.duti ]; then
-  duti ~/.duti
+if [ "$(uname)" == "Darwin" ]; then
+    if [ -f ~/.duti ]; then
+      duti ~/.duti
+    fi
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    wget --quiet --output-document - https://raw.githubusercontent.com/rupa/z/master/z.sh >> ~/.bashrc.local
 fi
 
 if [ ! -z "${GOPATH}" ]; then
