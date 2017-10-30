@@ -39,6 +39,8 @@ else
     Plugin 'flazz/vim-colorschemes'
     " show whitespace
     Plugin 'Yggdroot/indentLine'
+    " autocompletion
+    Plugin 'ervandew/supertab'
     " file system explorer
     Plugin 'scrooloose/nerdtree'
     " easily bulk un/comment regions
@@ -62,8 +64,6 @@ else
     Plugin 'tmhedberg/SimpylFold'
     " auto indentation
     Plugin 'vim-scripts/indentpython.vim'
-    " auto completion
-    Plugin 'davidhalter/jedi-vim'
     " improved syntax highlighting
     Plugin 'vim-python/python-syntax'
 
