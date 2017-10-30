@@ -2,6 +2,13 @@
 
 Personal dotfiles. Uses Thoughbot's [rcm][rcm]
 
+Supports:
+
+* OS X High Sierra (10.13)
+* Raspbian (8, jessie)
+
+Older versions may work but aren't regularly tested
+
 ## Pre-installation
 
 1. Follow [laptop setup here][laptop]
@@ -10,17 +17,12 @@ Personal dotfiles. Uses Thoughbot's [rcm][rcm]
 
 ### Manual
 
-1. Grab source code 
+1. Grab source code
     ```sh
     git clone git@github.com:mdzhang/dotfiles.git
     ```
 
 1. Install [rcm][rcm]
-
-    ```
-    brew tap thoughtbot/formulae
-    brew install rcm
-    ```
 
 1. Install dotfiles
 
