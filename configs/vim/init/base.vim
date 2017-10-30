@@ -140,7 +140,7 @@ endif
 
 set background=dark
 try
-    colorscheme monokai
+    colorscheme Monokai
 catch
 endtry
 
