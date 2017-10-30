@@ -23,7 +23,8 @@ set history=500
 set autoread
 
 " set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
+set encoding=utf-8
+set fileencoding=utf-8
 
 " use Unix as the standard file type
 set ffs=unix,dos,mac
