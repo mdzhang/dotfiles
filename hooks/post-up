@@ -9,9 +9,5 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     wget --quiet --output-document - https://raw.githubusercontent.com/rupa/z/master/z.sh >> ~/.bashrc.local
 fi
 
-if [ ! -z "${GOPATH}" ]; then
-  mkdir -p $HOME/Code/mdzhang/go/src/github.com/mdzhang
-fi
-
 # NB: causes cli to freeze up
 ~/.vim/bin/install

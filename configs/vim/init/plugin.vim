@@ -8,6 +8,15 @@ if executable('ag')
 endif
 
 " ----------
+" Plugin 'kien/ctrlp.vim'
+" ----------
+
+if executable('ag')
+  " use ag in CtrlP for more quickly listing files while respecting .gitignore
+  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
+endif
+
+" ----------
 " Plugin 'vim-syntastic/syntastic'
 " ----------
 

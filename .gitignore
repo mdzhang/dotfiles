@@ -1,5 +1,5 @@
 vimrc.local
-configs/bash/configs/secrets.bash
+configs/bash/init/secrets.bash
 configs/vim/undo
 configs/vim/bundle
 !configs/vim/bundle/Vundle.vim

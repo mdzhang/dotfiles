@@ -12,3 +12,8 @@ shopt -s checkwinsize
 
 # append to the history file, don't overwrite it
 shopt -s histappend
+
+ssh-add -l | grep "The agent has no identities" > /dev/null
+if [ $? -eq 0 ]; then
+  ssh-add
+fi

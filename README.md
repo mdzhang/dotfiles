@@ -19,7 +19,7 @@ Older versions may work but aren't regularly tested
 
 1. Grab source code
     ```sh
-    git clone git@github.com:mdzhang/dotfiles.git
+    git clone git@github.com:mdzhang/dotfiles.git ~/.dotfiles
     ```
 
 1. Install [rcm][rcm]
@@ -36,7 +36,7 @@ After updating dotfiles locally, run `rcup` again to update
 
 ### Sensitive Information
 
-Add to `configs/bash/configs/secrets.sh`
+Add to `configs/bash/init/secrets.sh`
 
 ## Authors
 

@@ -1,3 +1,0 @@
-function get_color_256 {
-  echo $(escape_color "[38;5;$1m")
-}

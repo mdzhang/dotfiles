@@ -15,6 +15,9 @@ mkdir -p ~/media/configs/sickrage
 mkdir -p ~/media/configs/couchpotato
 mkdir -p ~/media/configs/transmission
 
+# for source code dir generally and golang dir
+mkdir -p ~/opt/mdzhang/go/src/github.com/mdzhang
+
 # Create GPG directories
 gpg --list-keys
 
