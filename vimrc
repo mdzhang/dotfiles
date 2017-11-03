@@ -74,6 +74,12 @@ else
     Plugin 'pangloss/vim-javascript'
     Plugin 'mxw/vim-jsx'
 
+    "
+    " Golang
+    "
+
+    Plugin 'fatih/vim-go'
+
     " vundle plugins must be added before this line
     call vundle#end()
 
