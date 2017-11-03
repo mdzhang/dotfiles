@@ -56,6 +56,8 @@ let NERDTreeIgnore = [
     \'\.eggs',
     \'\.tox',
     \'node_modules$',
+    \'coverage$',
+    \'coverage_html$',
     \'\.coverage$',
     \'\.cache$',
     \'dist',
