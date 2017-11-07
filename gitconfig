@@ -59,6 +59,8 @@
 
   reh = reset --hard
 
+  tgs = show-ref --abbrev=7 --tags
+
   unstage = reset HEAD --
   last = log -1 --pretty=format:\"%h %an, %ar : %s\" HEAD
   llog = log -20 --decorate --pretty=format:\"%h %an, %ar : %s\" HEAD
