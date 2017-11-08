@@ -1,4 +1,33 @@
 " ----------
+" Helper functions
+" ----------
+
+function! ReadIgnores()
+  let ignore = $HOME . "/.ignore"
+  let iglist = []
+  if filereadable(ignore)
+    for oline in readfile(ignore)
+       " ignore comments and empty lines
+       let line = substitute(oline, '\s|\n|\r', '', "g")
+       if line =~ '^#' | con | endif
+       if line == ''   | con | endif
+       call add(iglist, line)
+     endfor
+  endif
+  return iglist
+endfunction
+
+function! ConvertNerdTreeIgnores(ignores)
+    let iglist = []
+    for ignore in a:ignores
+        let cig = substitute(ignore, "^\\*", "", "")
+        let cigf = substitute(cig, "^\\.", "\\\\.", "")
+        call add(iglist, cigf)
+    endfor
+    return iglist
+endfunction
+
+" ----------
 " Plugin 'mileszs/ack.vim'
 " ----------
 
@@ -47,24 +76,7 @@ autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " don't display these in file directory
-let NERDTreeIgnore = [
-    \'\.pyc$',
-    \'\.egg-info$',
-    \'__pycache__$',
-    \'.ropeproject',
-    \'sdist',
-    \'\.eggs',
-    \'\.tox',
-    \'node_modules$',
-    \'coverage$',
-    \'coverage_html$',
-    \'\.coverage$',
-    \'\.cache$',
-    \'dist',
-    \'build',
-    \'.idea',
-    \'\.DS_Store'
-    \]
+let NERDTreeIgnore = ConvertNerdTreeIgnores(ReadIgnores())
 
 " show dot/hidden files in file directory
 let NERDTreeShowHidden=1

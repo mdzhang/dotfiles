@@ -3,7 +3,6 @@
 *.log
 *.dump
 *.swp
-*~
 
 # Secrets
 .envrc
