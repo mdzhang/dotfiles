@@ -145,7 +145,7 @@ endif
 
 set background=dark
 try
-    colorscheme monokai-chris
+    colorscheme hybrid
 catch
 endtry
 

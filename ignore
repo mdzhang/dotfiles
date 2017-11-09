@@ -16,6 +16,7 @@ tmp/
 build/
 dist/
 htmlcov/
+logs/
 .tox/
 .coverage/
 coverage/
