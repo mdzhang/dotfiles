@@ -1,7 +1,5 @@
 " treat files with .es6 extension as JS files
 au BufNewFile,BufRead *.es6 set filetype=javascript
-autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " ----------
 " Plugin 'vim-syntastic/syntastic'

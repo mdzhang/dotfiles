@@ -55,6 +55,8 @@ else
     Plugin 'tpope/vim-fugitive'
     " search everything
     Plugin 'kien/ctrlp.vim'
+    " cross-editor config
+    Plugin 'editorconfig/editorconfig-vim'
 
     "
     " Python
