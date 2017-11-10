@@ -26,8 +26,8 @@
   cd = commit --amend
   cad = commit -a --amend
 
-  d = diff
-  dc = diff --cached
+  d = difftool
+  dc = difftool --cached
 
   f = fetch
 
@@ -73,9 +73,9 @@
 
   # Diff of last 2 commits
   ch = diff HEAD^ HEAD
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
