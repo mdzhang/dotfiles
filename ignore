@@ -1,14 +1,29 @@
 # Always-ignore file extensions
 *.diff
+*.dll
 *.dump
+*.dylib
+*.exe
 *.log
+*.out
 *.pem
+*.pid*
+*.so
+*.sqlite3
 *.swp
+*.test
 
 # Secrets
 .env
 .envrc
 secrets/
+
+# local environments
+.env/
+.venv/
+env/
+venv/
+ENV/
 
 # Generic ignore directories
 .coverage/
@@ -39,7 +54,6 @@ node_modules/
 *.egg-info/
 *.py[cod]
 *.pyc
-*.so
 .eggs/
 .ropeproject/
 __pycache__/
@@ -47,6 +61,13 @@ develop-eggs/
 docs/_build/
 eggs/
 sdist/
+wheels/
+
+# Golang
+.glide/
+
+# Ruby
+.bundle/
 
 # VCS
 .git/
