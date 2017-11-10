@@ -1,47 +1,54 @@
-# Always-ignore extensions
+# Always-ignore file extensions
 *.diff
-*.log
 *.dump
+*.log
+*.pem
 *.swp
 
 # Secrets
-.envrc
 .env
-*.pem
+.envrc
 secrets/
 
 # Generic ignore directories
-tmp/
+.coverage/
+.tox/
 build/
+coverage/
 dist/
 htmlcov/
 logs/
-.tox/
-.coverage/
-coverage/
+tmp/
 
 # OS
 .DS_Store
 
 # Editors and IDEs
-.idea/*
+.idea/
 *.iml
 
-# Javascript
+# CSS
 .sass-cache/
+
+# Javascript
 node_modules/
 
 # Python
-__pycache__
-docs/_build/
-*.pyc
-develop-eggs/
-eggs/
-.eggs/
-sdist/
-*.egg-info/
-*.egg
-*.py[cod]
 *$py.class
+*.egg
+*.egg-info/
+*.py[cod]
+*.pyc
 *.so
+.eggs/
 .ropeproject/
+__pycache__/
+develop-eggs/
+docs/_build/
+eggs/
+sdist/
+
+# VCS
+.git/
+.hg/
+.svn/

@@ -1,4 +1,48 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Helper functions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" returns true if paste mode is enabled
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    endif
+    return ''
+endfunction
+
+function! TrimWhitespace()
+    let l:save = winsaveview()
+    %s/\s\+$//e
+    call winrestview(l:save)
+endfunction
+
+function! ReadIgnores()
+  let ignore = $HOME . "/.ignore"
+  let iglist = []
+  if filereadable(ignore)
+    for oline in readfile(ignore)
+       " ignore comments, empty lines, and gitignore exclusion rules
+       let line = substitute(oline, '\s|\n|\r', '', "g")
+       if line =~ '^#' | con | endif
+       if line == ''   | con | endif
+       if ignore =~ '^!' | con | endif
+       call add(iglist, line)
+     endfor
+  endif
+  return iglist
+endfunction
+
+function! ConvertWildIgnores(ignores)
+    let igstring = ''
+    for ignore in a:ignores
+        " remove trailing slashes
+        let cig = substitute(ignore, '\/$', '', "g")
+        let igstring .= "," . cig
+    endfor
+    return igstring
+endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -40,6 +84,17 @@ set ignorecase
 set smartcase
 " do incremental searching i.e. highlight as pattern typed
 set incsearch
+
+if has("wildmenu")
+    " have vim tab complete behave like bash tab complete
+    set wildmenu
+    set wildmode=longest,list
+
+    " set wildignore
+    set wildignore=*~,.git
+    let s:wildignores = ConvertWildIgnores(ReadIgnores())
+    let &wildignore .= s:wildignores
+endif
 
 " use magic for regular expressions
 set magic
@@ -165,21 +220,3 @@ let mapleader = ","
 let maplocalleader = ","
 
 nnoremap <space> za
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Helper functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    endif
-    return ''
-endfunction
-
-fun! TrimWhitespace()
-    let l:save = winsaveview()
-    %s/\s\+$//e
-    call winrestview(l:save)
-endfun

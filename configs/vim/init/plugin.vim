@@ -1,33 +1,4 @@
 " ----------
-" Helper functions
-" ----------
-
-function! ReadIgnores()
-  let ignore = $HOME . "/.ignore"
-  let iglist = []
-  if filereadable(ignore)
-    for oline in readfile(ignore)
-       " ignore comments and empty lines
-       let line = substitute(oline, '\s|\n|\r', '', "g")
-       if line =~ '^#' | con | endif
-       if line == ''   | con | endif
-       call add(iglist, line)
-     endfor
-  endif
-  return iglist
-endfunction
-
-function! ConvertNerdTreeIgnores(ignores)
-    let iglist = []
-    for ignore in a:ignores
-        let cig = substitute(ignore, "^\\*", "", "")
-        let cigf = substitute(cig, "^\\.", "\\\\.", "")
-        call add(iglist, cigf)
-    endfor
-    return iglist
-endfunction
-
-" ----------
 " Plugin 'mileszs/ack.vim'
 " ----------
 
@@ -42,7 +13,7 @@ endif
 
 if executable('ag')
   " use ag in CtrlP for more quickly listing files while respecting .gitignore
-  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
+  let g:ctrlp_user_command = 'ag -Q -l --hidden -g "" %s'
 endif
 
 " ----------
@@ -76,7 +47,7 @@ autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " don't display these in file directory
-let NERDTreeIgnore = ConvertNerdTreeIgnores(ReadIgnores())
+let NERDTreeRespectWildIgnore = 1
 
 " show dot/hidden files in file directory
 let NERDTreeShowHidden=1
