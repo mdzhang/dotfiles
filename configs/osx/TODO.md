@@ -37,4 +37,5 @@ Figure out how to script the following:
         - `/Applications`
         - `~/opt`
         - `~/media`
-
+1. [Maximize keyboard shortcut](http://simianuprising.com/2010/03/15/mac-osx-setting-a-keyboard-shortcut-for-maximizeresize-window-green-jewel/)
+1. Disable Mission Control keyboard shortcuts (i.e. C-u, C-d, etc.) since they interfere w/ tmux

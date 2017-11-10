@@ -5,6 +5,12 @@ if [ "$(uname)" == "Darwin" ]; then
     if [ -f ~/.duti ]; then
       duti ~/.duti
     fi
+
+    # use homebrew bash
+    LINE='/usr/local/bin/bash'
+    FILE=/etc/shells
+    sudo grep -qF "$LINE" "$FILE" || sudo bash -c 'echo "$LINE" > $FILE'
+    sudo chsh -s $LINE $USER
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     wget --quiet --output-document - https://raw.githubusercontent.com/rupa/z/master/z.sh >> ~/.bashrc.local
 fi

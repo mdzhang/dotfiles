@@ -1,0 +1,4 @@
+# use vi cmds in any GNU readline-based tool e.g. bash, mysql
+set editing-mode vi
+# show vi mode in prompt
+set show-mode-in-prompt on
