@@ -59,6 +59,12 @@ else
     Plugin 'editorconfig/editorconfig-vim'
 
     "
+    " Markdown
+    "
+    Plugin 'godlygeek/tabular'
+    Plugin 'plasticboy/vim-markdown'
+
+    "
     " Python
     "
 

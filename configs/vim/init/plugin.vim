@@ -32,6 +32,8 @@ let g:syntastic_check_on_wq = 0
 " show leading spaces
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '.'
+" don't conceal chars in e.g. markdown, json
+let g:indentLine_setConceal = 0
 
 " ----------
 " Plugin 'scrooloose/nerdtree'
