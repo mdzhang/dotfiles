@@ -18,6 +18,9 @@ mkdir -p ~/media/configs/transmission
 # for source code dir generally and golang dir
 mkdir -p ~/opt/mdzhang/go/src/github.com/mdzhang
 
+# for neovim
+mkdir -p ~/.config/nvim
+
 # Create GPG directories
 gpg --list-keys
 

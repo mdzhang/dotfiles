@@ -1,4 +1,5 @@
 export RCRC=$DOT_PATH/rcrc
+export XDG_CONFIG_HOME=$HOME/.config
 
 #
 # language

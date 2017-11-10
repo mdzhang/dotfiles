@@ -11,6 +11,9 @@ if [ "$(uname)" == "Darwin" ]; then
     FILE=/etc/shells
     sudo grep -qF "$LINE" "$FILE" || sudo bash -c 'echo "$LINE" > $FILE'
     sudo chsh -s $LINE $USER
+
+    # setup neovim
+    ln -fs ~/.nvimrc ~/.config/nvim/init.vim
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     wget --quiet --output-document - https://raw.githubusercontent.com/rupa/z/master/z.sh >> ~/.bashrc.local
 fi

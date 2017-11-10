@@ -43,3 +43,4 @@ alias nr='npm run'
 alias lni='local_network_ip'
 
 alias ag='ag --path-to-ignore ~/.ignore'
+alias vim='nvim'
