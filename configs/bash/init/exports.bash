@@ -44,6 +44,10 @@ export PROMPT_DIRTRIM=2
 export PROMPT_COMMAND="find_git_branch; find_git_dirty; $PROMPT_COMMAND"
 export PS1=$(get_prompt)
 
+
+export GOPATH=$HOME/opt/mdzhang/go
+export PATH=$PATH:$(go env GOPATH)/bin
+
 #
 # OS X
 #

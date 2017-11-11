@@ -34,6 +34,7 @@ dist/
 htmlcov/
 logs/
 tmp/
+vendor/
 
 # OS
 .DS_Store

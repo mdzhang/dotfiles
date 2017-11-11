@@ -17,8 +17,6 @@ fi
 
 if which goenv > /dev/null; then
   eval "$(goenv init -)";
-  export GOPATH=$HOME/opt/mdzhang/go
-  export PATH=$PATH:$(go env GOPATH)/bin
 fi
 
 if which direnv > /dev/null; then

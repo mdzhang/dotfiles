@@ -1,3 +1,5 @@
+bashrc.local
+gitconfig.local
 vimrc.local
 configs/bash/init/secrets.bash
 configs/vim/undo
