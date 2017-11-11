@@ -59,6 +59,11 @@ else
     Plugin 'editorconfig/editorconfig-vim'
 
     "
+    " JSON
+    "
+    Plugin 'elzr/vim-json'
+
+    "
     " Markdown
     "
     Plugin 'godlygeek/tabular'

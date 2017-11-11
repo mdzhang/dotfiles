@@ -26,14 +26,18 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " ----------
+" Plugin 'elzr/vim-json'
+" ----------
+
+let g:vim_json_syntax_conceal = 0
+
+" ----------
 " Plugin 'Yggdroot/indentLine'
 " ----------
 
 " show leading spaces
 let g:indentLine_leadingSpaceEnabled = 1
-let g:indentLine_leadingSpaceChar = '.'
-" don't conceal chars in e.g. markdown, json
-let g:indentLine_setConceal = 0
+let g:indentLine_leadingSpaceChar = '␣'
 
 " ----------
 " Plugin 'scrooloose/nerdtree'

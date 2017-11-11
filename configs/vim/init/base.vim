@@ -160,7 +160,7 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 set wrap
 
 " show trailing spaces
-set listchars=trail:.
+set listchars=tab:→\ ,eol:↲,trail:␣,nbsp:•
 set list
 
 "
