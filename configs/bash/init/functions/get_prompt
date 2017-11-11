@@ -10,12 +10,12 @@ function get_color_256 {
   echo $(escape_color "[38;5;$1m")
 }
 
-BLUE=$(get_color_256 "117")
-PURPLE=$(get_color_256 "141")
-YELLOW=$(get_color_256 "228")
-ORANGE=$(get_color_256 "220")
-GREEN=$(get_color_256 "119")
-RED=$(get_color_256 "202")
+BLUE=$(get_color_256 "111")
+PURPLE=$(get_color_256 "104")
+YELLOW=$(get_color_256 "220")
+ORANGE=$(get_color_256 "166")
+GREEN=$(get_color_256 "106")
+RED=$(get_color_256 "124")
 COLOR_NONE="\e[0m"
 
 function get_prompt {
@@ -27,5 +27,12 @@ function get_prompt {
   fi
 
   # just shows user and path
-  echo "${GREEN}[\T]${RED}${env}:${ORANGE}\W ${PURPLE}\$git_branch ${BLUE}\$ "
+  echo "${GREEN}[\T]${RED}${env}:${YELLOW}\W ${PURPLE}\$git_branch ${BLUE}\$ "
+}
+
+function print_colors {
+  for C in {16..255}; do
+    local color=$(get_color_256 "$C")
+    echo -en "${COLOR_NONE}${color} - $C\n"
+  done
 }
