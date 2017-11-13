@@ -48,7 +48,7 @@ else
     " easily expand/collapse visually selected region
     Plugin 'terryma/vim-expand-region'
     " syntax checker
-    Plugin 'vim-syntastic/syntastic'
+    Plugin 'w0rp/ale'
     " code search tool
     Plugin 'mileszs/ack.vim'
     " git integration
