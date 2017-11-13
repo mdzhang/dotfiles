@@ -30,6 +30,7 @@ ENV/
 .tox/
 build/
 coverage/
+coverage_html/
 dist/
 htmlcov/
 logs/
@@ -57,6 +58,7 @@ node_modules/
 *.pyc
 .eggs/
 .ropeproject/
+.tox/
 __pycache__/
 develop-eggs/
 docs/_build/
