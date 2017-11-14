@@ -220,3 +220,6 @@ let mapleader = ","
 let maplocalleader = ","
 
 nnoremap <space> za
+
+" shorcut for using PCRE substitution instead of weird vim substitution
+command Re perldo
