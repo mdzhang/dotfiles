@@ -81,3 +81,15 @@ let g:NERDDefaultAlign = 'left'
 " ----------
 
 nmap <Leader>tt :TagbarToggle
+
+" ----------
+" Plugin 'w0rp/ale'
+" ----------
+
+let g:ale_open_list = 1
+
+" ----------
+" Plugin 'vim-airline/vim-airline'
+" ----------
+
+let g:airline#extensions#ale#enabled = 1
