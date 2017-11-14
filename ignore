@@ -1,31 +1,56 @@
-# Always-ignore file extensions
-*.diff
+# Compiled source #
+###################
+*.com
+*.class
 *.dll
-*.dump
 *.dylib
 *.exe
+*.o
+*.so
+
+# Logs, databases, and backups #
+################################
+*.db
+*.dump
 *.log
 *.out
-*.pem
-*.pid*
-*.so
 *.sqlite3
 *.swp
+
+# Compressed #
+##############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Extras #
+##########
+*.diff
+*.pid
 *.test
 
-# Secrets
+# Secrets #
+###########
+*.pem
 .env
 .envrc
 secrets/
 
-# local environments
+# Local environments #
+######################
 .env/
 .venv/
 env/
 venv/
 ENV/
 
-# Generic ignore directories
+# Generic ignore directories #
+##############################
 .coverage/
 .tox/
 build/
@@ -37,12 +62,19 @@ logs/
 tmp/
 vendor/
 
-# OS
+# OS #
+######
 .DS_Store
+.Spotlight-V100
+.Trashes
 
-# Editors and IDEs
+# Editors and IDEs #
+####################
 .idea/
 *.iml
+
+# Language specific #
+#####################
 
 # CSS
 .sass-cache/
@@ -72,7 +104,8 @@ wheels/
 # Ruby
 .bundle/
 
-# VCS
+# VCS #
+#######
 .git/
 .hg/
 .svn/
