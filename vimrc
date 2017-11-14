@@ -78,7 +78,7 @@ else
     " auto indentation
     Plugin 'vim-scripts/indentpython.vim'
     " improved syntax highlighting
-    Plugin 'vim-python/python-syntax'
+    Plugin 'hdima/python-syntax'
 
     "
     " Javascript
