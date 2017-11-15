@@ -17,6 +17,12 @@ if executable('ag')
 endif
 
 " ----------
+" Plugin 'dyng/ctrlsf.vim'
+" ----------
+
+nmap <Leader>F :CtrlSF
+
+" ----------
 " Plugin 'vim-syntastic/syntastic'
 " ----------
 
@@ -58,7 +64,7 @@ let NERDTreeRespectWildIgnore = 1
 " show dot/hidden files in file directory
 let NERDTreeShowHidden=1
 
-nmap nt :NERDTreeToggle
+nmap <Leader>nt :NERDTreeToggle
 
 " ----------
 " Plugin 'scrooloose/nerdcommenter'
@@ -77,7 +83,7 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDDefaultAlign = 'left'
 
 " ----------
-" Plugin 'scrooloose/nerdcommenter'
+" Plugin 'majutsushi/tagbar'
 " ----------
 
 nmap <Leader>tt :TagbarToggle

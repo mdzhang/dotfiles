@@ -51,6 +51,9 @@ else
     Plugin 'w0rp/ale'
     " code search tool
     Plugin 'mileszs/ack.vim'
+    " code search/replace tools
+    Plugin 'dyng/ctrlsf.vim'
+    Plugin 'terryma/vim-multiple-cursors'
     " git integration
     Plugin 'tpope/vim-fugitive'
     " search everything
