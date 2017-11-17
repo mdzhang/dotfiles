@@ -64,6 +64,9 @@ let NERDTreeRespectWildIgnore = 1
 " show dot/hidden files in file directory
 let NERDTreeShowHidden=1
 
+" show line numbers in file directory
+let NERDTreeShowLineNumbers=1
+
 nmap <Leader>nt :NERDTreeToggle
 
 " ----------
@@ -85,6 +88,12 @@ let g:NERDDefaultAlign = 'left'
 " ----------
 " Plugin 'majutsushi/tagbar'
 " ----------
+
+" autofocus tagbar on open
+let g:tagbar_autofocus = 1
+
+" use the global line number settings
+let g:tagbar_show_linenumbers = -1
 
 nmap <Leader>tt :TagbarToggle
 
