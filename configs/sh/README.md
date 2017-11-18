@@ -1,0 +1,1 @@
+Posix shell compliant configs

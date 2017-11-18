@@ -1,4 +1,12 @@
-function brew_update() {
+#!/bin/sh
+
+#
+# Configuration for packages installed with Homebrew
+#
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+brew_update() {
   brew doctor
   brew update
   brew upgrade --cleanup
@@ -20,7 +28,7 @@ if which goenv > /dev/null; then
 fi
 
 if which direnv > /dev/null; then
-  eval "$(direnv hook bash)"
+  eval "$(direnv hook $SHELL_NAME)"
 fi
 
 if which pyenv > /dev/null; then

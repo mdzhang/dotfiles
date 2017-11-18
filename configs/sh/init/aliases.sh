@@ -1,3 +1,5 @@
+#!/bin/sh
+
 alias root='sudo su'
 
 # Prevents accidentally clobbering files

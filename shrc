@@ -1,0 +1,28 @@
+#!/bin/sh
+
+export DOT_PATH=$HOME/.dotfiles
+
+_load_settings() {
+  _dir="$1"
+  if [ -d "$_dir" ];
+  then
+    for config in $_dir/*; do
+      if [ -f "$config" ]; then
+        . "$config"
+      fi
+    done
+  elif [ -f "$_dir" ];
+  then
+    . "$_dir"
+  else
+    echo "Could not load setting $_dir"
+  fi
+}
+
+_load_settings "$DOT_PATH/configs/sh/init/pre"
+_load_settings "$DOT_PATH/configs/sh/init"
+
+if [ -f ~/.shrc.local ]; then
+  . ~/.shrc.local
+fi
+

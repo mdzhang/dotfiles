@@ -1,7 +1,7 @@
 bashrc.local
 gitconfig.local
 vimrc.local
-configs/bash/init/secrets.bash
+configs/sh/init/secrets.bash
 configs/vim/undo
 configs/vim/bundle
 !configs/vim/bundle/Vundle.vim
