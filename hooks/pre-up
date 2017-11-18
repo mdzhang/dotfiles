@@ -29,6 +29,6 @@ mkdir -p ~/.config/nvim
 # create GPG directories
 gpg --list-keys
 
-# grab Vundle and oh-my-zsh source code
+# grab Vundle and prezto source code
 git submodule init
-git submodule update
+git submodule update --init --recursive
