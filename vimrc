@@ -76,6 +76,11 @@ else
     Plugin 'plasticboy/vim-markdown'
 
     "
+    " Docker
+    "
+    Plugin 'ekalinin/dockerfile.vim'
+
+    "
     " Python
     "
 
