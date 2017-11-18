@@ -6,6 +6,11 @@ if ! [[ -L ~/.vim ]]; then
     ln -s $DOT_PATH/configs/vim ~/.vim
 fi
 
+if ! [[ -L ~/.nvimrc ]]; then
+    ln -fs $DOT_PATH/nvimrc ~/.config/nvim/init.vim
+fi
+
+# create Plex directories
 mkdir -p ~/media/data/movies
 mkdir -p ~/media/data/tv
 mkdir -p ~/media/data/books
@@ -21,9 +26,9 @@ mkdir -p ~/opt/mdzhang/go/src/github.com/mdzhang
 # for neovim
 mkdir -p ~/.config/nvim
 
-# Create GPG directories
+# create GPG directories
 gpg --list-keys
 
-# Grab Vundle source code
+# grab Vundle and oh-my-zsh source code
 git submodule init
 git submodule update

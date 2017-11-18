@@ -6,16 +6,13 @@ if [ "$(uname)" == "Darwin" ]; then
       duti ~/.duti
     fi
 
-    # use homebrew bash
-    LINE='/usr/local/bin/bash'
+    # use homebrew-installed shell
+    LINE='/usr/local/bin/zsh'
     FILE=/etc/shells
     sudo grep -qF "$LINE" "$FILE" || sudo bash -c 'echo "$LINE" > $FILE'
     sudo chsh -s $LINE $USER
-
-    # setup neovim
-    ln -fs ~/.nvimrc ~/.config/nvim/init.vim
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    wget --quiet --output-document - https://raw.githubusercontent.com/rupa/z/master/z.sh >> ~/.bashrc.local
+    wget --quiet --output-document - https://raw.githubusercontent.com/rupa/z/master/z.sh >> ~/.shrc.local
 fi
 
 # NB: causes cli to freeze up
