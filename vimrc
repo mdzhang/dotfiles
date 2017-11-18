@@ -43,6 +43,7 @@ else
     Plugin 'ervandew/supertab'
     " file system explorer
     Plugin 'scrooloose/nerdtree'
+    Plugin 'jistr/vim-nerdtree-tabs'
     " easily bulk un/comment regions
     Plugin 'scrooloose/nerdcommenter'
     " easily expand/collapse visually selected region

@@ -223,3 +223,33 @@ nnoremap <space> za
 
 " shorcut for using PCRE substitution instead of weird vim substitution
 cabbrev pd perldo
+
+" faster tab navigation
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
+" Shift + h --> goto previous tab
+nnoremap H gT
+" Shift + l --> goto next tab
+nnoremap L gt
+" Shift + n --> open new tab
+nnoremap N :tabnew <Enter>
+" Shift + w --> close tab
+nnoremap W :close <Enter>
+
+"
+" standard editor shortcuts
+"
+
+" Ctrl + a --> select all
+map <C-a> GVgg
+" Ctrl + s --> save file
+map <C-s> :w <Enter>

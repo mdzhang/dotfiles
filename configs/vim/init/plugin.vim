@@ -86,6 +86,12 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDDefaultAlign = 'left'
 
 " ----------
+" Plugin 'jistr/vim-nerdtree-tabs'
+" ----------
+
+let g:nerdtree_tabs_open_on_console_startup = 1
+
+" ----------
 " Plugin 'majutsushi/tagbar'
 " ----------
 
