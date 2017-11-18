@@ -49,12 +49,6 @@ let g:indentLine_leadingSpaceChar = '␣'
 " Plugin 'scrooloose/nerdtree'
 " ----------
 
-" open up NERDTree automatically
-autocmd vimenter * NERDTree
-
-" autofocus last opened window
-" autocmd vimenter * wincmd p
-
 " close vim if only a NERDTree is left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -89,7 +83,7 @@ let g:NERDDefaultAlign = 'left'
 " Plugin 'jistr/vim-nerdtree-tabs'
 " ----------
 
-let g:nerdtree_tabs_open_on_console_startup = 1
+" let g:nerdtree_tabs_open_on_console_startup = 1
 
 " ----------
 " Plugin 'majutsushi/tagbar'
@@ -118,3 +112,15 @@ let g:ale_lint_on_text_changed = 'never'
 " ----------
 
 let g:airline#extensions#ale#enabled = 1
+
+" ----------
+" Plugin 'mhinz/vim-startify'
+" ----------
+
+" open up Startify and NERDTree automatically
+autocmd vimenter *
+  \   if !argc()
+  \ |   Startify
+  \ |   NERDTree
+  \ |   wincmd w
+  \ | endif

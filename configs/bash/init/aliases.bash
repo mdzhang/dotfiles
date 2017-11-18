@@ -21,6 +21,7 @@ alias c='clear'
 alias p='ps -ajx | grep'
 alias f='find . | grep'
 alias g='git'
+alias v='vim'
 
 # Easier navigation
 alias ..='cd ..'

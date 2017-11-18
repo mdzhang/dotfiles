@@ -44,6 +44,8 @@ else
     " file system explorer
     Plugin 'scrooloose/nerdtree'
     Plugin 'jistr/vim-nerdtree-tabs'
+    " fancy startup screen
+    Plugin 'mhinz/vim-startify'
     " easily bulk un/comment regions
     Plugin 'scrooloose/nerdcommenter'
     " easily expand/collapse visually selected region
