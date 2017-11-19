@@ -3,6 +3,9 @@
 export RCRC=$DOT_PATH/rcrc
 export XDG_CONFIG_HOME=$HOME/.config
 
+# set default user to hide user@host in agnoster theme (zsh and bash) prompt
+DEFAULT_USER="mdzhang"
+
 #
 # language
 #
@@ -46,12 +49,3 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 export GOPATH=$HOME/opt/mdzhang/go
 export PATH=$PATH:${GOPATH}/bin
 
-#
-# os
-#
-
-if [ "$(uname)" = "Darwin" ]; then
-    if [ -f /usr/local/bin/brew ]; then
-      _load_settings "$DOT_PATH/configs/sh/init/os/osx"
-    fi
-fi

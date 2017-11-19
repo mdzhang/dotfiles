@@ -1,6 +1,7 @@
 #!/bin/sh
 
 export DOT_PATH=$HOME/.dotfiles
+export SHELL_NAME=$(ps -hp $$ | tail -n 1 | awk '{print $4}' | cut -c 2-)
 
 _load_settings() {
   _dir="$1"
@@ -19,8 +20,16 @@ _load_settings() {
   fi
 }
 
-_load_settings "$DOT_PATH/configs/sh/init/pre"
-_load_settings "$DOT_PATH/configs/sh/init"
+modules="bundler docker general git npm vim yarn"
+
+if [ "$(uname)" = "Darwin" ]; then
+  modules="$modules brew osx"
+fi
+
+for module in $modules
+do
+  _load_settings "$DOT_PATH/configs/sh/modules/$module"
+done
 
 if [ -f ~/.shrc.local ]; then
   . ~/.shrc.local

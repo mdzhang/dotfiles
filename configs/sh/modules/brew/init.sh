@@ -4,6 +4,14 @@
 # Configuration for packages installed with Homebrew
 #
 
+if [ "$(uname)" != "Darwin" ]; then
+  exit
+fi
+
+if ! [[ -f /usr/local/bin/brew ]]; then
+  exit
+fi
+
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 brew_update() {

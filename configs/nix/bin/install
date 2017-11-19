@@ -1,0 +1,4 @@
+#!/bin/sh
+
+wget --quiet --output-document - https://raw.githubusercontent.com/rupa/z/master/z.sh >> ~/.shrc.local
+

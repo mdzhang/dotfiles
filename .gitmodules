@@ -4,3 +4,6 @@
 [submodule "configs/zsh/prezto"]
 	path = configs/zsh/prezto
 	url = git@github.com:sorin-ionescu/prezto.git
+[submodule "configs/bash/bash-it"]
+	path = configs/bash/bash-it
+	url = git@github.com:Bash-it/bash-it.git

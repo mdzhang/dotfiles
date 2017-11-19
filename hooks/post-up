@@ -1,19 +1,12 @@
-#!/bin/bash
+#!/bin/sh
 echo 'Running rcm post-up hook'
 
 if [ "$(uname)" == "Darwin" ]; then
-    if [ -f ~/.duti ]; then
-      duti ~/.duti
-    fi
-
-    # use homebrew-installed shell
-    LINE='/usr/local/bin/zsh'
-    FILE=/etc/shells
-    sudo grep -qF "$LINE" "$FILE" || sudo bash -c 'echo "$LINE" > $FILE'
-    sudo chsh -s $LINE $USER
+  $DOT_PATH/configs/osx/bin/postinstall
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    wget --quiet --output-document - https://raw.githubusercontent.com/rupa/z/master/z.sh >> ~/.shrc.local
+  $DOT_PATH/configs/nix/bin/install
 fi
 
+$DOT_PATH/configs/bash/bin/install
 # NB: causes cli to freeze up
 ~/.vim/bin/install

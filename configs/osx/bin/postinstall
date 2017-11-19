@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ -f ~/.duti ]; then
+  duti ~/.duti
+fi
+
+# use homebrew-installed shell
+LINE='/usr/local/bin/bash'
+FILE=/etc/shells
+sudo grep -qF "$LINE" "$FILE" || sudo bash -c 'echo "$LINE" > $FILE'
+sudo chsh -s $LINE $USER
+
+$DOT_PATH/configs/osx/configure

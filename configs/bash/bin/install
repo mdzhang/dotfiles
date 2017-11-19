@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+. ~/.bash_profile;
+
+# No aliases since bash-it/prezto aliases conflict, which confuses me
+# when I move between shells
+# just put aliases in configs/sh/aliases
+bashit_alias=(
+)
+
+bashit_plugin=(
+)
+
+bashit_completion=(
+  bash-it
+  brew
+  docker
+  docker-compose
+  makefile
+  npm
+  pip
+  ssh
+  system
+)
+
+for file_type in "alias" "plugin" "completion"
+do
+  eval file_types=( '"${bashit_'${file_type}'[@]}"' )
+
+  for file_to_enable in "${file_types[@]}"
+  do
+    bash-it enable $file_type $file_to_enable
+  done
+done
+

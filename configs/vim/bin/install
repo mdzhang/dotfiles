@@ -1,7 +1,7 @@
-#!/bin/bash
-cd ~/.vim
+#!/bin/sh
+cd ~/.vim || exit
 
-if !(grep --quiet --no-messages lazy_load ~/.vim/bundle/Vundle.vim/autoload/vundle.vim); then
+if ! (grep --quiet --no-messages lazy_load ~/.vim/bundle/Vundle.vim/autoload/vundle.vim); then
   echo "Installing Vundle..."
   echo ""
   rm -rf ~/.vim/bundle/Vundle.vim
