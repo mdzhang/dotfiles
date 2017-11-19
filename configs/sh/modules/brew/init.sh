@@ -64,3 +64,8 @@ fi
 if [ -d /usr/local/opt/sqlite/bin ]; then
   export PATH="/usr/local/opt/sqlite/bin:$PATH"
 fi
+
+if which thefuck > /dev/null; then
+  eval $(thefuck --alias);
+fi
+

@@ -112,7 +112,7 @@ else
 
     syntax on
 
-    runtime! init/**.vim
+    runtime! modules/**.vim
 
     if filereadable($HOME . "/.vimrc.local")
         source ~/.vimrc.local

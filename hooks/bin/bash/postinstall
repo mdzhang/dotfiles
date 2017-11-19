@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+#
+# Enable bash-it aliases/plugins/completions
+#
+
 . ~/.bash_profile;
 
 # No aliases since bash-it/prezto aliases conflict, which confuses me

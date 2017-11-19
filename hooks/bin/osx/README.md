@@ -1,4 +1,6 @@
-# OS X Setup TODOs
+# OS X Setup/Teardown scripts
+
+## TODOs
 
 Figure out how to script the following:
 

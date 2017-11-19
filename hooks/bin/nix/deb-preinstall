@@ -1,0 +1,42 @@
+#!/bin/sh
+
+fancy_echo() {
+  fmt="$1"; shift
+
+  # shellcheck disable=SC2059
+  printf "\n$fmt\n" "$@"
+}
+
+# For rcm installation
+fancy_echo "Grabbing Thoughtbot gpg key..."
+wget --quiet --output-document - https://apt.thoughtbot.com/thoughtbot.gpg.key | sudo apt-key add -
+fancy_echo "Updating Thoughtbot package sources list..."
+echo "deb http://apt.thoughtbot.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/thoughtbot.list
+
+fancy_echo "Updating apt-get..."
+sudo apt-get update
+
+fancy_echo "Installing packages..."
+sudo apt-get install -y $(sed -r 's/^(\w+)\s*#?.*/\1/g' - <<EOF
+eject       # for ejecting media
+fbterm      # more colors in terminal
+rcm         # for dotfile install/management
+udisks      # for ejecting media
+xclip       # for copying to clipboard
+vim         # goto editor
+python-rpi.gpio
+python3-rpi.gpio
+silversearcher-ag # vim code search underlying lib
+EOF
+)
+
+# TODO: Grab Hack font and install to ~/.fonts/truetype/hack/*.ttf
+
+# raspi-config sets LANG and LC_* vars but not LANGUAGE
+# which makes terminal + vim not display utf8 chars correctly
+fancy_echo "Setting locale..."
+sudo update-locale LANG=en_US.UTF-8 LANGUAGE=en.UTF-8
+
+# pip3 install pre-commit
+
+fancy_echo "Consider restarting w/\n$ sudo reboot"

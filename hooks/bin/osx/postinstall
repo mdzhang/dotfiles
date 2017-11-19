@@ -1,9 +1,11 @@
 #!/bin/sh
 
+# duti doesn't automatically read this
 if [ -f ~/.duti ]; then
   duti ~/.duti
 fi
 
+# TODO: broken
 # use homebrew-installed shell
 LINE='/usr/local/bin/bash'
 FILE=/etc/shells

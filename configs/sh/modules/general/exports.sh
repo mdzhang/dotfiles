@@ -3,9 +3,6 @@
 export RCRC=$DOT_PATH/rcrc
 export XDG_CONFIG_HOME=$HOME/.config
 
-# set default user to hide user@host in agnoster theme (zsh and bash) prompt
-DEFAULT_USER="mdzhang"
-
 #
 # language
 #

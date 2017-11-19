@@ -4,7 +4,7 @@
 # bash-it configs
 #
 
-export BASH_IT_CUSTOM="$DOT_PATH/configs/bash/init"
+export BASH_IT_CUSTOM="$DOT_PATH/configs/bash/modules"
 
 # Path to the bash it configuration
 export BASH_IT="$DOT_PATH/configs/bash/bash-it"

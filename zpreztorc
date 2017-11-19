@@ -44,6 +44,9 @@ zstyle ':prezto:module:editor' ps-context 'yes'
 # Prompt
 #
 
+# set default user to hide user@host in agnoster theme prompt
+DEFAULT_USER="mdzhang"
+
 # set theme
 zstyle ':prezto:module:prompt' theme 'agnoster'
 
