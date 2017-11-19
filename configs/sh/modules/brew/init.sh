@@ -4,14 +4,6 @@
 # Configuration for packages installed with Homebrew
 #
 
-if [ "$(uname)" != "Darwin" ]; then
-  exit
-fi
-
-if ! [[ -f /usr/local/bin/brew ]]; then
-  exit
-fi
-
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 brew_update() {
@@ -43,14 +35,9 @@ if which pyenv > /dev/null; then
   eval "$(pyenv init -)";
 fi
 
-if brew ls --versions pyenv-virtualenv > /dev/null; then
+if which pyenv-virtualenv > /dev/null; then
   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
   eval "$(pyenv virtualenv-init -)";
-fi
-
-if which jenv > /dev/null; then
-  eval "$(jenv init -)"
-  export PATH="$HOME/.jenv/bin:$PATH"
 fi
 
 if [ -f /usr/local/etc/profile.d/z.sh ]; then
@@ -68,4 +55,3 @@ fi
 if which thefuck > /dev/null; then
   eval $(thefuck --alias);
 fi
-

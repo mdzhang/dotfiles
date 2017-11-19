@@ -61,6 +61,7 @@ brew 'readline'                     # override sys version
 # brew 'ruby-build'
 brew 'shellcheck'                   # bash script linter
 brew 'sqlite'
+brew 'thefuck'                      # corrects previous shell command
 brew 'the_silver_searcher'          # code searching tool
 # brew 'tmux'                         # terminal multiplexer
 # brew 'transmission'                 # torrent client

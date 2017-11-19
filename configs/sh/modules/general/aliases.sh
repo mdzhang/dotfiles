@@ -4,7 +4,7 @@ alias d="ls -al | grep '^d'"     # show the dir's in the current dir
 alias h='history'                # show the history of commands issued
 alias c='clear'
 alias p='ps -ajx | grep'
-alias f='find . | grep'
+alias f='fuck'                   # alias fuck from thefuck
 alias rmf='rm -f'
 alias mkdir='mkdir -p'
 

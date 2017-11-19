@@ -7,7 +7,7 @@ fi
 
 # TODO: broken
 # use homebrew-installed shell
-LINE='/usr/local/bin/bash'
+LINE='/usr/local/bin/zsh'
 FILE=/etc/shells
 sudo grep -qF "$LINE" "$FILE" || sudo bash -c 'echo "$LINE" > $FILE'
 sudo chsh -s $LINE $USER

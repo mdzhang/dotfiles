@@ -20,15 +20,15 @@ _load_settings() {
   fi
 }
 
-modules="bundler docker general git npm vim yarn"
+local_modules="bundler docker general git npm vim yarn"
 
 if [ "$(uname)" = "Darwin" ]; then
-  modules="$modules brew osx"
+  local_modules="$local_modules brew osx"
 fi
 
-for module in $modules
+for local_module in $local_modules
 do
-  _load_settings "$DOT_PATH/configs/sh/modules/$module"
+  _load_settings "$DOT_PATH/configs/sh/modules/$local_module"
 done
 
 if [ -f ~/.shrc.local ]; then
