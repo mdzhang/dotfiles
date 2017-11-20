@@ -89,6 +89,7 @@ cask 'font-hack'                    # preferred coding font
 cask 'google-chrome'                # browser
 # cask 'google-cloud-sdk'
 # cask 'google-drive'                 # cloud storage
+# cask 'iterm2'                       # better terminal
 # cask 'keybase'                      # security / public dir
 # cask 'macdown'                      # markdown editor
 # cask 'ngrok'                        # tunnels to localhost
