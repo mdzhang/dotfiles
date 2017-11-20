@@ -16,6 +16,7 @@
 *.out
 *.sqlite3
 *.swp
+._*
 
 # Compressed #
 ##############
@@ -36,7 +37,7 @@
 
 # Secrets #
 ###########
-*.pem
+# *.pem
 .env
 .envrc
 secrets/
