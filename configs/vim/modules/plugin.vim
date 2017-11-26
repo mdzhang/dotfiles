@@ -38,6 +38,12 @@ let g:syntastic_check_on_wq = 0
 let g:vim_json_syntax_conceal = 0
 
 " ----------
+" Plugin 'plasticboy/vim-markdown'
+" ----------
+
+let g:vim_markdown_conceal = 0
+
+" ----------
 " Plugin 'Yggdroot/indentLine'
 " ----------
 
