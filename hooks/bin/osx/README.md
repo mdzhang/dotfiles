@@ -4,6 +4,9 @@
 
 Figure out how to script the following:
 
+1. Add iTerm2 to dock and
+    - use dark theme
+    - use tango dark color preset
 1. Setup developer CLI tools
     ```
     docker login
