@@ -53,5 +53,5 @@ if [ -d /usr/local/opt/sqlite/bin ]; then
 fi
 
 if which thefuck > /dev/null; then
-  eval $(thefuck --alias);
+  eval "$(thefuck --alias)";
 fi

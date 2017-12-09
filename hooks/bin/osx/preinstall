@@ -17,101 +17,14 @@ if ! command -v brew >/dev/null; then
         'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
 fi
 
-fancy_echo "Installing Homebrew bundler..."
-brew tap Homebrew/bundle
-
 fancy_echo "Updating brew..."
 brew update
 brew upgrade
 
-fancy_echo "Bundling formulae..."
-brew bundle --file=- <<EOF
-tap 'caskroom/cask'                 # application installer
-tap 'caskroom/fonts'                # favorite fonts
-tap 'caskroom/versions'
-tap 'thoughtbot/formulae'           # for rcm
-brew 'ack'                          # for vim search
-brew 'bash'                         # override sys version w/ latest
-brew 'coreutils'
-brew 'ctags'                        # for vim tagbar plugin
-brew 'direnv'                       # per dir env var loader
-brew 'duti'                         # set default apps for file types
-brew 'git'                          # version control
-# brew 'goenv'
-# brew 'golang'
-# brew 'glide'                        # golang pkg management
-brew 'gpg'                          # verify my git commits
-# brew 'heroku'                       # heroku toolbelt
-brew 'httpie'                       # pretty curl/wget
-brew 'jq'                           # json processor
-brew 'mas'                          # cli for mac app store
-# brew 'mysql', restart_service: true
-# brew 'nmap'                         # network utility
-brew 'node-build'
-brew 'nodenv'
-brew 'openssl'                      # override sys version
-brew 'postgresql', restart_service: true
-brew 'pre-commit'                   # git hooks
-brew 'pyenv'
-brew 'pyenv-virtualenv'
-# brew 'rbenv'
-brew 'rcm'                          # dotfile setup
-brew 'readline'                     # override sys version
-# brew 'redis', restart_service: true
-# brew 'ruby-build'
-brew 'shellcheck'                   # bash script linter
-brew 'sqlite'
-brew 'thefuck'                      # corrects previous shell command
-brew 'the_silver_searcher'          # code searching tool
-# brew 'tmux'                         # terminal multiplexer
-# brew 'transmission'                 # torrent client
-brew 'tree'                         # pretty list dirs
-# editor; override sys version
-brew 'vim', with_override_system_vi: true
-brew 'wget'
-brew 'z'                            # jump between common dirs/files
-brew 'zsh'                          # override sys version w/ latest
-cask '1password'                    # password manager
-# cask 'alfred'
-# cask 'bartender'                    # organize menubar
-cask 'bettertouchtool'
-# cask 'calibre'                      # ebook manager
-cask 'caffeine'                     # prevent computer sleep
-# cask 'dash'                         # offline docs
-cask 'disk-inventory-x'             # visualize disk usage
-cask 'docker'                       # container platform
-cask 'dropbox'                      # cloud storage
-# cask 'filezilla'                    # ftp client
-cask 'flux'                         # screen dimmer
-# cask 'flycut'                       # clipboard manager
-cask 'font-hack'                    # preferred coding font
-# cask 'gimp'                         # image editor
-cask 'google-chrome'                # browser
-# cask 'google-cloud-sdk'
-# cask 'google-drive'                 # cloud storage
-# cask 'iterm2'                       # better terminal
-# cask 'keybase'                      # security / public dir
-# cask 'macdown'                      # markdown editor
-# cask 'ngrok'                        # tunnels to localhost
-# cask 'nordvpn'                      # vpn provider
-# cask 'origin'                       # video game manager
-# cask 'paw'                          # API tool
-# cask 'plex-media-server'            # for serving local media e.g. for Roku
-# cask 'postman'                      # API tool
-# cask 'psequel'                      # PostgreSQL gui
-# cask 'sequel-pro'                   # MySQL gui
-# cask 'slack'                        # work messaging
-cask 'sourcetree'                   # diff viewer, merge tool
-# cask 'spotify'                      # music lib
-# cask 'sqlitebrowser'                # sqlite gui
-# cask 'steam'                        # video game manager
-cask 'the-unarchiver'               # decompressing things
-# cask 'vagrant'                      # provision VMs
-# cask 'vagrant-manager'              # manage all vagrant VMs from menubar
-# cask 'virtualbox'                   # VMs
-# cask 'vlc'                          # media player
-# mas 'BetterSnapTool', id: 417375580
-EOF
+fancy_echo "Installing Homebrew bundler..."
+brew tap Homebrew/bundle
+
+brew bundle --file=$XDG_CONFIG_HOME/brewfile/Brewfile
 
 brew cleanup
 brew cask cleanup

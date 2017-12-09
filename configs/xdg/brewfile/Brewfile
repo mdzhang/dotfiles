@@ -1,0 +1,163 @@
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
+tap 'caskroom/versions'
+tap 'thoughtbot/formulae'
+
+
+#
+# override old, shitty, or missing system defaults
+#
+
+
+brew 'bash'
+brew 'git'
+brew 'vim', args: ['with-override-system-vi']
+brew 'zsh'
+
+brew 'findutils', args: ['with-default-names']
+brew 'gnu-sed', args: ['with-default-names']
+brew 'grep', args: ['with-default-names']
+brew 'openssl'
+brew 'readline'
+
+brew 'nmap'
+brew 'wget'
+
+
+#
+# convenience cli utilities
+#
+
+
+# jump between common dirs/files
+brew 'z'
+
+# pretty curl/wget
+brew 'httpie'
+
+# corrects previous shell command
+brew 'thefuck'
+
+# json processor
+brew 'jq'
+
+# pretty list dirs
+brew 'tree'
+
+cask 'iterm2'
+
+
+#
+# vim plugin support
+#
+
+
+# for vim search
+brew 'ack'
+
+# for vim tagbar plugin
+brew 'ctags'
+
+# code searching tool
+brew 'the_silver_searcher'
+
+
+#
+# programming languages (env + dep management, linting)
+#
+
+
+# brew 'goenv'
+# brew 'golang'
+# brew 'glide'
+brew 'node-build'
+brew 'nodenv'
+brew 'pyenv'
+brew 'pyenv-virtualenv'
+# brew 'rbenv'
+# brew 'ruby-build'
+brew 'shellcheck'
+
+
+#
+# datastores and GUIs for them
+#
+
+
+# brew 'mysql', restart_service: true
+brew 'postgresql', restart_service: true
+# brew 'redis', restart_service: true
+brew 'sqlite'
+
+# cask 'psequel'
+# cask 'sequel-pro'
+# cask 'sqlitebrowser'
+
+
+#
+# security, privacy, and authentication
+#
+
+
+cask '1password'
+brew 'gpg'
+# cask 'keybase'
+# cask 'nordvpn'
+
+
+#
+# other dev tools
+#
+
+
+# per dir env var loader
+brew 'direnv'
+brew 'pre-commit'
+brew 'rcm'
+cask 'docker'
+cask 'font-hack'
+cask 'sourcetree'
+# brew 'heroku'
+# brew 'tmux'
+# cask 'dash'
+# cask 'filezilla'
+# cask 'google-cloud-sdk'
+# cask 'ngrok'
+# cask 'postman'
+# cask 'vagrant-manager'
+# cask 'virtualbox'
+
+
+#
+# lifeblood aka productivity and required apps
+#
+
+cask 'dropbox'
+# cask 'alfred'
+# cask 'bartender'
+cask 'bettertouchtool'
+cask 'caffeine'
+cask 'disk-inventory-x'
+cask 'flux'
+# cask 'flycut'
+cask 'google-chrome'
+# cask 'google-drive'
+# cask 'slack'
+cask 'the-unarchiver'
+# appstore 417375580 'BetterSnapTool'
+# set default apps for file types
+brew 'duti'
+
+
+#
+# entertainment
+#
+
+# brew 'transmission'
+# cask 'calibre'
+# cask 'gimp'
+# cask 'origin'
+# cask 'plex-media-server'
+# cask 'spotify'
+# cask 'steam'
+# cask 'vlc'

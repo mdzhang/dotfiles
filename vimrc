@@ -63,6 +63,8 @@ else
     Plugin 'kien/ctrlp.vim'
     " cross-editor config
     Plugin 'editorconfig/editorconfig-vim'
+    " collection of language packs for better defaults
+    Plugin 'sheerun/vim-polyglot'
 
     "
     " JSON

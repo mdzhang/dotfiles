@@ -2,15 +2,36 @@
 echo 'Running rcm pre-up hook'
 
 if ! [[ -L ~/.vim ]]; then
-    rm -f ~/.vim
-    ln -s $DOT_PATH/configs/vim ~/.vim
+   rm -f ~/.vim
+   ln -s $DOT_PATH/configs/vim ~/.vim
 fi
 
-if ! [[ -L ~/.nvimrc ]]; then
-    ln -fs $DOT_PATH/nvimrc ~/.config/nvim/init.vim
-fi
+_link_xdg_configs() {
+  _dir="$1"
 
-# create Plex directories
+  if ! [[ -d "$_dir" ]]; then
+    echo "$_dir is not a directory. Not linking configs"
+  fi
+
+  for name in $_dir/*; do
+    if [ -d "$name" ]; then
+      for file in $name/*; do
+        if [ -f "$file" ]; then
+          src=$file
+          dst=~/.config/$(basename $name)/$(basename $file)
+          mkdir -p $name
+          echo "Linking $dst to $src"
+          ln -fs "$src" "$dst"
+        fi
+      done
+    fi
+  done
+}
+
+# link files into $XDG_CONFIG_HOME
+_link_xdg_configs "$DOT_PATH/configs/xdg"
+
+# create home media server directories
 mkdir -p ~/media/data/movies
 mkdir -p ~/media/data/tv
 mkdir -p ~/media/data/books
@@ -23,11 +44,8 @@ mkdir -p ~/media/configs/transmission
 # for source code dir generally and golang dir
 mkdir -p ~/opt/mdzhang/go/src/github.com/mdzhang
 
-# for neovim
-mkdir -p ~/.config/nvim
-
-# create GPG directories
-gpg --list-keys
+# create GPG directories; silence output
+gpg --list-keys > /dev/null
 
 # grab Vundle/prezto/bashit source code
 git submodule init
