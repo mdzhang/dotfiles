@@ -52,6 +52,7 @@ ENV/
 
 # Generic ignore directories #
 ##############################
+.cache/
 .coverage/
 .tox/
 build/
