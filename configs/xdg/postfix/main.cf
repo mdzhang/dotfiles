@@ -1,0 +1,41 @@
+debug_peer_level = 2
+debugger_command =
+	 PATH=/bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin
+	 ddd $daemon_directory/$process_name $process_id & sleep 5
+
+biff = no
+command_directory = /usr/sbin
+compatibility_level = 2
+daemon_directory = /usr/libexec/postfix
+data_directory = /var/lib/postfix
+html_directory = /usr/share/doc/postfix/html
+inet_protocols = all
+mail_owner = _postfix
+mailbox_size_limit = 0
+mailq_path = /usr/bin/mailq
+manpage_directory = /usr/share/man
+message_size_limit = 10485760
+mydomain_fallback = localhost
+mynetworks = 127.0.0.0/8, [::1]/128
+newaliases_path = /usr/bin/newaliases
+queue_directory = /private/var/spool/postfix
+readme_directory = /usr/share/doc/postfix
+recipient_delimiter = +
+sample_directory = /usr/share/doc/postfix/examples
+sendmail_path = /usr/sbin/sendmail
+setgid_group = _postdrop
+smtpd_client_restrictions = permit_mynetworks permit_sasl_authenticated permit
+smtpd_tls_ciphers = medium
+tls_random_source = dev:/dev/urandom
+unknown_local_recipient_reject_code = 550
+
+# Gmail SMTP
+relayhost=smtp.gmail.com:587
+# Enable SASL authentication in the Postfix SMTP client.
+smtp_sasl_auth_enable=yes
+smtp_sasl_password_maps=hash:/etc/postfix/sasl_passwd
+smtp_sasl_security_options=noanonymous
+smtp_sasl_mechanism_filter=plain
+# Enable Transport Layer Security (TLS), i.e. SSL.
+smtp_use_tls=yes
+smtp_tls_security_level=encrypt

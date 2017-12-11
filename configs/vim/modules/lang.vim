@@ -1,3 +1,7 @@
+" treat .cf configuration files as ini files
+au BufNewFile,BufRead *.cf set filetype=dosini
+au BufNewFile,BufRead *.conf set filetype=dosini
+
 " treat files with .es6 extension as JS files
 au BufNewFile,BufRead *.es6 set filetype=javascript
 

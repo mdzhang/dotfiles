@@ -20,7 +20,9 @@ brew 'grep', args: ['with-default-names']
 brew 'openssl'
 brew 'readline'
 
+brew 'mutt'
 brew 'nmap'
+brew 'watch'
 brew 'wget'
 
 
