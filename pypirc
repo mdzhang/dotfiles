@@ -6,9 +6,9 @@ index-servers =
 [pypi]
 repository=https://upload.pypi.org/legacy/
 username=mdzhang
-password=foo
+password=<TODO>
 
 [pypitest]
 repository=https://test.pypi.org/legacy/
 username=mdzhang
-password=foo
+password=<TODO>

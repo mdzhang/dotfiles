@@ -7,3 +7,6 @@
 [submodule "configs/bash/bash-it"]
 	path = configs/bash/bash-it
 	url = git@github.com:Bash-it/bash-it.git
+[submodule "configs/mutt/bundles/mutt-colors-solarized"]
+	path = configs/mutt/bundles/mutt-colors-solarized
+	url = git@github.com:altercation/mutt-colors-solarized.git

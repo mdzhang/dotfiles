@@ -2,6 +2,9 @@
 au BufNewFile,BufRead *.cf set filetype=dosini
 au BufNewFile,BufRead *.conf set filetype=dosini
 
+" set filetype on config files for mutt
+au BufNewFile,BufRead *.muttrc setfiletype muttrc
+
 " treat files with .es6 extension as JS files
 au BufNewFile,BufRead *.es6 set filetype=javascript
 

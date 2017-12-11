@@ -2,6 +2,7 @@ tap 'caskroom/cask'
 tap 'caskroom/fonts'
 tap 'caskroom/versions'
 tap 'thoughtbot/formulae'
+tap 'sgeb/mutt'
 
 
 #
@@ -20,8 +21,9 @@ brew 'grep', args: ['with-default-names']
 brew 'openssl'
 brew 'readline'
 
-brew 'mutt'
+brew 'sgeb/mutt', args: ['with-trash-patch', 'with-sidebar-patch', 'with-gmail-server-search-patch', 'with-gmail-labels-patch', 'with-forwref-patch']
 brew 'nmap'
+brew 'urlview'
 brew 'watch'
 brew 'wget'
 

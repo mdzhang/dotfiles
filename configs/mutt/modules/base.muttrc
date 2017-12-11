@@ -1,0 +1,53 @@
+set my_server = imap.gmail.com
+set my_smtp_server = smtp.gmail.com
+set my_user = "$EMAIL"
+set my_pass = "$GOOGLE_APP_PASSWORD"
+
+# Account info
+set folder = imaps://$my_server:993           # default location of mailboxes
+set spoolfile = "+INBOX"    # default inbox
+set mbox      = "+[Gmail]/All Mail"
+set postponed = "+[Gmail]/Drafts"
+# set record = "+[Gmail]/Sent Mail"
+set trash = "+[Gmail]/Trash"
+
+set from = $my_user
+set realname = "$FULL_NAME"
+
+set smtp_url        = "smtp://$my_user:$my_pass@$my_smtp_server:587"
+set smtp_pass       = $my_pass
+set imap_user       = $my_user
+set imap_pass       = $my_pass
+
+# Paths
+set alias_file       = ~/.mutt/alias         # where to store aliases
+set header_cache     = ~/.mutt/cache/headers # where to store headers
+set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
+set certificate_file = ~/.mutt/certificates  # where to store certs
+# set mailcap_path     = ~/.mutt/macos/mailcap # entries for filetypes
+set tmpdir           = ~/.mutt/temp          # where to keep temp files
+set signature        = ~/.mutt/sig           # my signature file
+
+# Editor
+set editor="vim -c 'set spell spelllang=en'"
+
+# Basic Options
+set assumed_charset   = "utf-8"
+set send_charset      = "utf-8"
+set charset           = "utf-8"
+set delete            = no
+set mail_check        = 300
+
+# Index View Options
+set sort            = threads                     # like gmail
+set sort_aux        = reverse-last-date-received
+
+# Pager View Options
+alternative_order text/enriched text/plain text/html # html is the last option
+auto_view text/html
+
+# Compose View Options
+set attribution     = "On %d, %n wrote:"  # format of quoting header
+
+# Last, but not least, get mutt to display its version on startup.
+push <show-version>

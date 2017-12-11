@@ -1,7 +1,9 @@
 #!/bin/sh
 
 export RCRC=$DOT_PATH/rcrc
+export XDG_CACHE_HOME=$HOME/.cache
 export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
 
 #
 # language
@@ -46,3 +48,8 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 export GOPATH=$HOME/opt/mdzhang/go
 export PATH=$PATH:${GOPATH}/bin
 
+#
+# convenience
+#
+export EMAIL=zhang.michelle.d@gmail.com
+export FULL_NAME='Michelle D Zhang'
