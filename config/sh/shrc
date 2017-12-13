@@ -6,8 +6,6 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
 
-export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
-
 _load_settings() {
   _dir="$1"
   if [ -d "$_dir" ];
@@ -25,7 +23,7 @@ _load_settings() {
   fi
 }
 
-local_modules="bundler docker general git npm vim yarn"
+local_modules="bundler docker general git npm vim xdg yarn"
 
 if [ "$(uname)" = "Darwin" ]; then
   local_modules="$local_modules brew osx"

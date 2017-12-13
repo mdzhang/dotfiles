@@ -1,4 +1,5 @@
 export ZPREZTODIR=$XDG_CONFIG_HOME/zsh/opt/prezto
+export HISTFILE="$XDG_DATA_HOME"/zsh/history
 
 # show timestamp in right side prompt
 RPROMPT="%*"

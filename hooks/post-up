@@ -7,6 +7,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
   $DOT_PATH/hooks/bin/nix/postinstall
 fi
 
-$DOT_PATH/hooks/bin/bash/postinstall
+# $DOT_PATH/hooks/bin/bash/postinstall
 # NB: causes cli to freeze up
-$DOT_PATH/hooks/bin/vim/postinstall
+# $DOT_PATH/hooks/bin/vim/postinstall
