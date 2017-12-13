@@ -1,0 +1,8 @@
+export ZPREZTODIR=$XDG_CONFIG_HOME/zsh/opt/prezto
+
+# show timestamp in right side prompt
+RPROMPT="%*"
+
+if [[ -s "$ZPREZTODIR/init.zsh" ]]; then
+  source "$ZPREZTODIR/init.zsh"
+fi

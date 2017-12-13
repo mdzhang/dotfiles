@@ -1,0 +1,70 @@
+#
+# Sets Prezto options.
+#
+# https://github.com/sorin-ionescu/prezto
+#
+
+#
+# General
+#
+
+# Color output (auto set to 'no' on dumb terminals).
+zstyle ':prezto:*:*' color 'yes'
+
+# Set the Prezto modules to load (browse modules).
+# The order matters.
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'ssh' \
+  'completion' \
+  'docker' \
+  'homebrew' \
+  'git' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'prompt'
+
+#
+# Editor
+#
+
+# use vi key mappings
+zstyle ':prezto:module:editor' key-bindings 'vi'
+
+# show >>> depending on vi mode
+zstyle ':prezto:module:editor' ps-context 'yes'
+
+#
+# Prompt
+#
+
+# set default user to hide user@host in agnoster theme prompt
+DEFAULT_USER="mdzhang"
+
+# set theme
+zstyle ':prezto:module:prompt' theme 'agnoster'
+
+# prompt shows indicator for non-zero return codes for previous command
+zstyle ':prezto:module:prompt' show-return-val 'yes'
+
+#
+# Terminal
+#
+
+# Auto set the tab and window titles.
+zstyle ':prezto:module:terminal' auto-title 'yes'
+
+# Set the window title format.
+zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
+
+# Set the tab title format.
+zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
+
+# Set the terminal multiplexer title format.
+zstyle ':prezto:module:terminal:multiplexer-title' format '%s'
