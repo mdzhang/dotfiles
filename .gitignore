@@ -1,6 +1,4 @@
-bashrc.local
-gitconfig.local
-vimrc.local
+*.local
 configs/sh/modules/general/secrets.sh
 configs/vim/undo
 configs/vim/bundle

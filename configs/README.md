@@ -1,10 +1,10 @@
 # Configs
 
-Configs for things that are too large for a single dotfile. Should generally follow dir structure
+This directory is symlinked to `$XDG_CONFIG_HOME`
 
-```
-- <module name e.g. vim>
-  \_ modules        # files that should be sourced on module startup
-```
+Directory summary
 
-Exception for `xdg`, which contains files to be symlinked into `$XDG_CONFIG_HOME`
+| Name | Purpose |
+|------|---------|
+| opt  | Third party stuff; can be copy pasted or a git submodule |
+| usr  | My stuff |
