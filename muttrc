@@ -1,8 +1,1 @@
-# -*- muttrc -*-
-#
-# rc file for mutt
-#
-
-source ~/.mutt/modules/base.muttrc
-source ~/.mutt/modules/bindings.muttrc
-source ~/.mutt/modules/colors.muttrc
+config/mutt/muttrc
