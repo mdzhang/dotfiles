@@ -49,6 +49,11 @@ export GOPATH=$HOME/opt/mdzhang/go
 export PATH=$PATH:${GOPATH}/bin
 
 #
+# browsers
+#
+export WWW_HOME=http://google.com
+
+#
 # convenience
 #
 export EMAIL=zhang.michelle.d@gmail.com

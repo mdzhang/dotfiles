@@ -23,8 +23,8 @@ _link_xdg_configs() {
       for file in $name/*; do
         if [ -f "$file" ]; then
           src=$file
-          dst=~/.config/$(basename $name)/$(basename $file)
-          mkdir -p $name
+          dst="$HOME/.config/$(basename $name)/$(basename $file)"
+          mkdir -p -v $(dirname $dst)
           echo "Linking $dst to $src"
           ln -fs "$src" "$dst"
         fi
