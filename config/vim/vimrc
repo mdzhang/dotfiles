@@ -16,8 +16,11 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
+" for XDG override
+set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIMRUNTIME
+
 let need_to_install_plugins=0
-if empty(system("grep lazy_load ~/.vim/bundle/Vundle.vim/autoload/vundle.vim"))
+if empty(system("grep lazy_load $XDG_CONFIG_HOME/vim/opt/Vundle.vim/autoload/vundle.vim"))
     echoerr "Vundle plugins are not installed. Please run ~/.vim/bin/install"
 else
     " initialize vundle

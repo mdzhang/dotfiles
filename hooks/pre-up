@@ -1,53 +1,8 @@
 #!/bin/bash
 echo 'Running rcm pre-up hook'
 
-if ! [[ -L "$HOME/.vim" ]]; then
-   rm -rf ~/.vim
-   ln -s $DOT_PATH/configs/vim ~/.vim
-fi
-
-if ! [ -L "$HOME/.mutt" ]; then
-   rm -rf ~/.mutt
-   ln -s $DOT_PATH/configs/mutt ~/.mutt
-fi
-
-_link_xdg_configs() {
-  _dir="$1"
-
-  if ! [[ -d "$_dir" ]]; then
-    echo "$_dir is not a directory. Not linking configs"
-  fi
-
-  for name in $_dir/*; do
-    if [ -d "$name" ]; then
-      for file in $name/*; do
-        if [ -f "$file" ]; then
-          src=$file
-          dst="$HOME/.config/$(basename $name)/$(basename $file)"
-          mkdir -p -v $(dirname $dst)
-          echo "Linking $dst to $src"
-          ln -fs "$src" "$dst"
-        fi
-      done
-    fi
-  done
-}
-
-# link files into $XDG_CONFIG_HOME
-_link_xdg_configs "$DOT_PATH/configs/xdg"
-
-# create home media server directories
-mkdir -p ~/media/data/movies
-mkdir -p ~/media/data/tv
-mkdir -p ~/media/data/books
-
-mkdir -p ~/media/configs/plex
-mkdir -p ~/media/configs/sickrage
-mkdir -p ~/media/configs/couchpotato
-mkdir -p ~/media/configs/transmission
-
 # for source code dir generally and golang dir
-mkdir -p ~/opt/mdzhang/go/src/github.com/mdzhang
+mkdir -p ~/src/mdzhang/go/src/github.com/mdzhang
 
 # create GPG directories; silence output
 gpg --list-keys > /dev/null

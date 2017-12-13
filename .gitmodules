@@ -1,6 +1,3 @@
-[submodule "configs/vim/bundle/Vundle.vim"]
-    path = configs/vim/bundle/Vundle.vim
-    url = https://github.com/VundleVim/Vundle.vim.git
 [submodule "config/bash/opt/bash-it"]
 	path = config/bash/opt/bash-it
 	url = git@github.com:Bash-it/bash-it.git
@@ -10,3 +7,6 @@
 [submodule "config/mutt/opt/mutt-colors-solarized"]
 	path = config/mutt/opt/mutt-colors-solarized
 	url = git@github.com:altercation/mutt-colors-solarized.git
+[submodule "config/vim/opt/Vundle.vim"]
+	path = config/vim/opt/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git
