@@ -32,6 +32,8 @@ if which direnv > /dev/null; then
 fi
 
 if which pyenv > /dev/null; then
+  # export CFLAGS="-I$(brew --prefix openssl)/include"
+  # export LDFLAGS="-L$(brew --prefix openssl)/lib"
   eval "$(pyenv init -)";
 fi
 

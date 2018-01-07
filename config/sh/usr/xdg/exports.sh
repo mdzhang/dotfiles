@@ -13,3 +13,5 @@ export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
 export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
+
+export HTTPIE_CONFIG_DIR="$XDG_CONFIG_HOME"/httpie

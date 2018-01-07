@@ -52,3 +52,7 @@ Add to `config/sh/usr/general/secrets.bash`
 Copyright (c) 2013-2017 Michelle D. Zhang. MIT Licensed, see [LICENSE](LICENSE) for details.
 
 [rcm]: https://github.com/thoughtbot/rcm
+
+
+
+TODO - npmrc, gnupg,

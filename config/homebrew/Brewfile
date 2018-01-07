@@ -117,6 +117,7 @@ brew 'gpg'
 # per dir env var loader
 brew 'direnv'
 brew 'pre-commit'
+# brew 'qcachegrind'
 brew 'rcm'
 cask 'docker'
 cask 'font-hack'
