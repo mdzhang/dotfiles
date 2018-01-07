@@ -39,7 +39,7 @@ After updating dotfiles locally, run `rcup` again to update
 
 ### Sensitive Information
 
-Add to `configs/sh/modules/general/secrets.bash`
+Add to `config/sh/usr/general/secrets.bash`
 
 ## Authors
 
@@ -52,3 +52,7 @@ Add to `configs/sh/modules/general/secrets.bash`
 Copyright (c) 2013-2017 Michelle D. Zhang. MIT Licensed, see [LICENSE](LICENSE) for details.
 
 [rcm]: https://github.com/thoughtbot/rcm
+
+
+
+TODO - npmrc, gnupg,

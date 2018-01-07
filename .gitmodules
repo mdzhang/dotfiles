@@ -1,12 +1,12 @@
-[submodule "configs/vim/bundle/Vundle.vim"]
-    path = configs/vim/bundle/Vundle.vim
-    url = https://github.com/VundleVim/Vundle.vim.git
-[submodule "configs/zsh/prezto"]
-	path = configs/zsh/prezto
-	url = git@github.com:sorin-ionescu/prezto.git
-[submodule "configs/bash/bash-it"]
-	path = configs/bash/bash-it
+[submodule "config/bash/opt/bash-it"]
+	path = config/bash/opt/bash-it
 	url = git@github.com:Bash-it/bash-it.git
-[submodule "configs/mutt/bundles/mutt-colors-solarized"]
-	path = configs/mutt/bundles/mutt-colors-solarized
+[submodule "config/zsh/opt/prezto"]
+	path = config/zsh/opt/prezto
+	url = git@github.com:sorin-ionescu/prezto.git
+[submodule "config/mutt/opt/mutt-colors-solarized"]
+	path = config/mutt/opt/mutt-colors-solarized
 	url = git@github.com:altercation/mutt-colors-solarized.git
+[submodule "config/vim/opt/Vundle.vim"]
+	path = config/vim/opt/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git

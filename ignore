@@ -1,3 +1,5 @@
+# Shared by a variety of utilities e.g. vim, git, hg, ag, etc.
+
 # Compiled source #
 ###################
 *.com

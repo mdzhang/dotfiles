@@ -1,2 +1,1 @@
-EXCLUDES="README.md LICENSE configs docs"
-DOTFILES_DIRS="$DOT_PATH"
+config/rcm/rcrc

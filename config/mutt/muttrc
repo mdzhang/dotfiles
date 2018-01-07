@@ -1,0 +1,8 @@
+# -*- muttrc -*-
+#
+# rc file for mutt
+#
+
+source $XDG_CONFIG_HOME/mutt/usr/base.muttrc
+source $XDG_CONFIG_HOME/mutt/usr/bindings.muttrc
+source $XDG_CONFIG_HOME/mutt/usr/colors.muttrc
