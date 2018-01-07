@@ -1,0 +1,2 @@
+EXCLUDES="README.md LICENSE cache config docs"
+DOTFILES_DIRS="$DOT_PATH"

@@ -1,0 +1,14 @@
+###############################################################################
+# Courtesy of https://github.com/LK4D4/dotfiles/blob/master/urlview
+#
+# Urlview configuration file.
+# man urlview  <Man page>
+#
+###############################################################################
+
+# Regular expression to use to match URLs.
+REGEXP (((http|https|ftp|gopher)|mailto)[.:][^ >"\t]*|www\.[-a-z0-9.]+)[^ .,;\t>">\):]
+
+# Command to invoke for selected URL.
+#COMMAND lynx %s
+COMMAND open %s

@@ -1,0 +1,90 @@
+# Local/private config goes in the include
+[include]
+  path = ~/.gitconfig.local
+[user]
+  name = Michelle D Zhang
+  email = zhang.michelle.d@gmail.com
+[commit]
+  gpgsign = true
+[core]
+  editor = vim
+	excludesfile = /Users/mdzhang/.ignore
+[pull]
+  rebase = true
+[push]
+  default = current
+[alias]
+  a = add --all
+  st = status
+  br = branch
+
+  sh = stash
+  shp = stash pop
+  shd = stash drop
+
+  c = commit
+  cm = commit -m
+  ca = commit -a
+  cam = commit -am
+  cd = commit --amend
+  cad = commit -a --amend
+
+  d = difftool
+  dc = difftool --cached
+
+  f = fetch
+
+  g = grep -p
+
+  ig = update-index --assume-unchanged
+  uig = update-index --no-assume-unchanged
+
+  co = checkout
+  com = checkout master
+  cod = checkout development
+
+  ps = push
+  psf = push -f
+  pso = push origin
+  psfo = push -f origin
+  psom = push origin master
+  psfom = push -f origin master
+
+  pl = pull
+  plr = pull --rebase
+
+  rb = rebase
+  rbc = rebase --continue
+  rbd = rebase development
+  rbi = rebase -i
+  rbm = rebase master
+  rbs = rebase --skip
+
+  reh = reset --hard
+
+  tgs = show-ref --abbrev=7 --tags
+
+  unstage = reset HEAD --
+  last = log -1 --pretty=format:\"%h %an, %ar : %s\" HEAD
+  llog = log -20 --decorate --pretty=format:\"%h %an, %ar : %s\" HEAD
+
+  # Find commits by commit message
+  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+
+  # Find commits by source code
+  fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+
+  # Diff of last 2 commits
+  ch = diff HEAD^ HEAD
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
