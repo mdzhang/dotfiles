@@ -64,6 +64,8 @@ else
     Plugin 'tpope/vim-fugitive'
     " search everything
     Plugin 'kien/ctrlp.vim'
+    " incremental search highlighting w/ regex search support (use /\v)
+    Plugin 'haya14busa/incsearch.vim'
     " cross-editor config
     Plugin 'editorconfig/editorconfig-vim'
     " collection of language packs for better defaults

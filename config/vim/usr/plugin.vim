@@ -120,6 +120,15 @@ let g:ale_lint_on_text_changed = 'never'
 let g:airline#extensions#ale#enabled = 1
 
 " ----------
+" Plugin 'haya14busa/incsearch.vim'
+" ----------
+
+
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+" ----------
 " Plugin 'mhinz/vim-startify'
 " ----------
 
