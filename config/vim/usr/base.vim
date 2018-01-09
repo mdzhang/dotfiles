@@ -242,10 +242,10 @@ noremap <leader>0 :tablast<cr>
 nnoremap H gT
 " Shift + l --> goto next tab
 nnoremap L gt
-" Shift + n --> open new tab
-nnoremap N :tabnew <Enter>
-" Shift + w --> close tab
-nnoremap W :close <Enter>
+" Shift + k --> open new tab
+nnoremap K :tabnew <Enter>
+" Shift + j --> close tab
+nnoremap J :close <Enter>
 
 "
 " standard editor shortcuts
