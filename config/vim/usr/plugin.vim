@@ -126,10 +126,19 @@ let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
 
 " ----------
-" Plugin 'vim-airline/vim-airline'
+" Plugin 'itchyny/lightline.vim'
 " ----------
 
-let g:airline#extensions#ale#enabled = 1
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
 
 " ----------
 " Plugin 'haya14busa/incsearch.vim'

@@ -33,7 +33,7 @@ else
     Plugin 'VundleVim/Vundle.vim'
 
     " nice status bar
-    Plugin 'vim-airline/vim-airline'
+    Plugin 'itchyny/lightline.vim'
     " show git diff (added, mod'd, removed) in the gutter
     Plugin 'mhinz/vim-signify'
     " show file content outline
