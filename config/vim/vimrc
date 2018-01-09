@@ -53,6 +53,8 @@ else
     Plugin 'scrooloose/nerdcommenter'
     " easily expand/collapse visually selected region
     Plugin 'terryma/vim-expand-region'
+    " easily move selected code up/down
+    Plugin 'matze/vim-move'
     " syntax checker
     Plugin 'w0rp/ale'
     " code search tool
