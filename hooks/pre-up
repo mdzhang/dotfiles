@@ -4,6 +4,7 @@ echo 'Running rcm pre-up hook'
 # symlink XDG dirs
 ln -s ~/.dotfiles/config ~/.config
 ln -s ~/.dotfiles/cache ~/.cache
+mkdir -p ~/.local/share
 
 # for source code dir generally and golang dir
 mkdir -p ~/src/mdzhang/go/src/github.com/mdzhang

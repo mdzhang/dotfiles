@@ -1,7 +1,2 @@
 *.local
 config/sh/usr/general/secrets.sh
-configs/vim/undo
-configs/vim/bundle
-!configs/vim/bundle/Vundle.vim
-configs/mutt/cache
-configs/mutt/temp
