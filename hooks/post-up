@@ -9,4 +9,4 @@ fi
 
 # $DOT_PATH/hooks/bin/bash/postinstall
 # NB: causes cli to freeze up
-# $DOT_PATH/hooks/bin/vim/postinstall
+$DOT_PATH/hooks/bin/vim/postinstall
