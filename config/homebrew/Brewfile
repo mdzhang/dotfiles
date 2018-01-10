@@ -116,6 +116,7 @@ brew 'gpg'
 
 # per dir env var loader
 brew 'direnv'
+# brew 'graphviz'
 brew 'pre-commit'
 # brew 'qcachegrind'
 brew 'rcm'

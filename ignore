@@ -10,12 +10,15 @@
 *.o
 *.so
 
-# Logs, databases, and backups #
+# Logs, performance, databases, and backups #
 ################################
+*.calltree
 *.db
 *.dump
 *.log
 *.out
+*.prof
+*.lprof
 *.sqlite3
 *.swp
 ._*
@@ -55,6 +58,7 @@ ENV/
 # Generic ignore directories #
 ##############################
 .cache/
+.benchmark/
 .coverage/
 .tox/
 build/
