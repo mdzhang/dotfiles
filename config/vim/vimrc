@@ -38,6 +38,8 @@ else
     Plugin 'mhinz/vim-signify'
     " show file content outline
     Plugin 'majutsushi/tagbar'
+    " show code minimap
+    Plugin 'severin-lemaignan/vim-minimap'
     " vim themes
     Plugin 'flazz/vim-colorschemes'
     " show whitespace
