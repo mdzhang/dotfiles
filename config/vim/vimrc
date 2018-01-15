@@ -74,6 +74,9 @@ else
     Plugin 'sheerun/vim-polyglot'
     " track time in Vim on wakatime.com
     Plugin 'wakatime/vim-wakatime'
+    " alignment
+    Plugin 'junegunn/vim-easy-align'
+    Plugin 'godlygeek/tabular'
 
     "
     " JSON
@@ -83,7 +86,6 @@ else
     "
     " Markdown
     "
-    Plugin 'godlygeek/tabular'
     Plugin 'plasticboy/vim-markdown'
 
     "

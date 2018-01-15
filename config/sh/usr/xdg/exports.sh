@@ -17,6 +17,8 @@ export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export HTTPIE_CONFIG_DIR="$XDG_CONFIG_HOME"/httpie
 
 export PYENV_ROOT="$XDG_CONFIG_HOME"/pyenv
+# gem binaries don't like this
+# export RBENV_ROOT="$XDG_CONFIG_HOME"/rbenv
 export NODENV_ROOT="$XDG_CONFIG_HOME"/nodenv
 export GOENV_ROOT="$XDG_CONFIG_HOME"/goenv
 export GLIDE_HOME="$XDG_CONFIG_HOME"/glide

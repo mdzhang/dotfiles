@@ -157,6 +157,13 @@ map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
 " ----------
+" Plugin 'junegunn/vim-easy-align'
+" ----------
+
+" Align GitHub-flavored Markdown tables
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
+" ----------
 " Plugin 'mhinz/vim-startify'
 " ----------
 

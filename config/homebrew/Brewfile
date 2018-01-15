@@ -3,7 +3,7 @@ tap 'caskroom/fonts'
 tap 'caskroom/versions'
 tap 'thoughtbot/formulae'
 tap 'sgeb/mutt'
-
+tap 'eqnxio/equinox'
 
 #
 # override old, shitty, or missing system defaults
@@ -105,6 +105,7 @@ brew 'sqlite'
 
 cask '1password'
 brew 'gpg'
+cask 'keepassxc'
 # cask 'keybase'
 # cask 'nordvpn'
 
@@ -113,13 +114,15 @@ brew 'gpg'
 # other dev tools
 #
 
-
+# better man pages
+brew 'tldr'
 # per dir env var loader
 brew 'direnv'
 # brew 'graphviz'
 brew 'pre-commit'
 # brew 'qcachegrind'
 brew 'rcm'
+# brew 'equinox/release-tool'
 cask 'docker'
 cask 'font-hack'
 cask 'sourcetree'
