@@ -1,16 +1,11 @@
 #!/bin/bash
 echo 'Running rcm pre-up hook'
 
-# symlink XDG dirs
-ln -s ~/.dotfiles/config ~/.config
-ln -s ~/.dotfiles/cache ~/.cache
-mkdir -p ~/.local/share
-
-# for source code dir generally and golang dir
-mkdir -p ~/src/mdzhang/go/src/github.com/mdzhang
-
-# create GPG directories; silence output
-gpg --list-keys > /dev/null
+if [ "$(uname)" = "Darwin" ]; then
+  # TODO: Ansible task
+elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+  echo "Not implemented"
+fi
 
 # grab Vundle/prezto/bashit/mutt source code
 git submodule init

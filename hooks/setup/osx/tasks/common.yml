@@ -1,0 +1,17 @@
+---
+
+# create GPG directories; silence output
+gpg --list-keys > /dev/null
+
+# vim dirs
+mkdir -p ~/.vim
+ln -s $XDG_CACHE_HOME/vim/bundle ~/.vim/bundle
+
+# symlink XDG dirs
+ln -s ~/.dotfiles/config ~/.config
+ln -s ~/.dotfiles/cache ~/.cache
+mkdir -p ~/.local/share
+
+# for source code dir generally and golang dir
+mkdir -p ~/src/mdzhang/go/src/github.com/mdzhang
+

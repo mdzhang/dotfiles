@@ -1,0 +1,15 @@
+---
+# Custom iTerm2 theme
+- name: Get current iTerm profile.
+  shell: defaults read com.googlecode.iterm2.plist 'Custom Color Presets'
+  register: iterm_theme
+  changed_when: false
+  always_run: yes
+
+- name: Ensure custom iTerm2 profile is added and set as default
+  shell: "{{ item }}"
+  with_items:
+    - /usr/libexec/PlistBuddy -c "Add 'Custom Color Presets':'Hybrid' dict" ~/Library/Preferences/com.googlecode.iterm2.plist
+    - /usr/libexec/PlistBuddy -c "Merge '~/.dotfiles/hooks/setup/osx/files/terminal/Hybrid.itermcolors' 'Custom Color Presets':'Hybrid'" ~/Library/Preferences/com.googlecode.iterm2.plist
+    - /usr/libexec/PlistBuddy -c "Merge '~/.dotfiles/hooks/setup/osx/files/terminal/Hybrid.itermcolors' 'New Bookmarks':0" ~/Library/Preferences/com.googlecode.iterm2.plist
+  when: "'Hybrid' not in iterm_theme.stdout"
