@@ -2,11 +2,19 @@
 echo 'Running rcm post-up hook'
 
 if [ "$(uname)" = "Darwin" ]; then
-  $DOT_PATH/hooks/bin/osx/postinstall
-elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
-  $DOT_PATH/hooks/bin/nix/postinstall
-fi
+  # TODO: Ansible task
 
-# $DOT_PATH/hooks/bin/bash/postinstall
-# NB: causes cli to freeze up
-$DOT_PATH/hooks/bin/vim/postinstall
+  # duti doesn't automatically read this
+  if [ -f ~/.duti ]; then
+    duti ~/.duti
+  fi
+
+  # TODO: broken
+  # use homebrew-installed shell
+  LINE='/usr/local/bin/zsh'
+  FILE=/etc/shells
+  sudo grep -qF "$LINE" "$FILE" || sudo bash -c 'echo "$LINE" > $FILE'
+  sudo chsh -s $LINE $USER
+elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+  echo "Not implemented"
+fi

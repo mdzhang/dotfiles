@@ -1,0 +1,20 @@
+---
+# Custom Terminal theme.
+- name: Get current Terminal profile.
+  shell: defaults read com.apple.terminal 'Default Window Settings'
+  register: terminal_theme
+  changed_when: false
+  always_run: yes
+
+- name: Ensure custom Terminal profile is added.
+  shell: open files/terminal/Hybrid.terminal
+  changed_when: false
+  when: "'Hybrid' not in terminal_theme.stdout"
+
+- name: Ensure custom Terminal profile is set as default.
+  shell: "{{ item }}"
+  with_items:
+    - defaults write com.apple.terminal 'Default Window Settings' -string Hybrid
+    - defaults write com.apple.terminal 'Startup Window Settings' -string Hybrid
+  changed_when: false
+  when: "'Hybrid' not in terminal_theme.stdout"

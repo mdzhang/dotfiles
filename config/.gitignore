@@ -6,7 +6,8 @@
 !editorconfig
 !git
 !homebrew
-!lync
+!lynx
+!macos
 !mutt
 !nvim
 !pg
