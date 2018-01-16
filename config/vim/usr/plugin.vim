@@ -80,6 +80,7 @@ let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
 
 nmap <Leader>nt :NERDTreeToggle
+nmap <Leader>ntf :NERDTreeFind
 
 " ----------
 " Plugin 'scrooloose/nerdcommenter'
