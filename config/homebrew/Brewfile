@@ -21,6 +21,7 @@ brew 'grep', args: ['with-default-names']
 brew 'openssl'
 brew 'readline'
 
+brew 'newsboat'
 brew 'irssi'
 brew 'sgeb/mutt', args: ['with-trash-patch', 'with-sidebar-patch', 'with-gmail-server-search-patch', 'with-gmail-labels-patch', 'with-forwref-patch']
 brew 'nmap'
