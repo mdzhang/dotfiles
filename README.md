@@ -5,7 +5,6 @@ Laptop setup scripts and personal dotfiles. Uses Thoughbot's [rcm][rcm]
 Supports:
 
 * OS X High Sierra (10.13)
-* Raspbian (8, jessie)
 
 Older versions may work but aren't regularly tested
 
@@ -23,9 +22,9 @@ Installs source code to `~/.dotfiles` by default
   - Replace occurrences of `zhang.michelle.d@gmail.com` with your email
   - Replace occurrences of `Michelle D Zhang` with your full name
 
-1. Run preinstall scripts for system e.g.
+1. Install Ansible (requires Python)
     ```sh
-    ./hooks/bin/osx/preinstall
+    pip install ansible
     ```
 
 1. Install dotfiles
@@ -52,7 +51,3 @@ Add to `config/sh/usr/general/secrets.bash`
 Copyright (c) 2013-2018 Michelle D. Zhang. MIT Licensed, see [LICENSE](LICENSE) for details.
 
 [rcm]: https://github.com/thoughtbot/rcm
-
-
-
-TODO - npmrc, gnupg,

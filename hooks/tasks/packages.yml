@@ -1,0 +1,28 @@
+---
+- name: Determine shell
+  shell: "basename $SHELL"
+  register: shell_contents
+
+- name: Install bash-it packages
+  shell: . ~/.dotfiles/config/bash/postinstall
+  when: shell_contents.stdout.find('bash') != -1
+
+- name: Install vim plugins
+  shell: . ~/.dotfiles/config/vim/postinstall
+
+# - name: Install python globals
+#   pip:
+#     requirements: ~/.dotfiles/config/python/requirements.txt
+#
+# - name: Install node globals
+#   npm:
+#     name: "{{ item }}"
+#     global: yes
+#   with_items:
+#     - prettier
+#     - eslint
+#     - yarn
+#
+# TODO: Install golang globals
+# Some are covered by vim-go plugin :GoInstallBinaries
+# See https://github.com/fatih/vim-go/blob/b50d8f2c89d5955fd923722d8f65a5be3b96b7ca/plugin/go.vim#L32

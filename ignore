@@ -19,6 +19,7 @@
 *.out
 *.prof
 *.lprof
+*.retry
 *.sqlite3
 *.swp
 ._*

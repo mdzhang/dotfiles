@@ -4,8 +4,6 @@
 # Install vundles
 #
 
-mkdir -p ~/.vim
-ln -s $XDG_CACHE_HOME/vim/bundle ~/.vim/bundle
-
 vim -c VundleInstall -c quitall
+vim -c GoInstallBinaries -c quitall
 

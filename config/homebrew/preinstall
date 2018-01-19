@@ -11,7 +11,9 @@ fancy_echo() {
   printf "\n$fmt\n" "$@"
 }
 
-if ! command -v brew >/dev/null; then
+if which brew > /dev/null; then
+  fancy_echo "Brew already installed"
+else
   fancy_echo "Installing Homebrew ..."
       curl -fsS \
         'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby

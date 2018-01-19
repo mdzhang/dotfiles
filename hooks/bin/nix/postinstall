@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# No way to install rupa z w/ package manager; just append to shared rc file
-wget --quiet --output-document - https://raw.githubusercontent.com/rupa/z/master/z.sh >> ~/.shrc.local
-

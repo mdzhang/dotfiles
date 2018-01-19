@@ -1,0 +1,52 @@
+---
+- name: "Symlink XDG {{ item.path }} to {{ item.src }}"
+  file:
+    src: "{{ item.src }}"
+    path: "{{ item.path }}"
+    state: link
+  with_items:
+    - src: ~/.dotfiles/config
+      path: ~/.config
+
+- name: "Ensure {{ item }} directory exists"
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - ~/media/data/books
+    - ~/media/data/movies
+    - ~/media/data/tv
+    - ~/.cache/vim
+    - ~/.cache/vim/backups
+    - ~/.cache/vim/swaps
+    - ~/.cache/vim/undo
+    - ~/.cache/pg
+    - ~/.cache/less
+    - ~/.cache/mutt
+    - ~/.vim
+    - ~/opt/mdzhang/go/src/github.com/mdzhang
+
+- name: "Ensure {{ item }} directory exists"
+  file:
+    path: "{{ item }}"
+    state: directory
+  become: yes
+  become_user: root
+  with_items:
+    - /etc/ansible
+    - /etc/postfix
+
+- name: "Symlink {{ item.path }} to {{ item.src }}"
+  file:
+    src: "{{ item.src }}"
+    path: "{{ item.path }}"
+    state: link
+  with_items:
+    - src: ~/.dotfiles/config
+      path: ~/.config
+    - src: /etc/ansible
+      path: /usr/local/etc/ansible
+    - src: ~/.config/mackup/usr
+      path: ~/.mackup
+    - src: ~/.config/vim/opt
+      path: ~/.vim/bundle/opt
