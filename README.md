@@ -32,6 +32,8 @@ Installs source code to `~/.dotfiles` by default
     env RCRC=$HOME/.dotfiles/rcrc rcup
     ```
 
+1. If on OS X, use `mackup restore` to symlink over sensitive files
+
 ## Customization
 
 After updating dotfiles locally, run `rcup` again to update
