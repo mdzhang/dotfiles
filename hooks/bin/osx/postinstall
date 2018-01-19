@@ -13,3 +13,4 @@ sudo grep -qF "$LINE" "$FILE" || sudo bash -c 'echo "$LINE" > $FILE'
 sudo chsh -s $LINE $USER
 
 $DOT_PATH/hooks/bin/osx/configure
+# ln -s $XDG_CONFIG_DIR/mackup/usr ~/.mackup
