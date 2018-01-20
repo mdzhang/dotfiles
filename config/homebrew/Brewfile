@@ -54,6 +54,9 @@ cask 'iterm2'
 
 cask 'dnsmasq'
 
+brew 'knqyf263/pet/pet'
+brew 'fzf'
+
 
 #
 # vim plugin support

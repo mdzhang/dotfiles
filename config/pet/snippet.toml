@@ -1,0 +1,4 @@
+[[snippets]]
+  description = "Restart video utilities on OS X (for when camera is on but video is black)"
+  command = "sudo killall VDCAssistant && sudo killall AppleCameraAssistant"
+  output = ""
