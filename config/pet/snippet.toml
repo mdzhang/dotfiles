@@ -7,3 +7,8 @@
   description = "Finding the pid listening on a specific port on Mac OS"
   command = "lsof -n -i4TCP:8000 | grep LISTEN"
   output = ""
+
+[[snippets]]
+  description = "Delete all git branches with 'feature' in the name"
+  command = "g br -D $(g br | grep feature | tr -d '\\n' | sed  's/\\n//g')"
+  output = ""
