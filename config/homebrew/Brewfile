@@ -4,6 +4,7 @@ tap 'caskroom/versions'
 tap 'thoughtbot/formulae'
 tap 'sgeb/mutt'
 tap 'eqnxio/equinox'
+tap 'homebrew/science'
 
 #
 # override old, shitty, or missing system defaults
@@ -85,6 +86,8 @@ brew 'node-build'
 brew 'nodenv'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
+# cask 'r-app'
+# cask 'rstudio'
 # brew 'rbenv'
 # brew 'ruby-build'
 brew 'shellcheck'
@@ -142,6 +145,7 @@ cask 'sourcetree'
 # cask 'postman'
 # cask 'vagrant-manager'
 # cask 'virtualbox'
+# cask 'xquartz'
 
 
 #
