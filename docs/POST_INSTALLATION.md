@@ -25,3 +25,4 @@
 
     - [Add to GitHub](https://github.com/settings/keys)
 
+1. Update iTerm to have unlimited scrollback
