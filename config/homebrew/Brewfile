@@ -51,6 +51,12 @@ brew 'jq'
 # pretty list dirs
 brew 'tree'
 
+# interactive selection of unix pipe output
+brew 'fpp'
+
+# see progress of coreutils cmds
+brew 'progress'
+
 cask 'iterm2'
 
 cask 'dnsmasq'
