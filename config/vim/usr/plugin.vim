@@ -165,6 +165,15 @@ map g/ <Plug>(incsearch-stay)
 au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
 " ----------
+" Plugin 'jpalardy/vim-slime'
+" ----------
+
+let g:slime_paste_file = "$XDG_DATA_HOME/slime/.slime_paste"
+let g:slime_target = "tmux"
+let g:slime_python_ipython = 1
+" generally use target pane like ':.1'
+
+" ----------
 " Plugin 'mhinz/vim-startify'
 " ----------
 

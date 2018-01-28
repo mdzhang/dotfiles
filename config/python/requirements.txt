@@ -4,3 +4,4 @@ haxor-news
 ipython
 pandas
 numpy
+matplotlib

@@ -51,6 +51,8 @@ else
     Plugin 'jistr/vim-nerdtree-tabs'
     " fancy startup screen
     Plugin 'mhinz/vim-startify'
+    " connect to a REPL
+    Plugin 'jpalardy/vim-slime'
     " easily bulk un/comment regions
     Plugin 'scrooloose/nerdcommenter'
     " easily expand/collapse visually selected region
