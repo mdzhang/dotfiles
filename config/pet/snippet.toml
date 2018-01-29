@@ -12,3 +12,13 @@
   description = "Delete all git branches with 'feature' in the name"
   command = "g br -D $(g br | grep feature | tr -d '\\n' | sed  's/\\n//g')"
   output = ""
+
+[[snippets]]
+  description = "Select line 736 from file out.log"
+  command = "sed '736q;d' out.log"
+  output = ""
+
+[[snippets]]
+  description = "Replace with capture group"
+  command = "sed -r 's/^Reading line (.+)$/\\1/g'"
+  output = ""
