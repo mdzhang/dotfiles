@@ -117,6 +117,8 @@ set splitright
 set scrolloff=7
 " scrolling in iterm
 set mouse=nicr
+" speed up laggy scrolling
+set lazyredraw
 
 "
 " Display
