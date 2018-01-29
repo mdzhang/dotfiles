@@ -115,6 +115,8 @@ set splitright
 
 " set number of lines to see above/below cursor when moving around
 set scrolloff=7
+" scrolling in iterm
+set mouse=nicr
 
 "
 " Display
