@@ -35,22 +35,17 @@ endif
 nmap <Leader>F :CtrlSF
 
 " ----------
-" Plugin 'vim-syntastic/syntastic'
+" Plugin 'sheerun/vim-polyglot'
 " ----------
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 " ----------
-" Plugin 'elzr/vim-json'
+" Plugin 'elzr/vim-json' (polyglot)
 " ----------
 
 let g:vim_json_syntax_conceal = 0
 
 " ----------
-" Plugin 'plasticboy/vim-markdown'
+" Plugin 'plasticboy/vim-markdown' (polyglot)
 " ----------
 
 let g:vim_markdown_conceal = 0

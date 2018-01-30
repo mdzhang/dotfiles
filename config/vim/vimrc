@@ -38,8 +38,6 @@ else
     Plugin 'mhinz/vim-signify'
     " show file content outline
     Plugin 'majutsushi/tagbar'
-    " show code minimap
-    Plugin 'severin-lemaignan/vim-minimap'
     " vim themes
     Plugin 'flazz/vim-colorschemes'
     " show whitespace
@@ -83,21 +81,6 @@ else
     Plugin 'godlygeek/tabular'
 
     "
-    " JSON
-    "
-    Plugin 'elzr/vim-json'
-
-    "
-    " Markdown
-    "
-    Plugin 'plasticboy/vim-markdown'
-
-    "
-    " Docker
-    "
-    Plugin 'ekalinin/dockerfile.vim'
-
-    "
     " Python
     "
 
@@ -107,19 +90,6 @@ else
     Plugin 'vim-scripts/indentpython.vim'
     " improved syntax highlighting
     Plugin 'hdima/python-syntax'
-
-    "
-    " Javascript
-    "
-
-    Plugin 'pangloss/vim-javascript'
-    Plugin 'mxw/vim-jsx'
-
-    "
-    " Golang
-    "
-
-    Plugin 'fatih/vim-go'
 
     " vundle plugins must be added before this line
     call vundle#end()
