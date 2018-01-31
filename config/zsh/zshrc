@@ -1,9 +1,12 @@
 export ZPREZTODIR=$XDG_CONFIG_HOME/zsh/opt/prezto
-export HISTFILE="$XDG_DATA_HOME"/zsh/history
+export HISTFILE="$XDG_DATA_HOME/zsh/history"
 
 # show timestamp in right side prompt
 RPROMPT="%*"
 
+_load_settings "$XDG_CONFIG_HOME/zsh/usr"
+
 if [[ -s "$ZPREZTODIR/init.zsh" ]]; then
   source "$ZPREZTODIR/init.zsh"
 fi
+

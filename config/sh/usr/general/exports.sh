@@ -26,6 +26,7 @@ export VISUAL='vim'
 export HISTCONTROL=ignoreboth
 # for setting history length
 export HISTSIZE=10000
+export SAVEHIST=10000
 export HISTFILESIZE=20000
 
 #
