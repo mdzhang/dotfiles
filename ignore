@@ -100,6 +100,7 @@ node_modules/
 .eggs/
 .ropeproject/
 .tox/
+.pytest_cache/
 __pycache__/
 develop-eggs/
 docs/_build/
