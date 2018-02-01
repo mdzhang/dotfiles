@@ -10,6 +10,8 @@
 - name: Install vim plugins
   shell: . ~/.dotfiles/config/vim/postinstall
 
+# Run rustup-init for rust
+
 # - name: Install python globals
 #   pip:
 #     requirements: ~/.dotfiles/config/python/requirements.txt
