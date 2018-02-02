@@ -35,6 +35,8 @@ brew 'wget'
 # convenience cli utilities
 #
 
+# syntax highlighted cat
+brew 'ccat'
 
 # jump between common dirs/files
 brew 'z'
@@ -142,6 +144,9 @@ brew 'pre-commit'
 # brew 'qcachegrind'
 brew 'rcm'
 # brew 'equinox/release-tool'
+# brew 'kubernetes-helm'
+# brew 'kubernetes-cli'
+# brew 'socat' # for k8s, kid
 cask 'docker'
 cask 'font-hack'
 cask 'sourcetree'

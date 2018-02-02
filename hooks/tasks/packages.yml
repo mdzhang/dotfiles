@@ -15,6 +15,10 @@
 # - name: Install executable binaries to bin
   # with_items:
   #   - https://www.evernote.com/shard/s69/sh/ff1e78f3-a369-4855-b18f-6184ce789c45/f3511927d0fb356ce883835f2eb712e0/res/de33e89a-cdc6-42b5-a476-32e2df1cf4bc/xidel.zip
+  # curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-darwin-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+  # helm init --upgrade
+  # curl -Lo kid https://raw.githubusercontent.com/vyshane/kid/master/kid && chmod +x kid && mv kid /usr/local/bin
+
 #
 
 # - name: Install python globals

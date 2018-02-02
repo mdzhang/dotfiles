@@ -10,3 +10,6 @@ if [[ -s "$ZPREZTODIR/init.zsh" ]]; then
   source "$ZPREZTODIR/init.zsh"
 fi
 
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi

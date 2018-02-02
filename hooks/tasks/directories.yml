@@ -26,6 +26,7 @@
     - ~/.vim
     - ~/opt/mdzhang/go/src/github.com/mdzhang
     - ~/.local/share/zsh
+    - ~/.local/share/kube
 
 - name: "Ensure {{ item }} directory exists"
   file:
@@ -51,3 +52,5 @@
       path: ~/.mackup
     - src: ~/.config/vim/opt
       path: ~/.vim/bundle/opt
+    - src: ~/.local/share/kube
+      path: ~/.kube

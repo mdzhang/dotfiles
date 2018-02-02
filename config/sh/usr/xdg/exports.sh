@@ -31,3 +31,6 @@ export GLIDE_HOME="$XDG_DATA_HOME"/glide
 
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+
+export HELM_HOME="$XDG_DATA_HOME"/helm
+export MINIKUBE_HOME="$XDG_DATA_HOME"/minikube
