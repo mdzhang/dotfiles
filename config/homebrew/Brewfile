@@ -48,6 +48,9 @@ brew 'thefuck'
 # json processor
 brew 'jq'
 
+# cli tool for previewing css selector output
+brew 'https://raw.githubusercontent.com/EricChiang/pup/master/pup.rb'
+
 # pretty list dirs
 brew 'tree'
 

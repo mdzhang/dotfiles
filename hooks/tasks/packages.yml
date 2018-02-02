@@ -12,6 +12,11 @@
 
 # Run rustup-init for rust
 
+# - name: Install executable binaries to bin
+  # with_items:
+  #   - https://www.evernote.com/shard/s69/sh/ff1e78f3-a369-4855-b18f-6184ce789c45/f3511927d0fb356ce883835f2eb712e0/res/de33e89a-cdc6-42b5-a476-32e2df1cf4bc/xidel.zip
+#
+
 # - name: Install python globals
 #   pip:
 #     requirements: ~/.dotfiles/config/python/requirements.txt

@@ -22,3 +22,23 @@
   description = "Replace with capture group"
   command = "sed -r 's/^Reading line (.+)$/\\1/g'"
   output = ""
+
+[[snippets]]
+  description = "Example xidel xpath selector"
+  command = "xidel --html --data index.html --xpath '//div[not(contains(@class, \"announcement\"))]/ul[@class=\"topiclist topics\"]/li[contains(@class, \"row\")]' --output-format=adhoc"
+  output = ""
+
+[[snippets]]
+  description = "Example pup css selection"
+  command = "cat index.html| pup 'ul.topiclist.topics > li.row > dl > dt > div.list-inner > a.topictitle text{}'"
+  output = ""
+
+[[snippets]]
+  description = "jq - timestamp example"
+  command = "grep $(date '+%F') foo.log | grep '\\\"_cmd\\\": \\\"tylenol\\\"' | grep '\\\"msg\\\": \\\"run' | jq '{timestamp: (.timestamp[:19] | strptime(\"%Y-%M-%dT%H:%M:%S\") | mktime), msg}' | jq -s '(.[1].timestamp - .[0].timestamp) / 60'"
+  output = ""
+
+[[snippets]]
+  description = "jq - group/select example"
+  command = "grep $(date '+%F') foo.log | grep '\\\"_cmd\\\": \\\"tylenol\\\"' | grep \"owner.statistics\" | jq -c '{owner_name, hits: .stats.relevant_hits}' | jq -c 'select(.hits > 0)' | sort | jq -c ."
+  output = ""
