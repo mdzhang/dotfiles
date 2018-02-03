@@ -23,7 +23,7 @@ _load_settings() {
   fi
 }
 
-local_modules="xdg bundler cargo docker general git irssi newsboat npm vim yarn"
+local_modules="xdg bundler cargo docker general git irssi kubectl newsboat npm vim yarn"
 
 if [ "$(uname)" = "Darwin" ]; then
   local_modules="$local_modules brew osx"
