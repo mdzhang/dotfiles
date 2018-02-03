@@ -1,4 +1,14 @@
 #!/bin/sh
-echo 'Running rcm post-up hook'
+read -p "Run post-up hook? [y/n] " run_post_up < /dev/tty
 
-ansible-playbook post.yml -i inventory --ask-sudo-pass -vvvv
+if [ "$run_post_up" = "y" ]; then
+  read -p "Step through tasks? [y/n] " step < /dev/tty
+
+  if [ "$step" = "y" ]; then
+    flag="--step"
+  fi
+
+  ansible-playbook post.yml -i inventory --ask-sudo-pass $flag -vvvv < /dev/tty
+else
+  echo "Not running post-up hook"
+fi

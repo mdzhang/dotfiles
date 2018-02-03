@@ -6,6 +6,7 @@
     - include_tasks: tasks/setup.yml
 
   tasks:
+    - include_tasks: tasks/gitmodules.yml
     - include_tasks: tasks/directories.yml
     - include_tasks: tasks/homebrew.yml
       when: uname_contents.stdout.find('Darwin') != -1

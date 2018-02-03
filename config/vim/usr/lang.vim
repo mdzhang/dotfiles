@@ -8,6 +8,9 @@ au BufNewFile,BufRead *.muttrc setfiletype muttrc
 " treat files with .es6 extension as JS files
 au BufNewFile,BufRead *.es6 set filetype=javascript
 
+au BufNewFile,BufRead Brewfile set filetype=ruby
+
+
 " ----------
 " Plugin 'vim-syntastic/syntastic'
 " ----------

@@ -1,8 +1,14 @@
 #!/bin/bash
-echo 'Running rcm pre-up hook'
+read -p "Run pre-up hook? [y/n] " run_pre_up < /dev/tty
 
-# grab third party source code
-git submodule init
-git submodule update --init --recursive
+if [ "$run_pre_up" = "y" ]; then
+  read -p "Step through tasks? [y/n] " step < /dev/tty
 
-ansible-playbook pre.yml -i inventory --ask-sudo-pass -vvvv
+  if [ "$step" = "y" ]; then
+    flag="--step"
+  fi
+
+  ansible-playbook pre.yml -i inventory --ask-sudo-pass $flag -vvvv < /dev/tty
+else
+  echo "Not running pre-up hook"
+fi
