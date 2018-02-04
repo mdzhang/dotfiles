@@ -4,12 +4,9 @@ export HISTFILE="$XDG_DATA_HOME/zsh/history"
 # show timestamp in right side prompt
 RPROMPT="%*"
 
-_load_settings "$XDG_CONFIG_HOME/zsh/usr"
-
 if [[ -s "$ZPREZTODIR/init.zsh" ]]; then
   source "$ZPREZTODIR/init.zsh"
 fi
 
-if [ $commands[kubectl] ]; then
-  source <(kubectl completion zsh)
-fi
+_load_settings "$XDG_CONFIG_HOME/zsh/usr"
+

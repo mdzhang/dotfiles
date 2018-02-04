@@ -12,6 +12,9 @@ alias kcsc='k config set-context'
 alias kcdc='k config delete-context'
 alias kccc='k config current-context'
 
+# Node management
+alias kgn='k get nodes'
+
 # Pod management.
 alias kgp='k get pods'
 alias klp='k logs pods'

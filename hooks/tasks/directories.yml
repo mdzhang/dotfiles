@@ -27,6 +27,7 @@
     - ~/opt/mdzhang/go/src/github.com/mdzhang
     - ~/.local/share/zsh
     - ~/.local/share/kube
+    - ~/.config/boto/
 
 - name: "Ensure {{ item }} directory exists"
   file:
