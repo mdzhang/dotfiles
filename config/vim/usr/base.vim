@@ -64,7 +64,10 @@ set noswapfile
 " centralize backups, swapfiles and undo history
 set backupdir=$XDG_CACHE_HOME/vim/backups
 set directory=$XDG_CACHE_HOME/vim/swaps
-set viminfo+='1000,n$XDG_CACHE_HOME/vim/viminfo
+
+if !has('nvim')
+  set viminfo+='1000,n$XDG_CACHE_HOME/vim/viminfo
+endif
 
 try
     set undodir=$XDG_CACHE_HOME/vim/undo
