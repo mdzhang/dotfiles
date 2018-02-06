@@ -119,7 +119,8 @@ set splitright
 "
 
 " set number of lines to see above/below cursor when moving around
-set scrolloff=7
+" make it large so cursor stays in screen center
+set scrolloff=999
 " scrolling in iterm
 set mouse=nicr
 " speed up laggy scrolling
