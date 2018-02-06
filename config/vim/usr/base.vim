@@ -53,6 +53,8 @@ language en_US.UTF-8
 set langmenu=en_US.UTF-8
 
 " use Unix as the standard file type
+set binary
+set ff=unix
 set ffs=unix,dos,mac
 set fileformat=unix
 
