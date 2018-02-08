@@ -42,3 +42,8 @@
   description = "jq - group/select example"
   command = "grep $(date '+%F') foo.log | grep '\\\"_cmd\\\": \\\"tylenol\\\"' | grep \"owner.statistics\" | jq -c '{owner_name, hits: .stats.relevant_hits}' | jq -c 'select(.hits > 0)' | sort | jq -c ."
   output = ""
+
+[[snippets]]
+  description = "pretty print csv"
+  command = "mlr --icsv --opprint cat nyc-east-river-bicycle-counts.csv"
+  output = ""

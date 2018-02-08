@@ -47,6 +47,9 @@ brew 'httpie'
 # corrects previous shell command
 brew 'thefuck'
 
+# csv processor
+brew 'miller'
+
 # json processor
 brew 'jq'
 
