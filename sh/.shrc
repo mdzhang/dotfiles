@@ -35,7 +35,6 @@ fi
 
 for local_module in $local_modules
 do
-  echo "loading $local_module"
   _load_settings "$XDG_CONFIG_HOME/sh/$local_module"
 done
 

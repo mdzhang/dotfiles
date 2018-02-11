@@ -2,21 +2,17 @@
 
 source "$HOME/.shrc"
 
-#
-# bash-it configs
-#
-
-export BASH_IT_CUSTOM="$XDG_CONFIG_HOME/bash/usr"
-
-# Path to the bash it configuration
+# Path to bash-it installation
 export BASH_IT="$XDG_CONFIG_HOME/bash/opt/bash-it"
 
-# Lock and Load a custom theme file
-# location /.bash_it/themes/
+# Specify theme
 export BASH_IT_THEME='brainy'
 
-# Set this to false to turn off version control status checking within the prompt for all themes
+# Enable version control status checking
 export SCM_CHECK=true
+
+# Specify path to custom configurations
+export BASH_IT_CUSTOM="$XDG_CONFIG_HOME/bash/usr"
 
 # Load Bash It
 source "$BASH_IT/bash_it.sh"

@@ -1,11 +1,5 @@
 #!/bin/zsh
 
-set -o shwordsplit
-
-if [ -f ~/.profile ]; then
-  . ~/.profile;
-fi
-
-if [ -f ~/.zshrc ]; then
-  . ~/.zsrc
+if [ -f "$HOME/.zshrc" ]; then
+  . "$HOME/.zshrc";
 fi

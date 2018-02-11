@@ -16,6 +16,7 @@ Installs source code to `~/.dotfiles` by default
 1. Grab source code
     ```sh
     git clone git@github.com:mdzhang/dotfiles.git ~/.dotfiles
+    git submodule init && git submodule update --init --recursive
     ```
 
 1. Customize with your personal info
