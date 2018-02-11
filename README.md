@@ -9,6 +9,10 @@ Supports:
 
 Older versions may work but aren't regularly tested
 
+## Prerequisites
+
+- Packages installed by [laptop script](https://github.com/mdzhang/laptop)
+
 ## Installation
 
 Installs source code to `~/.dotfiles` by default
