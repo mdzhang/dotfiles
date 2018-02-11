@@ -1,8 +1,0 @@
----
-- name: Set core env vars
-  shell: . ~/.dotfiles/config/sh/usr/xdg/exports.sh
-
-- name: Determine OS
-  shell: uname
-  register: uname_contents
-

@@ -1,2 +1,2 @@
 *.local
-config/sh/usr/general/secrets.sh
+sh/.config/sh/general/secrets.sh

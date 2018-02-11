@@ -1,7 +1,0 @@
-yapf
-flake8
-haxor-news
-ipython
-pandas
-numpy
-matplotlib

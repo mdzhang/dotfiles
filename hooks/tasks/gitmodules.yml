@@ -1,3 +1,0 @@
----
-- name: Install git submodules
-  shell: git submodule init && git submodule update --init --recursive

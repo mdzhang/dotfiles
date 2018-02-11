@@ -1,9 +1,0 @@
-#!/bin/sh
-
-#
-# Install vundles
-#
-
-vim -c VundleInstall -c quitall
-vim -c GoInstallBinaries -c quitall
-

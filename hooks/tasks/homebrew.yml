@@ -1,4 +1,0 @@
----
-- name: Install Homebrew package manager w/ packages
-  shell: . ~/.dotfiles/config/homebrew/preinstall
-  when: uname_contents.stdout.find('Darwin') != -1
