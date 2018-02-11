@@ -1,0 +1,126 @@
+# Shared by a variety of utilities e.g. vim, git, hg, ag, etc.
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.dylib
+*.exe
+*.o
+*.so
+
+# Logs, performance, databases, and backups #
+################################
+*.calltree
+*.db
+*.dump
+*.log
+*.out
+*.prof
+*.lprof
+*.retry
+*.sqlite3
+*.swp
+._*
+
+# Compressed #
+##############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+
+# Extras #
+##########
+*.diff
+*.pid
+*.test
+
+# Secrets #
+###########
+# *.pem
+.env
+.envrc
+secrets/
+
+# Local environments #
+######################
+.env/
+.venv/
+env/
+venv/
+ENV/
+
+# Generic ignore directories #
+##############################
+.cache/
+.benchmark/
+.coverage/
+.tox/
+build/
+coverage/
+coverage_html/
+dist/
+htmlcov/
+logs/
+tmp/
+vendor/
+
+# OS #
+######
+# macOS
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+# Kubuntu
+.directory
+
+# Editors and IDEs #
+####################
+.idea/
+*.iml
+
+# Language specific #
+#####################
+
+# CSS
+.sass-cache/
+
+# Javascript
+node_modules/
+
+# Python
+*$py.class
+*.egg
+*.egg-info/
+*.py[cod]
+*.pyc
+.eggs/
+.ropeproject/
+.tox/
+.pytest_cache/
+__pycache__/
+develop-eggs/
+docs/_build/
+eggs/
+sdist/
+wheels/
+
+# Golang
+.glide/
+
+# Ruby
+.bundle/
+
+# VCS #
+#######
+.git/
+.hg/
+.svn/

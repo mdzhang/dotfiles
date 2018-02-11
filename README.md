@@ -1,12 +1,17 @@
 # [Dotfiles](https://dotfiles.github.io/)
 
-Laptop setup scripts and personal dotfiles. Uses Thoughbot's [rcm][rcm]
+Laptop setup scripts and personal dotfiles. Uses [GNU Stow][stow]
 
 Supports:
 
 * OS X High Sierra (10.13)
+* (K)Ubuntu 17.10
 
 Older versions may work but aren't regularly tested
+
+## Prerequisites
+
+- Packages installed by [laptop script](https://github.com/mdzhang/laptop)
 
 ## Installation
 
@@ -15,6 +20,7 @@ Installs source code to `~/.dotfiles` by default
 1. Grab source code
     ```sh
     git clone git@github.com:mdzhang/dotfiles.git ~/.dotfiles
+    git submodule init && git submodule update --init --recursive
     ```
 
 1. Customize with your personal info
@@ -22,25 +28,26 @@ Installs source code to `~/.dotfiles` by default
   - Replace occurrences of `zhang.michelle.d@gmail.com` with your email
   - Replace occurrences of `Michelle D Zhang` with your full name
 
-1. Install Ansible (requires Python)
+1. Install [`stow`][stow] on your OS
+
+1. Stow folders you're interested in
     ```sh
-    pip install ansible
+    stow git
+    stow bash
+    stow sh
+    stow vim
+    ...
     ```
 
-1. Install dotfiles
+1. Remove them later if you want
     ```sh
-    env RCRC=$HOME/.dotfiles/rcrc rcup
+    stow -D bash
+    stow zsh
     ```
-
-1. If on OS X, use `mackup restore` to symlink over sensitive files
-
-## Customization
-
-After updating dotfiles locally, run `rcup` again to update
 
 ### Sensitive Information
 
-Add to `config/sh/usr/general/secrets.bash`
+Add to `sh/.config/sh/general/secrets.sh`
 
 ## Authors
 
@@ -52,4 +59,4 @@ Add to `config/sh/usr/general/secrets.bash`
 
 Copyright (c) 2013-2018 Michelle D. Zhang. MIT Licensed, see [LICENSE](LICENSE) for details.
 
-[rcm]: https://github.com/thoughtbot/rcm
+[stow]: https://www.gnu.org/software/stow/manual/stow.html
