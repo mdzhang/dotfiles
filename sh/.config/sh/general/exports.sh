@@ -34,3 +34,5 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 export EMAIL=zhang.michelle.d@gmail.com
 export FULL_NAME="Michelle D Zhang"
+
+export GHQ_ROOT="$HOME/src"
