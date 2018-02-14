@@ -36,3 +36,5 @@ export EMAIL=zhang.michelle.d@gmail.com
 export FULL_NAME="Michelle D Zhang"
 
 export GHQ_ROOT="$HOME/src"
+export ANYENV_ROOT="$XDG_DATA_HOME/anyenv"
+export PATH="$ANYENV_ROOT/bin:$PATH"
