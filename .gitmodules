@@ -10,3 +10,6 @@
 [submodule "mutt/.config/mutt/opt/mutt-colors-solarized"]
 	path = mutt/.config/mutt/opt/mutt-colors-solarized
 	url = git@github.com:altercation/mutt-colors-solarized.git
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = git@github.com:tmux-plugins/tpm.git
