@@ -42,6 +42,8 @@ else
     Plugin 'Yggdroot/indentLine'
     " autocompletion
     Plugin 'ervandew/supertab'
+    " code completion
+    Plugin 'maralla/completor.vim'
     " file system explorer
     Plugin 'scrooloose/nerdtree'
     Plugin 'jistr/vim-nerdtree-tabs'
