@@ -14,27 +14,12 @@ brew_update() {
   brew cask cleanup
 }
 
-if which rbenv > /dev/null; then
-  # export RUBY_CONFIGURE_OPTS="--with-readline-dir=`brew --prefix readline` --with-openssl-dir=`brew --prefix openssl`"
-  eval "$(rbenv init -)";
-fi
-
 if which nodenv > /dev/null; then
   eval "$(nodenv init -)";
 fi
 
-if which goenv > /dev/null; then
-  eval "$(goenv init -)";
-fi
-
 if which direnv > /dev/null; then
   eval "$(direnv hook $SHELL_NAME)"
-fi
-
-if which pyenv > /dev/null; then
-  # export CFLAGS="-I$(brew --prefix openssl)/include"
-  # export LDFLAGS="-L$(brew --prefix openssl)/lib"
-  eval "$(pyenv init -)";
 fi
 
 if which pyenv-virtualenv > /dev/null; then
