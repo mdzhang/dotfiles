@@ -35,6 +35,17 @@ endif
 nmap <Leader>F :CtrlSF
 
 " ----------
+" Plugin 'maralla/completor.vim'
+" ----------
+
+" disable auto-trigger
+let g:completor_auto_trigger = 0
+inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
+" use tab to select completion
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+
+" ----------
 " Plugin 'sheerun/vim-polyglot'
 " ----------
 
