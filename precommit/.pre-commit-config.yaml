@@ -1,0 +1,17 @@
+# Not a real pre-commit-config file, just for reference
+-   repo: local
+    hooks:
+    -   id: flake8
+        name: flake8
+        entry: flake8
+        # Use system to account for pyenv-virtualenv
+        # https://github.com/pre-commit/pre-commit/issues/178
+        language: system
+        files: somedir/.*\.py$
+        args: []
+    -   id: eslint
+        name: eslint
+        entry: ./node_modules/.bin/eslint
+        args: [--ext=.js, --ext=.jsx]
+        language: system
+        files: \.(js|jsx)$
