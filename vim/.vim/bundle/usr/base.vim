@@ -257,6 +257,9 @@ nnoremap K :tabnew <Enter>
 " Shift + j --> close tab
 nnoremap J :close <Enter>
 
+" hit enter to select autocomplete selection without inserting newline
+" inoremap <expr> <cr> ((pumvisible())?("\<C-y>"):("\<cr>"))
+
 "
 " standard editor shortcuts
 "
