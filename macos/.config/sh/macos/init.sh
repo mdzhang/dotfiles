@@ -14,10 +14,6 @@ brew_update() {
   brew cask cleanup
 }
 
-if which nodenv > /dev/null; then
-  eval "$(nodenv init -)";
-fi
-
 if which direnv > /dev/null; then
   eval "$(direnv hook $SHELL_NAME)"
 fi
