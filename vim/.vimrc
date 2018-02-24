@@ -80,6 +80,16 @@ else
     Plugin 'junegunn/vim-easy-align'
     Plugin 'godlygeek/tabular'
 
+    if has('nvim')
+      Plugin 'Shougo/deoplete.nvim'
+    else
+      Plugin 'Shougo/deoplete.nvim'
+      Plugin 'roxma/nvim-yarp'
+      Plugin 'roxma/vim-hug-neovim-rpc'
+    endif
+
+    Plugin 'zchee/deoplete-jedi'
+
     "
     " Python
     "

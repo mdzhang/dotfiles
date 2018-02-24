@@ -169,6 +169,12 @@ let g:slime_python_ipython = 1
 " generally use target pane like ':.1'
 
 " ----------
+" Plugin 'Shougo/deoplete.nvim'
+" ----------
+
+let g:deoplete#enable_at_startup = 1
+
+" ----------
 " Plugin 'mhinz/vim-startify'
 " ----------
 
