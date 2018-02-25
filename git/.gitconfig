@@ -103,6 +103,14 @@
   name = Michelle D Zhang
   email = zhang.michelle.d@gmail.com
 
+[commit]
+
+	gpgsign = true
+
+[gpg]
+
+	program = gpg
+
 [core]
 
   editor = vim
