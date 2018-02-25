@@ -52,3 +52,8 @@
   description = "Check battery (Linux)"
   command = "upower -i /org/freedesktop/UPower/devices/battery_BAT0"
   output = ""
+
+[[snippets]]
+  description = "See routing table (linux)"
+  command = "ip route list | column -t"
+  output = ""
