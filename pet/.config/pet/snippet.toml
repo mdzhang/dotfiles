@@ -47,3 +47,8 @@
   description = "pretty print csv"
   command = "mlr --icsv --opprint cat nyc-east-river-bicycle-counts.csv"
   output = ""
+
+[[snippets]]
+  description = "Check battery (Linux)"
+  command = "upower -i /org/freedesktop/UPower/devices/battery_BAT0"
+  output = ""
