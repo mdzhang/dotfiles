@@ -57,3 +57,8 @@
   description = "See routing table (linux)"
   command = "ip route list | column -t"
   output = ""
+
+[[snippets]]
+  description = "Print PATH entries on different lines"
+  command = "echo $PATH |  tr ':' '\\n'"
+  output = ""
