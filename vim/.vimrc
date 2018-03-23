@@ -74,8 +74,6 @@ else
     Plugin 'editorconfig/editorconfig-vim'
     " collection of language packs for better defaults
     Plugin 'sheerun/vim-polyglot'
-    " track time in Vim on wakatime.com
-    Plugin 'wakatime/vim-wakatime'
     " alignment
     Plugin 'junegunn/vim-easy-align'
     Plugin 'godlygeek/tabular'

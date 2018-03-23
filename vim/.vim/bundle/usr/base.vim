@@ -156,8 +156,8 @@ set foldcolumn=1
 " show line numbers
 set number
 
-" highlight current line
-set cursorline
+" don't highlight current line (slows redraw)
+set nocursorline
 
 " display incomplete commands
 set showcmd

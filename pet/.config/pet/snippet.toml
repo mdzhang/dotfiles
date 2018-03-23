@@ -62,3 +62,8 @@
   description = "Print PATH entries on different lines"
   command = "echo $PATH |  tr ':' '\\n'"
   output = ""
+
+[[snippets]]
+  description = "Remove ._ prefix from files with zmv"
+  command = "zmv '._(*)' '$1'"
+  output = ""
