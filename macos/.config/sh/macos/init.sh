@@ -31,6 +31,11 @@ if [ -d /usr/local/opt/openssl/bin ]; then
   export PATH="/usr/local/opt/openssl/bin:$PATH"
 fi
 
+# for GNU envsubst
+if [ -d /usr/local/opt/gettext/bin ]; then
+  export PATH="/usr/local/opt/gettext/bin:$PATH"
+fi
+
 if [ -d /usr/local/opt/sqlite/bin ]; then
   export PATH="/usr/local/opt/sqlite/bin:$PATH"
 fi
