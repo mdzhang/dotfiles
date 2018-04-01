@@ -67,3 +67,8 @@
   description = "Remove ._ prefix from files with zmv"
   command = "zmv '._(*)' '$1'"
   output = ""
+
+[[snippets]]
+  description = "Delete all helm deployments"
+  command = "helm ls | tail -n+2 | awk '{print $1}' | xargs helm delete"
+  output = ""
