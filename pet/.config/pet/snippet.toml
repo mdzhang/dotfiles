@@ -72,3 +72,8 @@
   description = "Delete all helm deployments"
   command = "helm ls | tail -n+2 | awk '{print $1}' | xargs helm delete"
   output = ""
+
+[[snippets]]
+  description = "Get bundle identifier for application (MacOS)"
+  command = "/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' /Applications/TerminalVim.app/Contents/Info.plist"
+  output = ""

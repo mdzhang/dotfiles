@@ -1,19 +1,22 @@
 # bundle id   UTI/ext/MIME type role
 com.apple.Preview .pdf all
-com.sublimetext.3 .css editor
-com.sublimetext.3 .csv editor
-com.sublimetext.3 .js editor
-com.sublimetext.3 .json editor
-com.sublimetext.3 .log editor
-com.sublimetext.3 .py editor
-com.sublimetext.3 .rb editor
-com.sublimetext.3 .sass editor
-com.sublimetext.3 .scss editor
-com.sublimetext.3 .sh editor
-com.sublimetext.3 .txt editor
-com.sublimetext.3 .xml editor
-com.sublimetext.3 .yml editor
-com.uranusjr.macdown .md editor
+
+# See https://gist.github.com/charlietran/43639b0f4e0a01c7c20df8f1929b76f2
+com.apple.automator.TerminalVim .css editor
+com.apple.automator.TerminalVim .csv editor
+com.apple.automator.TerminalVim .js editor
+com.apple.automator.TerminalVim .json editor
+com.apple.automator.TerminalVim .log editor
+com.apple.automator.TerminalVim .py editor
+com.apple.automator.TerminalVim .rb editor
+com.apple.automator.TerminalVim .sass editor
+com.apple.automator.TerminalVim .scss editor
+com.apple.automator.TerminalVim .sh editor
+com.apple.automator.TerminalVim .txt editor
+com.apple.automator.TerminalVim .xml editor
+com.apple.automator.TerminalVim .yml editor
+com.apple.automator.TerminalVim .md editor
+
 org.videolan.vlc .avi all
 org.videolan.vlc .mkv all
 org.videolan.vlc .mov all
