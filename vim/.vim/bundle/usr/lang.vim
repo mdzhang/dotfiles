@@ -10,6 +10,9 @@ au BufNewFile,BufRead *.es6 set filetype=javascript
 
 au BufNewFile,BufRead Brewfile set filetype=ruby
 
+" treat Helm .tpl as go template
+au BufRead,BufNewFile *.tpl set filetype=gohtmltmpl
+
 
 " ----------
 " Plugin 'vim-syntastic/syntastic'
