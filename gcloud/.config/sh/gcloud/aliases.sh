@@ -45,3 +45,6 @@ alias krsd='k rollout status deployment'
 alias kgrs='k get rs'
 alias krh='k rollout history'
 alias kru='k rollout undo'
+
+
+alias gcdp='gcloud docker -- push'

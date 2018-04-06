@@ -77,3 +77,8 @@
   description = "Get bundle identifier for application (MacOS)"
   command = "/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' /Applications/TerminalVim.app/Contents/Info.plist"
   output = ""
+
+[[snippets]]
+  description = "Ping redis"
+  command = "curl -w '\\n' http://<host>:6379/ping"
+  output = ""
