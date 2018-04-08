@@ -14,10 +14,6 @@ brew_update() {
   brew cask cleanup
 }
 
-if which direnv > /dev/null; then
-  eval "$(direnv hook $SHELL_NAME)"
-fi
-
 if which pyenv-virtualenv > /dev/null; then
   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
   eval "$(pyenv virtualenv-init -)";
