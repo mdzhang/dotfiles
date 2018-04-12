@@ -98,6 +98,15 @@ else
     Plugin 'vim-scripts/indentpython.vim'
     " improved syntax highlighting
     Plugin 'hdima/python-syntax'
+    " better jinja filetype detection
+    Plugin 'lepture/vim-jinja'
+
+    "
+    " Yaml
+    "
+
+    " code folding
+    Plugin 'pedrohdz/vim-yaml-folds'
 
     " vundle plugins must be added before this line
     call vundle#end()
