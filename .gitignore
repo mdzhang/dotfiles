@@ -1,5 +1,6 @@
 *.local
 sh/.config/sh/general/secrets.sh
-vim/.vim/bundle/opt/*
 !vim/.vim/bundle/Vundle.vim
+vim/.vim/bundle/opt/*
+vim/.vim/undo
 vim/.vim/viminfo

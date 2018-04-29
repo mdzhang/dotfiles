@@ -126,7 +126,7 @@ let g:ale_linters['python'] = ['flake8']
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fixers['json'] = ['prettier']
-let g:ale_fixers['python'] = ['yapf']
+let g:ale_fixers['python'] = ['yapf', 'isort']
 
 " ----------
 " Plugin 'itchyny/lightline.vim'

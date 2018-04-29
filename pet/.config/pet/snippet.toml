@@ -82,3 +82,8 @@
   description = "Ping redis"
   command = "curl -w '\\n' http://<host>:6379/ping"
   output = ""
+
+[[snippets]]
+  description = "Git rebase and prefer develop changes to the current branch's changes"
+  command = "g rb -X ours develop"
+  output = ""
