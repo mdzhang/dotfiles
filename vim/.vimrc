@@ -30,6 +30,9 @@ else
     " let Vundle manage Vundle, required
     Plugin 'VundleVim/Vundle.vim'
 
+    " required by other plugins, must come first
+    Plugin 'godlygeek/tabular'
+
     " nice status bar
     Plugin 'itchyny/lightline.vim'
     " show git diff (added, mod'd, removed) in the gutter
@@ -72,11 +75,13 @@ else
     Plugin 'haya14busa/incsearch.vim'
     " cross-editor config
     Plugin 'editorconfig/editorconfig-vim'
+    " should be included in polyglot, but
+    " https://github.com/sheerun/vim-polyglot/issues/152
+    Plugin 'plasticboy/vim-markdown'
     " collection of language packs for better defaults
     Plugin 'sheerun/vim-polyglot'
     " alignment
     Plugin 'junegunn/vim-easy-align'
-    Plugin 'godlygeek/tabular'
 
     if has('nvim')
       Plugin 'Shougo/deoplete.nvim'
