@@ -210,9 +210,12 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-set background=dark
 try
-    colorscheme hybrid
+  " set this before setting colorscheme or background isn't right color
+  " in TUI vim
+  let g:dracula_colorterm = 0
+  set termguicolors
+  colorscheme dracula
 catch
 endtry
 

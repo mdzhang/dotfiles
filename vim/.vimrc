@@ -40,7 +40,9 @@ else
     " show file content outline
     Plugin 'majutsushi/tagbar'
     " vim themes
-    Plugin 'flazz/vim-colorschemes'
+    Plugin 'w0ng/vim-hybrid'
+    " install this one w/ :PluginInstall
+    Plugin 'dracula/vim'
     " show whitespace
     Plugin 'Yggdroot/indentLine'
     " autocompletion
