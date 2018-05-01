@@ -45,6 +45,12 @@ nmap <Leader>F :CtrlSF
 let g:vim_json_syntax_conceal = 0
 
 " ----------
+" Plugin 'vim-python/python-syntax' (polyglot)
+" ----------
+
+let g:python_highlight_all = 1
+
+" ----------
 " Plugin 'plasticboy/vim-markdown' (polyglot)
 " ----------
 

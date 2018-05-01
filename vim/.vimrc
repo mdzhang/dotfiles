@@ -93,8 +93,6 @@ else
     Plugin 'tmhedberg/SimpylFold'
     " auto indentation
     Plugin 'vim-scripts/indentpython.vim'
-    " improved syntax highlighting
-    Plugin 'hdima/python-syntax'
     " better jinja filetype detection
     Plugin 'lepture/vim-jinja'
 
