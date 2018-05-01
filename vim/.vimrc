@@ -85,16 +85,6 @@ else
     " alignment
     Plugin 'junegunn/vim-easy-align'
 
-    if has('nvim')
-      Plugin 'Shougo/deoplete.nvim'
-    else
-      Plugin 'Shougo/deoplete.nvim'
-      Plugin 'roxma/nvim-yarp'
-      Plugin 'roxma/vim-hug-neovim-rpc'
-    endif
-
-    Plugin 'zchee/deoplete-jedi'
-
     "
     " Python
     "
