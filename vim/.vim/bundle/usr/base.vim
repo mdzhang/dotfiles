@@ -211,11 +211,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-  " set this before setting colorscheme or background isn't right color
-  " in TUI vim
-  let g:dracula_colorterm = 0
-  set termguicolors
-  colorscheme dracula
+  colorscheme nord
 catch
 endtry
 
