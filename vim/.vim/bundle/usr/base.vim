@@ -210,6 +210,10 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
+if $COLORTERM == 'truecolor'
+  set termguicolors
+endif
+
 try
   colorscheme nord
 catch
