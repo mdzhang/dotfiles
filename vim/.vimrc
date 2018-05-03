@@ -42,7 +42,7 @@ else
     " vim themes
     Plugin 'w0ng/vim-hybrid'
     " install this one w/ :PluginInstall
-    Plugin 'arcticicestudio/nord-vim'
+    Plugin 'mdzhang/nord-vim'
     " show whitespace
     Plugin 'Yggdroot/indentLine'
     " autocompletion

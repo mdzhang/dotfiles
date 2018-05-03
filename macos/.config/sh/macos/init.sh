@@ -19,10 +19,6 @@ if which pyenv-virtualenv > /dev/null; then
   eval "$(pyenv virtualenv-init -)";
 fi
 
-if [ -f /usr/local/etc/profile.d/z.sh ]; then
-  . /usr/local/etc/profile.d/z.sh
-fi
-
 if [ -d /usr/local/opt/openssl/bin ]; then
   export PATH="/usr/local/opt/openssl/bin:$PATH"
 fi
@@ -34,8 +30,4 @@ fi
 
 if [ -d /usr/local/opt/sqlite/bin ]; then
   export PATH="/usr/local/opt/sqlite/bin:$PATH"
-fi
-
-if which thefuck > /dev/null; then
-  eval "$(thefuck --alias)";
 fi

@@ -10,3 +10,10 @@ if which direnv > /dev/null; then
   eval "$(direnv hook $SHELL_NAME)"
 fi
 
+if which thefuck > /dev/null; then
+  eval "$(thefuck --alias)";
+fi
+
+if which fasd > /dev/null; then
+  eval "$(fasd --init auto)"
+fi
