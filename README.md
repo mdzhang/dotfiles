@@ -24,9 +24,9 @@ Installs source code to `~/.dotfiles` by default
     ```
 
 1. Customize with your personal info
-  - Replace occurrences of `mdzhang` with your system user name (for me this is also my git handle)
-  - Replace occurrences of `zhang.michelle.d@gmail.com` with your email
-  - Replace occurrences of `Michelle D Zhang` with your full name
+    - Replace occurrences of `mdzhang` with your system user name (for me this is also my git handle)
+    - Replace occurrences of `zhang.michelle.d@gmail.com` with your email
+    - Replace occurrences of `Michelle D Zhang` with your full name
 
 1. Install [`stow`][stow] on your OS
 
