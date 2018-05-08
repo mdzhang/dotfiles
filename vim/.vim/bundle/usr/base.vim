@@ -212,6 +212,8 @@ endif
 
 if $COLORTERM == 'truecolor'
   set termguicolors
+  set background=dark
+  set t_Co=256
 endif
 
 try
