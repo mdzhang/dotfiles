@@ -38,6 +38,9 @@ nmap <Leader>F :CtrlSF
 " Plugin 'sheerun/vim-polyglot'
 " ----------
 
+" https://github.com/sheerun/vim-polyglot/issues/303
+let g:graphql_javascript_tags = []
+
 " ----------
 " Plugin 'elzr/vim-json' (polyglot)
 " ----------
