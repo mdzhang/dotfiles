@@ -204,6 +204,7 @@ autocmd BufWritePre * :call TrimWhitespace()
 
 " enable syntax highlighting
 syntax enable
+set background=dark
 
 " enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
@@ -212,12 +213,11 @@ endif
 
 if $COLORTERM == 'truecolor'
   set termguicolors
-  set background=dark
   set t_Co=256
 endif
 
 try
-  colorscheme nord
+  colorscheme nord-hybrid
 catch
 endtry
 
