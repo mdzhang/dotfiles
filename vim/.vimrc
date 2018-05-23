@@ -41,6 +41,7 @@ else
     Plugin 'majutsushi/tagbar'
     " vim themes
     Plugin 'mdzhang/vim-nord-hybrid'
+    Plugin 'drewtempelmeyer/palenight.vim'
     " show whitespace
     Plugin 'Yggdroot/indentLine'
     " autocompletion
