@@ -82,8 +82,6 @@ else
     Plugin 'sheerun/vim-polyglot'
     " alignment
     Plugin 'junegunn/vim-easy-align'
-    " detect bad writing
-    Plugin 'davidbeckingsale/writegood.vim'
     " preview markdown in browser
     Plugin 'JamshedVesuna/vim-markdown-preview'
 
