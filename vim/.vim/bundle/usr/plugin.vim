@@ -1,3 +1,5 @@
+" For plugin configuration
+
 " ----------
 " Plugin 'mileszs/ack.vim'
 " ----------
@@ -38,9 +40,6 @@ nmap <Leader>F :CtrlSF
 " Plugin 'sheerun/vim-polyglot'
 " ----------
 
-" https://github.com/sheerun/vim-polyglot/issues/303
-let g:graphql_javascript_tags = []
-
 " ----------
 " Plugin 'elzr/vim-json' (polyglot)
 " ----------
@@ -51,12 +50,14 @@ let g:vim_json_syntax_conceal = 0
 " Plugin 'vim-python/python-syntax' (polyglot)
 " ----------
 
+" prefer more highlighting for things like self, etc
 let g:python_highlight_all = 1
 
 " ----------
 " Plugin 'plasticboy/vim-markdown' (polyglot)
 " ----------
 
+" syntax highlight code within code fences
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_fenced_languages = ['python']
 
@@ -79,10 +80,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let NERDTreeRespectWildIgnore = 1
 
 " show dot/hidden files in file directory
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 1
 
 " show line numbers in file directory
-let NERDTreeShowLineNumbers=1
+let NERDTreeShowLineNumbers = 1
 
 nmap <Leader>nt :NERDTreeToggle
 nmap <Leader>ntf :NERDTreeFind
@@ -102,12 +103,6 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " left-align comment delimiters (instead of aligning w/ code)
 let g:NERDDefaultAlign = 'left'
-
-" ----------
-" Plugin 'jistr/vim-nerdtree-tabs'
-" ----------
-
-" let g:nerdtree_tabs_open_on_console_startup = 1
 
 " ----------
 " Plugin 'majutsushi/tagbar'
@@ -177,12 +172,6 @@ let g:slime_paste_file = "~/.vim/slime/.slime_paste"
 let g:slime_target = "tmux"
 let g:slime_python_ipython = 1
 " generally use target pane like ':.1'
-
-" ----------
-" Plugin 'Shougo/deoplete.nvim'
-" ----------
-
-let g:deoplete#enable_at_startup = 1
 
 " ----------
 " Plugin 'machakann/vim-highlightedyank'
