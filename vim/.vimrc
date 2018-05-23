@@ -42,6 +42,8 @@ else
     " vim themes
     Plugin 'mdzhang/vim-nord-hybrid'
     Plugin 'drewtempelmeyer/palenight.vim'
+    " highlight yank section
+    Plugin 'machakann/vim-highlightedyank'
     " show whitespace
     Plugin 'Yggdroot/indentLine'
     " autocompletion

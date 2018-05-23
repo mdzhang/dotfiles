@@ -185,6 +185,13 @@ let g:slime_python_ipython = 1
 let g:deoplete#enable_at_startup = 1
 
 " ----------
+" Plugin 'machakann/vim-highlightedyank'
+" ----------
+
+" persist yank highlight until edit
+let g:highlightedyank_highlight_duration = -1
+
+" ----------
 " Plugin 'mhinz/vim-startify'
 " ----------
 
