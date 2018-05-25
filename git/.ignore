@@ -59,6 +59,7 @@ ENV/
 
 # Generic ignore directories #
 ##############################
+cache/
 .cache/
 .benchmark/
 .coverage

@@ -67,7 +67,7 @@ let g:vim_markdown_fenced_languages = ['python']
 
 " show leading spaces
 let g:indentLine_leadingSpaceEnabled = 1
-let g:indentLine_leadingSpaceChar = '␣'
+let g:indentLine_leadingSpaceChar = '·'
 
 " ----------
 " Plugin 'scrooloose/nerdtree'

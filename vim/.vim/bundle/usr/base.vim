@@ -174,7 +174,7 @@ set laststatus=2
 set wrap
 
 " show trailing spaces
-set listchars=tab:→\ ,eol:↲,trail:␣,nbsp:•
+set listchars=tab:→\ ,eol:↲,trail:·,nbsp:•,space:·
 set list
 
 "
