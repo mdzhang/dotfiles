@@ -242,6 +242,7 @@ au BufNewFile,BufRead *.muttrc setfiletype muttrc
 
 " treat files with .es6 extension as JS files
 au BufNewFile,BufRead *.es6 set filetype=javascript
+au BufNewFile,BufRead .eslintrc set filetype=json
 
 au BufNewFile,BufRead Brewfile set filetype=ruby
 
