@@ -63,6 +63,11 @@ else
     Plugin 'terryma/vim-expand-region'
     " easily move selected code up/down
     Plugin 'matze/vim-move'
+    " easily add/remove/change quotes etc. for selected text objects
+    "   ds" to delete surrounding quotes
+    "   ys[select text obj]" to add quotes
+    "   cs"' to replace " with '
+    Plugin 'tpope/vim-surround'
     " syntax checker
     Plugin 'w0rp/ale'
     " code search tool
