@@ -127,6 +127,9 @@ let g:ale_lint_on_text_changed = 'never'
 
 let g:ale_linters = {}
 let g:ale_linters['python'] = ['flake8']
+let g:ale_linters['json'] = ['jsonlint']
+let g:ale_linters['css'] = ['csslint']
+let g:ale_linters['yaml'] = ['yamllint']
 
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
