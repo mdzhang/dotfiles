@@ -111,6 +111,9 @@ else
     " code folding
     Plugin 'pedrohdz/vim-yaml-folds'
 
+    " devicons and glyphs (must be last)
+    Plugin 'ryanoasis/vim-devicons'
+
     " vundle plugins must be added before this line
     call vundle#end()
 
