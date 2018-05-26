@@ -194,3 +194,9 @@ autocmd vimenter *
   \ |   NERDTree
   \ |   wincmd w
   \ | endif
+
+" ----------
+" Plugin 'ryanoasis/vim-devicons'
+" ----------
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
