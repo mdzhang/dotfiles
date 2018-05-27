@@ -200,3 +200,14 @@ autocmd vimenter *
 " ----------
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
+
+" ----------
+" Plugin 'luochen1990/rainbow'
+" ----------
+let g:rainbow_active = 1
+" use Nord colors for bracket highlighting
+" specifically nord 8, 12, 13, 14, 15
+let g:rainbow_conf = {
+      \ 'guifgs': ['#88C0D0', '#D08770', '#EBCB8B', '#A3BE8C', '#B48EAD'],
+      \ 'ctermfgs': ['6', '11', '3', '2', '5']
+      \ }

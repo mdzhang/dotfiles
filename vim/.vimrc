@@ -42,6 +42,8 @@ else
     " vim themes
     Plugin 'mdzhang/vim-nord-hybrid'
     Plugin 'drewtempelmeyer/palenight.vim'
+    " rainbow bracket highlighting
+    Plugin 'luochen1990/rainbow'
     " highlight yank section
     Plugin 'machakann/vim-highlightedyank'
     " show whitespace
