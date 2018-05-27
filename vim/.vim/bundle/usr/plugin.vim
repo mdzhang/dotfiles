@@ -59,7 +59,8 @@ let g:python_highlight_all = 1
 
 " syntax highlight code within code fences
 let g:vim_markdown_conceal = 0
-let g:vim_markdown_fenced_languages = ['python']
+" TODO: this slows editing on markdown files w/ many code blocsk
+"let g:vim_markdown_fenced_languages = ['python']
 
 " ----------
 " Plugin 'Yggdroot/indentLine'
