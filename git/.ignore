@@ -114,6 +114,7 @@ docs/_build/
 eggs/
 sdist/
 wheels/
+.ipynb_checkpoints/
 
 # Golang
 .glide/
