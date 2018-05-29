@@ -88,6 +88,7 @@ vendor/
 ####################
 .idea/
 *.iml
+python_cscope.files
 
 # Language specific #
 #####################
