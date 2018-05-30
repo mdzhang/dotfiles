@@ -87,3 +87,8 @@
   description = "Git rebase and prefer develop changes to the current branch's changes"
   command = "g rb -X ours develop"
   output = ""
+
+[[snippets]]
+  description = "GHQ get a project from a self-hosted gitlab"
+  command = "ghq get ssh://git@gitlab.my.host/group/rep -p"
+  output = ""

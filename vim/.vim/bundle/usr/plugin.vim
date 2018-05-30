@@ -67,7 +67,7 @@ let g:vim_markdown_conceal = 0
 " ----------
 
 " show leading spaces
-let g:indentLine_leadingSpaceEnabled = 0
+let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '·'
 
 " ----------
@@ -133,7 +133,7 @@ let g:ale_linters['css'] = ['csslint']
 let g:ale_linters['yaml'] = ['yamllint']
 
 let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fixers['javascript'] = ['eslint']
 let g:ale_fixers['json'] = ['prettier']
 let g:ale_fixers['python'] = ['yapf', 'isort']
 

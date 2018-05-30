@@ -1,10 +1,20 @@
 {
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": ["react"],
   "parserOptions": {
-      "ecmaVersion": 7,
-      "sourceType": "module",
-      "ecmaFeatures": {
-          "jsx": true,
-          "modules": true
-      }
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "globals": {},
+  "rules": {
+    "no-underscore-dangle": 0
   }
 }
