@@ -219,7 +219,7 @@ if $COLORTERM == 'truecolor'
 endif
 
 try
-  colorscheme nord-hybrid
+  colorscheme iceberg
 catch
 endtry
 

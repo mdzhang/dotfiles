@@ -42,6 +42,7 @@ else
     " vim themes
     Plugin 'mdzhang/vim-nord-hybrid'
     Plugin 'drewtempelmeyer/palenight.vim'
+    Plugin 'cocopon/iceberg.vim'
     " rainbow bracket highlighting
     Plugin 'luochen1990/rainbow'
     " highlight yank section
