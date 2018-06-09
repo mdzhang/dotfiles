@@ -40,7 +40,6 @@ else
     " show file content outline
     Plugin 'majutsushi/tagbar'
     " vim themes
-    Plugin 'mdzhang/vim-nord-hybrid'
     Plugin 'drewtempelmeyer/palenight.vim'
     Plugin 'cocopon/iceberg.vim'
     " rainbow bracket highlighting
@@ -81,7 +80,7 @@ else
     " git integration
     Plugin 'tpope/vim-fugitive'
     " search everything
-    Plugin 'kien/ctrlp.vim'
+    Plugin 'ctrlpvim/ctrlp.vim'
     " incremental search highlighting w/ regex search support (use /\v)
     Plugin 'haya14busa/incsearch.vim'
     " cross-editor config
