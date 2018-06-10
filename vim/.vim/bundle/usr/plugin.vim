@@ -59,7 +59,7 @@ let g:python_highlight_all = 1
 
 " syntax highlight code within code fences
 let g:vim_markdown_conceal = 0
-" TODO: this slows editing on markdown files w/ many code blocsk
+" TODO: this slows editing on markdown files w/ many code blocks
 "let g:vim_markdown_fenced_languages = ['python']
 
 " ----------
@@ -67,8 +67,10 @@ let g:vim_markdown_conceal = 0
 " ----------
 
 " show leading spaces
-let g:indentLine_leadingSpaceEnabled = 1
+let g:indentLine_leadingSpaceEnabled = 0
 let g:indentLine_leadingSpaceChar = '·'
+let g:indentLine_char = '┆'
+let g:indentLine_color_gui = '#282d43'
 
 " ----------
 " Plugin 'scrooloose/nerdtree'
