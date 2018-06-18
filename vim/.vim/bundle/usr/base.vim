@@ -245,6 +245,7 @@ au BufNewFile,BufRead *.es6 set filetype=javascript
 au BufNewFile,BufRead .eslintrc set filetype=json
 
 au BufNewFile,BufRead Brewfile set filetype=ruby
+au BufNewFile,BufRead .envrc set filetype=sh
 
 " treat Helm .tpl as go template
 au BufRead,BufNewFile *.tpl set filetype=gohtmltmpl

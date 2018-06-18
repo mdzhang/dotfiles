@@ -240,6 +240,11 @@ autocmd vimenter *
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 
+" avoid brackets around icons in nerdtree
+if exists('g:loaded_webdevicons')
+    call webdevicons#refresh()
+endif
+
 " ----------
 " Plugin 'luochen1990/rainbow'
 " ----------
