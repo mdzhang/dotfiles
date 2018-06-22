@@ -139,6 +139,12 @@ let g:ale_fixers['javascript'] = ['eslint']
 let g:ale_fixers['json'] = ['prettier']
 let g:ale_fixers['python'] = ['yapf', 'isort']
 
+" auto close error/warning list when file/buffer is closed
+augroup CloseLoclistWindowGroup
+  autocmd!
+  autocmd QuitPre * if empty(&buftype) | lclose | endif
+augroup END
+
 " ----------
 " Plugin 'itchyny/lightline.vim'
 " ----------
