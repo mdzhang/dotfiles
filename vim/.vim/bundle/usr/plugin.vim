@@ -249,9 +249,9 @@ endif
 " Plugin 'luochen1990/rainbow'
 " ----------
 let g:rainbow_active = 1
-" use Nord colors for bracket highlighting
-" specifically nord 8, 12, 13, 14, 15
+" use Iceterm colors for bracket highlighting
+" blue / red / orange / green / purple
 let g:rainbow_conf = {
-      \ 'guifgs': ['#88C0D0', '#D08770', '#EBCB8B', '#A3BE8C', '#B48EAD'],
-      \ 'ctermfgs': ['6', '11', '3', '2', '5']
+      \ 'guifgs': ['#e2a478', '#e27878', '#89b8c2', '#b4be82', '#a093c7'],
+      \ 'ctermfgs': ['150', '203', '216', '109', '140']
       \ }
