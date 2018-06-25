@@ -92,3 +92,8 @@
   description = "GHQ get a project from a self-hosted gitlab"
   command = "ghq get ssh://git@gitlab.my.host/group/rep -p"
   output = ""
+
+[[snippets]]
+  description = "Add a git tag with a message to a specific SHA"
+  command = "g tag -a v0.12-alpha.1 9318430 -m \"Nested entities init support\""
+  output = ""
