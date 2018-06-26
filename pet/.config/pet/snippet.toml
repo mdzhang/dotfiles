@@ -1,60 +1,60 @@
 [[snippets]]
-  description = "Restart video utilities on OS X (for when camera is on but video is black)"
+  description = "[macos] Restart video utilities on OS X (for when camera is on but video is black)"
   command = "sudo killall VDCAssistant && sudo killall AppleCameraAssistant"
   output = ""
 
 [[snippets]]
-  description = "Finding the pid listening on a specific port on Mac OS"
+  description = "[macos] Finding the pid listening on a specific port"
   command = "lsof -n -i4TCP:8000 | grep LISTEN"
   output = ""
 
 [[snippets]]
-  description = "Delete all git branches with 'feature' in the name"
+  description = "[git] Delete all git branches with 'feature' in the name"
   command = "g br -D $(g br | grep feature | tr -d '\\n' | sed  's/\\n//g')"
   output = ""
 
 [[snippets]]
-  description = "Select line 736 from file out.log"
+  description = "[sed] Select line 736 from file out.log"
   command = "sed '736q;d' out.log"
   output = ""
 
 [[snippets]]
-  description = "Replace with capture group"
+  description = "[sed] Replace with capture group"
   command = "sed -r 's/^Reading line (.+)$/\\1/g'"
   output = ""
 
 [[snippets]]
-  description = "Example xidel xpath selector"
+  description = "[xidel] xpath selector"
   command = "xidel --html --data index.html --xpath '//div[not(contains(@class, \"announcement\"))]/ul[@class=\"topiclist topics\"]/li[contains(@class, \"row\")]' --output-format=adhoc"
   output = ""
 
 [[snippets]]
-  description = "Example pup css selection"
+  description = "[pup] css selection"
   command = "cat index.html| pup 'ul.topiclist.topics > li.row > dl > dt > div.list-inner > a.topictitle text{}'"
   output = ""
 
 [[snippets]]
-  description = "jq - timestamp example"
+  description = "[jq] timestamp"
   command = "grep $(date '+%F') foo.log | grep '\\\"_cmd\\\": \\\"tylenol\\\"' | grep '\\\"msg\\\": \\\"run' | jq '{timestamp: (.timestamp[:19] | strptime(\"%Y-%M-%dT%H:%M:%S\") | mktime), msg}' | jq -s '(.[1].timestamp - .[0].timestamp) / 60'"
   output = ""
 
 [[snippets]]
-  description = "jq - group/select example"
+  description = "[jq] group/select"
   command = "grep $(date '+%F') foo.log | grep '\\\"_cmd\\\": \\\"tylenol\\\"' | grep \"owner.statistics\" | jq -c '{owner_name, hits: .stats.relevant_hits}' | jq -c 'select(.hits > 0)' | sort | jq -c ."
   output = ""
 
 [[snippets]]
-  description = "pretty print csv"
+  description = "[mlr] pretty print csv"
   command = "mlr --icsv --opprint cat nyc-east-river-bicycle-counts.csv"
   output = ""
 
 [[snippets]]
-  description = "Check battery (Linux)"
+  description = "[nix] Check battery"
   command = "upower -i /org/freedesktop/UPower/devices/battery_BAT0"
   output = ""
 
 [[snippets]]
-  description = "See routing table (linux)"
+  description = "[nix] See routing table"
   command = "ip route list | column -t"
   output = ""
 
@@ -74,7 +74,7 @@
   output = ""
 
 [[snippets]]
-  description = "Get bundle identifier for application (MacOS)"
+  description = "[macos] Get bundle identifier for application (MacOS)"
   command = "/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' /Applications/TerminalVim.app/Contents/Info.plist"
   output = ""
 
@@ -84,16 +84,21 @@
   output = ""
 
 [[snippets]]
-  description = "Git rebase and prefer develop changes to the current branch's changes"
+  description = "[git] Git rebase and prefer develop changes to the current branch's changes"
   command = "g rb -X ours develop"
   output = ""
 
 [[snippets]]
-  description = "GHQ get a project from a self-hosted gitlab"
+  description = "[ghq] GHQ get a project from a self-hosted gitlab"
   command = "ghq get ssh://git@gitlab.my.host/group/rep -p"
   output = ""
 
 [[snippets]]
-  description = "Add a git tag with a message to a specific SHA"
+  description = "[git] Add a git tag with a message to a specific SHA"
   command = "g tag -a v0.12-alpha.1 9318430 -m \"Nested entities init support\""
+  output = ""
+
+[[snippets]]
+  description = "[git] Delete local tags and refresh by pulling from remote"
+  command = "git tag -l | xargs git tag -d && git fetch --tags"
   output = ""
