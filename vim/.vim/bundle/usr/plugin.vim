@@ -232,6 +232,9 @@ let g:highlightedyank_highlight_duration = -1
 " Plugin 'mhinz/vim-startify'
 " ----------
 
+" don't change project root
+let g:startify_change_to_dir=0
+
 " open up Startify and NERDTree automatically
 autocmd vimenter *
   \   if !argc()
@@ -261,3 +264,10 @@ let g:rainbow_conf = {
       \ 'guifgs': ['#e2a478', '#e27878', '#89b8c2', '#b4be82', '#a093c7'],
       \ 'ctermfgs': ['150', '203', '216', '109', '140']
       \ }
+
+" ----------
+" Plugin 'mileszs/ack.vim'
+" ----------
+
+" don't auto-open first matching file
+cabbrev Ack Ack!

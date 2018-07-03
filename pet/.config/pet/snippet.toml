@@ -102,3 +102,8 @@
   description = "[git] Delete local tags and refresh by pulling from remote"
   command = "git tag -l | xargs git tag -d && git fetch --tags"
   output = ""
+
+[[snippets]]
+  description = "find logs -name \"*MagicMock*\" | xargs -d '\\n' rm"
+  command = "[find] Remove files in 'logs' dir with name matching '*MagicMock*' pattern"
+  output = ""
