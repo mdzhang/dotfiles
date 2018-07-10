@@ -271,3 +271,12 @@ let g:rainbow_conf = {
 
 " don't auto-open first matching file
 cabbrev Ack Ack!
+
+" ----------
+" Plugin 'mtth/scratch.vim'
+" ----------
+
+let g:scratch_top = 0
+let g:scratch_horizontal = 0
+let g:scratch_height = 100
+let g:scratch_persistence_file = '.scratch.vim'

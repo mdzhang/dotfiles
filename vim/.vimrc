@@ -94,6 +94,8 @@ else
     Plugin 'junegunn/vim-easy-align'
     " preview markdown in browser
     Plugin 'JamshedVesuna/vim-markdown-preview'
+    " todo list plugin
+    Plugin 'lukaszkorecki/workflowish'
 
     "
     " Python
