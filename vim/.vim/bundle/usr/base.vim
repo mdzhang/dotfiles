@@ -261,7 +261,7 @@ let maplocalleader = ","
 nnoremap <space> za
 
 " shorcut for using PCRE substitution instead of weird vim substitution
-cabbrev pd perldo
+cabbrev pld perldo
 
 " faster tab navigation
 noremap <leader>1 1gt

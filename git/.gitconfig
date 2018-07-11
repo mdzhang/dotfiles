@@ -122,7 +122,7 @@
 
 [rebase]
 
-  instructionFormat = "%an %s"
+  instructionFormat = "[%an] %s"
 
 [push]
 
