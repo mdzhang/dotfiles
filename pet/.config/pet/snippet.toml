@@ -104,6 +104,6 @@
   output = ""
 
 [[snippets]]
-  description = "find logs -name \"*MagicMock*\" | xargs -d '\\n' rm"
-  command = "[find] Remove files in 'logs' dir with name matching '*MagicMock*' pattern"
+  description = "[find] Remove files in 'logs' dir with name matching '*MagicMock*' pattern"
+  command = "find logs -name \"*MagicMock*\" | xargs -d '\\n' rm"
   output = ""

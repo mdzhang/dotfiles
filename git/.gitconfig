@@ -130,7 +130,7 @@
 
 [diff]
 
-  tool = vimdiff
+  tool = icdiff
 
 [difftool]
 
@@ -144,6 +144,9 @@
 
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path =
+
+[difftool "icdiff"]
+    cmd = icdiff $LOCAL $REMOTE
 
 [mergetool "sourcetree"]
 
@@ -160,3 +163,6 @@
   #   by the local ones
 
   path = ~/.gitconfig.local
+
+[icdiff]
+	options = --highlight --line-numbers
