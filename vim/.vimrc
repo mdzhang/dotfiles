@@ -39,6 +39,7 @@ else
     Plugin 'mhinz/vim-signify'
     " show file content outline
     Plugin 'majutsushi/tagbar'
+    Plugin 'lvht/tagbar-markdown'
     " vim themes
     Plugin 'drewtempelmeyer/palenight.vim'
     Plugin 'cocopon/iceberg.vim'

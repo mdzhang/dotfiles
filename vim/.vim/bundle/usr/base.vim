@@ -190,7 +190,11 @@ set expandtab
 
 set smarttab
 set autoindent
-set smartindent
+
+set nosmartindent
+set cindent
+set cinkeys-=0#
+set indentkeys-=0#
 
 " 1 tab == 2 spaces
 set shiftwidth=2
