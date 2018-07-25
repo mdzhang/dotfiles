@@ -85,5 +85,6 @@ if [[ -n ${ZSH_VERSION-} ]]; then
 	autoload -U +X bashcompinit && bashcompinit
 fi
 
+# TODO: fix loading order and uncomment this
 # tab-completion
-complete -o nospace -F _up up
+# complete -o nospace -F _up up

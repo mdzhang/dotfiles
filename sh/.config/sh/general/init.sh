@@ -17,3 +17,9 @@ fi
 if which fasd > /dev/null; then
   eval "$(fasd --init auto)"
 fi
+
+[ -f ~/.fzf.$SHELL_NAME ] && source ~/.fzf.$SHELL_NAME
+
+if [ -f ~/.local/bin/vocab ]; then
+  ~/.local/bin/vocab
+fi
