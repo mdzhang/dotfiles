@@ -4,3 +4,5 @@ sh/.config/sh/general/secrets.sh
 vim/.vim/bundle/opt/*
 vim/.vim/undo
 vim/.vim/viminfo
+vim/.vim/pack/
+nvim/.config/nvim/pack/
