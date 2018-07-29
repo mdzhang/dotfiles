@@ -20,6 +20,6 @@ fi
 
 [ -f ~/.fzf.$SHELL_NAME ] && source ~/.fzf.$SHELL_NAME
 
-if [ -f ~/.local/bin/vocab ]; then
-  ~/.local/bin/vocab
+if which vocab > /dev/null; then
+  vocab
 fi
