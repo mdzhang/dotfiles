@@ -1,6 +1,7 @@
 alias root='sudo su'
 
 alias d="ls -al | grep '^d'"     # show the dir's in the current dir
+alias da='direnv allow'
 alias h='history'                # show the history of commands issued
 alias c='clear'
 alias p='ps -ajx | grep'
