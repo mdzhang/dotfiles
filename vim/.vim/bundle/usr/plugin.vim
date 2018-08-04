@@ -57,6 +57,8 @@ let g:python_highlight_all = 1
 " Plugin 'plasticboy/vim-markdown' (polyglot)
 " ----------
 
+" align w/ editor config
+let g:vim_markdown_new_list_item_indent = 2
 " syntax highlight code within code fences
 let g:vim_markdown_conceal = 0
 " TODO: this slows editing on markdown files w/ many code blocks
