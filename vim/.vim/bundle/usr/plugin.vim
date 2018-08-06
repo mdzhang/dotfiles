@@ -31,6 +31,18 @@ if executable('ag')
 endif
 
 " ----------
+" Plugin 'matze/vim-move
+" ----------
+
+let g:move_key_modifier = 'C'
+
+" ----------
+" Plugin 'MattesGroeger/vim-bookmarks'
+" ----------
+
+highlight BookmarkSign ctermfg=109
+
+" ----------
 " Plugin 'dyng/ctrlsf.vim'
 " ----------
 
