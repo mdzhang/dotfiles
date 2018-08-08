@@ -14,6 +14,7 @@ brew_update() {
   brew cask cleanup
 }
 
+
 # Bash completion dir: /usr/local/etc/bash_completion.d
 # zsh completions dir: /usr/local/share/zsh/site-functions
 
@@ -37,7 +38,14 @@ if which pyenv-virtualenv > /dev/null; then
 fi
 
 if [ -d /usr/local/opt/openssl/bin ]; then
+  export CFLAGS="-I$(brew --prefix openssl)/include $CFLAGS"
+  export LDFLAGS="-L$(brew --prefix openssl)/lib $LDFLAGS"
   export PATH="/usr/local/opt/openssl/bin:$PATH"
+fi
+
+if [ -d /usr/local/opt/readline/lib ]; then
+  export CFLAGS="-I$(brew --prefix readline)/include $CFLAGS"
+  export LDFLAGS="-L$(brew --prefix readline)/lib $LDFLAGS"
 fi
 
 # for GNU envsubst
