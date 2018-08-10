@@ -2,6 +2,11 @@ if which anyenv > /dev/null; then
   eval "$(anyenv init - --no-rehash)";
 fi
 
+if which pyenv-virtualenv > /dev/null; then
+  export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+  eval "$(pyenv virtualenv-init - --no-rehash)";
+fi
+
 if which basher > /dev/null; then
   eval "$(basher init -)"
 fi

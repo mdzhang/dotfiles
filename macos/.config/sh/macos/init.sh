@@ -32,11 +32,6 @@ if [ -d /usr/local/opt/ncurses/bin ]; then
   export PATH="/usr/local/opt/ncurses/bin:$PATH"
 fi
 
-if which pyenv-virtualenv > /dev/null; then
-  export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-  eval "$(pyenv virtualenv-init - --no-rehash)";
-fi
-
 if [ -d /usr/local/opt/openssl/bin ]; then
   export CFLAGS="-I/usr/local/opt/openssl/include $CFLAGS"
   export LDFLAGS="-L/usr/local/opt/openssl/lib $LDFLAGS"
