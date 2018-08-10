@@ -1,5 +1,5 @@
 if which anyenv > /dev/null; then
-  eval "$(anyenv init -)";
+  eval "$(anyenv init - --no-rehash)";
 fi
 
 if which basher > /dev/null; then
@@ -12,10 +12,6 @@ fi
 
 if which thefuck > /dev/null; then
   eval "$(thefuck --alias)";
-fi
-
-if which fasd > /dev/null; then
-  eval "$(fasd --init auto)"
 fi
 
 [ -f ~/.fzf.$SHELL_NAME ] && source ~/.fzf.$SHELL_NAME

@@ -1,5 +1,7 @@
 #!/bin/zsh -l
 
+# zmodload zsh/zprof
+
 set -o shwordsplit
 
 source "$HOME/.shrc"
@@ -18,5 +20,4 @@ if [[ -s "$ZPREZTODIR/init.zsh" ]]; then
   source "$ZPREZTODIR/init.zsh"
 fi
 
-# Load custom configurations
-_load_settings "$XDG_CONFIG_HOME/zsh/usr"
+# zprof
