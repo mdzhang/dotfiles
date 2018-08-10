@@ -34,18 +34,18 @@ fi
 
 if which pyenv-virtualenv > /dev/null; then
   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-  eval "$(pyenv virtualenv-init -)";
+  eval "$(pyenv virtualenv-init - --no-rehash)";
 fi
 
 if [ -d /usr/local/opt/openssl/bin ]; then
-  export CFLAGS="-I$(brew --prefix openssl)/include $CFLAGS"
-  export LDFLAGS="-L$(brew --prefix openssl)/lib $LDFLAGS"
+  export CFLAGS="-I/usr/local/opt/openssl/include $CFLAGS"
+  export LDFLAGS="-L/usr/local/opt/openssl/lib $LDFLAGS"
   export PATH="/usr/local/opt/openssl/bin:$PATH"
 fi
 
 if [ -d /usr/local/opt/readline/lib ]; then
-  export CFLAGS="-I$(brew --prefix readline)/include $CFLAGS"
-  export LDFLAGS="-L$(brew --prefix readline)/lib $LDFLAGS"
+  export CFLAGS="-I/usr/local/opt/readline/include $CFLAGS"
+  export LDFLAGS="-L/usr/local/opt/readline/lib $LDFLAGS"
 fi
 
 # for GNU envsubst

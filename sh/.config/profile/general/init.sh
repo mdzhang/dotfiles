@@ -19,3 +19,8 @@ fi
 if which vocab > /dev/null; then
   vocab
 fi
+
+ssh-add -l | grep "The agent has no identities" > /dev/null
+if [ $? -eq 0 ]; then
+  ssh-add
+fi
