@@ -13,3 +13,9 @@
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
+[submodule "fish/.local/share/omf"]
+	path = fish/.local/share/omf
+	url = git@github.com:oh-my-fish/oh-my-fish.git
+[submodule "fish/.local/share/fisherman"]
+	path = fish/.local/share/fisherman
+	url = git@github.com:fisherman/fisherman.git

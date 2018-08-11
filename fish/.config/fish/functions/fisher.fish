@@ -1,0 +1,1 @@
+/home/mdzhang/.dotfiles/fish/.local/share/fisherman/fisher.fish

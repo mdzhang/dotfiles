@@ -1,4 +1,4 @@
-*.local
+history
 sh/.config/sh/general/secrets.sh
 !vim/.vim/bundle/Vundle.vim
 vim/.vim/bundle/opt/*
