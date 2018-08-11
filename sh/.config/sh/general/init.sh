@@ -1,3 +1,5 @@
+export GPG_TTY=$(tty)
+
 # mdzhang: this is slow
 if which anyenv > /dev/null; then
   eval "$(anyenv init - --no-rehash $SHELL_NAME)";
