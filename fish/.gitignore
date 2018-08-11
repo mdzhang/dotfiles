@@ -1,1 +1,7 @@
+.config/fish/conf.d/*
+!.config/fish/conf.d/omf.fish
+
+.config/fish/functions/*
+!.config/fish/functions/fisher.fish
+
 .config/fish/fishd.*
