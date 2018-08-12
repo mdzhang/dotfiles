@@ -1,9 +1,6 @@
 [submodule "vim/.vim/bundle/opt/Vundle.vim"]
 	path = vim/.vim/bundle/opt/Vundle.vim
 	url = git@github.com:VundleVim/Vundle.vim.git
-[submodule "zsh/.config/zsh/opt/prezto"]
-	path = zsh/.config/zsh/opt/prezto
-	url = git@github.com:mdzhang/prezto.git
 [submodule "bash/.config/bash/opt/bash-it"]
 	path = bash/.config/bash/opt/bash-it
 	url = git@github.com:Bash-it/bash-it.git
@@ -19,3 +16,6 @@
 [submodule "fish/.local/share/fisherman"]
 	path = fish/.local/share/fisherman
 	url = git@github.com:fisherman/fisherman.git
+[submodule "zsh/.config/zsh/opt/zgen"]
+	path = zsh/.config/zsh/opt/zgen
+	url = git@github.com:tarjoilija/zgen.git
