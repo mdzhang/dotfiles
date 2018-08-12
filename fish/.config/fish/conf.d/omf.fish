@@ -1,5 +1,7 @@
 #!/bin/fish
 
+set -gx SHELL (which fish)
+
 ########################################
 # TODO: Can't do `source "$HOME/.shrc`
 #       b/c Fish isn't bash-wards compat
