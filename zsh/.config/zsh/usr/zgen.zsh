@@ -1,8 +1,5 @@
 #!/bin/zsh -l
 
-# Path to prezto installation
-export ZPREZTODIR="$XDG_CONFIG_HOME/zsh/opt/prezto"
-
 export ZGEN_DIR="$XDG_DATA_HOME/zgen"
 
 # set default user to hide user@host in agnoster theme prompt
@@ -77,8 +74,6 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
 
     # highlight command line text
     zgen load zsh-users/zsh-syntax-highlighting
-    # quickly move to higher level directories
-    zgen load Tarrasch/zsh-bd
     # fzf/z integration
     zgen load andrewferrier/fzf-z
 
