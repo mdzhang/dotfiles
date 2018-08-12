@@ -18,7 +18,7 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
     #
 
     # Color output (auto set to 'no' on dumb terminals).
-    zgen prezto * color 'yes'
+    zgen prezto '*:*' color 'yes'
 
     # prezto modules to load, order matters
     zgen prezto autosuggestions
@@ -74,6 +74,15 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
 
     # load prezto
     zgen prezto
+
+    # highlight command line text
+    zgen load zsh-users/zsh-syntax-highlighting
+    # quickly move to higher level directories
+    zgen load Tarrasch/zsh-bd
+    # print directories w/ git status info
+    zgen load supercrabtree/k
+    # fzf/z integration
+    zgen load andrewferrier/fzf-z
 
     # generate the init script from plugins above
     zgen save
