@@ -79,8 +79,6 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
     zgen load zsh-users/zsh-syntax-highlighting
     # quickly move to higher level directories
     zgen load Tarrasch/zsh-bd
-    # print directories w/ git status info
-    zgen load supercrabtree/k
     # fzf/z integration
     zgen load andrewferrier/fzf-z
 
