@@ -74,6 +74,8 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
 
     # highlight command line text
     zgen load zsh-users/zsh-syntax-highlighting
+    # more autocompletions
+    zgen load zsh-users/zsh-completions
     # fzf/z integration
     zgen load andrewferrier/fzf-z
 
