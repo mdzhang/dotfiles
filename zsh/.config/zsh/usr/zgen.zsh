@@ -10,6 +10,9 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
 
   # if the init scipt doesn't exist
   if ! zgen saved; then
+    # load prezto
+    zgen prezto
+
     #
     # General
     #
@@ -69,15 +72,13 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
     # Set the terminal multiplexer title format.
     zgen prezto terminal:multiplexer-title format '%s'
 
-    # load prezto
-    zgen prezto
-
     # highlight command line text
     zgen load zsh-users/zsh-syntax-highlighting
-    # more autocompletions
-    zgen load zsh-users/zsh-completions
     # fzf/z integration
     zgen load andrewferrier/fzf-z
+    # more autocompletions
+    zgen load littleq0903/gcloud-zsh-completion src
+    zgen load zsh-users/zsh-completions
 
     zgen loadall $XDG_CONFIG_HOME/zsh/usr/plugins
 
