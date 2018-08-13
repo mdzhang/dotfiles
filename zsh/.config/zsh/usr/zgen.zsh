@@ -77,6 +77,8 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
     # fzf/z integration
     zgen load andrewferrier/fzf-z
 
+    zgen loadall $XDG_CONFIG_HOME/zsh/usr/plugins
+
     # generate the init script from plugins above
     zgen save
   fi
