@@ -97,8 +97,6 @@ else
     Plugin 'JamshedVesuna/vim-markdown-preview'
     " todo list plugin
     Plugin 'lukaszkorecki/workflowish'
-    " mark lines in files
-    Plugin 'MattesGroeger/vim-bookmarks'
 
     "
     " Python
