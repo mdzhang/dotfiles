@@ -87,6 +87,13 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
     # autocompletions
     zgen load littleq0903/gcloud-zsh-completion src
 
+    zgen load zsh-users/zsh-history-substring-search
+
+    bindkey -M vicmd 'k' history-substring-search-up
+    bindkey -M vicmd 'j' history-substring-search-down
+    bindkey '^[[A' history-substring-search-up
+    bindkey '^[[B' history-substring-search-down
+
     ###################
     # Custom
     ###################
