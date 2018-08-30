@@ -98,7 +98,18 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
     # Custom
     ###################
 
-    zgen loadall $XDG_CONFIG_HOME/zsh/usr/plugins
+    zgen load $XDG_CONFIG_HOME/zsh/usr/plugins/completions.zsh
+
+    # mdzhang: this only takes effect if you manually edit the agnoster theme,
+    #          specifically to have:
+    #
+    # prompt_dir() {
+    #   prompt_segment blue $PRIMARY_FG
+    #   print -Pn " $(shrink_path -l -s)"
+    # }
+    #
+    # :(
+    zgen load $XDG_CONFIG_HOME/zsh/usr/plugins/shrink-path.zsh
 
     # generate the init script from plugins above
     zgen save
