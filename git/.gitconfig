@@ -39,9 +39,12 @@
   rbs = rebase --skip
   reh = reset --hard
   tgs = show-ref --abbrev=7 --tags
+  # remove stale branches from appearing when listing remote branches
+  pr = git remote prune origin
   unstage = reset HEAD --
   last = log -1 --pretty=format:\"%h %an, %ar : %s\" HEAD
   llog = log -20 --decorate --pretty=format:\"%h %an, %ar : %s\" HEAD
+  lllog = log -50 --decorate --pretty=format:\"%h %an, %ar : %s\" HEAD
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
