@@ -108,6 +108,8 @@ else
     Plugin 'vim-scripts/indentpython.vim'
     " better jinja filetype detection
     Plugin 'lepture/vim-jinja'
+    " jupyter support
+    Plugin 'szymonmaszke/vimpyter'
 
     "
     " Yaml
