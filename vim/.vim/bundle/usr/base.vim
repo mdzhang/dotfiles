@@ -107,6 +107,7 @@ endif
 
 " use magic for regular expressions
 set magic
+set re=1
 
 " enable code folding
 set foldmethod=syntax
@@ -201,9 +202,6 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 
-" trim trailing whitespace
-autocmd BufWritePre * :call TrimWhitespace()
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -235,24 +233,36 @@ if has("gui_running")
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => File types
+" => Autocmds
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" treat .cf configuration files as ini files
-au BufNewFile,BufRead *.cf set filetype=dosini
-au BufNewFile,BufRead *.conf set filetype=dosini
 
-" set filetype on config files for mutt
-au BufNewFile,BufRead *.muttrc setfiletype muttrc
+augroup vimrc_base
+  autocmd!
 
-" treat files with .es6 extension as JS files
-au BufNewFile,BufRead *.es6 set filetype=javascript
-au BufNewFile,BufRead .eslintrc set filetype=json
+  " trim trailing whitespace
+  autocmd BufWritePre * :call TrimWhitespace()
 
-au BufNewFile,BufRead Brewfile set filetype=ruby
-au BufNewFile,BufRead .envrc set filetype=sh
+  "
+  " filetypes
+  "
 
-" treat Helm .tpl as go template
-au BufRead,BufNewFile *.tpl set filetype=gohtmltmpl
+  " treat .cf configuration files as ini files
+  au BufNewFile,BufRead *.cf set filetype=dosini
+  au BufNewFile,BufRead *.conf set filetype=dosini
+
+  " set filetype on config files for mutt
+  au BufNewFile,BufRead *.muttrc setfiletype muttrc
+
+  " treat files with .es6 extension as JS files
+  au BufNewFile,BufRead *.es6 set filetype=javascript
+  au BufNewFile,BufRead .eslintrc set filetype=json
+
+  au BufNewFile,BufRead Brewfile set filetype=ruby
+  au BufNewFile,BufRead .envrc set filetype=sh
+
+  " treat Helm .tpl as go template
+  au BufRead,BufNewFile *.tpl set filetype=gohtmltmpl
+augroup END
 
 """"""""""""""""""""""""""""""
 " => Key mappings

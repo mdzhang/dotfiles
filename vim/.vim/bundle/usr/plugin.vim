@@ -90,8 +90,6 @@ let g:indentLine_color_gui = '#282d43'
 " Plugin 'scrooloose/nerdtree'
 " ----------
 
-" close vim if only a NERDTree is left open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " don't display these in file directory
 let NERDTreeRespectWildIgnore = 1
@@ -154,11 +152,6 @@ let g:ale_fixers['javascript'] = ['eslint']
 let g:ale_fixers['json'] = ['prettier']
 let g:ale_fixers['python'] = ['yapf', 'isort']
 
-" auto close error/warning list when file/buffer is closed
-augroup CloseLoclistWindowGroup
-  autocmd!
-  autocmd QuitPre * if empty(&buftype) | lclose | endif
-augroup END
 
 " ----------
 " Plugin 'itchyny/lightline.vim'
@@ -210,7 +203,6 @@ function! LightlineLinterOK() abort
   return l:counts.total == 0 ? '✓ ' : ''
 endfunction
 
-autocmd User ALELint call lightline#update()
 
 " ----------
 " Plugin 'haya14busa/incsearch.vim'
@@ -219,13 +211,6 @@ autocmd User ALELint call lightline#update()
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
-
-" ----------
-" Plugin 'junegunn/vim-easy-align'
-" ----------
-
-" Align GitHub-flavored Markdown tables
-au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
 " ----------
 " Plugin 'jpalardy/vim-slime'
@@ -249,14 +234,6 @@ let g:highlightedyank_highlight_duration = -1
 
 " don't change project root
 let g:startify_change_to_dir=0
-
-" open up Startify and NERDTree automatically
-autocmd vimenter *
-  \   if !argc()
-  \ |   Startify
-  \ |   NERDTree
-  \ |   wincmd w
-  \ | endif
 
 " ----------
 " Plugin 'ryanoasis/vim-devicons'
@@ -295,3 +272,35 @@ let g:scratch_top = 0
 let g:scratch_horizontal = 0
 let g:scratch_height = 100
 let g:scratch_persistence_file = '.scratch.vim'
+
+
+"
+" avoid duplicate autocmd handlers & spam by grouping all autocmds together
+"
+
+augroup vimrc_plugins
+  autocmd!
+
+  " auto close error/warning list when file/buffer is closed
+  autocmd QuitPre * if empty(&buftype) | lclose | endif
+
+  " close vim if only a NERDTree is left open
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+  autocmd User ALELint call lightline#update()
+
+  " open up Startify and NERDTree automatically
+  autocmd vimenter *
+    \   if !argc()
+    \ |   Startify
+    \ |   NERDTree
+    \ |   wincmd w
+    \ | endif
+
+  " ----------
+  " Plugin 'junegunn/vim-easy-align'
+  " ----------
+
+  " Align GitHub-flavored Markdown tables
+  au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+augroup END
