@@ -129,6 +129,9 @@ let g:tagbar_autofocus = 1
 " use the global line number settings
 let g:tagbar_show_linenumbers = -1
 
+" don't sort tags
+let g:tagbar_sort = 0
+
 nmap <Leader>tt :TagbarToggle
 
 " ----------
