@@ -125,6 +125,11 @@ wheels/
 # Ruby
 .bundle/
 
+# Scala
+project/project
+project/target
+target
+
 # VCS #
 #######
 .git/

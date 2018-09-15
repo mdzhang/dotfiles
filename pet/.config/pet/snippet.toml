@@ -107,3 +107,8 @@
   description = "[find] Remove files in 'logs' dir with name matching '*MagicMock*' pattern"
   command = "find logs -name \"*MagicMock*\" | xargs -d '\\n' rm"
   output = ""
+
+[[snippets]]
+  description = "Highlight occurrences of 'pattern1' in input stream"
+  command = "ack --passthru 'pattern1'"
+  output = ""

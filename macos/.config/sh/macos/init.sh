@@ -51,3 +51,7 @@ fi
 if [ -d /usr/local/opt/sqlite/bin ]; then
   export PATH="/usr/local/opt/sqlite/bin:$PATH"
 fi
+
+if [ -d /usr/local/opt/sbt@0.13/bin ]; then
+  export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
+fi
