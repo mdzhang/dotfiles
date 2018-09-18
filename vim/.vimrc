@@ -71,6 +71,8 @@ else
     "   ys[select text obj]" to add quotes
     "   cs"' to replace " with '
     Plugin 'tpope/vim-surround'
+    " additional text objects
+    Plugin 'wellle/targets.vim'
     " syntax checker
     Plugin 'w0rp/ale'
     " code search tool
