@@ -111,4 +111,8 @@
 [[snippets]]
   description = "Highlight occurrences of 'pattern1' in input stream"
   command = "ack --passthru 'pattern1'"
+
+[[snippets]]
+  description = "Use ghostscript to extract text from a pdf"
+  command = "ghost -dBATCH -dNOPAUSE -sDEVICE=txtwrite -sOutputFile=simple1.txt simple1.pdf"
   output = ""
