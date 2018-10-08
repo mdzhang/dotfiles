@@ -1,5 +1,8 @@
 c = get_config()
 
+# vim shortcuts
+c.TerminalInteractiveShell.editing_mode = 'vi'
+
 c.InteractiveShellApp.exec_lines = [
     'import re',
     'import numpy as np',
