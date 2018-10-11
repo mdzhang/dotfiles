@@ -83,7 +83,7 @@ else
     " git integration
     Plugin 'tpope/vim-fugitive'
     " search everything
-    Plugin 'ctrlpvim/ctrlp.vim'
+    Plugin 'junegunn/fzf'
     " incremental search highlighting w/ regex search support (use /\v)
     Plugin 'haya14busa/incsearch.vim'
     " cross-editor config

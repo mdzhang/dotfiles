@@ -2,28 +2,32 @@
 
 " ----------
 " Plugin 'mileszs/ack.vim'
-" ----------
-
-" use the silver searcher for faster searching if available
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep --hidden'
-endif
-
-" ----------
-" Plugin 'matze/vim-move
-" ----------
-
-let g:move_key_modifier = 'C'
-
-" ----------
 " Plugin 'kien/ctrlp.vim'
+" Plugin 'junegunn/fzf'
 " ----------
 
-if executable('ag')
+" don't auto-open first matching file
+cabbrev Ack Ack!
+
+" Ctrl + p --> FZF
+map <C-p> :FZF <ENTER>
+
+" use ripgrep for faster searching if available
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep --no-heading --hidden'
+
+  " let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+  let g:ctrlp_user_command = 'rg --hidden --files %s'
+" use the silver searcher for faster searching if available
+elseif executable('ag')
+  let g:ackprg = 'ag --vimgrep --hidden'
+
   " use ag in CtrlP for more quickly listing files while respecting .gitignore
   let g:ctrlp_user_command = 'ag -Q -l --hidden -g "" %s'
+endif
 
-  " ag is fast enough that CtrlP doesn't need to cache
+if executable('rg') || executable('ag')
+  " these are fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 
   " regexp search by default
@@ -259,13 +263,6 @@ let g:rainbow_conf = {
       \ 'guifgs': ['#e2a478', '#e27878', '#89b8c2', '#b4be82', '#a093c7'],
       \ 'ctermfgs': ['150', '203', '216', '109', '140']
       \ }
-
-" ----------
-" Plugin 'mileszs/ack.vim'
-" ----------
-
-" don't auto-open first matching file
-cabbrev Ack Ack!
 
 " ----------
 " Plugin 'mtth/scratch.vim'
