@@ -2,7 +2,6 @@
 
 " ----------
 " Plugin 'mileszs/ack.vim'
-" Plugin 'kien/ctrlp.vim'
 " Plugin 'junegunn/fzf'
 " ----------
 
@@ -12,26 +11,11 @@ cabbrev Ack Ack!
 " Ctrl + p --> FZF
 map <C-p> :FZF <ENTER>
 
-" use ripgrep for faster searching if available
+" use ripgrep or the silver searcher for faster searching if available
 if executable('rg')
   let g:ackprg = 'rg --vimgrep --no-heading --hidden'
-
-  " let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-  let g:ctrlp_user_command = 'rg --hidden --files %s'
-" use the silver searcher for faster searching if available
 elseif executable('ag')
   let g:ackprg = 'ag --vimgrep --hidden'
-
-  " use ag in CtrlP for more quickly listing files while respecting .gitignore
-  let g:ctrlp_user_command = 'ag -Q -l --hidden -g "" %s'
-endif
-
-if executable('rg') || executable('ag')
-  " these are fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-
-  " regexp search by default
-  let g:ctrlp_regexp = 1
 endif
 
 " ----------
