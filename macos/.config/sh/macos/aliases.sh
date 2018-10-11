@@ -29,3 +29,6 @@ alias caskl='brew cask list'
 alias casko='brew cask outdated'
 alias casks='brew cask search'
 alias caskx='brew cask uninstall'
+
+# launch kitty
+alias lkitty='/Applications/kitty.app/Contents/MacOS/kitty'

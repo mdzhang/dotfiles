@@ -221,7 +221,7 @@ if $COLORTERM == 'truecolor'
 endif
 
 try
-  colorscheme iceberg
+  colorscheme palenight
 catch
 endtry
 
