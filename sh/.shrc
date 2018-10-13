@@ -27,7 +27,7 @@ _load_settings() {
   fi
 }
 
-local_modules="xdg general scripts docker gcloud git golang lynx newsboat node pg python readline ruby rust vim"
+local_modules="xdg general scripts docker gcloud git golang lynx newsboat node pg python readline ruby rust scala vim"
 
 if [ "$(uname)" = "Darwin" ]; then
   local_modules="$local_modules macos"
