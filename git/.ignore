@@ -91,6 +91,7 @@ vendor/
 *.iml
 python_cscope.files
 .scratch.vim
+.tags
 
 # Language specific #
 #####################

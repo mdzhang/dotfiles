@@ -88,9 +88,11 @@ else
     Plugin 'haya14busa/incsearch.vim'
     " cross-editor config
     Plugin 'editorconfig/editorconfig-vim'
-    " should be included in polyglot, but
+    " included in polyglot, but
     " https://github.com/sheerun/vim-polyglot/issues/152
     Plugin 'plasticboy/vim-markdown'
+    " included in vim-polyglot, but ctags not detected properly
+    Plugin 'derekwyatt/vim-scala'
     " collection of language packs for better defaults
     Plugin 'sheerun/vim-polyglot'
     " alignment

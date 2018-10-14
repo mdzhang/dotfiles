@@ -117,6 +117,8 @@ set foldlevel=99
 set splitbelow
 set splitright
 
+set tags=./tags,./TAGS,tags,TAGS,.tags,./.tags,tags;/
+
 "
 " Moving around
 "
