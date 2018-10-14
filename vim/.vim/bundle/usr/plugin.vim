@@ -72,7 +72,7 @@ let g:vim_markdown_conceal = 0
 let g:indentLine_leadingSpaceEnabled = 0
 let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_char = '┆'
-let g:indentLine_color_gui = '#282d43'
+let g:indentLine_color_gui = '#4B5263'
 
 " ----------
 " Plugin 'scrooloose/nerdtree'
