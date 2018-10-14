@@ -45,8 +45,6 @@ else
     Plugin 'cocopon/iceberg.vim'
     " rainbow bracket highlighting
     Plugin 'luochen1990/rainbow'
-    " highlight yank section
-    Plugin 'machakann/vim-highlightedyank'
     " show whitespace
     Plugin 'Yggdroot/indentLine'
     " autocompletion
