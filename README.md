@@ -5,7 +5,7 @@ Laptop setup scripts and personal dotfiles. Uses [GNU Stow][stow]
 Supports:
 
 * OS X High Sierra (10.13)
-* (K)Ubuntu 17.10
+* (K)Ubuntu 18.04
 
 Older versions may work but aren't regularly tested
 
