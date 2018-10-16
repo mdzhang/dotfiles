@@ -122,3 +122,13 @@
   description = "Generate an XKCD password"
   command = "xkcdpass | tr ' ' '-'"
   output = ""
+
+[[snippets]]
+  description = "Get the first token in a whitespace delimited line"
+  command = "awk '{print $1}'"
+  output = ""
+
+[[snippets]]
+  description = "Print all lines in range"
+  command = "sed -n '17388352 ,17388452p' filename"
+  output = ""
