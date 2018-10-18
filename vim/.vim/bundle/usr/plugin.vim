@@ -260,6 +260,17 @@ let g:scratch_horizontal = 0
 let g:scratch_height = 100
 let g:scratch_persistence_file = '.scratch.vim'
 
+" ----------
+" Plugin 'metakirby5/codi.vim'
+" ----------
+
+" account for vim mode ins/cmd prefix
+let g:codi#interpreters = {
+   \ 'python': {
+   \   'bin': 'python',
+   \   'prompt': '^\((ins)>>>\|\.\.\.\) ',
+   \ },
+\ }
 
 "
 " avoid duplicate autocmd handlers & spam by grouping all autocmds together

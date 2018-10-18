@@ -97,6 +97,8 @@ else
     Plugin 'junegunn/vim-easy-align'
     " todo list plugin
     Plugin 'lukaszkorecki/workflowish'
+    " interactive scratchpad that shows output as right side comment
+    Plugin 'metakirby5/codi.vim'
 
     "
     " Python
