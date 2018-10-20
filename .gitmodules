@@ -19,3 +19,6 @@
 [submodule "zsh/.config/zsh/opt/zgen"]
 	path = zsh/.config/zsh/opt/zgen
 	url = git@github.com:tarjoilija/zgen.git
+[submodule "sh/.basher"]
+	path = sh/.basher
+	url = git@github.com:basherpm/basher.git
