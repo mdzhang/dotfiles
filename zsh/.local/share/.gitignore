@@ -1,4 +1,2 @@
-z/*
-zgen/*
-!zgen/.keep
-
+*
+!.keep

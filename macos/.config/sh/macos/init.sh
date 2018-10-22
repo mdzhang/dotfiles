@@ -43,6 +43,10 @@ if [ -d /usr/local/opt/readline/lib ]; then
   export LDFLAGS="-L/usr/local/opt/readline/lib $LDFLAGS"
 fi
 
+# Fix for zlib issue on Mojave
+# https://github.com/pyenv/pyenv/issues/530
+export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include $CFLAGS"
+
 # for GNU envsubst
 if [ -d /usr/local/opt/gettext/bin ]; then
   export PATH="/usr/local/opt/gettext/bin:$PATH"
