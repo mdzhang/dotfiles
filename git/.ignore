@@ -85,13 +85,13 @@ pgdata/
 # Secrets #
 ###########
 # *.pem
-.env
+#.env
 .envrc
 secrets/
 
 # Local environments #
 ######################
-.env/
+#.env/
 .venv/
 env/
 venv/
@@ -206,4 +206,7 @@ target
 
 # Work-specific #
 #################
+erd.pdf
+client_secrets.json
+#pyproject.toml
 .pre-commit-config.yaml

@@ -1,0 +1,16 @@
+---
+name: airflow
+root: ~/src/git.inverselink.com/data-engineering
+
+pre_window:
+  - pyenv activate dataeng
+
+windows:
+  - webserver:
+      pre: cat $AIRFLOW_HOME/airflow-webserver.pid | xargs kill -9
+      panes:
+        - airflow webserver
+  - worker: airflow worker
+  - scheduler: airflow scheduler
+  - flower: airflow flower
+  - docker: docker-compose up -d redis postgres

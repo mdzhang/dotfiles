@@ -3,7 +3,7 @@
 export ZGEN_DIR="$XDG_DATA_HOME/zgen"
 
 # set default user to hide user@host in agnoster theme prompt
-export DEFAULT_USER="mdzhang"
+export DEFAULT_USER="michelle"
 
 if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
   source "$XDG_CONFIG_HOME/zsh/opt/zgen/zgen.zsh"

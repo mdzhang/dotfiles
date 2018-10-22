@@ -1,1 +1,1 @@
-gem: --no-ri --no-rdoc
+gem: --no-ri --no-rdoc -- --with-cppflags=-I/usr/local/opt/openssl/include

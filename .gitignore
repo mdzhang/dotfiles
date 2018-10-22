@@ -1,5 +1,6 @@
 history
 sh/.config/sh/general/secrets.sh
+sh/.local/share/z
 !vim/.vim/pack/Vundle.vim
 vim/.vim/pack/opt/*
 vim/.vim/undo

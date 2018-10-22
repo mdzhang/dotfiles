@@ -22,7 +22,7 @@
   uig = update-index --no-assume-unchanged
   co = checkout
   com = checkout master
-  cod = checkout development
+  cod = checkout develop
   ps = push
   psf = push -f
   pso = push origin
@@ -31,9 +31,11 @@
   psfom = push -f origin master
   pl = pull
   plr = pull --rebase
+  plra = pull --rebase --autostash
+  up = pull --rebase --autostash
   rb = rebase
   rbc = rebase --continue
-  rbd = rebase development
+  rbd = rebase develop
   rbi = rebase -i
   rbm = rebase master
   rbs = rebase --skip
@@ -72,6 +74,10 @@
   }; f"
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+[color]
+  ui = true
+  pager = true
 
 [color "branch"]
 
@@ -169,3 +175,5 @@
 
 [icdiff]
   options = --highlight --line-numbers
+[log]
+	decorate = short
