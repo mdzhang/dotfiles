@@ -35,6 +35,7 @@ fi
 if [ -d /usr/local/opt/openssl/bin ]; then
   export CFLAGS="-I/usr/local/opt/openssl/include $CFLAGS"
   export LDFLAGS="-L/usr/local/opt/openssl/lib $LDFLAGS"
+  export CPPFLAGS="-I/usr/local/opt/openssl/include $CPPFLAGS"
   export PATH="/usr/local/opt/openssl/bin:$PATH"
 fi
 

@@ -108,11 +108,11 @@
 
 [commit]
 
-	gpgsign = true
+  gpgsign = true
 
 [gpg]
 
-	program = gpg
+  program = gpg
 
 [core]
 
@@ -168,4 +168,4 @@
   path = ~/.gitconfig.local
 
 [icdiff]
-	options = --highlight --line-numbers
+  options = --highlight --line-numbers
