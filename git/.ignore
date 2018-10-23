@@ -91,12 +91,26 @@ vendor/
 *.iml
 python_cscope.files
 .scratch.vim
+
+# Ignore tags created by etags, ctags and gtags (GNU global)
+TAGS
+.TAGS
+!TAGS/
+tags
 .tags
+.tags*
+!tags/
+gtags.files
+GTAGS
+GRTAGS
+GPATH
+GSYMS
 
 # Language specific #
 #####################
 
 # CSS
+*.sassc
 .sass-cache/
 
 # Javascript
@@ -125,6 +139,9 @@ wheels/
 
 # Ruby
 .bundle/
+.rspec/
+*.rbc
+/.byebug_history
 
 # Scala
 project/project
@@ -136,3 +153,7 @@ target
 .git/
 .hg/
 .svn/
+
+# Work-specific #
+#################
+.pre-commit-config.yaml
