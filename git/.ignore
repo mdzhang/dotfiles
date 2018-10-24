@@ -138,6 +138,7 @@ wheels/
 .glide/
 
 # Ruby
+bundle/
 .bundle/
 .rspec/
 *.rbc
