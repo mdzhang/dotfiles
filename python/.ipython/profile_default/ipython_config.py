@@ -7,8 +7,10 @@ c.InteractiveShellApp.exec_lines = [
     'import re',
     'import numpy as np',
     'import pandas as pd',
-    'import seaborn as sns',
+    'import matplotlib as mpl',
+    "mpl.use('TkAgg')",
     'import matplotlib.pyplot as plt',
+    'import seaborn as sns',
     'sns.set()',
 ]
 c.InteractiveShell.autoindent = True
