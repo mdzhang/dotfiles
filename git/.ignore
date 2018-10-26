@@ -24,6 +24,21 @@
 *.swp
 ._*
 
+# Data #
+########
+*.csv
+*.dat
+*.efx
+*.gbr
+*.key
+*.pps
+*.ppt
+*.pptx
+*.sdf
+*.tax2010
+*.vcf
+*.xml
+
 # Compressed #
 ##############
 *.7z
@@ -133,6 +148,7 @@ eggs/
 sdist/
 wheels/
 .ipynb_checkpoints/
+*/.ipynb_checkpoints/*
 
 # Golang
 .glide/

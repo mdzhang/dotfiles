@@ -1,0 +1,5 @@
+*
+!.gitignore
+!profile_default/ipython_config.py
+!profile_default/startup/*.py
+

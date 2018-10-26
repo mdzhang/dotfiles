@@ -132,3 +132,13 @@
   description = "Print all lines in range"
   command = "sed -n '17388352 ,17388452p' filename"
   output = ""
+
+[[snippets]]
+  description = "Create file in multiple directories in one go"
+  command = "touch data/{key,log}/.keep"
+  output = ""
+
+[[snippets]]
+  description = "See who's listening on a port, linux"
+  command = "netstat -ltnp | grep -w '8080'"
+  output = ""
