@@ -257,7 +257,7 @@ augroup vimrc_base
 
   " treat files with .es6 extension as JS files
   au BufNewFile,BufRead *.es6 set filetype=javascript
-  au BufNewFile,BufRead .eslintrc set filetype=json
+  au BufNewFile,BufRead .eslintrc,.arcconfig,.arclint set filetype=json
 
   au BufNewFile,BufRead Brewfile set filetype=ruby
   au BufNewFile,BufRead .envrc set filetype=sh
