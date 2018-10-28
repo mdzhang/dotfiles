@@ -13,7 +13,7 @@ map <C-p> :FZF <ENTER>
 
 " use ripgrep or the silver searcher for faster searching if available
 if executable('rg')
-  let g:ackprg = 'rg --vimgrep --no-heading --hidden'
+  let g:ackprg = 'rg --vimgrep --no-heading --hidden --ignore-file ~/.ignore'
 elseif executable('ag')
   let g:ackprg = 'ag --vimgrep --hidden'
 endif
