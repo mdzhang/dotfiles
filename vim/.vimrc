@@ -17,12 +17,12 @@ set nocompatible               " be iMproved
 filetype off                   " required!
 
 let need_to_install_plugins=0
-if empty(system("grep lazy_load ~/.vim/bundle/opt/Vundle.vim/autoload/vundle.vim"))
+if empty(system("grep lazy_load ~/.vim/pack/opt/Vundle.vim/autoload/vundle.vim"))
     echoerr "Vundle plugins are not installed. Pleas erun ~/.vim/bin/install"
 else
-    " initialize cundle
-    set rtp+=~/.vim/bundle/opt/Vundle.vim
-    call vundle#rc('~/.vim/bundle/opt')
+    " initialize vundle
+    set rtp+=~/.vim/pack/opt/Vundle.vim
+    call vundle#rc('~/.vim/pack/opt')
 
     " vundle plugins must be below this line
     call vundle#begin()
@@ -131,7 +131,7 @@ else
 
     syntax on
 
-    runtime! bundle/usr/**.vim
+    runtime! pack/usr/**.vim
 
     if filereadable($HOME . "/.vimrc.local")
         source ~/.vimrc.local

@@ -1,5 +1,5 @@
-[submodule "vim/.vim/bundle/opt/Vundle.vim"]
-	path = vim/.vim/bundle/opt/Vundle.vim
+[submodule "vim/.vim/pack/opt/Vundle.vim"]
+	path = vim/.vim/pack/opt/Vundle.vim
 	url = git@github.com:VundleVim/Vundle.vim.git
 [submodule "bash/.config/bash/opt/bash-it"]
 	path = bash/.config/bash/opt/bash-it
