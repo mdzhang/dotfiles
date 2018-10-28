@@ -142,3 +142,8 @@
   description = "See who's listening on a port, linux"
   command = "netstat -ltnp | grep -w '8080'"
   output = ""
+
+[[snippets]]
+  description = "Mount a HFS+ disk for read/write"
+  command = "sudo mount -t hfsplus -o force,rw /dev/sdb3 /home/mdzhang/usb"
+  output = ""
