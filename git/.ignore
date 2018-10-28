@@ -152,6 +152,8 @@ wheels/
 
 # Golang
 .glide/
+# from ultimate plumber
+up[0-9]*.sh
 
 # Ruby
 bundle/
