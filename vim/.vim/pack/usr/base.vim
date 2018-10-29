@@ -255,6 +255,8 @@ augroup vimrc_base
   " set filetype on config files for mutt
   au BufNewFile,BufRead *.muttrc setfiletype muttrc
 
+  au BufNewFile,BufRead .dockerignore setfiletype conf
+
   " treat files with .es6 extension as JS files
   au BufNewFile,BufRead *.es6 set filetype=javascript
   au BufNewFile,BufRead .eslintrc,.arcconfig,.arclint set filetype=json
