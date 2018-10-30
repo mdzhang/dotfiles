@@ -1,5 +1,14 @@
 # Shared by a variety of utilities e.g. vim, git, hg, ag, etc.
 
+*.obj
+*.a
+*.lib
+*.ncb
+*.suo
+*.pdb
+*.idb
+*.psd
+
 # Compiled source #
 ###################
 *.com
@@ -37,6 +46,7 @@
 *.sdf
 *.tax2010
 *.vcf
+pgdata/
 
 # Compressed #
 ##############
@@ -49,6 +59,22 @@
 *.tar
 *.zip
 *.tgz
+*.tbz2
+*.gzip
+
+# Binary #
+##########
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.ttf
+*.tga
+*.dds
+*.ico
+*.eot
+*.pdf
+*.swf
 
 # Extras #
 ##########
@@ -105,6 +131,7 @@ vendor/
 *.iml
 python_cscope.files
 .scratch.vim
+*.sublime-workspace
 
 # Ignore tags created by etags, ctags and gtags (GNU global)
 TAGS

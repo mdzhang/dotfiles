@@ -250,6 +250,7 @@ augroup vimrc_base
 
   " treat .cf configuration files as ini files
   au BufNewFile,BufRead *.cf set filetype=dosini
+  au BufNewFile,BufRead *.cfg set filetype=dosini
   au BufNewFile,BufRead *.conf set filetype=dosini
 
   " set filetype on config files for mutt
