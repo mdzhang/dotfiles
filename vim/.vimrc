@@ -6,134 +6,149 @@
 " How this works:
 "
 " This file is minimal.  Most of the vim settings and initialization is in
-" several files in .vim/init.  This makes it easier to find things and to
+" several files in .vim/pack/usr.  This makes it easier to find things and to
 " merge between branches and repos.
 "
 " Please do not add configuration to this file, unless it *really* needs to
 " come first or last, like Vundle and sourcing the machine-local config.
-" Instead, add it to one of the files in .vim/init, or create a new one.
+" Instead, add it to one of the files in .vim/pack/usr, or create a new one.
 
 set nocompatible               " be iMproved
-filetype off                   " required!
 
 let need_to_install_plugins=0
-if empty(system("grep lazy_load ~/.vim/pack/opt/Vundle.vim/autoload/vundle.vim"))
-    echoerr "Vundle plugins are not installed. Pleas erun ~/.vim/bin/install"
+if empty(system("grep 'dein#call' ~/.vim/pack/opt/dein.vim/autoload/dein.vim"))
+    echoerr "dein.vim not properly installed. Ensure you have recursively initialized git submodules"
 else
-    " initialize vundle
-    set rtp+=~/.vim/pack/opt/Vundle.vim
-    call vundle#rc('~/.vim/pack/opt')
+  " initialize dein.vim
+  set runtimepath+=~/.vim/pack/opt/dein.vim
 
-    " vundle plugins must be below this line
-    call vundle#begin()
+  if dein#load_state('~/.vim/pack/opt')
+    call dein#begin('~/.vim/pack/opt')
 
-    " let Vundle manage Vundle, required
-    Plugin 'VundleVim/Vundle.vim'
+    " let dein manage dein, required
+    call dein#add('~/.vim/pack/opt/dein.vim')
 
+    " required by dein.vim
+    call dein#add('Shougo/deoplete.nvim')
+    if !has('nvim')
+      call dein#add('roxma/nvim-yarp')
+      call dein#add('roxma/vim-hug-neovim-rpc')
+    endif
+
+    " dein plugins must be below this line
     " required by other plugins, must come first
-    Plugin 'godlygeek/tabular'
+    call dein#add('godlygeek/tabular')
 
     " nice status bar
-    Plugin 'itchyny/lightline.vim'
+    call dein#add('itchyny/lightline.vim')
     " show git diff (added, mod'd, removed) in the gutter
-    Plugin 'mhinz/vim-signify'
+    call dein#add('mhinz/vim-signify')
     " show file content outline
-    Plugin 'majutsushi/tagbar'
-    Plugin 'lvht/tagbar-markdown'
+    call dein#add('majutsushi/tagbar')
+    call dein#add('lvht/tagbar-markdown')
     " vim themes
-    Plugin 'drewtempelmeyer/palenight.vim'
-    Plugin 'cocopon/iceberg.vim'
+    call dein#add('drewtempelmeyer/palenight.vim')
+    call dein#add('cocopon/iceberg.vim')
     " rainbow bracket highlighting
-    Plugin 'luochen1990/rainbow'
+    call dein#add('luochen1990/rainbow')
     " show whitespace
-    Plugin 'Yggdroot/indentLine'
+    call dein#add('Yggdroot/indentLine')
     " autocompletion
-    Plugin 'ervandew/supertab'
+    call dein#add('ervandew/supertab')
     " scratch pad
-    Plugin 'mtth/scratch.vim'
+    call dein#add('mtth/scratch.vim')
     " file system explorer
-    Plugin 'scrooloose/nerdtree'
-    Plugin 'jistr/vim-nerdtree-tabs'
+    call dein#add('scrooloose/nerdtree')
+    call dein#add('jistr/vim-nerdtree-tabs')
     " fancy startup screen
-    Plugin 'mhinz/vim-startify'
+    call dein#add('mhinz/vim-startify')
     " connect to a REPL
-    Plugin 'jpalardy/vim-slime'
+    call dein#add('jpalardy/vim-slime')
     " easily bulk un/comment regions
-    Plugin 'scrooloose/nerdcommenter'
+    call dein#add('scrooloose/nerdcommenter')
     " easily expand/collapse visually selected region
-    Plugin 'terryma/vim-expand-region'
+    call dein#add('terryma/vim-expand-region')
     " easily move selected code up/down
-    Plugin 'matze/vim-move'
+    call dein#add('matze/vim-move')
     " easily add/remove/change quotes etc. for selected text objects
     "   ds" to delete surrounding quotes
     "   ys[select text obj]" to add quotes
     "   cs"' to replace " with '
-    Plugin 'tpope/vim-surround'
+    call dein#add('tpope/vim-surround')
     " additional text objects
-    Plugin 'wellle/targets.vim'
+    call dein#add('wellle/targets.vim')
     " syntax checker
-    Plugin 'w0rp/ale'
+    call dein#add('w0rp/ale')
     " code search tool
-    Plugin 'mileszs/ack.vim'
+    call dein#add('mileszs/ack.vim')
     " code search/replace tools
-    Plugin 'dyng/ctrlsf.vim'
-    Plugin 'terryma/vim-multiple-cursors'
+    call dein#add('dyng/ctrlsf.vim')
+    call dein#add('terryma/vim-multiple-cursors')
     " git integration
-    Plugin 'tpope/vim-fugitive'
+    call dein#add('tpope/vim-fugitive')
     " search everything
-    Plugin 'junegunn/fzf'
+    call dein#add('junegunn/fzf')
     " incremental search highlighting w/ regex search support (use /\v)
-    Plugin 'haya14busa/incsearch.vim'
+    call dein#add('haya14busa/incsearch.vim')
     " cross-editor config
-    Plugin 'editorconfig/editorconfig-vim'
+    call dein#add('editorconfig/editorconfig-vim')
     " included in polyglot, but
     " https://github.com/sheerun/vim-polyglot/issues/152
-    Plugin 'plasticboy/vim-markdown'
+    call dein#add('plasticboy/vim-markdown')
     " included in vim-polyglot, but ctags not detected properly
-    Plugin 'derekwyatt/vim-scala'
+    call dein#add('derekwyatt/vim-scala')
     " collection of language packs for better defaults
-    Plugin 'sheerun/vim-polyglot'
+    call dein#add('sheerun/vim-polyglot')
     " alignment
-    Plugin 'junegunn/vim-easy-align'
+    call dein#add('junegunn/vim-easy-align')
     " todo list plugin
-    Plugin 'lukaszkorecki/workflowish'
+    call dein#add('lukaszkorecki/workflowish')
     " interactive scratchpad that shows output as right side comment
-    Plugin 'metakirby5/codi.vim'
+    call dein#add('metakirby5/codi.vim')
 
     "
     " Python
     "
 
     " code folding
-    Plugin 'tmhedberg/SimpylFold'
+    call dein#add('tmhedberg/SimpylFold')
     " auto indentation
-    Plugin 'vim-scripts/indentpython.vim'
+    call dein#add('vim-scripts/indentpython.vim')
     " better jinja filetype detection
-    Plugin 'lepture/vim-jinja'
+    call dein#add('lepture/vim-jinja')
     " jupyter support
-    Plugin 'szymonmaszke/vimpyter'
+    call dein#add('szymonmaszke/vimpyter')
 
     "
     " Yaml
     "
 
     " code folding
-    Plugin 'pedrohdz/vim-yaml-folds'
+    call dein#add('pedrohdz/vim-yaml-folds')
 
     " devicons and glyphs (must be last)
-    Plugin 'ryanoasis/vim-devicons'
+    call dein#add('ryanoasis/vim-devicons')
 
-    " vundle plugins must be added before this line
-    call vundle#end()
+    " dein plugins must be added before this line
+    call dein#end()
+    call dein#save_state()
+  endif
 
-    " enable filetype plugins
-    filetype plugin indent on
+  " enable filetype plugins
+  filetype plugin indent on
 
-    syntax on
+  syntax on
 
-    runtime! pack/usr/**.vim
+  " load custom vim scripts
+  runtime! pack/usr/**.vim
 
-    if filereadable($HOME . "/.vimrc.local")
-        source ~/.vimrc.local
-    endif
+  " load local vim overrides
+  if filereadable($HOME . "/.vimrc.local")
+      source ~/.vimrc.local
+  endif
+
+  " install not installed plugins on startup.
+  if dein#check_install()
+   call dein#install()
+  endif
 endif
