@@ -263,6 +263,7 @@ augroup vimrc_base
   au BufNewFile,BufRead .eslintrc,.arcconfig,.arclint set filetype=json
 
   au BufNewFile,BufRead Brewfile set filetype=ruby
+  au BufNewFile,BufRead *_test.rb set filetype=rspec
   au BufNewFile,BufRead .envrc set filetype=sh
 
   " treat Helm .tpl as go template
