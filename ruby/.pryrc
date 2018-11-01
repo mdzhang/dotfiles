@@ -6,3 +6,5 @@ if defined?(PryByebug)
   Pry.commands.alias_command 'q', 'quit'
   Pry.commands.alias_command 'w', 'whereami'
 end
+
+Pry.config.color = true
