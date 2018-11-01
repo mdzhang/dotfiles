@@ -147,3 +147,8 @@
   description = "Mount a HFS+ disk for read/write"
   command = "sudo mount -t hfsplus -o force,rw /dev/sdb3 /home/mdzhang/usb"
   output = ""
+
+[[snippets]]
+  description = "create a arcanist revision without requesting review, but do notify user jsmith"
+  command = "arc diff --plan-changes --cc jsmith master"
+  output = ""
