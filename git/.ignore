@@ -180,6 +180,10 @@ wheels/
 .glide/
 # from ultimate plumber
 up[0-9]*.sh
+# terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
 
 # Ruby
 bundle/
