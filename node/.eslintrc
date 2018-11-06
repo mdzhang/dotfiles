@@ -15,6 +15,10 @@
   },
   "globals": {},
   "rules": {
-    "no-underscore-dangle": 0
+    "no-underscore-dangle": 0,
+    "array-element-newline": [
+      2,
+      { "multiline": true }
+    ]
   }
 }

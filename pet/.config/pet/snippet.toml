@@ -152,3 +152,18 @@
   description = "create a arcanist revision without requesting review, but do notify user jsmith"
   command = "arc diff --plan-changes --cc jsmith master"
   output = ""
+
+[[snippets]]
+  description = "gzip a directory on macos"
+  command = "tar cvf - pcap-parsed | gzip > pcap-parsed.gz"
+  output = ""
+
+[[snippets]]
+  description = "unzip a macos gzip compressed w/ tar cvf"
+  command = "tar xopf pcap-parsed.gz"
+  output = ""
+
+[[snippets]]
+  description = "Update an existing diff starting at given commit\""
+  command = "arc diff --plan-changes 8d2dda91 --update D28522"
+  output = ""

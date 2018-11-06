@@ -260,7 +260,7 @@ augroup vimrc_base
 
   " treat files with .es6 extension as JS files
   au BufNewFile,BufRead *.es6 set filetype=javascript
-  au BufNewFile,BufRead .eslintrc,.arcconfig,.arclint set filetype=json
+  au BufNewFile,BufRead .eslintrc,.arcconfig,.arclint,.prettierrc set filetype=json
 
   au BufNewFile,BufRead Brewfile set filetype=ruby
   au BufNewFile,BufRead *_test.rb set filetype=rspec
@@ -268,6 +268,8 @@ augroup vimrc_base
 
   " treat Helm .tpl as go template
   au BufRead,BufNewFile *.tpl set filetype=gohtmltmpl
+
+  au BufRead,BufNewFile .yamllint set filetype=yaml
 augroup END
 
 """"""""""""""""""""""""""""""

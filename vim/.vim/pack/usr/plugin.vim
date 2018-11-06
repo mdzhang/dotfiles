@@ -144,8 +144,8 @@ let g:ale_linters['markdown'] = ['markdownlint']
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['eslint']
 let g:ale_fixers['json'] = ['prettier']
-let g:ale_fixers['python'] = ['yapf', 'isort']
-
+let g:ale_fixers['python'] = ['black', 'isort']
+let g:ale_fixers['terraform'] = ['terraform']
 
 " ----------
 " Plugin 'itchyny/lightline.vim'
