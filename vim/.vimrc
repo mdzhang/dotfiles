@@ -126,6 +126,11 @@ else
     " code folding
     call dein#add('pedrohdz/vim-yaml-folds')
 
+    "
+    " LookML
+    "
+    call dein#add('thalesmello/lkml.vim')
+
     " devicons and glyphs (must be last)
     call dein#add('ryanoasis/vim-devicons')
 
