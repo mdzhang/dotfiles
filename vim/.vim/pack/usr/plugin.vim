@@ -252,6 +252,11 @@ let g:rainbow_conf = {
       \ }
 
 " ----------
+" Plugin 'RRethy/vim-illuminate.git'
+" ----------
+hi link illuminatedWord Visual
+
+" ----------
 " Plugin 'mtth/scratch.vim'
 " ----------
 

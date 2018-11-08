@@ -90,6 +90,8 @@ else
     call dein#add('junegunn/fzf')
     " incremental search highlighting w/ regex search support (use /\v)
     call dein#add('haya14busa/incsearch.vim')
+    " highlight all occurrences of hovered over token
+    call dein#add('RRethy/vim-illuminate.git')
     " cross-editor config
     call dein#add('editorconfig/editorconfig-vim')
     " included in polyglot, but
