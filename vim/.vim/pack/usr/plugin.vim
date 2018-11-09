@@ -134,18 +134,21 @@ let g:ale_fix_on_save = 1
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
 
-let g:ale_linters = {}
-let g:ale_linters['python'] = ['flake8']
-let g:ale_linters['json'] = ['jsonlint']
-let g:ale_linters['css'] = ['csslint']
-let g:ale_linters['yaml'] = ['yamllint']
-let g:ale_linters['markdown'] = ['markdownlint']
-
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['eslint']
-let g:ale_fixers['json'] = ['prettier']
-let g:ale_fixers['python'] = ['black', 'isort']
-let g:ale_fixers['terraform'] = ['terraform']
+let g:ale_linters = {
+  \ 'python': ['flake8'],
+  \ 'json': ['jsonlint'],
+  \ 'css': ['csslint'],
+  \ 'yaml': ['yamllint'],
+  \ 'markdown': ['markdownlint'],
+  \ 'rst': ['rstcheck', 'proselint', 'write-good'],
+  \ 'sql': ['sqlint'],
+  \ }
+let g:ale_fixers = {
+  \ 'javascript': ['eslint'],
+  \ 'json': ['prettier'],
+  \ 'python': ['black', 'isort'],
+  \ 'terraform': ['terraform'],
+  \ }
 
 " ----------
 " Plugin 'itchyny/lightline.vim'
