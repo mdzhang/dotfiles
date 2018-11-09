@@ -20,7 +20,15 @@ fi
 
 [ -f ~/.fzf.$SHELL_NAME ] && source ~/.fzf.$SHELL_NAME
 
-ssh-add -l | grep "The agent has no identities" > /dev/null
-if [ $? -eq 0 ]; then
-  ssh-add
-fi
+# add all SSH keys
+for possiblekey in ${HOME}/.ssh/id_*; do
+    if grep -q PRIVATE "$possiblekey"; then
+      # see if it's already been added
+      ssh-add -l | grep "$(ssh-keygen -lf $possiblekey | awk '{print $2}')" > /dev/null
+
+      # if not, add it
+      if [ $? -eq 1 ]; then
+        ssh-add "$possiblekey"
+      fi
+    fi
+done
