@@ -1,22 +1,22 @@
 " For plugin configuration
 
 " ----------
-" Plugin 'mileszs/ack.vim'
 " Plugin 'junegunn/fzf'
 " ----------
 
-" don't auto-open first matching file
-cabbrev Ack Ack!
-
-" Ctrl + p --> FZF
+" Ctrl + p --> FZF for searching file names
 map <C-p> :FZF <ENTER>
 
-" use ripgrep or the silver searcher for faster searching if available
-if executable('rg')
-  let g:ackprg = 'rg --vimgrep --no-heading --hidden --ignore-file ~/.ignore'
-elseif executable('ag')
-  let g:ackprg = 'ag --vimgrep --hidden'
-endif
+" Ack = ripgrep + FZF
+command! -bang -nargs=* Ack
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --hidden --ignore-file ~/.ignore --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
+" Ctrl + Shift + p to search file contents
+map <S-p> :Ack <ENTER>
 
 " ----------
 " Plugin 'matze/vim-move

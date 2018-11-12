@@ -79,8 +79,6 @@ else
     call dein#add('wellle/targets.vim')
     " syntax checker
     call dein#add('w0rp/ale')
-    " code search tool
-    call dein#add('mileszs/ack.vim')
     " code search/replace tools
     call dein#add('dyng/ctrlsf.vim')
     call dein#add('terryma/vim-multiple-cursors')
@@ -88,6 +86,7 @@ else
     call dein#add('tpope/vim-fugitive')
     " search everything
     call dein#add('junegunn/fzf')
+    call dein#add('junegunn/fzf.vim')
     " incremental search highlighting w/ regex search support (use /\v)
     call dein#add('haya14busa/incsearch.vim')
     " highlight all occurrences of hovered over token
