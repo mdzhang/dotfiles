@@ -157,7 +157,7 @@ let g:ale_fixers = {
 let g:lightline = {
       \ 'colorscheme': 'palenight',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
+      \   'left': [ [ 'mode', 'paste', 'modified' ],
       \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
       \   'right': [['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
       \ },
