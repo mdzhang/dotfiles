@@ -1,0 +1,9 @@
+name: site
+root: ~/src/github.com/mdzhang/mdzhang.com
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+  - server: make start
