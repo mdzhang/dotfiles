@@ -155,8 +155,8 @@ set noerrorbells
 set novisualbell
 set t_vb=
 
-" add extra margin to the left
-set foldcolumn=1
+" no fold column
+set foldcolumn=0
 
 " show line numbers
 set number

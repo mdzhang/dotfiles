@@ -7,16 +7,16 @@
 " Ctrl + p --> FZF for searching file names
 map <C-p> :FZF <ENTER>
 
-" Ack = ripgrep + FZF
-command! -bang -nargs=* Ack
+" Rg = ripgrep + FZF
+command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --hidden --ignore-file ~/.ignore --no-heading --color=always '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
+  \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
   \   <bang>0)
 
 " Ctrl + Shift + p to search file contents
-map <S-p> :Ack <ENTER>
+map <S-p> :Rg <ENTER>
 
 " ----------
 " Plugin 'matze/vim-move
