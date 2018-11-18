@@ -270,6 +270,8 @@ augroup vimrc_base
   au BufRead,BufNewFile *.tpl set filetype=gohtmltmpl
 
   au BufRead,BufNewFile .yamllint set filetype=yaml
+
+  au BufRead,BufNewFile .Rprofile set filetype=r
 augroup END
 
 """"""""""""""""""""""""""""""
