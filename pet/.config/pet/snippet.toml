@@ -167,3 +167,23 @@
   description = "Update an existing diff starting at given commit\""
   command = "arc diff --plan-changes 8d2dda91 --update D28522"
   output = ""
+
+[[snippets]]
+  description = "Remove exited docker containers"
+  command = "docker ps -a -q -f status=exited  | xargs docker rm"
+  output = ""
+
+[[snippets]]
+  description = "Generate ubuntu crypt pass (python2)"
+  command = "python -c \"from passlib.hash import sha512_crypt; import getpass,string,random; print sha512_crypt.using(salt=''.join([random.choice(string.ascii_letters + string.digits) for _ in range(16)]),rounds=5000).hash(getpass.getpass())\""
+  output = ""
+
+[[snippets]]
+  description = "List largest S3 objects with size and key"
+  command = "aws s3api list-object-versions --bucket my-bucket --query 'Versions[*].{Key: Key, Size: Size}'"
+  output = ""
+
+[[snippets]]
+  description = "Get largest element by .Size attribute"
+  command = "jq -c 'sort_by(.Size) | last | .Size'"
+  output = ""
