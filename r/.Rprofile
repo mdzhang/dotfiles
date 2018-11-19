@@ -7,11 +7,13 @@ pkgs <- c(
   "data.table",
   "dplyr",
   "knitr",
+  "lintr",
   "lubridate",
   "purrr",
   "readr",
   "rmarkdown",
   "stringr",
+  "styler",
   "testthat",
   "tidyr"
 )
