@@ -44,9 +44,10 @@ autoload_pkgs <- c(
 # but if this isn't here and I run manually, it's fine :(
 install_pkgs <- function() {
   if (!require("devtools")) utils::install.packages("devtools")
-  if (!require("pacman")) devtools::install_github("trinker/pacman")
-  do.call(pacman::p_install, as.list(pkgs), character.only = TRUE)
-  do.call(pacman::p_install_gh, as.list(gh_pkgs), character.only = TRUE)
+  library("devtools")
+
+  utils::install.packages(pkgs, character.only = TRUE)
+  devtools::install_github(gh_pkgs, character.only = TRUE)
 }
 
-do.call(pacman::p_load, as.list(autoload_pkgs))
+lapply(autoload_pkgs, library, character.only = TRUE)
