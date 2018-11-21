@@ -12,6 +12,24 @@ pkgs <- c(
   "testthat",
   "tidyverse"
 )
+core_tidy_pkgs <- c(
+  "ggplot2",
+  "tibble",
+  "tidyr",
+  "readr",
+  "purrr",
+  "dplyr",
+  "stringr",
+  "forcats"
+)
+noncore_tidy_pkgs <- c(
+  "lubridate",
+  "DBI",
+  "haven",
+  "httr",
+  "jsonlite",
+  "readxl"
+)
 opt_pkgs <- c(
   "benchmarkme",
   "bigmemory",
@@ -24,11 +42,10 @@ gh_pkgs <- c(
 )
 autoload_pkgs <- c(
   "colorout",
-  "tidyverse"
+  "tidyverse",
+  noncore_tidy_pkgs
 )
 
-# if I execute this in this file, it weirdly enters an infinite loop on 3.5.1
-# but if this isn't here and I run manually, it's fine :(
 install_pkgs <- function() {
   if (!require("devtools")) utils::install.packages("devtools")
   library("devtools")
@@ -37,4 +54,9 @@ install_pkgs <- function() {
   devtools::install_github(gh_pkgs, character.only = TRUE)
 }
 
-# lapply(autoload_pkgs, library, character.only = TRUE)
+# autoload all packages in autoload_pkgs
+loaded_pkgs <- utils::tail(
+  lapply(autoload_pkgs, library, character.only = TRUE),
+  n = 1)[[1]]
+# print loaded packages, avoiding repeating tidyverse packages
+setdiff(loaded_pkgs, c(core_tidy_pkgs, "tidyverse"))
