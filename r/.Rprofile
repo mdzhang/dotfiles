@@ -5,28 +5,18 @@ options(
 pkgs <- c(
   "assertr",
   "data.table",
-  "dplyr",
   "knitr",
   "lintr",
-  "lubridate",
-  "purrr",
-  "readr",
   "rmarkdown",
-  "stringr",
   "styler",
   "testthat",
-  "tidyr"
+  "tidyverse"
 )
 opt_pkgs <- c(
-  "DBI",
   "benchmarkme",
   "bigmemory",
-  "haven",            # SAS, SPSS, Stata
-  "httr",             # HTTP
-  "jsonlite",
   "microbenchmark",
-  "profvis",          # code profiling
-  "readxl"            # excel
+  "profvis"          # code profiling
 )
 gh_pkgs <- c(
   "jalvesaq/colorout",
@@ -34,12 +24,7 @@ gh_pkgs <- c(
 )
 autoload_pkgs <- c(
   "colorout",
-  "dplyr",
-  "lubridate",
-  "purrr",
-  "readr",
-  "stringr",
-  "tidyr"
+  "tidyverse"
 )
 
 # if I execute this in this file, it weirdly enters an infinite loop on 3.5.1
@@ -52,4 +37,4 @@ install_pkgs <- function() {
   devtools::install_github(gh_pkgs, character.only = TRUE)
 }
 
-lapply(autoload_pkgs, library, character.only = TRUE)
+# lapply(autoload_pkgs, library, character.only = TRUE)
