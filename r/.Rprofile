@@ -2,6 +2,9 @@ options(
   repos = structure(c(CRAN="https://cloud.r-project.org"))
 )
 
+base_pkgs <- c(
+  "stats"
+)
 pkgs <- c(
   "assertr",
   "data.table",
@@ -41,6 +44,8 @@ gh_pkgs <- c(
   "klutometis/roxygen"
 )
 autoload_pkgs <- c(
+  # ensure base packages loaded first so tidyverse packages mask base methods
+  base_pkgs,
   "colorout",
   "tidyverse",
   noncore_tidy_pkgs
@@ -55,6 +60,7 @@ install_pkgs <- function() {
 }
 
 # autoload all packages in autoload_pkgs
+# this is for convenience in REPL, obviously scripts should not rely on this
 loaded_pkgs <- utils::tail(
   lapply(autoload_pkgs, library, character.only = TRUE),
   n = 1)[[1]]
