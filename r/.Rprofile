@@ -6,42 +6,43 @@ base_pkgs <- c(
   "stats"
 )
 pkgs <- c(
-  "assertr",
+  "assertr",          # code assertions
   "data.table",
   "knitr",
-  "lintr",
+  "lintr",            # code linting
+  "pryr",             # code inspection
   "rmarkdown",
-  "styler",
-  "testthat",
+  "styler",           # code style
+  "testthat",         # test framework
   "tidyverse"
 )
 core_tidy_pkgs <- c(
-  "ggplot2",
+  "ggplot2",          # visualization
   "tibble",
   "tidyr",
-  "readr",
-  "purrr",
+  "readr",            # reading files
+  "purrr",            # fp methods
   "dplyr",
-  "stringr",
+  "stringr",          # string utilities
   "forcats"
 )
 noncore_tidy_pkgs <- c(
-  "lubridate",
+  "lubridate",        # date utilities
   "DBI",
   "haven",
-  "httr",
+  "httr",             # HTTP requests
   "jsonlite",
   "readxl"
 )
 opt_pkgs <- c(
-  "benchmarkme",
-  "bigmemory",
-  "microbenchmark",
+  "benchmarkme",     # code benchmarking
+  "bigmemory",       # for handling large datasets
+  "microbenchmark",  # code benchmarking
   "profvis"          # code profiling
 )
 gh_pkgs <- c(
-  "jalvesaq/colorout",
-  "klutometis/roxygen"
+  "jalvesaq/colorout",  # colorized repl
+  "klutometis/roxygen"  # code comments
 )
 autoload_pkgs <- c(
   # ensure base packages loaded first so tidyverse packages mask base methods
