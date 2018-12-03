@@ -7,9 +7,11 @@ base_pkgs <- c(
 )
 pkgs <- c(
   "assertr",          # code assertions
-  "data.table",
+  "data.table",       # convenience data.frame wrapper
+  "ggplot2",          # static visualizations
   "knitr",
   "lintr",            # code linting
+  "plotly",           # interactive visualizations
   "pryr",             # code inspection
   "rmarkdown",
   "styler",           # code style
@@ -28,7 +30,7 @@ core_tidy_pkgs <- c(
 )
 noncore_tidy_pkgs <- c(
   "lubridate",        # date utilities
-  "DBI",
+  "DBI",              # database connection utils
   "haven",
   "httr",             # HTTP requests
   "jsonlite",
