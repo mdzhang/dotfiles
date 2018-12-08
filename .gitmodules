@@ -1,24 +1,32 @@
 [submodule "vim/.vim/pack/opt/dein.vim"]
 	path = vim/.vim/pack/opt/dein.vim
 	url = git@github.com:Shougo/dein.vim.git
+	ignore = dirty
 [submodule "bash/.config/bash/opt/bash-it"]
 	path = bash/.config/bash/opt/bash-it
 	url = git@github.com:Bash-it/bash-it.git
+	ignore = dirty
 [submodule "mutt/.config/mutt/opt/mutt-colors-solarized"]
 	path = mutt/.config/mutt/opt/mutt-colors-solarized
 	url = git@github.com:altercation/mutt-colors-solarized.git
+	ignore = dirty
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
+	ignore = dirty
 [submodule "fish/.local/share/omf"]
 	path = fish/.local/share/omf
 	url = git@github.com:oh-my-fish/oh-my-fish.git
+	ignore = dirty
 [submodule "zsh/.config/zsh/opt/zgen"]
 	path = zsh/.config/zsh/opt/zgen
 	url = git@github.com:tarjoilija/zgen.git
+	ignore = dirty
 [submodule "sh/.basher"]
 	path = sh/.basher
 	url = git@github.com:basherpm/basher.git
+	ignore = dirty
 [submodule "fish/.local/share/fisherman"]
 	path = fish/.local/share/fisherman
 	url = git@github.com:fisherman/fisherman.git
+	ignore = dirty
