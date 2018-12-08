@@ -22,10 +22,6 @@
 	path = zsh/.config/zsh/opt/zgen
 	url = git@github.com:tarjoilija/zgen.git
 	ignore = dirty
-[submodule "sh/.basher"]
-	path = sh/.basher
-	url = git@github.com:basherpm/basher.git
-	ignore = dirty
 [submodule "fish/.local/share/fisherman"]
 	path = fish/.local/share/fisherman
 	url = git@github.com:fisherman/fisherman.git
