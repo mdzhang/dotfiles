@@ -4,6 +4,8 @@
 
 set -o shwordsplit
 
+export SHELL=$(which zsh)
+
 source "$HOME/.shrc"
 
 # custom history file location that respects XDG
