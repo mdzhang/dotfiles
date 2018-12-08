@@ -13,9 +13,6 @@
 [submodule "fish/.local/share/omf"]
 	path = fish/.local/share/omf
 	url = git@github.com:oh-my-fish/oh-my-fish.git
-[submodule "fish/.local/share/fisherman"]
-	path = fish/.local/share/fisherman
-	url = git@github.com:fisherman/fisherman.git
 [submodule "zsh/.config/zsh/opt/zgen"]
 	path = zsh/.config/zsh/opt/zgen
 	url = git@github.com:tarjoilija/zgen.git
