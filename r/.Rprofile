@@ -64,8 +64,8 @@ install_pkgs <- function() {
 
 # autoload all packages in autoload_pkgs
 # this is for convenience in REPL, obviously scripts should not rely on this
-loaded_pkgs <- utils::tail(
-  lapply(autoload_pkgs, library, character.only = TRUE),
-  n = 1)[[1]]
-# print loaded packages, avoiding repeating tidyverse packages
-setdiff(loaded_pkgs, c(core_tidy_pkgs, "tidyverse"))
+# loaded_pkgs <- utils::tail(
+#   lapply(autoload_pkgs, library, character.only = TRUE),
+#   n = 1)[[1]]
+# # print loaded packages, avoiding repeating tidyverse packages
+# setdiff(loaded_pkgs, c(core_tidy_pkgs, "tidyverse"))
