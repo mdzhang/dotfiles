@@ -9,3 +9,15 @@ refresh() {
   sudo apt-get clean
   df -h
 }
+
+screenreset() {
+  # call to bring panel back if it disappears after moving onto extended display screen
+  screens=$(xrandr | grep -c ' connected ')
+  echo "found $screens displays"
+
+  if [ "$screens" = 1 ]; then
+    gsettings set org.cinnamon panels-enabled "['1:0:left']"
+  else
+    gsettings set org.cinnamon panels-enabled "['1:1:left']"
+  fi
+}
