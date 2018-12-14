@@ -108,7 +108,7 @@
 
 [commit]
 
-  gpgsign = false
+  gpgsign = true
 
 [gpg]
 
