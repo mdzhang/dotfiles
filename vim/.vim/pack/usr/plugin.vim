@@ -139,6 +139,7 @@ let g:ale_linters = {
   \ 'json': ['jsonlint'],
   \ 'css': ['csslint'],
   \ 'yaml': ['yamllint'],
+  \ 'yaml.ansible': ['ansible-lint'],
   \ 'markdown': ['markdownlint'],
   \ 'rst': ['rstcheck', 'proselint', 'write-good'],
   \ 'sql': ['sqlint'],
