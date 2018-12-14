@@ -58,14 +58,19 @@ install_pkgs <- function() {
   if (!require("devtools")) utils::install.packages("devtools")
   library("devtools")
 
-  utils::install.packages(pkgs, character.only = TRUE)
-  devtools::install_github(gh_pkgs, character.only = TRUE)
+  utils::install.packages(pkgs)
+  devtools::install_github(gh_pkgs)
 }
 
-# autoload all packages in autoload_pkgs
+load_pkgs <- function() {
+  # autoload all packages in autoload_pkgs
+  loaded_pkgs <- utils::tail(
+    lapply(autoload_pkgs, library, character.only = TRUE),
+    n = 1)[[1]]
+  # print loaded packages, avoiding repeating tidyverse packages
+  setdiff(loaded_pkgs, c(core_tidy_pkgs, "tidyverse"))
+}
+
+
 # this is for convenience in REPL, obviously scripts should not rely on this
-# loaded_pkgs <- utils::tail(
-#   lapply(autoload_pkgs, library, character.only = TRUE),
-#   n = 1)[[1]]
-# # print loaded packages, avoiding repeating tidyverse packages
-# setdiff(loaded_pkgs, c(core_tidy_pkgs, "tidyverse"))
+load_pkgs()
