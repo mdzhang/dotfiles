@@ -86,8 +86,7 @@ set history=500
 set autoread
 
 " use system clipboard
-set clipboard=unnamedplus
-set paste
+set clipboard=unnamed
 
 " ignore case when searching
 set ignorecase
