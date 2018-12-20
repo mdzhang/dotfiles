@@ -187,3 +187,8 @@
   description = "Get largest element by .Size attribute"
   command = "jq -c 'sort_by(.Size) | last | .Size'"
   output = ""
+
+[[snippets]]
+  description = "Get average size of files matching ls pattern in K"
+  command = "la out*.pcap | awk '{print $5}' | rev | cut -c 2- | rev | Rscript -e 'd<-scan(\"stdin\", quiet=TRUE)' -e 'mean(d)'                                                                                         14:16:10"
+  output = ""
