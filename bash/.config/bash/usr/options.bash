@@ -1,7 +1,5 @@
 #!/bin/bash
 
-ulimit -u 512
-
 # case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
