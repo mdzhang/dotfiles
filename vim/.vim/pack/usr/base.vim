@@ -86,7 +86,12 @@ set history=500
 set autoread
 
 " use system clipboard
-set clipboard=unnamed
+let uname = substitute(system('uname'), '\n', '', '')
+if uname == 'Linux'
+  set clipboard=unnamedplus
+else " macos
+  set clipboard=unnamed
+endif
 
 " ignore case when searching
 set ignorecase
