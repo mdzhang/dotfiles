@@ -89,6 +89,7 @@ set autoread
 let uname = substitute(system('uname'), '\n', '', '')
 if uname == 'Linux'
   set clipboard=unnamedplus
+  set paste
 else " macos
   set clipboard=unnamed
 endif
