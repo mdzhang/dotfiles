@@ -6,6 +6,7 @@ refresh() {
   sudo apt-get upgrade
   sudo apt-get autoremove
   sudo apt-get autoclean
+  sudo du -sh /var/cache/apt/archives
   sudo apt-get clean
   df -h
 }

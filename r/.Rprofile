@@ -9,6 +9,7 @@ pkgs <- c(
   "assertr",          # code assertions
   "data.table",       # convenience data.frame wrapper
   "ggplot2",          # static visualizations
+  "infer",            # statistical inference
   "knitr",
   "lintr",            # code linting
   "plotly",           # interactive visualizations
@@ -17,6 +18,15 @@ pkgs <- c(
   "styler",           # code style
   "testthat",         # test framework
   "tidyverse"
+)
+geo_pkgs <- c(
+  "ggmap",            # maps for ggplot
+  "leaflet",          # interactive maps
+  "raster",           # best for raster data
+  "rnaturalearth",    # world map data
+  "sp",               # spatial data classes
+  "tigris",           # easy download/import of US census geographies
+  "tmap"              # ggmap alternative
 )
 core_tidy_pkgs <- c(
   "ggplot2",          # visualization
@@ -73,4 +83,4 @@ load_pkgs <- function() {
 
 
 # this is for convenience in REPL, obviously scripts should not rely on this
-load_pkgs()
+# load_pkgs()
