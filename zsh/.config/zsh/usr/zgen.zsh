@@ -36,7 +36,6 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
     zgen prezto completion
     zgen prezto docker
     zgen prezto homebrew
-    zgen prezto git
     zgen prezto syntax-highlighting
     zgen prezto history-substring-search
     zgen prezto prompt
