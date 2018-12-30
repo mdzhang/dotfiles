@@ -20,6 +20,8 @@ fi
 
 [ -f ~/.fzf.$SHELL_NAME ] && source ~/.fzf.$SHELL_NAME
 
+[[ -s "/etc/grc.$SHELL_NAME" ]] && source /etc/grc.$SHELL_NAME
+
 # add all SSH keys
 for possiblekey in ${HOME}/.ssh/id_*; do
     if grep -q PRIVATE "$possiblekey"; then
