@@ -23,7 +23,10 @@ geo_pkgs <- c(
   "ggmap",            # maps for ggplot
   "leaflet",          # interactive maps
   "raster",           # best for raster data
+  "rgdal",
+  "rgeos",
   "rnaturalearth",    # world map data
+  "sf",               # spatial data frames; modern alternative to sp
   "sp",               # spatial data classes
   "tigris",           # easy download/import of US census geographies
   "tmap"              # ggmap alternative
