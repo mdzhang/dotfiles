@@ -197,3 +197,8 @@
   description = "Add to system clipboard on linux"
   command = "xclip -sel clip"
   output = ""
+
+[[snippets]]
+  description = "Convert PDF to PNG file"
+  command = "pdftoppm input.pdf output.png -png"
+  output = ""
