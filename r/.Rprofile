@@ -28,6 +28,7 @@ geo_pkgs <- c(
   "rnaturalearth",    # world map data
   "sf",               # spatial data frames; modern alternative to sp
   "sp",               # spatial data classes
+  "spatstat",         # spatial statistics
   "tigris",           # easy download/import of US census geographies
   "tmap"              # ggmap alternative
 )
