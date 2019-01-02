@@ -1,5 +1,4 @@
 #!/bin/zsh -l
-
 # zmodload zsh/zprof
 
 set -o shwordsplit
@@ -16,5 +15,9 @@ RPROMPT="%*"
 
 # Load custom configurations
 _load_settings "$XDG_CONFIG_HOME/zsh/usr"
+
+if which vocab > /dev/null; then
+  vocab
+fi
 
 # zprof

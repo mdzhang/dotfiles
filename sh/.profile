@@ -1,5 +1,5 @@
 #!/bin/sh
 
-if [ -f "$HOME/.shrc" ]; then
+if [ "$(uname)" != "Darwin" ] && [ -f "$HOME/.shrc" ]; then
   . "$HOME/.shrc";
 fi
