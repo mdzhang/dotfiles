@@ -20,10 +20,7 @@ fi
 
 [ -f ~/.fzf.$SHELL_NAME ] && source ~/.fzf.$SHELL_NAME
 
-# grc for linux
 [ -f "/etc/grc.$SHELL_NAME" ] && source /etc/grc.$SHELL_NAME
-# grc for macos
-[ -f "/usr/local/etc/grc.$SHELL_NAME" ] && source /usr/local/etc/grc.$SHELL_NAME
 
 # add all SSH keys
 for possiblekey in ${HOME}/.ssh/id_*; do
