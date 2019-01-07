@@ -75,6 +75,10 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
     # Set the terminal multiplexer title format.
     zgen prezto terminal:multiplexer-title format '%s'
 
+    # conflicts w/ grc coloring
+    zgen prezto utility:ls dirs-first 'no'
+    zgen prezto utility:ls color 'no'
+
     ###################
     # Other Third Party
     ###################
