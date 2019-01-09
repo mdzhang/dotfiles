@@ -32,6 +32,7 @@
 *.sqlite3
 *.swp
 ._*
+*.bak
 
 # Data #
 ########
