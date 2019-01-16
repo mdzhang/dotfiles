@@ -1,30 +1,47 @@
+---
 repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.1.0
+    hooks:
+      - id: trailing-whitespace
+      - id: check-byte-order-marker
+      - id: flake8
+        language: system
+      - id: check-added-large-files
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: check-json
+      - id: check-xml
+      - id: check-yaml
+      - id: detect-private-key
+      - id: detect-aws-credentials
+      - id: no-commit-to-branch
+        args: [--branch, develop, --branch, master]
+  - repo: https://github.com/fzylogic/rubocop-pre-commit-hook
+    rev: 5e0a725f6e50e60b7a292e23414e1a3b10316f0a
+    hooks:
+      - id: check-rubocop
   - repo: https://github.com/ambv/black
-    rev: stable
+    rev: 18.9b0
     hooks:
       - id: black
         language: system
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v1.2.3
-    hooks:
-      - id: flake8
-        language: system
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.7.3
+    rev: v1.8.1
     hooks:
       - id: terraform_fmt
   - repo: https://github.com/ansible/ansible-lint.git
-    sha: v3.3.1
+    rev: v4.0.1
     hooks:
       - id: ansible-lint
-        files: \.(yaml|yml)$
+        files: \.(yml)$
         language: system
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
-    sha: 1.10.2
+    rev: 1.10.3
     hooks:
       - id: shellcheck
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v5.10.0
+    rev: v5.12.0
     hooks:
       - id: eslint
         name: eslint
