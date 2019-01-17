@@ -134,6 +134,7 @@ let g:ale_fix_on_save = 1
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
 
+let g:ale_linter_aliases = {'rspec': ['ruby']}
 let g:ale_linters = {
   \ 'python': ['flake8'],
   \ 'json': ['jsonlint'],
@@ -142,6 +143,7 @@ let g:ale_linters = {
   \ 'yaml.ansible': ['ansible-lint'],
   \ 'markdown': ['markdownlint'],
   \ 'rst': ['rstcheck', 'proselint', 'write-good'],
+  \ 'ruby': ['rubocop'],
   \ 'sql': ['sqlint'],
   \ }
 let g:ale_fixers = {
