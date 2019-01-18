@@ -207,3 +207,8 @@
   description = "delete remote git branch"
   command = "git push origin :remote-branch-name"
   output = ""
+
+[[snippets]]
+  description = "[git] drop all changes"
+  command = "git stash save --keep-index --include-untracked && git stash drop"
+  output = ""
