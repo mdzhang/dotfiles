@@ -49,3 +49,10 @@ repos:
         args: [--ext=.js, --ext=.jsx]
         language: system
         files: \.(js|jsx)$
+  - repo: local
+    hooks:
+      - id: fixjson
+        name: fixjson
+        entry: fixjson --write
+        language: node
+        files: \.(json)$
