@@ -89,7 +89,8 @@ set autoread
 let uname = substitute(system('uname'), '\n', '', '')
 if uname == 'Linux'
   set clipboard=unnamedplus
-  set paste
+  " breaks supertab
+  " set paste
 else " macos
   set clipboard=unnamed
 endif

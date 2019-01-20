@@ -29,6 +29,7 @@ geo_pkgs <- c(
   "sf",               # spatial data frames; modern alternative to sp
   "sp",               # spatial data classes
   "spatstat",         # spatial statistics
+  "spatialkernel",
   "tigris",           # easy download/import of US census geographies
   "tmap"              # ggmap alternative
 )

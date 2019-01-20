@@ -212,3 +212,13 @@
   description = "[git] drop all changes"
   command = "git stash save --keep-index --include-untracked && git stash drop"
   output = ""
+
+[[snippets]]
+  description = "GPG encrypt test.txt file"
+  command = "gpg --output test.gpg --encrypt --recipient zhang.michelle.d@gmail.com test.txt"
+  output = ""
+
+[[snippets]]
+  description = "GPG decrypt test.gpg file"
+  command = "gpg --output test.decrypted.txt --decrypt test.gpg"
+  output = ""

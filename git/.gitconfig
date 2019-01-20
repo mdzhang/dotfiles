@@ -105,10 +105,11 @@
 
   name = Michelle D Zhang
   email = zhang.michelle.d@gmail.com
+  signingkey = 8B87E1491655C95A
 
 [commit]
 
-  gpgsign = false
+  gpgsign = true
 
 [gpg]
 
