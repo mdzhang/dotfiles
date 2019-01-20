@@ -3,6 +3,7 @@ export GPG_TTY=$(tty)
 # mdzhang: this is slow
 if which anyenv > /dev/null; then
   eval "$(anyenv init - --no-rehash $SHELL_NAME)";
+  # mdzhang: symlink Anaconda env into anyenv/envs/pyenv/versions
 fi
 
 if which pyenv-virtualenv > /dev/null; then

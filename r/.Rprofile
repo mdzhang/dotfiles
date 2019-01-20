@@ -5,6 +5,7 @@ options(
 base_pkgs <- c(
   "stats"
 )
+# 'IRkernel' for Jupyter notebook interop
 pkgs <- c(
   "assertr",          # code assertions
   "data.table",       # convenience data.frame wrapper
