@@ -217,7 +217,7 @@ map g/ <Plug>(incsearch-stay)
 " ----------
 
 let g:slime_paste_file = "~/.vim/slime/.slime_paste"
-let g:slime_target = "tmux"
+let g:slime_target = "kitty"
 let g:slime_python_ipython = 1
 " generally use target pane like ':.1'
 
