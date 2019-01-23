@@ -5,13 +5,17 @@
 #
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HOMEBREW_INSTALL_CLEANUP=1
 
 brew_update() {
   brew doctor
   brew update
-  brew upgrade --cleanup
+  brew upgrade
+
+  brew cask doctor
+  brew cask upgrade
+
   brew cleanup
-  brew cask cleanup
 }
 
 
