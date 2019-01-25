@@ -132,6 +132,17 @@ else
     "
     call dein#add('thalesmello/lkml.vim')
 
+    "
+    " Fluentd
+    "
+    call dein#add('itkq/fluentd-vim')
+
+    "
+    " Terraform
+    "
+    " for autocompletion, linting, and ctags
+    call dein#add('juliosueiras/vim-terraform-completion')
+
     " devicons and glyphs (must be last)
     call dein#add('ryanoasis/vim-devicons')
 
