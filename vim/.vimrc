@@ -128,6 +128,11 @@ else
     call dein#add('pedrohdz/vim-yaml-folds')
 
     "
+    " JSON
+    "
+    call dein#add('tpope/vim-jdaddy')
+
+    "
     " LookML
     "
     call dein#add('thalesmello/lkml.vim')

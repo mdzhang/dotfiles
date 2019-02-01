@@ -79,6 +79,8 @@ try
 catch
 endtry
 
+set modeline
+
 " lines of history vim remembers
 set history=500
 

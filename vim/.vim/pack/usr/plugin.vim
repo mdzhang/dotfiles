@@ -15,6 +15,13 @@ command! -bang -nargs=* Rg
   \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
   \   <bang>0)
 
+command! -bang -nargs=* Rga
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --hidden --no-heading --color=always '.<q-args>, 1,
+  \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
+  \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
+  \   <bang>0)
+
 " Ctrl + Shift + p to search file contents
 map <S-p> :Rg <ENTER>
 
