@@ -119,6 +119,7 @@
 
   editor = vim
   excludesfile = ~/.ignore
+  pager = less -XRF
 
 [pull]
 
@@ -150,7 +151,8 @@
   path =
 
 [difftool "icdiff"]
-    cmd = icdiff $LOCAL $REMOTE
+
+  cmd = icdiff $LOCAL $REMOTE
 
 [mergetool "sourcetree"]
 
@@ -169,4 +171,5 @@
   path = ~/.gitconfig.local
 
 [icdiff]
+
   options = --highlight --line-numbers
