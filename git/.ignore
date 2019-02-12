@@ -86,7 +86,7 @@ pgdata/
 # Secrets #
 ###########
 # *.pem
-.env
+.env*
 .envrc
 secrets/
 
