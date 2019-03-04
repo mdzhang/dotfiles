@@ -222,3 +222,8 @@
   description = "GPG decrypt test.gpg file"
   command = "gpg --output test.decrypted.txt --decrypt test.gpg"
   output = ""
+
+[[snippets]]
+  description = "comm -23 <(...) <(...)"
+  command = "Find things in left stream not in right stream"
+  output = ""
