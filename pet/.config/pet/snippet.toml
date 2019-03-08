@@ -227,3 +227,8 @@
   description = "comm -23 <(...) <(...)"
   command = "Find things in left stream not in right stream"
   output = ""
+
+[[snippets]]
+  description = "basic psql cmd"
+  command = "psql -U <user> -h <host> -d <database> -c '<sql>'"
+  output = ""
