@@ -48,6 +48,7 @@
 *.tax2010
 *.vcf
 pgdata/
+data/
 
 # Compressed #
 ##############
@@ -105,6 +106,7 @@ cache/
 .cache/
 .benchmark/
 .coverage
+.coverage*
 .coverage/
 .tox/
 build/
