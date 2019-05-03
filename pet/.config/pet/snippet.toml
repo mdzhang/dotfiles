@@ -232,3 +232,13 @@
   description = "basic psql cmd"
   command = "psql -U <user> -h <host> -d <database> -c '<sql>'"
   output = ""
+
+[[snippets]]
+  description = "Convert macOS Quicktime mov to gif"
+  command = "ffmpeg -i in.mov -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif"
+  output = ""
+
+[[snippets]]
+  description = "Pipe command output to stderr, stdout, and a file"
+  command = "echo 'foo'  2>&1 | tee out.log"
+  output = ""

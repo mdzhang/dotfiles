@@ -36,6 +36,10 @@ if [ -d /usr/local/opt/ncurses/bin ]; then
   export PATH="/usr/local/opt/ncurses/bin:$PATH"
 fi
 
+if [ -d /usr/local/opt/groovy/bin ]; then
+  export GROOVY_HOME="/usr/local/opt/groovy/libexec"
+fi
+
 if [ -d /usr/local/opt/openssl/bin ]; then
   export CFLAGS="-I/usr/local/opt/openssl/include $CFLAGS"
   export LDFLAGS="-L/usr/local/opt/openssl/lib $LDFLAGS"
@@ -67,4 +71,4 @@ fi
 
 # NB: do this _after_ homebrew packages added to path, since gnu-bin replaces
 #     a few commands and makes them more linux-y, which grc wants
-[ -f "/usr/local/etc/grc.$SHELL_NAME" ] && source /usr/local/etc/grc.$SHELL_NAME
+[ -f "/usr/local/etc/grc.$SHELL_NAME" ] && source "/usr/local/etc/grc.$SHELL_NAME"
