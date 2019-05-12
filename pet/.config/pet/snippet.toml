@@ -242,3 +242,13 @@
   description = "Pipe command output to stderr, stdout, and a file"
   command = "echo 'foo'  2>&1 | tee out.log"
   output = ""
+
+[[snippets]]
+  description = "Generate lines following sequence pattern"
+  command = "seq -f \"Line %g\" 10"
+  output = ""
+
+[[snippets]]
+  description = "Print odd numbered lines by specifying start (1) and step (2)"
+  command = "sed -n '1~2p'"
+  output = ""
