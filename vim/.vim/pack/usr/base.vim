@@ -251,7 +251,10 @@ augroup vimrc_base
   autocmd!
 
   " trim trailing whitespace
-  autocmd BufWritePre * :call TrimWhitespace()
+  au BufWritePre * :call TrimWhitespace()
+
+  " set spell checking on markdown files
+  au BufRead,BufNewFile *.md setlocal spell
 
   "
   " filetypes
