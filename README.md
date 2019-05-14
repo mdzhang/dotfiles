@@ -46,6 +46,8 @@ Installs source code to `~/.dotfiles` by default
     stow zsh
     ```
 
+1. `stow` will symlink a variety of files under e.g. `$XDG_CONFIG_HOME/sh/`, but to source them from your `~.*rc` file, they need to be specified in `local_modules` in [`sh/.shrc`](./sh/.shrc) as well. These have a reasonable default, but may need to be updated based on additional local changes.
+
 ### Sensitive Information
 
 Add to `sh/.config/sh/general/secrets.sh`
@@ -58,6 +60,6 @@ Add to `sh/.config/sh/general/secrets.sh`
 
 ## License
 
-Copyright (c) 2013-2018 Michelle D. Zhang. MIT Licensed, see [LICENSE](LICENSE) for details.
+Copyright (c) 2013-2019 Michelle D. Zhang. MIT Licensed, see [LICENSE](LICENSE) for details.
 
 [stow]: https://www.gnu.org/software/stow/manual/stow.html
