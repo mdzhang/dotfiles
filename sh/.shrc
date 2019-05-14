@@ -27,7 +27,9 @@ _load_settings() {
   fi
 }
 
-local_modules="xdg general scripts docker gcloud git golang lynx newsboat node pg python readline ruby rust R scala vim"
+automodules=$(ls $XDG_CONFIG_HOME/sh | tr --delete '@' | grep -vE '(xdg|general|macos|nix)' | tr '\n' ' ')
+# deliberately source these first
+local_modules="xdg general $automodules"
 
 if [ "$(uname)" = "Darwin" ]; then
   local_modules="$local_modules macos"
