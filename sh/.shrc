@@ -27,7 +27,7 @@ _load_settings() {
   fi
 }
 
-automodules=$(ls $XDG_CONFIG_HOME/sh | tr --delete '@' | grep -vE '(xdg|general|macos|nix)' | tr '\n' ' ')
+automodules=$(ls $XDG_CONFIG_HOME/sh | tr -d '@' | grep -vE '(xdg|general|macos|nix)' | tr '\n' ' ')
 # deliberately source these first
 local_modules="xdg general $automodules"
 
