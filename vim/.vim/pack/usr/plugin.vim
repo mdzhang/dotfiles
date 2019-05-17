@@ -158,6 +158,7 @@ let g:ale_fixers = {
   \ 'json': ['fixjson'],
   \ 'python': ['black', 'isort'],
   \ 'terraform': ['terraform'],
+  \ 'yaml': ['prettier'],
   \ }
 
 " ----------

@@ -252,3 +252,8 @@
   description = "Print odd numbered lines by specifying start (1) and step (2)"
   command = "sed -n '1~2p'"
   output = ""
+
+[[snippets]]
+  description = "replace yaml lines w/ special chars and wrap in quotes"
+  command = "sed -i -E 's/^(.+): (.+[@{\\/].+)$/\\1: \"\\2\"/g' f.yaml"
+  output = ""

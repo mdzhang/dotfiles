@@ -1,7 +1,15 @@
 {
-    "useTabs": false,
-    "printWidth": 50,
-    "tabWidth": 2,
-    "trailingComma": "all",
-    "singleQuote": true
+  "useTabs": false,
+  "printWidth": 50,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "*.y*ml",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }

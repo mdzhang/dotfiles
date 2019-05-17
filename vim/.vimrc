@@ -126,6 +126,8 @@ else
 
     " code folding
     call dein#add('pedrohdz/vim-yaml-folds')
+    " autoformatting
+    call dein#add('tarekbecker/vim-yaml-formatter')
 
     "
     " JSON
