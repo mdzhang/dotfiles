@@ -1,10 +1,12 @@
 options(
-  repos = structure(c(CRAN="https://cloud.r-project.org"))
+  repos = structure(c(CRAN = "https://cloud.r-project.org"))
 )
 
 base_pkgs <- c(
   "stats"
 )
+
+# commonly used packages
 # 'IRkernel' for Jupyter notebook interop
 pkgs <- c(
   "assertr",          # code assertions
@@ -20,6 +22,8 @@ pkgs <- c(
   "testthat",         # test framework
   "tidyverse"
 )
+
+# for geospatial analysis
 geo_pkgs <- c(
   "ggmap",            # maps for ggplot
   "leaflet",          # interactive maps
@@ -29,11 +33,12 @@ geo_pkgs <- c(
   "rnaturalearth",    # world map data
   "sf",               # spatial data frames; modern alternative to sp
   "sp",               # spatial data classes
-  "spatstat",         # spatial statistics
   "spatialkernel",
   "tigris",           # easy download/import of US census geographies
   "tmap"              # ggmap alternative
 )
+
+# packages in tidyverse
 core_tidy_pkgs <- c(
   "ggplot2",          # visualization
   "tibble",
@@ -44,6 +49,9 @@ core_tidy_pkgs <- c(
   "stringr",          # string utilities
   "forcats"
 )
+
+# additional tidyverse packages we'd like to load automatically
+# but that aren't loaded when loading tidyverse
 noncore_tidy_pkgs <- c(
   "lubridate",        # date utilities
   "DBI",              # database connection utils
@@ -52,16 +60,29 @@ noncore_tidy_pkgs <- c(
   "jsonlite",
   "readxl"
 )
+
+# statistical packages
+stats_pkgs <- c(
+  "class",            # classification
+  "FNN",              # knn
+  "spatstat"          # spatial statistics
+)
+
+# performance and optimization packages
 opt_pkgs <- c(
   "benchmarkme",     # code benchmarking
   "bigmemory",       # for handling large datasets
   "microbenchmark",  # code benchmarking
   "profvis"          # code profiling
 )
+
+# packages from github, not CRAN
 gh_pkgs <- c(
   "jalvesaq/colorout",  # colorized repl
   "klutometis/roxygen"  # code comments
 )
+
+# packages to load in load_pkgs() call
 autoload_pkgs <- c(
   # ensure base packages loaded first so tidyverse packages mask base methods
   base_pkgs,
