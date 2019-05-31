@@ -65,7 +65,21 @@ noncore_tidy_pkgs <- c(
 stats_pkgs <- c(
   "class",            # classification
   "FNN",              # knn
-  "spatstat"          # spatial statistics
+  "spatstat",         # spatial statistics
+  "naivebayes",
+  "klaR",             # classification
+  "mgcv",             # GAM
+  "infer",
+  "lmPerm",           # permutation tests for linear models
+  "boot",             # bootstrapping
+  "matrixStats",
+  "descr",            # descriptive statistics
+  "rpart",            # decision trees
+  "cluster",          # cluster analysis
+  "dendextend",       # colored dendrograms
+  "randomForest",
+  "Hmisc",
+  "pROC"              # ROC curves
 )
 
 # performance and optimization packages

@@ -106,6 +106,8 @@ else
     call dein#add('lukaszkorecki/workflowish')
     " interactive scratchpad that shows output as right side comment
     call dein#add('metakirby5/codi.vim')
+    " show markers in sidebar
+    call dein#add('kshenoy/vim-signature')
 
     "
     " Python

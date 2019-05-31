@@ -48,7 +48,6 @@
 *.tax2010
 *.vcf
 pgdata/
-data/
 
 # Compressed #
 ##############
