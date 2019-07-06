@@ -1,0 +1,50 @@
+diff --git b/kitty/.config/kitty/kitty.conf a/kitty/.config/kitty/kitty.conf
+index 746ac56..68326e0 100644
+--- b/kitty/.config/kitty/kitty.conf
++++ a/kitty/.config/kitty/kitty.conf
+@@ -17,7 +17,7 @@ shell /usr/bin/zsh --login
+ # colors
+ #
+ 
+-include ./palenight.conf
++include ./ayu_light.conf
+ 
+ #
+ # fonts
+diff --git b/vim/.vim/pack/usr/base.vim a/vim/.vim/pack/usr/base.vim
+index 0b57c1f..4222820 100644
+--- b/vim/.vim/pack/usr/base.vim
++++ a/vim/.vim/pack/usr/base.vim
+@@ -219,7 +219,7 @@ set softtabstop=2
+ 
+ " enable syntax highlighting
+ syntax enable
+-set background=dark
++set background=light
+ 
+ " enable 256 colors palette in Gnome Terminal
+ if $COLORTERM == 'gnome-terminal'
+@@ -232,8 +232,8 @@ if $COLORTERM == 'truecolor'
+ endif
+ 
+ try
+-  " let g:ayucolor='light'
+-  colorscheme palenight
++  let g:ayucolor='light'
++  colorscheme ayu
+ catch
+ endtry
+ 
+diff --git b/vim/.vim/pack/usr/plugin.vim a/vim/.vim/pack/usr/plugin.vim
+index 136f69f..56c1a2f 100644
+--- b/vim/.vim/pack/usr/plugin.vim
++++ a/vim/.vim/pack/usr/plugin.vim
+@@ -166,7 +166,7 @@ let g:ale_fixers = {
+ " ----------
+ 
+ let g:lightline = {
+-      \ 'colorscheme': 'palenight',
++      \ 'colorscheme': 'ayu',
+       \ 'active': {
+       \   'left': [ [ 'mode', 'paste', 'modified' ],
+       \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],

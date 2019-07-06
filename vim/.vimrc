@@ -49,6 +49,7 @@ else
     " vim themes
     call dein#add('drewtempelmeyer/palenight.vim')
     call dein#add('cocopon/iceberg.vim')
+    call dein#add('ayu-theme/ayu-vim')
     " rainbow bracket highlighting
     call dein#add('luochen1990/rainbow')
     " show whitespace

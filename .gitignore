@@ -8,3 +8,5 @@ vim/.vim/pack/
 nvim/.config/nvim/pack/
 sh/.local/share/z/data
 r/.local/share/R/libs
+
+!switch_to_light.diff

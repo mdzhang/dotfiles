@@ -116,6 +116,7 @@ htmlcov/
 logs/
 tmp/
 vendor/
+hint-report/
 
 # OS #
 ######
