@@ -219,7 +219,7 @@ set softtabstop=2
 
 " enable syntax highlighting
 syntax enable
-set background=light
+set background=dark
 
 " enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
@@ -232,8 +232,8 @@ if $COLORTERM == 'truecolor'
 endif
 
 try
-  let g:ayucolor='light'
-  colorscheme ayu
+  " let g:ayucolor='light'
+  colorscheme palenight
 catch
 endtry
 

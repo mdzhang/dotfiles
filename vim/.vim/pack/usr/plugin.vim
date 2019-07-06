@@ -166,7 +166,7 @@ let g:ale_fixers = {
 " ----------
 
 let g:lightline = {
-      \ 'colorscheme': 'ayu',
+      \ 'colorscheme': 'palenight',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste', 'modified' ],
       \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],

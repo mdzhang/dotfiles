@@ -1,8 +1,10 @@
+COMMON = bash css docker gcloud git golang irssi lynx mutt newsboat nix node nvim pet pg python r readline ruby rust scala sh stow tmux urlview vim yaml zsh
+
 stow-mac:
-	stow bash css docker gcloud git golang irssi lynx macos mackup mutt newsboat node nvim pet pg python r readline ruby rust scala sh stow tmux urlview vim yaml zsh
+	stow ${COMMON} macos mackup
 
 stow-nix:
-	stow bash css docker gcloud git golang irssi lynx mutt newsboat nix node nvim pet pg python r readline ruby rust scala sh stow tmux urlview vim yaml zsh
+	stow ${COMMON} nix
 
 stow: stow-mac
 	@echo "Default to macos"
@@ -12,3 +14,9 @@ init:
 
 update:
 	git submodule update --recursive --remote
+
+light:
+	git apply switch_to_dark.diff
+
+dark:
+	git apply -R switch_to_dark.diff
