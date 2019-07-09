@@ -15,6 +15,7 @@ pkgs <- c(
   "infer",            # statistical inference
   "knitr",
   "lintr",            # code linting
+  "formatR",          # code autoformatting
   "plotly",           # interactive visualizations
   "pryr",             # code inspection
   "rmarkdown",

@@ -16,6 +16,7 @@ c.InteractiveShellApp.exec_lines = [
 c.InteractiveShell.autoindent = True
 c.InteractiveShell.confirm_exit = False
 c.InteractiveShell.editor = 'vim'
+c.InteractiveShell.log_level = 0
 
 c.AliasManager.user_aliases = [
     (
