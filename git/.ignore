@@ -108,6 +108,7 @@ cache/
 .coverage*
 .coverage/
 .tox/
+.pyre/
 build/
 coverage/
 coverage_html/
