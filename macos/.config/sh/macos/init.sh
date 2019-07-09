@@ -69,6 +69,10 @@ if [ -d /usr/local/opt/sbt@0.13/bin ]; then
   export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
 fi
 
+if [ -d /Applications/SnowSQL.app/Contents/MacOS ]; then
+  export PATH="/Applications/SnowSQL.app/Contents/MacOS:$PATH"
+fi
+
 # NB: do this _after_ homebrew packages added to path, since gnu-bin replaces
 #     a few commands and makes them more linux-y, which grc wants
 [ -f "/usr/local/etc/grc.$SHELL_NAME" ] && source "/usr/local/etc/grc.$SHELL_NAME"
