@@ -224,8 +224,8 @@
   output = ""
 
 [[snippets]]
-  description = "comm -23 <(...) <(...)"
-  command = "Find things in left stream not in right stream"
+  description = "Find things in left stream not in right stream"
+  command = "comm -23 <(...) <(...)"
   output = ""
 
 [[snippets]]
@@ -256,4 +256,14 @@
 [[snippets]]
   description = "replace yaml lines w/ special chars and wrap in quotes"
   command = "sed -i -E 's/^(.+): (.+[@{\\/].+)$/\\1: \"\\2\"/g' f.yaml"
+  output = ""
+
+[[snippets]]
+  description = "git debug vars"
+  command = "GIT_TRACE=2 GIT_CURL_VERBOSE=2 GIT_TRACE_PERFORMANCE=2 GIT_TRACE_PACK_ACCESS=2 GIT_TRACE_PACKET=2 GIT_TRACE_PACKFILE=2 GIT_TRACE_SETUP=2 GIT_TRACE_SHALLOW=2"
+  output = ""
+
+[[snippets]]
+  description = "delete local Git branches if their remote-tracking references don't exist anymore"
+  command = "git fetch --prune"
   output = ""
