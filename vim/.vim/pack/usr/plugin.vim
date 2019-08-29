@@ -161,6 +161,12 @@ let g:ale_fixers = {
   \ 'yaml': ['prettier'],
   \ }
 
+" dbt jinja SQL files elicit a lot of lint warnings
+let g:ale_pattern_options = {
+\   '.*dbt_projects/.*\.sql$': {'ale_enabled': 0},
+\}
+
+
 " ----------
 " Plugin 'itchyny/lightline.vim'
 " ----------
