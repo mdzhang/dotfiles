@@ -267,3 +267,23 @@
   description = "delete local Git branches if their remote-tracking references don't exist anymore"
   command = "git fetch --prune"
   output = ""
+
+[[snippets]]
+  description = "Split file \"out.sql\" on pattern \"pattern\", and put line containing first match to \"pattern\" into second file"
+  command = "csplit -sf file -n 1 out.sql /pattern/-1"
+  output = ""
+
+[[snippets]]
+  description = "Trim lines"
+  command = "awk '{$1=$1;print}'"
+  output = ""
+
+[[snippets]]
+  description = "Delete every over line"
+  command = "awk 'FNR%2' < file"
+  output = ""
+
+[[snippets]]
+  description = "Reset Core Audio & Restart on macos"
+  command = "sudo killall coreaudiod"
+  output = ""
