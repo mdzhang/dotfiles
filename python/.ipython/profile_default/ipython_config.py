@@ -12,6 +12,9 @@ c.InteractiveShellApp.exec_lines = [
     'import matplotlib.pyplot as plt',
     'import seaborn as sns',
     'sns.set()',
+    "pd.set_option('display.max_colwidth', -1)",
+    "pd.set_option('display.max_rows', len(df))",
+    "pd.set_option('expand_frame_repr', True)",
 ]
 c.InteractiveShell.autoindent = True
 c.InteractiveShell.confirm_exit = False

@@ -173,3 +173,7 @@
 [icdiff]
 
   options = --highlight --line-numbers
+
+[ghq "https://gitlab.com/repos/"]
+
+  vcs = git

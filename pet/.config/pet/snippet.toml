@@ -287,3 +287,8 @@
   description = "Reset Core Audio & Restart on macos"
   command = "sudo killall coreaudiod"
   output = ""
+
+[[snippets]]
+  description = "Use GHQ to fetch a GitLab repo"
+  command = "ghq get ssh://git@gitlab.com/<user>/<repo>.git <user>/<repo> -p"
+  output = ""
