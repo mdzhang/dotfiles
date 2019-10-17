@@ -292,3 +292,8 @@
   description = "Use GHQ to fetch a GitLab repo"
   command = "ghq get ssh://git@gitlab.com/<user>/<repo>.git <user>/<repo> -p"
   output = ""
+
+[[snippets]]
+  description = "Duplicate each line, and replace every other line with regex"
+  command = "perl -ne 'for$i(0..1){print}' foo  | sed -E '1n;s/<pattern>/<replacement>/;n'"
+  output = ""
