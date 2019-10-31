@@ -296,4 +296,7 @@
 [[snippets]]
   description = "Duplicate each line, and replace every other line with regex"
   command = "perl -ne 'for$i(0..1){print}' foo  | sed -E '1n;s/<pattern>/<replacement>/;n'"
-  output = ""
+
+[[snippets]]
+  description = "sudo apt-get --purge remove linux-sound-base alsa-base alsa-utils"
+  command = "[debian] Fix dummy output"
