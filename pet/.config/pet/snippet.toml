@@ -296,7 +296,24 @@
 [[snippets]]
   description = "Duplicate each line, and replace every other line with regex"
   command = "perl -ne 'for$i(0..1){print}' foo  | sed -E '1n;s/<pattern>/<replacement>/;n'"
+  output = ""
 
 [[snippets]]
   description = "sudo apt-get --purge remove linux-sound-base alsa-base alsa-utils"
   command = "[debian] Fix dummy output"
+  output = ""
+
+[[snippets]]
+  description = "Lines to array of strings with jq"
+  command = "jq --raw-input --slurp 'split(\"\\n\")'"
+  output = ""
+
+[[snippets]]
+  description = "jq lines to object stream"
+  command = "jq --raw-input --slurp 'split(\"\\n\") | .[:-1] | .[] | {table: .}'"
+  output = ""
+
+[[snippets]]
+  description = "Replace tabs with spaces"
+  command = "find ./ -iname '*.py' -type f -exec bash -c 'expand -t 4 \"$0\" | sponge \"$0\"' {} \\;"
+  output = ""
