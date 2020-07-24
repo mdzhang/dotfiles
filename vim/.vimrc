@@ -152,6 +152,7 @@ else
     "
     " for autocompletion, linting, and ctags
     call dein#add('juliosueiras/vim-terraform-completion')
+    call dein#add('hashivim/vim-terraform')
 
     " devicons and glyphs (must be last)
     call dein#add('ryanoasis/vim-devicons')

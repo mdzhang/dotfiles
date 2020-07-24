@@ -159,6 +159,7 @@ let g:ale_fixers = {
   \ 'python': ['black', 'isort'],
   \ 'terraform': ['terraform'],
   \ 'yaml': ['prettier'],
+  \ 'go': ['gofmt'],
   \ }
 
 " dbt jinja SQL files elicit a lot of lint warnings

@@ -317,3 +317,38 @@
   description = "Replace tabs with spaces"
   command = "find ./ -iname '*.py' -type f -exec bash -c 'expand -t 4 \"$0\" | sponge \"$0\"' {} \\;"
   output = ""
+
+[[snippets]]
+  description = "Send a slack alert about a TF apply"
+  command = "/usr/local/bin/slack chat send  --author '' --channel '#michelle-noti' --color good  --title 'View snippet'   --text 'Ran :terraform: apply in `env-data-test`' --title-link 'https://gitlab.inverselink.com/snippets/1513' --footer 'Michelle Zhang"
+  output = ""
+
+[[snippets]]
+  description = "Join every other line to make a CSV"
+  command = "paste -s -d',\\n' orig.txt"
+  output = ""
+
+[[snippets]]
+  description = "Count occurrences of ',' char in input string"
+  command = "tr -cd ','  | wc -c"
+  output = ""
+
+[[snippets]]
+  description = "Looker deploy"
+  command = "curl -H 'X-Looker-Deploy-Secret: baffe85068c80138c4bd19f51e35f8a2'  localhost:9999/webhooks/projects/refinery/deploy"
+  output = ""
+
+[[snippets]]
+  description = "Get every other line in file"
+  command = "awk 'NR % 2 == 0' filename"
+  output = ""
+
+[[snippets]]
+  description = "Clean up git branches"
+  command = "git br -D $(comm -23 <(g br | grep -v clear | tr -d ' ' | tr -d '*' | sort) <(cat branches.all) | tr '\\n' ' ')"
+  output = ""
+
+[[snippets]]
+  description = "Merge json from 2 files with jq"
+  command = "jq -c -s '.[0] * .[1]' scratch scratch2"
+  output = ""
