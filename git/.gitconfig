@@ -111,6 +111,7 @@
 
   name = Michelle D Zhang
   email = zhang.michelle.d@gmail.com
+  signingkey = C5A9D9A6CB232AB2
 
 [commit]
 
@@ -175,5 +176,6 @@
 
 [icdiff]
   options = --highlight --line-numbers
+
 [log]
-	decorate = short
+  decorate = short

@@ -206,7 +206,3 @@ target
 
 # Work-specific #
 #################
-erd.pdf
-client_secrets.json
-#pyproject.toml
-.pre-commit-config.yaml

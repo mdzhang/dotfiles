@@ -18,9 +18,8 @@ brew_update() {
 # Bash completion dir: /usr/local/etc/bash_completion.d
 # zsh completions dir: /usr/local/share/zsh/site-functions
 
-# for global python executables?
+# for global python executables
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
-# export PATH="$HOME/.local/share/anyenv/envs/pyenv/versions/2.7.14/bin:$PATH"
 
 if [ -d /usr/local/opt/gnu-sed/bin ]; then
   export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -64,6 +63,3 @@ fi
 if [ -d /usr/local/opt/sbt@0.13/bin ]; then
   export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
 fi
-
-# Phabricator stuff
-export PATH="$HOME/src/github.com/phacility/arcanist/bin:$PATH"
