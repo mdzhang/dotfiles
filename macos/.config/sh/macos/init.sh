@@ -65,12 +65,39 @@ if [ -d /usr/local/opt/sqlite/bin ]; then
   export PATH="/usr/local/opt/sqlite/bin:$PATH"
 fi
 
+if [ -d /usr/local/opt/bison/bin ]; then
+  export PATH="/usr/local/opt/bison/bin:$PATH"
+  export LDFLAGS="-L/usr/local/opt/bison/lib"
+fi
+
+
 if [ -d /usr/local/opt/sbt@0.13/bin ]; then
   export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
 fi
 
 if [ -d /Applications/SnowSQL.app/Contents/MacOS ]; then
   export PATH="/Applications/SnowSQL.app/Contents/MacOS:$PATH"
+fi
+
+if [ -f "$(brew --prefix asdf)/asdf.sh" ]; then
+  . "$(brew --prefix asdf)/asdf.sh";
+
+  export PATH="$HOME/.asdf/shims:$PATH"
+fi
+
+if [ -d /usr/local/opt/libiconv/lib ]; then
+  export CFLAGS="-I/usr/local/opt/libiconv/include $CFLAGS"
+  export LDFLAGS="-L/usr/local/opt/libiconv/lib $LDFLAGS"
+fi
+
+if [ -d /usr/local/opt/bzip2/lib ]; then
+  export CFLAGS="-I/usr/local/opt/bzip2/include $CFLAGS"
+  export LDFLAGS="-L/usr/local/opt/bzip2/lib $LDFLAGS"
+fi
+
+if [ -d /usr/local/opt/zlib/lib ]; then
+  export CFLAGS="-I/usr/local/opt/zlib/include $CFLAGS"
+  export LDFLAGS="-L/usr/local/opt/zlib/lib $LDFLAGS"
 fi
 
 # NB: do this _after_ homebrew packages added to path, since gnu-bin replaces

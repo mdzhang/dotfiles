@@ -285,6 +285,8 @@ augroup vimrc_base
   au BufRead,BufNewFile .yamllint set filetype=yaml
 
   au BufRead,BufNewFile .Rprofile set filetype=r
+
+  au BufRead,BufNewFile .jenkinsfile set filetype=groovy
 augroup END
 
 """"""""""""""""""""""""""""""

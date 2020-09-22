@@ -352,3 +352,8 @@
   description = "Merge json from 2 files with jq"
   command = "jq -c -s '.[0] * .[1]' scratch scratch2"
   output = ""
+
+[[snippets]]
+  description = "Redirect output to file and stdout/err"
+  command = "echo foo 2>&1 | tee -a out.log"
+  output = ""
