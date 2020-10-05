@@ -286,7 +286,9 @@ augroup vimrc_base
 
   au BufRead,BufNewFile .Rprofile set filetype=r
 
-  au BufRead,BufNewFile .jenkinsfile set filetype=groovy
+  au BufRead,BufNewFile *.jenkinsfile set filetype=groovy
+
+  au BufRead,BufNewFile *.soql set filetype=sql
 augroup END
 
 """"""""""""""""""""""""""""""
