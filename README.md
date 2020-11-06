@@ -4,7 +4,7 @@ Laptop setup scripts and personal dotfiles. Uses [GNU Stow][stow]
 
 Supports:
 
-* OS X High Sierra (10.13)
+* OS X Catalina (10.15)
 * (K)Ubuntu 18.04
 
 Older versions may work but aren't regularly tested
@@ -58,6 +58,6 @@ Add to `sh/.config/sh/general/secrets.sh`
 
 ## License
 
-Copyright (c) 2013-2019 Michelle D. Zhang. MIT Licensed, see [LICENSE](LICENSE) for details.
+Copyright (c) 2013-2020 Michelle D. Zhang. MIT Licensed, see [LICENSE](LICENSE) for details.
 
 [stow]: https://www.gnu.org/software/stow/manual/stow.html
