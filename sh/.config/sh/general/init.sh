@@ -1,22 +1,17 @@
 export GPG_TTY=$(tty)
 
-# mdzhang: this is slow
-if which anyenv > /dev/null; then
-  eval "$(anyenv init - --no-rehash $SHELL_NAME)";
-  # mdzhang: symlink Anaconda env into anyenv/envs/pyenv/versions
+if which direnv > /dev/null; then
+  eval "$(direnv hook $SHELL_NAME)"
 fi
 
-if which pyenv-virtualenv > /dev/null; then
-  export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-  eval "$(pyenv virtualenv-init - --no-rehash)";
+if [ -f "$HOME/.local/share/asdf/asdf.sh" ]; then
+  . $HOME/.local/share/asdf/asdf.sh
+elif [ -f "$(brew --prefix asdf)/asdf.sh" ]; then
+  . "$(brew --prefix asdf)/asdf.sh";
 fi
 
 if which basher > /dev/null; then
   eval "$(basher init -)"
-fi
-
-if which direnv > /dev/null; then
-  eval "$(direnv hook $SHELL_NAME)"
 fi
 
 [ -f ~/.fzf.$SHELL_NAME ] && source ~/.fzf.$SHELL_NAME

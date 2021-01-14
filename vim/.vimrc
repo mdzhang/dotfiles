@@ -120,8 +120,6 @@ else
     call dein#add('vim-scripts/indentpython.vim')
     " better jinja filetype detection
     call dein#add('lepture/vim-jinja')
-    " jupyter support
-    call dein#add('szymonmaszke/vimpyter')
 
     "
     " Yaml
