@@ -218,7 +218,7 @@ set softtabstop=2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " enable syntax highlighting
-syntax enable
+syntax on
 set background=dark
 
 " enable 256 colors palette in Gnome Terminal
@@ -233,7 +233,8 @@ endif
 
 try
   " let g:ayucolor='light'
-  colorscheme palenight
+  let g:purify_italic = 0
+  colorscheme purify
 catch
 endtry
 

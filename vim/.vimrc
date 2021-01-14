@@ -50,6 +50,7 @@ else
     call dein#add('drewtempelmeyer/palenight.vim')
     call dein#add('cocopon/iceberg.vim')
     call dein#add('ayu-theme/ayu-vim')
+    call dein#add('kyoz/purify', {'rtp': 'vim'})
     " rainbow bracket highlighting
     call dein#add('luochen1990/rainbow')
     " show whitespace

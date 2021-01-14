@@ -172,7 +172,7 @@ let g:ale_pattern_options = {
 " ----------
 
 let g:lightline = {
-      \ 'colorscheme': 'palenight',
+      \ 'colorscheme': 'purify',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste', 'modified' ],
       \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
