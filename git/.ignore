@@ -137,6 +137,14 @@ python_cscope.files
 .scratch.vim
 *.sublime-workspace
 
+# vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
 # Ignore tags created by etags, ctags and gtags (GNU global)
 TAGS
 .TAGS
@@ -185,7 +193,8 @@ wheels/
 .glide/
 # from ultimate plumber
 up[0-9]*.sh
-# terraform
+
+# Terraform
 .terraform/
 *.tfstate
 *.tfstate.backup
@@ -207,7 +216,3 @@ target
 .git/
 .hg/
 .svn/
-
-# Work-specific #
-#################
-.pre-commit-config.yaml
