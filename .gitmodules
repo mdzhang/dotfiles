@@ -1,14 +1,6 @@
-[submodule "vim/.vim/pack/opt/dein.vim"]
-	path = vim/.vim/pack/opt/dein.vim
-	url = git@github.com:Shougo/dein.vim.git
-	ignore = dirty
 [submodule "bash/.config/bash/opt/bash-it"]
 	path = bash/.config/bash/opt/bash-it
 	url = git@github.com:Bash-it/bash-it.git
-	ignore = dirty
-[submodule "tmux/.tmux/plugins/tpm"]
-	path = tmux/.tmux/plugins/tpm
-	url = git@github.com:tmux-plugins/tpm.git
 	ignore = dirty
 [submodule "fish/.local/share/omf"]
 	path = fish/.local/share/omf

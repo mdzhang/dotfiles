@@ -15,167 +15,145 @@
 
 set nocompatible               " be iMproved
 
-let need_to_install_plugins=0
-if empty(system("grep 'dein#call' ~/.vim/pack/opt/dein.vim/autoload/dein.vim"))
-    echoerr "dein.vim not properly installed. Ensure you have recursively initialized git submodules"
-else
-  " initialize dein.vim
-  set runtimepath+=~/.vim/pack/opt/dein.vim
+" install vim-plug and plugins
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
+endif
 
-  if dein#load_state('~/.vim/pack/opt')
-    call dein#begin('~/.vim/pack/opt')
+call plug#begin('~/.vim/plugged')
+  " required by other plugins, must come first
+  Plug 'godlygeek/tabular'
 
-    " let dein manage dein, required
-    call dein#add('~/.vim/pack/opt/dein.vim')
+  " nice status bar
+  Plug 'itchyny/lightline.vim'
+  " show git diff (added, mod'd, removed) in the gutter
+  Plug 'mhinz/vim-signify'
+  " show file content outline
+  Plug 'majutsushi/tagbar'
+  Plug 'lvht/tagbar-markdown'
+  " vim themes
+  Plug 'drewtempelmeyer/palenight.vim'
+  Plug 'cocopon/iceberg.vim'
+  Plug 'ayu-theme/ayu-vim'
+  Plug 'kyoz/purify', {'rtp': 'vim'}
+  " rainbow bracket highlighting
+  Plug 'luochen1990/rainbow'
+  " show whitespace
+  Plug 'Yggdroot/indentLine'
+  " autocompletion
+  Plug 'ervandew/supertab'
+  " scratch pad
+  Plug 'mtth/scratch.vim'
+  " file system explorer
+  Plug 'scrooloose/nerdtree'
+  Plug 'jistr/vim-nerdtree-tabs'
+  " fancy startup screen
+  Plug 'mhinz/vim-startify'
+  " connect to a REPL
+  Plug 'jpalardy/vim-slime'
+  " easily bulk un/comment regions
+  Plug 'scrooloose/nerdcommenter'
+  " easily expand/collapse visually selected region
+  Plug 'terryma/vim-expand-region'
+  " easily move selected code up/down
+  Plug 'matze/vim-move'
+  " easily add/remove/change quotes etc. for selected text objects
+  "   ds" to delete surrounding quotes
+  "   ys[select text obj]" to add quotes
+  "   cs"' to replace " with '
+  Plug 'tpope/vim-surround'
+  " additional text objects
+  Plug 'wellle/targets.vim'
+  " syntax checker
+  Plug 'w0rp/ale'
+  " code search/replace tools
+  Plug 'dyng/ctrlsf.vim'
+  Plug 'terryma/vim-multiple-cursors'
+  " git integration
+  Plug 'tpope/vim-fugitive'
+  " search everything
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+  Plug 'haya14busa/incsearch.vim'
+  " highlight all occurrences of hovered over token
+  Plug 'RRethy/vim-illuminate.git'
+  " cross-editor config
+  Plug 'editorconfig/editorconfig-vim'
+  " included in polyglot, but
+  " https://github.com/sheerun/vim-polyglot/issues/152
+  Plug 'plasticboy/vim-markdown'
+  " included in vim-polyglot, but ctags not detected properly
+  Plug 'derekwyatt/vim-scala'
+  " collection of language packs for better defaults
+  Plug 'sheerun/vim-polyglot'
+  " alignment
+  Plug 'junegunn/vim-easy-align'
+  " todo list plugin
+  Plug 'lukaszkorecki/workflowish'
+  " interactive scratchpad that shows output as right side comment
+  Plug 'metakirby5/codi.vim'
+  " show markers in sidebar
+  Plug 'kshenoy/vim-signature'
 
-    " required by dein.vim
-    call dein#add('Shougo/deoplete.nvim')
-    if !has('nvim')
-      call dein#add('roxma/nvim-yarp')
-      call dein#add('roxma/vim-hug-neovim-rpc')
-    endif
+  "
+  " Python
+  "
 
-    " dein plugins must be below this line
-    " required by other plugins, must come first
-    call dein#add('godlygeek/tabular')
+  " code folding
+  Plug 'tmhedberg/SimpylFold'
+  " auto indentation
+  Plug 'vim-scripts/indentpython.vim'
+  " better jinja filetype detection
+  Plug 'lepture/vim-jinja'
 
-    " nice status bar
-    call dein#add('itchyny/lightline.vim')
-    " show git diff (added, mod'd, removed) in the gutter
-    call dein#add('mhinz/vim-signify')
-    " show file content outline
-    call dein#add('majutsushi/tagbar')
-    call dein#add('lvht/tagbar-markdown')
-    " vim themes
-    call dein#add('drewtempelmeyer/palenight.vim')
-    call dein#add('cocopon/iceberg.vim')
-    call dein#add('ayu-theme/ayu-vim')
-    call dein#add('kyoz/purify', {'rtp': 'vim'})
-    " rainbow bracket highlighting
-    call dein#add('luochen1990/rainbow')
-    " show whitespace
-    call dein#add('Yggdroot/indentLine')
-    " autocompletion
-    call dein#add('ervandew/supertab')
-    " scratch pad
-    call dein#add('mtth/scratch.vim')
-    " file system explorer
-    call dein#add('scrooloose/nerdtree')
-    call dein#add('jistr/vim-nerdtree-tabs')
-    " fancy startup screen
-    call dein#add('mhinz/vim-startify')
-    " connect to a REPL
-    call dein#add('jpalardy/vim-slime')
-    " easily bulk un/comment regions
-    call dein#add('scrooloose/nerdcommenter')
-    " easily expand/collapse visually selected region
-    call dein#add('terryma/vim-expand-region')
-    " easily move selected code up/down
-    call dein#add('matze/vim-move')
-    " easily add/remove/change quotes etc. for selected text objects
-    "   ds" to delete surrounding quotes
-    "   ys[select text obj]" to add quotes
-    "   cs"' to replace " with '
-    call dein#add('tpope/vim-surround')
-    " additional text objects
-    call dein#add('wellle/targets.vim')
-    " syntax checker
-    call dein#add('w0rp/ale')
-    " code search/replace tools
-    call dein#add('dyng/ctrlsf.vim')
-    call dein#add('terryma/vim-multiple-cursors')
-    " git integration
-    call dein#add('tpope/vim-fugitive')
-    " search everything
-    call dein#add('junegunn/fzf')
-    call dein#add('junegunn/fzf.vim')
-    " incremental search highlighting w/ regex search support (use /\v)
-    call dein#add('haya14busa/incsearch.vim')
-    " highlight all occurrences of hovered over token
-    call dein#add('RRethy/vim-illuminate.git')
-    " cross-editor config
-    call dein#add('editorconfig/editorconfig-vim')
-    " included in polyglot, but
-    " https://github.com/sheerun/vim-polyglot/issues/152
-    call dein#add('plasticboy/vim-markdown')
-    " included in vim-polyglot, but ctags not detected properly
-    call dein#add('derekwyatt/vim-scala')
-    " collection of language packs for better defaults
-    call dein#add('sheerun/vim-polyglot')
-    " alignment
-    call dein#add('junegunn/vim-easy-align')
-    " todo list plugin
-    call dein#add('lukaszkorecki/workflowish')
-    " interactive scratchpad that shows output as right side comment
-    call dein#add('metakirby5/codi.vim')
-    " show markers in sidebar
-    call dein#add('kshenoy/vim-signature')
+  "
+  " Yaml
+  "
 
-    "
-    " Python
-    "
+  " code folding
+  Plug 'pedrohdz/vim-yaml-folds'
+  " autoformatting
+  Plug 'tarekbecker/vim-yaml-formatter'
 
-    " code folding
-    call dein#add('tmhedberg/SimpylFold')
-    " auto indentation
-    call dein#add('vim-scripts/indentpython.vim')
-    " better jinja filetype detection
-    call dein#add('lepture/vim-jinja')
+  "
+  " JSON
+  "
+  Plug 'tpope/vim-jdaddy'
 
-    "
-    " Yaml
-    "
+  "
+  " LookML
+  "
+  Plug 'thalesmello/lkml.vim'
 
-    " code folding
-    call dein#add('pedrohdz/vim-yaml-folds')
-    " autoformatting
-    call dein#add('tarekbecker/vim-yaml-formatter')
+  "
+  " Fluentd
+  "
+  Plug 'itkq/fluentd-vim'
 
-    "
-    " JSON
-    "
-    call dein#add('tpope/vim-jdaddy')
+  "
+  " Terraform
+  "
+  " for autocompletion, linting, and ctags
+  Plug 'juliosueiras/vim-terraform-completion'
+  Plug 'hashivim/vim-terraform'
 
-    "
-    " LookML
-    "
-    call dein#add('thalesmello/lkml.vim')
+  " devicons and glyphs (must be last)
+  Plug 'ryanoasis/vim-devicons'
 
-    "
-    " Fluentd
-    "
-    call dein#add('itkq/fluentd-vim')
+" vim-plugin plugins must be added before this line
+call plug#end()
 
-    "
-    " Terraform
-    "
-    " for autocompletion, linting, and ctags
-    call dein#add('juliosueiras/vim-terraform-completion')
-    call dein#add('hashivim/vim-terraform')
+" enable filetype plugins
+filetype plugin indent on
 
-    " devicons and glyphs (must be last)
-    call dein#add('ryanoasis/vim-devicons')
+syntax on
 
-    " dein plugins must be added before this line
-    call dein#end()
-    call dein#save_state()
-  endif
+" load custom vim scripts
+runtime! pack/usr/**.vim
 
-  " enable filetype plugins
-  filetype plugin indent on
-
-  syntax on
-
-  " load custom vim scripts
-  runtime! pack/usr/**.vim
-
-  " load local vim overrides
-  if filereadable($HOME . "/.vimrc.local")
-      source ~/.vimrc.local
-  endif
-
-  " install not installed plugins on startup.
-  if dein#check_install()
-   call dein#install()
-  endif
+" load local vim overrides
+if filereadable($HOME . "/.vimrc.local")
+    source ~/.vimrc.local
 endif

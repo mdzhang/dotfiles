@@ -1,2 +1,6 @@
 !pack
 !slime
+
+# vim-plug
+autoload/plug.vim
+plugged/
