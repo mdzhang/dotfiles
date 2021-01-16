@@ -74,11 +74,11 @@ call plug#begin('~/.vim/plugged')
   " git integration
   Plug 'tpope/vim-fugitive'
   " search everything
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'haya14busa/incsearch.vim'
   " highlight all occurrences of hovered over token
-  Plug 'RRethy/vim-illuminate.git'
+  Plug 'RRethy/vim-illuminate'
   " cross-editor config
   Plug 'editorconfig/editorconfig-vim'
   " included in polyglot, but

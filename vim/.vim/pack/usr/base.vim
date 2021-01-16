@@ -227,7 +227,8 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 if $COLORTERM == 'truecolor'
-  set termguicolors
+  " disable for fzf
+  " set termguicolors
   set t_Co=256
 endif
 
