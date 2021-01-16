@@ -54,7 +54,7 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
     #
 
     # set theme
-    zgen prezto prompt theme 'agnoster'
+    zgen prezto prompt theme 'pure'
 
     # prompt shows indicator for non-zero return codes for previous command
     zgen prezto prompt show-return-val 'yes'
