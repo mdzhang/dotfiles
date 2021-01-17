@@ -44,6 +44,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Yggdroot/indentLine'
   " autocompletion
   Plug 'ervandew/supertab'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " scratch pad
   Plug 'mtth/scratch.vim'
   " file system explorer

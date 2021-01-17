@@ -48,6 +48,13 @@ nmap <Leader>F :CtrlSF
 " ----------
 
 " ----------
+" Plugin 'fatih/vim-go' (polyglot)
+" ----------
+
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
+" ----------
 " Plugin 'elzr/vim-json' (polyglot)
 " ----------
 
@@ -355,4 +362,10 @@ augroup vimrc_plugins
 
   " Align GitHub-flavored Markdown tables
   au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
+  " ----------
+  " Plugin 'neoclide/coc.nvim'
+  " ----------
+
+  autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 augroup END
