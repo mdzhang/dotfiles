@@ -368,4 +368,5 @@ augroup vimrc_plugins
   " ----------
 
   autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+  autocmd BufLeave *.md execute "silent! CocDisable"
 augroup END
