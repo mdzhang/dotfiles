@@ -1,4 +1,4 @@
-COMMON = bash css docker gcloud git golang kitty nix node nvim pet pg python r readline ruby rust scala sh stow tmux urlview vim yaml zsh
+COMMON = bash css docker gcloud git golang java kitty nix node nvim pet pg python r readline ruby rust scala sh stow tmux urlview vim yaml zsh
 
 stow-mac:
 	stow ${COMMON} macos mackup
