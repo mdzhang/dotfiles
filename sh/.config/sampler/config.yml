@@ -1,0 +1,35 @@
+---
+# config for https://github.com/sqshq/sampler
+sparklines:
+  - title: CPU usage
+    rate-ms: 200
+    scale: 0
+    sample: ps -A -o %cpu | awk '{s+=$1} END {print s}'
+  - title: Free memory pages
+    rate-ms: 200
+    scale: 0
+    sample: memory_pressure | grep 'Pages free' | awk '{print $3}'
+
+barcharts:
+  - title: Local network activity
+    rate-ms: 500        # sampling rate, default = 1000
+    scale: 0            # number of digits after sample decimal point, default = 1
+    items:
+      - label: UDP bytes in
+        sample: nettop -J bytes_in -l 1 -m udp | awk '{sum += $4} END {print sum}'
+      - label: UDP bytes out
+        sample: nettop -J bytes_out -l 1 -m udp | awk '{sum += $4} END {print sum}'
+      - label: TCP bytes in
+        sample: nettop -J bytes_in -l 1 -m tcp | awk '{sum += $4} END {print sum}'
+      - label: TCP bytes out
+        sample: nettop -J bytes_out -l 1 -m tcp | awk '{sum += $4} END {print sum}'
+
+textboxes:
+  - title: Local weather
+    rate-ms: 10000      # sampling rate, default = 1000
+    sample: curl wttr.in?0ATQF
+    border: false       # border around the item, default = true
+    color: 178          # 8-bit color number, default is white
+  - title: Docker containers stats
+    rate-ms: 500
+    sample: docker stats --no-stream --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.PIDs}}"

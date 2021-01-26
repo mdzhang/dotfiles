@@ -10,6 +10,14 @@ elif [ -f "$(brew --prefix asdf)/asdf.sh" ]; then
   . "$(brew --prefix asdf)/asdf.sh";
 fi
 
+if [ -f ~/.asdf/plugins/java/set-java-home.$SHELL_NAME ]; then
+  . ~/.asdf/plugins/java/set-java-home.$SHELL_NAME
+fi
+
+if which starship > /dev/null; then
+  eval "$(starship init $SHELL_NAME)"
+fi
+
 if which basher > /dev/null; then
   eval "$(basher init -)"
 fi

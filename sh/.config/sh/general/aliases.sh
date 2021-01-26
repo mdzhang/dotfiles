@@ -28,3 +28,4 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 alias tf='terraform'
+alias sm='sampler --config $XDG_CONFIG_HOME/sampler/config.yml'

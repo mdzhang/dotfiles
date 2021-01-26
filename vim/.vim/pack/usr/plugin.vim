@@ -192,6 +192,7 @@ let g:ale_linters = {
 let g:ale_fixers = {
   \ 'javascript': ['eslint'],
   \ 'json': ['fixjson'],
+  \ 'kotlin': ['ktlint'],
   \ 'python': ['black', 'isort'],
   \ 'terraform': ['terraform'],
   \ 'go': ['gofmt'],
