@@ -188,6 +188,7 @@ let g:ale_linters = {
   \ 'rst': ['rstcheck', 'proselint', 'write-good'],
   \ 'ruby': ['rubocop'],
   \ 'sql': ['sqlint'],
+  \ 'vim': ['vint'],
   \ }
 let g:ale_fixers = {
   \ 'javascript': ['eslint'],

@@ -82,13 +82,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'RRethy/vim-illuminate'
   " cross-editor config
   Plug 'editorconfig/editorconfig-vim'
-  " included in polyglot, but
-  " https://github.com/sheerun/vim-polyglot/issues/152
-  Plug 'plasticboy/vim-markdown'
-  " included in vim-polyglot, but ctags not detected properly
-  Plug 'derekwyatt/vim-scala'
   " collection of language packs for better defaults
   Plug 'sheerun/vim-polyglot'
+  " included in vim-polyglot, but ctags not detected properly
+  Plug 'derekwyatt/vim-scala'
   " alignment
   Plug 'junegunn/vim-easy-align'
   " todo list plugin
@@ -142,6 +139,9 @@ call plug#begin('~/.vim/plugged')
 
   " devicons and glyphs (must be last)
   Plug 'ryanoasis/vim-devicons'
+
+  " testing
+  Plug 'junegunn/vader.vim'
 
 " vim-plugin plugins must be added before this line
 call plug#end()
