@@ -11,7 +11,6 @@
 
 # Compiled source #
 ###################
-*.com
 *.class
 *.dll
 *.dylib
