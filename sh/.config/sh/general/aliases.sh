@@ -20,7 +20,7 @@ alias du='du -H'         # Human readable unit formatting
 
 # ls variants
 alias l='ls -1A'         # Lists in one column, hidden files.
-alias la='ll -Alh'         # Lists human readable sizes, hidden files.
+alias la='l -Alh'         # Lists human readable sizes, hidden files.
 
 # Always enable colored `grep` output
 alias grep='grep --color=auto'
