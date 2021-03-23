@@ -145,7 +145,7 @@ endif
 
 " use magic for regular expressions
 set magic
-set re=1
+set re=2
 
 " enable code folding
 set foldmethod=syntax

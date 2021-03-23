@@ -14,6 +14,10 @@ if [ -f ~/.asdf/plugins/java/set-java-home.$SHELL_NAME ]; then
   . ~/.asdf/plugins/java/set-java-home.$SHELL_NAME
 fi
 
+if which anyenv > /dev/null; then
+  eval "$(anyenv init -)"
+fi
+
 if which starship > /dev/null; then
   eval "$(starship init $SHELL_NAME)"
 fi
