@@ -38,6 +38,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'cocopon/iceberg.vim'
   Plug 'ayu-theme/ayu-vim'
   Plug 'kyoz/purify', {'rtp': 'vim'}
+  Plug 'arcticicestudio/nord-vim'
   " rainbow bracket highlighting
   Plug 'luochen1990/rainbow'
   " show whitespace
