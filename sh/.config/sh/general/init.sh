@@ -18,10 +18,6 @@ if which anyenv > /dev/null; then
   eval "$(anyenv init -)"
 fi
 
-if which starship > /dev/null; then
-  eval "$(starship init $SHELL_NAME)"
-fi
-
 if which basher > /dev/null; then
   eval "$(basher init -)"
 fi
