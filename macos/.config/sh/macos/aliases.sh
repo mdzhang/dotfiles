@@ -32,3 +32,6 @@ alias caskx='brew cask uninstall'
 
 # launch kitty
 alias lkitty='/Applications/kitty.app/Contents/MacOS/kitty'
+
+# launch Typora markdown reader
+alias typora="open -a typora"
