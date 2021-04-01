@@ -48,6 +48,8 @@
 *.tax2010
 *.vcf
 pgdata/
+*.mim
+*.eml
 
 # Compressed #
 ##############
