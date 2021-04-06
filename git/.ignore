@@ -201,6 +201,7 @@ up[0-9]*.sh
 *.tfstate
 *.tfstate.*
 .terraform.lock.hcl
+.terraform_*
 
 # Ruby
 bundle/
