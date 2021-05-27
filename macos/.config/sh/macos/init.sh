@@ -47,11 +47,6 @@ export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include $CFLAGS"
 
 # NB: do this _after_ homebrew packages added to path, since gnu-bin replaces
 #     a few commands and makes them more linux-y, which grc wants
+
+export PATH="$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH"
 [ -f "/usr/local/etc/grc.$SHELL_NAME" ] && . "/usr/local/etc/grc.$SHELL_NAME"
-
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
-gcloud_path="$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.$SHELL_NAME.inc"
-if [ -f "/$gcloud_path" ]; then
-   ."$gcloud_path"
-fi

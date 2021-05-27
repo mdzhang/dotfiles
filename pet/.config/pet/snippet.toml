@@ -357,3 +357,13 @@
   description = "Redirect output to file and stdout/err"
   command = "echo foo 2>&1 | tee -a out.log"
   output = ""
+
+[[snippets]]
+  description = "Get current date as ISO"
+  command = "date --iso-8601=seconds"
+  output = ""
+
+[[snippets]]
+  description = "Generate random string with Python from CLI"
+  command = "python -c 'import random; import string; print(\"\".join(random.choice(string.ascii_letters + string.digits) for i in range(30)))'"
+  output = ""

@@ -15,6 +15,10 @@
 
 set nocompatible               " be iMproved
 
+" enable filetype plugins
+" must be set before any runtimepath changes
+filetype plugin indent on
+
 " install vim-plug and plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -69,7 +73,7 @@ call plug#begin('~/.vim/plugged')
   " additional text objects
   Plug 'wellle/targets.vim'
   " syntax checker
-  Plug 'w0rp/ale'
+  Plug 'dense-analysis/ale'
   " code search/replace tools
   Plug 'dyng/ctrlsf.vim'
   Plug 'terryma/vim-multiple-cursors'
@@ -147,9 +151,6 @@ call plug#begin('~/.vim/plugged')
 " vim-plugin plugins must be added before this line
 call plug#end()
 
-" enable filetype plugins
-filetype plugin indent on
-
 syntax on
 
 " load custom vim scripts
@@ -157,5 +158,5 @@ runtime! pack/usr/**.vim
 
 " load local vim overrides
 if filereadable($HOME . "/.vimrc.local")
-    source ~/.vimrc.local
+   source ~/.vimrc.local
 endif

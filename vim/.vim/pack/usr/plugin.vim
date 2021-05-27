@@ -166,7 +166,7 @@ let g:tagbar_type_go = {
 \ }
 
 " ----------
-" Plugin 'w0rp/ale'
+" Plugin 'dense-analysis/ale'
 " ----------
 
 " avoid cursor disappearing when on lines w/ errors/warnings
@@ -179,10 +179,11 @@ let g:ale_lint_on_text_changed = 'never'
 
 let g:ale_linter_aliases = {'rspec': ['ruby']}
 let g:ale_linters = {
+  \ 'go': ['gopls'],
   \ 'python': ['flake8'],
   \ 'json': ['jsonlint'],
   \ 'css': ['csslint'],
-  \ 'yaml': ['yamllint'],
+  \ 'yaml': ['yamllint', 'prettier', 'spectral'],
   \ 'yaml.ansible': ['ansible-lint'],
   \ 'markdown': ['markdownlint'],
   \ 'rst': ['rstcheck', 'proselint', 'write-good'],
@@ -191,12 +192,13 @@ let g:ale_linters = {
   \ 'vim': ['vint'],
   \ }
 let g:ale_fixers = {
-  \ 'javascript': ['eslint'],
+  \ 'javascript': ['eslint', 'prettier'],
   \ 'json': ['fixjson'],
   \ 'kotlin': ['ktlint'],
   \ 'python': ['black', 'isort'],
   \ 'terraform': ['terraform'],
   \ 'go': ['gofmt'],
+  \ 'yaml': ['yamlfix'],
   \ }
 
 " dbt jinja SQL files elicit a lot of lint warnings
@@ -369,6 +371,7 @@ augroup vimrc_plugins
   " Plugin 'neoclide/coc.nvim'
   " ----------
 
+  " TODO: run :CocInstall coc-go after :PlugInstall
   autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
   autocmd BufLeave *.md execute "silent! CocDisable"
 augroup END
