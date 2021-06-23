@@ -79,6 +79,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'terryma/vim-multiple-cursors'
   " git integration
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rhubarb'
   " search everything
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'

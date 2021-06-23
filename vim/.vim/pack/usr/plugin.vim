@@ -179,7 +179,7 @@ let g:ale_lint_on_text_changed = 'never'
 
 let g:ale_linter_aliases = {'rspec': ['ruby']}
 let g:ale_linters = {
-  \ 'go': ['gopls'],
+  \ 'go': ['gopls', 'govet', 'staticcheck', 'golangci', 'golint'],
   \ 'python': ['flake8'],
   \ 'json': ['jsonlint'],
   \ 'css': ['csslint'],
