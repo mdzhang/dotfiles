@@ -141,9 +141,9 @@
 
   prompt = false
 
-[merge]
+[icdiff]
 
-  tool = vimdiff
+  options = --highlight --line-numbers
 
 [difftool "sourcetree"]
 
@@ -154,10 +154,20 @@
 
   cmd = icdiff $LOCAL $REMOTE
 
-[mergetool "sourcetree"]
+[merge]
 
-  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+  tool = vimdiff
+
+[ghq "https://gitlab.com/repos/"]
+
+  vcs = git
+
+[filter "lfs"]
+
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
 
 [include]
 
@@ -169,18 +179,3 @@
   #   by the local ones
 
   path = ~/.gitconfig.local
-
-[icdiff]
-
-  options = --highlight --line-numbers
-
-[ghq "https://gitlab.com/repos/"]
-
-  vcs = git
-
-[filter "lfs"]
-
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
