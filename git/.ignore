@@ -137,6 +137,7 @@ hint-report/
 *.iml
 python_cscope.files
 .scratch.vim
+cscope*
 *.sublime-workspace
 
 # vscode
@@ -188,6 +189,7 @@ docs/_build/
 eggs/
 sdist/
 wheels/
+site-packages*
 .ipynb_checkpoints/
 */.ipynb_checkpoints/*
 

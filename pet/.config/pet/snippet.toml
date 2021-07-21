@@ -367,3 +367,8 @@
   description = "Generate random string with Python from CLI"
   command = "python -c 'import random; import string; print(\"\".join(random.choice(string.ascii_letters + string.digits) for i in range(30)))'"
   output = ""
+
+[[snippets]]
+  description = "Build cscope resources for vim function usage lookup"
+  command = "cscope -Rb -s '*'"
+  output = ""
