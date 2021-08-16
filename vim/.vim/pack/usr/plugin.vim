@@ -53,6 +53,13 @@ nmap <Leader>F :CtrlSF
 
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
+let g:go_highlight_structs = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_fail_silently = 1
+let g:go_fmt_autosave = 0
 
 " ----------
 " Plugin 'elzr/vim-json' (polyglot)
@@ -178,8 +185,10 @@ let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
 
 let g:ale_linter_aliases = {'rspec': ['ruby']}
+
+" collision w/ vim-go
+" \ 'go': ['gopls', 'govet', 'staticcheck', 'golangci', 'golint'],
 let g:ale_linters = {
-  \ 'go': ['gopls', 'govet', 'staticcheck', 'golangci', 'golint'],
   \ 'python': ['flake8'],
   \ 'json': ['jsonlint'],
   \ 'css': ['csslint'],
@@ -193,6 +202,7 @@ let g:ale_linters = {
   \ }
 let g:ale_fixers = {
   \ 'javascript': ['eslint', 'prettier'],
+  \ 'typescript':  ['eslint', 'prettier'],
   \ 'json': ['fixjson'],
   \ 'kotlin': ['ktlint'],
   \ 'python': ['black', 'isort'],

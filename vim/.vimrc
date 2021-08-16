@@ -50,6 +50,7 @@ call plug#begin('~/.vim/plugged')
   " autocompletion
   Plug 'ervandew/supertab'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
   " scratch pad
   Plug 'mtth/scratch.vim'
   " file system explorer
@@ -90,6 +91,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'editorconfig/editorconfig-vim'
   " collection of language packs for better defaults
   Plug 'sheerun/vim-polyglot'
+  "   in vim-polyglot above, but does not init properly w/o explicit inclusion
+  Plug 'fatih/vim-go'
   " included in vim-polyglot, but ctags not detected properly
   Plug 'derekwyatt/vim-scala'
   " alignment

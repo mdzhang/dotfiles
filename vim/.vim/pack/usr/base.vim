@@ -320,6 +320,8 @@ augroup vimrc_base
   au BufRead,BufNewFile *.jenkinsfile set filetype=groovy
 
   au BufRead,BufNewFile *.soql set filetype=sql
+
+  au BufRead,BufNewFile go.mod set filetype=go
 augroup END
 
 """"""""""""""""""""""""""""""

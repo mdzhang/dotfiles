@@ -194,7 +194,7 @@ site-packages*
 */.ipynb_checkpoints/*
 
 # Golang
-.glide/
+/Godeps/
 # from ultimate plumber
 up[0-9]*.sh
 
