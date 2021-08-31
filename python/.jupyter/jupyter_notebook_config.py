@@ -528,7 +528,7 @@ c.NotebookApp.notebook_dir = "src"
 # c.Session.unpacker = 'json'
 
 ## Username for the Session. Default is your system username.
-# c.Session.username = 'michelle'
+# c.Session.username = 'mdz'
 
 # ------------------------------------------------------------------------------
 # MultiKernelManager(LoggingConfigurable) configuration

@@ -215,7 +215,7 @@
 
 [[snippets]]
   description = "GPG encrypt test.txt file"
-  command = "gpg --output test.gpg --encrypt --recipient zhang.michelle.d@gmail.com test.txt"
+  command = "gpg --output test.gpg --encrypt --recipient md.zhang.aka@gmail.com test.txt"
   output = ""
 
 [[snippets]]
@@ -320,7 +320,7 @@
 
 [[snippets]]
   description = "Send a slack alert about a TF apply"
-  command = "/usr/local/bin/slack chat send  --author '' --channel '#michelle-noti' --color good  --title 'View snippet'   --text 'Ran :terraform: apply in `env-data-test`' --title-link 'https://gitlab.inverselink.com/snippets/1513' --footer 'Michelle Zhang"
+  command = "/usr/local/bin/slack chat send  --author '' --channel '#mdzhang-noti' --color good  --title 'View snippet'   --text 'Ran :terraform: apply in `env-data-test`' --title-link 'https://gitlab.inverselink.com/snippets/1513' --footer 'm d zhang"
   output = ""
 
 [[snippets]]

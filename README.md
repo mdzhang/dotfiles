@@ -25,8 +25,8 @@ Installs source code to `~/.dotfiles` by default
 
 1. Customize with your personal info
     - Replace occurrences of `mdzhang` with your system user name (for me this is also my git handle)
-    - Replace occurrences of `zhang.michelle.d@gmail.com` with your email
-    - Replace occurrences of `Michelle D Zhang` with your full name
+    - Replace occurrences of `md.zhang.aka@gmail.com` with your email
+    - Replace occurrences of `m d zhang` with your full name
     - Update GPG `user.signingkey` in `git/.gitconfig`
 
 1. Install [`stow`][stow] on your OS
@@ -52,12 +52,12 @@ Add to `sh/.config/sh/general/secrets.sh`
 
 ## Authors
 
-**Michelle D. Zhang**
+**m d zhang**
 
   * <http://github.com/mdzhang>
 
 ## License
 
-Copyright (c) 2013-2020 Michelle D. Zhang. MIT Licensed, see [LICENSE](LICENSE) for details.
+Copyright (c) 2013-2021 m d zhang. MIT Licensed, see [LICENSE](LICENSE) for details.
 
 [stow]: https://www.gnu.org/software/stow/manual/stow.html
