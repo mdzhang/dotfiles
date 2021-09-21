@@ -286,6 +286,19 @@ let g:slime_python_ipython = 1
 " generally use target pane like ':.1'
 
 " ----------
+" Plugin 'sillybun/vim-repl'
+" ----------
+
+let g:repl_python_pre_launch_command = 'source ./venv/bin/activate'
+let g:repl_program = {
+  \ 'python': 'ipython',
+  \ 'default': 'zsh',
+  \ 'r': 'R',
+  \ 'lua': 'lua',
+  \ 'vim': 'vim -e',
+  \ }
+
+" ----------
 " Plugin 'machakann/vim-highlightedyank'
 " ----------
 

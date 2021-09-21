@@ -58,8 +58,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'jistr/vim-nerdtree-tabs'
   " fancy startup screen
   Plug 'mhinz/vim-startify'
-  " connect to a REPL
+  " connect to a terminal REPL
   Plug 'jpalardy/vim-slime'
+  " in-editor REPL
+  Plug 'sillybun/vim-repl'
   " easily bulk un/comment regions
   Plug 'scrooloose/nerdcommenter'
   " easily expand/collapse visually selected region
