@@ -105,8 +105,16 @@ call plug#begin('~/.vim/plugged')
   Plug 'metakirby5/codi.vim'
   " show markers in sidebar
   Plug 'kshenoy/vim-signature'
-  " text wrap for prose writing
+
+  "
+  " Prose writing
+  "
+
+  " text wrap
   Plug 'reedes/vim-pencil'
+  " distraction free
+  Plug 'junegunn/goyo.vim'
+  Plug 'junegunn/limelight.vim'
 
   "
   " Python

@@ -1,5 +1,7 @@
 !pack
 !slime
+!spell
+spell/*.spl
 
 # vim-plug
 autoload/plug.vim
