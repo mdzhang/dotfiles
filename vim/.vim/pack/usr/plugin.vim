@@ -267,6 +267,28 @@ function! LightlineLinterOK() abort
   return l:counts.total == 0 ? '✓ ' : ''
 endfunction
 
+function! s:focus_write()
+  if &ft == 'markdown' || &ft == 'text'
+    " ----------
+    " Plugin 'reedes/vim-pencil'
+    " ----------
+    call pencil#init()
+
+    " ----------
+    " Plugin 'junegunn/goyo.vim'
+    " ----------
+    autocmd User GoyoEnter Limelight
+    autocmd User GoyoLeave Limelight!
+
+    Goyo 80
+  else
+    let bufnr = bufnr('%')
+    Goyo!
+    execute 'b '.bufnr
+  endif
+endfunction
+
+command-bar -nargs=0 FocusWrite call s:focus_write()
 
 " ----------
 " Plugin 'haya14busa/incsearch.vim'
@@ -368,16 +390,6 @@ let g:limelight_conceal_ctermfg = 240
 let g:limelight_conceal_guifg = 'DarkGray'
 let g:limelight_conceal_guifg = '#777777'
 
-function! s:auto_goyo()
-  if &ft == 'markdown' || &ft == 'text'
-    Goyo 80
-  else
-    let bufnr = bufnr('%')
-    Goyo!
-    execute 'b '.bufnr
-  endif
-endfunction
-
 "
 " avoid duplicate autocmd handlers & spam by grouping all autocmds together
 "
@@ -407,16 +419,6 @@ augroup vimrc_plugins
 
   " Align GitHub-flavored Markdown tables
   au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
-
-  " ----------
-  " Plugin 'junegunn/goyo.vim'
-  " Plugin 'reedes/vim-pencil'
-  " ----------
-  autocmd BufNewFile,BufRead * call s:auto_goyo()
-  autocmd User GoyoEnter Limelight
-  autocmd User GoyoLeave Limelight!
-  autocmd FileType markdown,mkd call pencil#init()
-  autocmd FileType text         call pencil#init()
 
   " ----------
   " Plugin 'neoclide/coc.nvim'
