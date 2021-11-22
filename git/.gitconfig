@@ -157,6 +157,7 @@
 [merge]
 
   tool = vimdiff
+  renameLimit = 999999
 
 [ghq "https://gitlab.com/repos/"]
 
