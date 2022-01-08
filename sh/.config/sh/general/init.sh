@@ -6,7 +6,7 @@ fi
 
 if [ -f "$HOME/.local/share/asdf/asdf.sh" ]; then
   . $HOME/.local/share/asdf/asdf.sh
-elif [ -f "$(brew --prefix asdf)/asdf.sh" ]; then
+elif which brew > /dev/null && [ -f "$(brew --prefix asdf)/asdf.sh" ]; then
   . "$(brew --prefix asdf)/asdf.sh";
 fi
 
