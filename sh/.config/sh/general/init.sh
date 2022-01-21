@@ -1,6 +1,6 @@
 export GPG_TTY=$(tty)
 
-if which direnv > /dev/null; then
+if which direnv &> /dev/null; then
   eval "$(direnv hook $SHELL_NAME)"
 fi
 
@@ -14,11 +14,11 @@ if [ -f ~/.asdf/plugins/java/set-java-home.$SHELL_NAME ]; then
   . ~/.asdf/plugins/java/set-java-home.$SHELL_NAME
 fi
 
-if which anyenv > /dev/null; then
+if which anyenv &> /dev/null; then
   eval "$(anyenv init -)"
 fi
 
-if which basher > /dev/null; then
+if which basher &> /dev/null; then
   eval "$(basher init -)"
 fi
 
