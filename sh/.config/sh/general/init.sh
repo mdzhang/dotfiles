@@ -22,6 +22,10 @@ if which basher &> /dev/null; then
   eval "$(basher init -)"
 fi
 
+if which zoxide &> /dev/null; then
+  eval "$(zoxide init $SHELL_NAME)"
+fi
+
 [ -f ~/.fzf.$SHELL_NAME ] && source ~/.fzf.$SHELL_NAME
 
 [ -f "/etc/grc.$SHELL_NAME" ] && source /etc/grc.$SHELL_NAME
