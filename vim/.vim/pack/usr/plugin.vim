@@ -129,7 +129,7 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDDefaultAlign = 'left'
 
 " ----------
-" Plugin 'majutsushi/tagbar'
+" Plugin 'preservim/tagbar'
 " ----------
 
 " autofocus tagbar on open
@@ -141,7 +141,39 @@ let g:tagbar_show_linenumbers = -1
 " don't sort tags
 let g:tagbar_sort = 0
 
+" workaround for snap installed ctags
+" see https://github.com/preservim/tagbar/issues/568
+let g:tagbar_use_cache = 0
+
 nmap <Leader>tt :TagbarToggle
+
+" markdown support
+let g:tagbar_type_markdown = {
+  \ 'ctagstype'	: 'markdown',
+  \ 'kinds'		: [
+    \ 'c:chapter:0:1',
+    \ 's:section:0:1',
+    \ 'S:subsection:0:1',
+    \ 't:subsubsection:0:1',
+    \ 'T:l4subsection:0:1',
+    \ 'u:l5subsection:0:1',
+  \ ],
+  \ 'sro'			: '""',
+  \ 'kind2scope'	: {
+    \ 'c' : 'chapter',
+    \ 's' : 'section',
+    \ 'S' : 'subsection',
+    \ 't' : 'subsubsection',
+    \ 'T' : 'l4subsection',
+  \ },
+  \ 'scope2kind'	: {
+    \ 'chapter' : 'c',
+    \ 'section' : 's',
+    \ 'subsection' : 'S',
+    \ 'subsubsection' : 't',
+    \ 'l4subsection' : 'T',
+  \ },
+\ }
 
 " golang support
 let g:tagbar_type_go = {

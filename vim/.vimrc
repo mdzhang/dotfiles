@@ -35,8 +35,7 @@ call plug#begin('~/.vim/plugged')
   " show git diff (added, mod'd, removed) in the gutter
   Plug 'mhinz/vim-signify'
   " show file content outline
-  Plug 'majutsushi/tagbar'
-  Plug 'lvht/tagbar-markdown'
+  Plug 'preservim/tagbar'
   " vim themes
   Plug 'drewtempelmeyer/palenight.vim'
   Plug 'cocopon/iceberg.vim'
