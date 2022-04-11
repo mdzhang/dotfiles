@@ -233,6 +233,7 @@ let g:ale_linters = {
   \ 'vim': ['vint'],
   \ }
 let g:ale_fixers = {
+  \ '*': ['remove_trailing_lines', 'trim_whitespace'],
   \ 'javascript': ['eslint', 'prettier'],
   \ 'typescript':  ['eslint', 'prettier'],
   \ 'json': ['fixjson'],
