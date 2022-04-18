@@ -14,6 +14,10 @@ if [ -f ~/.asdf/plugins/java/set-java-home.$SHELL_NAME ]; then
   . ~/.asdf/plugins/java/set-java-home.$SHELL_NAME
 fi
 
+if [ -d ~/.pulumi/bin ]; then
+  export PATH="$HOME/.pulumi/bin:$PATH"
+fi
+
 if which anyenv &> /dev/null; then
   eval "$(anyenv init -)"
 fi
