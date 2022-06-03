@@ -21,21 +21,21 @@
   ig = update-index --assume-unchanged
   uig = update-index --no-assume-unchanged
   co = checkout
-  com = checkout master
+  com = checkout main
   cod = checkout development
   ps = push
   psf = push -f
   pso = push origin
   psfo = push -f origin
-  psom = push origin master
-  psfom = push -f origin master
+  psom = push origin main
+  psfom = push -f origin main
   pl = pull
   plr = pull --rebase
   rb = rebase
   rbc = rebase --continue
   rbd = rebase development
   rbi = rebase -i
-  rbm = rebase master
+  rbm = rebase main
   rbs = rebase --skip
   reh = reset --hard
   tgs = show-ref --abbrev=7 --tags
