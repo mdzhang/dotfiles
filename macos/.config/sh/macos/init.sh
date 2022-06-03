@@ -1,13 +1,5 @@
 #!/bin/sh
 
-if [ -d /opt/homebrew/bin/ ]; then
-  eval $(/opt/homebrew/bin/brew shellenv)
-fi
-
-if which anyenv &> /dev/null; then
-  eval "$(anyenv init -)"
-fi
-
 #
 # Configuration for packages installed with Homebrew
 #

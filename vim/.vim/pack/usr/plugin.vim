@@ -262,7 +262,7 @@ let g:lightline = {
       \   'right': [['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
+      \   'gitbranch': 'FugitiveHead'
       \ },
       \ 'component_expand': {
       \   'linter_warnings': 'LightlineLinterWarnings',

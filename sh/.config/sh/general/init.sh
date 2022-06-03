@@ -4,6 +4,10 @@ if which direnv &> /dev/null; then
   eval "$(direnv hook $SHELL_NAME)"
 fi
 
+if [ -d /opt/homebrew/bin/ ]; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+fi
+
 if [ -f "$HOME/.local/share/asdf/asdf.sh" ]; then
   . $HOME/.local/share/asdf/asdf.sh
 elif which brew > /dev/null && [ -f "$(brew --prefix asdf)/asdf.sh" ]; then
