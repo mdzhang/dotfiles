@@ -49,4 +49,10 @@ export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include $CFLAGS"
 #     a few commands and makes them more linux-y, which grc wants
 
 export PATH="$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH"
+
+if [ -f "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.$SHELL_NAME.inc" ]; then
+  . "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.$SHELL_NAME.inc"
+  . "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.$SHELL_NAME.inc"
+fi
+
 [ -f "/usr/local/etc/grc.$SHELL_NAME" ] && . "/usr/local/etc/grc.$SHELL_NAME"
