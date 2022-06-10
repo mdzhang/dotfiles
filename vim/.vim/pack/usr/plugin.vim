@@ -228,7 +228,7 @@ let g:ale_linters = {
   \ 'yaml.ansible': ['ansible-lint'],
   \ 'markdown': ['markdownlint'],
   \ 'rst': ['rstcheck', 'proselint', 'write-good'],
-  \ 'ruby': ['rubocop'],
+  \ 'ruby': ['reek', 'rubocop', 'solargraph', 'sorbet'],
   \ 'sql': ['sqlint'],
   \ 'vim': ['vint'],
   \ }
@@ -239,6 +239,7 @@ let g:ale_fixers = {
   \ 'json': ['fixjson'],
   \ 'kotlin': ['ktlint'],
   \ 'python': ['black', 'isort'],
+  \ 'ruby': ['rubocop'],
   \ 'terraform': ['terraform'],
   \ 'go': ['gofmt'],
   \ 'yaml': ['yamlfix'],
