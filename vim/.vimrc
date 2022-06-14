@@ -104,6 +104,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'metakirby5/codi.vim'
   " show markers in sidebar
   Plug 'kshenoy/vim-signature'
+  " kick off commands
+  Plug 'tpope/vim-dispatch'
+  " database
+  Plug 'tpope/vim-dadbod'
+  Plug 'kristijanhusak/vim-dadbod-ui'
 
   "
   " Prose writing
@@ -114,6 +119,11 @@ call plug#begin('~/.vim/plugged')
   " distraction free
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
+
+  "
+  " Ruby
+  "
+  Plug 'tpope/vim-rails'
 
   "
   " Python

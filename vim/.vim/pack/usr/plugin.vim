@@ -417,6 +417,18 @@ let g:codi#interpreters = {
 \ }
 
 " ----------
+" Plugin 'tpope/vim-dadbod'
+" ----------
+
+let g:dadbods = []
+let db = {
+  \"name": "Mysql Example",
+  \"url": "mysql://root:pass@0.0.0.0:3306/dbname"
+  \}
+call add(g:dadbods, db)
+let g:db = g:dadbods[0].url
+
+" ----------
 " Plugin 'junegunn/limelight.vim'
 " ----------
 let g:limelight_conceal_ctermfg = 'gray'
