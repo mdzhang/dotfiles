@@ -363,6 +363,9 @@ nnoremap <silent> Q gqap
 xnoremap <silent> Q gq
 nnoremap <silent> <leader>Q vapJgqap
 
+" current file path to clipboard
+nnoremap <leader>r :let @+=expand('%')<CR>
+
 " hit enter to select autocomplete selection without inserting newline
 " inoremap <expr> <cr> ((pumvisible())?("\<C-y>"):("\<cr>"))
 

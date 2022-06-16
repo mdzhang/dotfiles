@@ -124,6 +124,7 @@ call plug#begin('~/.vim/plugged')
   " Ruby
   "
   Plug 'tpope/vim-rails'
+  Plug 'tpope/vim-endwise'
 
   "
   " Python
