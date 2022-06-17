@@ -15,6 +15,7 @@
 *.dll
 *.dylib
 *.exe
+*.exe~
 *.o
 *.so
 
@@ -46,20 +47,25 @@
 *.sdf
 *.tax2010
 *.vcf
-pgdata/
 *.mim
 *.eml
+*.xml
+pgdata/
 
 # Compressed #
 ##############
 *.7z
+*.deb
 *.dmg
 *.gz
+*.pkg
 *.iso
 *.jar
 *.rar
+*.rpm
 *.tar
 *.zip
+*.zipx
 *.tgz
 *.tbz2
 *.gzip
@@ -78,10 +84,16 @@ pgdata/
 *.pdf
 *.swf
 
+# Runtime #
+##########
+pids
+*.pid
+*.seed
+*.pid.lock
+
 # Extras #
 ##########
 *.diff
-*.pid
 *.test
 
 # Secrets #
@@ -124,8 +136,16 @@ hint-report/
 ######
 # macOS
 .DS_Store
+.AppleDouble
+.LSOverride
 .Spotlight-V100
 .Trashes
+*.icloud
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
 # Kubuntu
 .directory
@@ -134,10 +154,9 @@ hint-report/
 ####################
 .idea/
 *.iml
-python_cscope.files
 .scratch.vim
-cscope*
 *.sublime-workspace
+.netrwhist
 
 # vscode
 .vscode/*
@@ -160,6 +179,8 @@ GTAGS
 GRTAGS
 GPATH
 GSYMS
+python_cscope.files
+cscope*
 
 # Language specific #
 #####################
@@ -170,6 +191,7 @@ GSYMS
 
 # Javascript
 node_modules/
+jspm_packages/
 .serverless/
 
 # Python
@@ -203,8 +225,10 @@ up[0-9]*.sh
 *.tfstate.*
 .terraform.lock.hcl
 .terraform_*
+*.tfvars
 
 # Ruby
+*.gem
 bundle/
 .bundle/
 .rspec/
