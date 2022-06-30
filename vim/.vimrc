@@ -127,6 +127,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-endwise'
 
   "
+  " JS
+  "
+  "
+  Plug 'leafgarland/typescript-vim'
+
+  "
   " Python
   "
 

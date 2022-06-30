@@ -304,7 +304,7 @@ augroup vimrc_base
 
   " treat files with .es6 extension as JS files
   au BufNewFile,BufRead *.es6 set filetype=javascript
-  au BufNewFile,BufRead .eslintrc,.arcconfig,.arclint,.prettierrc set filetype=json
+  au BufNewFile,BufRead .eslintrc,.esprintrc,.arcconfig,.arclint,.prettierrc set filetype=json
 
   au BufNewFile,BufRead Brewfile set filetype=ruby
   au BufNewFile,BufRead *_test.rb set filetype=rspec
@@ -364,7 +364,7 @@ xnoremap <silent> Q gq
 nnoremap <silent> <leader>Q vapJgqap
 
 " current file path to clipboard
-nnoremap <leader>r :let @+=expand('%')<CR>
+" nnoremap <leader>r :let @+=expand('%')<CR>
 
 " hit enter to select autocomplete selection without inserting newline
 " inoremap <expr> <cr> ((pumvisible())?("\<C-y>"):("\<cr>"))
