@@ -49,7 +49,7 @@
 *.vcf
 *.mim
 *.eml
-*.xml
+# *.xml
 pgdata/
 
 # Compressed #
@@ -99,7 +99,7 @@ pids
 # Secrets #
 ###########
 # *.pem
-.env*
+.env
 .envrc
 secrets/
 

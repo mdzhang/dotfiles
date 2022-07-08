@@ -131,6 +131,7 @@ call plug#begin('~/.vim/plugged')
   "
   "
   Plug 'leafgarland/typescript-vim'
+  Plug 'mogelbrod/vim-jsonpath'
 
   "
   " Python
