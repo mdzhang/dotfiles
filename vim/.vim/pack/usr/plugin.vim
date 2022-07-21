@@ -221,6 +221,15 @@ let g:tagbar_type_terraform = {
   \ 'deffile': expand('~') . '/.ctags.d/terraform.ctags',
 \ }
 
+let g:tagbar_type_yaml = {
+  \ 'ctagstype' : 'yaml',
+  \ 'kinds'     : [
+      \ 'p:property:1:0',
+      \ 'e:endpoint:1:0',
+      \ 'd:definition:1:0',
+  \ ],
+  \ }
+
 " ----------
 " Plugin 'dense-analysis/ale'
 " ----------
