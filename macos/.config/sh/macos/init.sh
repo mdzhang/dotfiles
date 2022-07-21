@@ -31,7 +31,7 @@ do
   export PATH="/usr/local/opt/$pkg/bin:$PATH"
 done
 
-ctools=( openssl readline bison libiconv bzip2 zlib )
+ctools=( openssl readline bison libiconv bzip2 zlib libpq )
 for pkg in "${ctools[@]}"
 do
   export CFLAGS="-I/usr/local/opt/$pkg/include $CFLAGS"

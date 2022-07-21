@@ -204,6 +204,23 @@ let g:tagbar_type_go = {
   \ 'ctagsargs' : '-sort -silent'
 \ }
 
+" terraform support
+" used together with vim/.ctags.d/terraform.ctags
+let g:tagbar_type_terraform = {
+  \ 'ctagstype' : 'terraform',
+  \ 'kinds' : [
+      \ 'r:Resources',
+      \ 'd:Datas',
+      \ 'v:Variables',
+      \ 'p:Providers',
+      \ 'o:Outputs',
+      \ 'm:Modules',
+      \ 'f:TFVars'
+  \ ],
+  \ 'sort' : 1,
+  \ 'deffile': expand('~') . '/.ctags.d/terraform.ctags',
+\ }
+
 " ----------
 " Plugin 'dense-analysis/ale'
 " ----------

@@ -171,8 +171,7 @@ call plug#begin('~/.vim/plugged')
   "
   " Terraform
   "
-  " for autocompletion, linting, and ctags
-  Plug 'juliosueiras/vim-terraform-completion'
+  " for autocompletion and linting
   Plug 'hashivim/vim-terraform'
 
   " devicons and glyphs (must be last)

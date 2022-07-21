@@ -223,7 +223,6 @@ up[0-9]*.sh
 **/.terraform/*
 *.tfstate
 *.tfstate.*
-.terraform.lock.hcl
 .terraform_*
 *.tfvars
 
