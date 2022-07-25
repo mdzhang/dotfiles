@@ -96,6 +96,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'fatih/vim-go'
   " included in vim-polyglot, but ctags not detected properly
   Plug 'derekwyatt/vim-scala'
+  Plug 'peitalin/vim-jsx-typescript'
   " alignment
   Plug 'junegunn/vim-easy-align'
   " todo list plugin
