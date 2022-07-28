@@ -12,6 +12,7 @@ if [ -f "$HOME/.local/share/asdf/asdf.sh" ]; then
   . $HOME/.local/share/asdf/asdf.sh
 elif which brew > /dev/null && [ -f "$(brew --prefix asdf)/asdf.sh" ]; then
   . "$(brew --prefix asdf)/asdf.sh";
+  . "$(brew --prefix asdf)/libexec/asdf.sh";
 fi
 
 if [ -f ~/.asdf/plugins/java/set-java-home.$SHELL_NAME ]; then
