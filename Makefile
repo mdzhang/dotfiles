@@ -13,6 +13,7 @@ init:
 	git submodule init && git submodule update --init --recursive
 
 update:
+	git pull --recurse-submodules
 	git submodule update --recursive --remote
 
 light:
