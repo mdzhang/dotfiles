@@ -128,7 +128,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-endwise'
 
   "
-  " JS
+  " JS/TS
   "
   "
   Plug 'leafgarland/typescript-vim'

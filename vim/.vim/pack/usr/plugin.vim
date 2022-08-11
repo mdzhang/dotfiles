@@ -259,7 +259,7 @@ let g:ale_linters = {
   \ 'vim': ['vint'],
   \ 'javascript': ['eslint', 'prettier'],
   \ 'javascriptreact':  ['eslint'],
-  \ 'typescript':  ['eslint', 'prettier'],
+  \ 'typescript':  ['eslint', 'prettier', 'tslint', 'tsserver'],
   \ 'typescriptreact':  ['eslint'],
   \ }
 let g:ale_fixers = {
