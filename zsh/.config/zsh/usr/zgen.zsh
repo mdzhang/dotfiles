@@ -25,20 +25,21 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
     zgen prezto '*:*' color 'yes'
 
     # prezto modules to load, order matters
+
     zgen prezto autosuggestions
-    zgen prezto environment
-    zgen prezto terminal
-    zgen prezto editor
-    zgen prezto directory
-    zgen prezto spectrum
-    zgen prezto utility
-    zgen prezto ssh
     zgen prezto completion
+    zgen prezto directory
     zgen prezto docker
-    zgen prezto homebrew
-    zgen prezto syntax-highlighting
+    zgen prezto editor
+    zgen prezto environment
     zgen prezto history-substring-search
+    zgen prezto homebrew
     zgen prezto prompt
+    zgen prezto spectrum
+    zgen prezto ssh
+    zgen prezto syntax-highlighting
+    zgen prezto terminal
+    zgen prezto utility
 
     #
     # Editor
@@ -118,4 +119,3 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
     zgen save
   fi
 fi
-
