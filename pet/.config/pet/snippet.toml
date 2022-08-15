@@ -64,12 +64,12 @@
   output = ""
 
 [[snippets]]
-  description = "Remove ._ prefix from files with zmv"
+  description = "[zsh] Remove ._ prefix from files with zmv"
   command = "zmv '._(*)' '$1'"
   output = ""
 
 [[snippets]]
-  description = "Delete all helm deployments"
+  description = "[k8s] Delete all helm deployments"
   command = "helm ls | tail -n+2 | awk '{print $1}' | xargs helm delete"
   output = ""
 
@@ -149,11 +149,6 @@
   output = ""
 
 [[snippets]]
-  description = "create a arcanist revision without requesting review, but do notify user jsmith"
-  command = "arc diff --plan-changes --cc jsmith master"
-  output = ""
-
-[[snippets]]
   description = "gzip a directory on macos"
   command = "tar cvf - pcap-parsed | gzip > pcap-parsed.gz"
   output = ""
@@ -164,12 +159,7 @@
   output = ""
 
 [[snippets]]
-  description = "Update an existing diff starting at given commit\""
-  command = "arc diff --plan-changes 8d2dda91 --update D28522"
-  output = ""
-
-[[snippets]]
-  description = "Remove exited docker containers"
+  description = "[docker] Remove exited docker containers"
   command = "docker ps -a -q -f status=exited  | xargs docker rm"
   output = ""
 
@@ -184,7 +174,7 @@
   output = ""
 
 [[snippets]]
-  description = "Get largest element by .Size attribute"
+  description = "[jq] Get largest element by .Size attribute"
   command = "jq -c 'sort_by(.Size) | last | .Size'"
   output = ""
 
@@ -204,7 +194,7 @@
   output = ""
 
 [[snippets]]
-  description = "delete remote git branch"
+  description = "[git] delete remote branch"
   command = "git push origin :remote-branch-name"
   output = ""
 
@@ -259,12 +249,12 @@
   output = ""
 
 [[snippets]]
-  description = "git debug vars"
+  description = "[git] debug vars"
   command = "GIT_TRACE=2 GIT_CURL_VERBOSE=2 GIT_TRACE_PERFORMANCE=2 GIT_TRACE_PACK_ACCESS=2 GIT_TRACE_PACKET=2 GIT_TRACE_PACKFILE=2 GIT_TRACE_SETUP=2 GIT_TRACE_SHALLOW=2"
   output = ""
 
 [[snippets]]
-  description = "delete local Git branches if their remote-tracking references don't exist anymore"
+  description = "[git] delete local branches if their remote-tracking references don't exist anymore"
   command = "git fetch --prune"
   output = ""
 
@@ -334,11 +324,6 @@
   output = ""
 
 [[snippets]]
-  description = "Looker deploy"
-  command = "curl -H 'X-Looker-Deploy-Secret: baffe85068c80138c4bd19f51e35f8a2'  localhost:9999/webhooks/projects/refinery/deploy"
-  output = ""
-
-[[snippets]]
   description = "Get every other line in file"
   command = "awk 'NR % 2 == 0' filename"
   output = ""
@@ -371,4 +356,9 @@
 [[snippets]]
   description = "Build cscope resources for vim function usage lookup"
   command = "cscope -Rb -s '*'"
+  output = ""
+
+[[snippets]]
+  description = "[git] make faster"
+  command = "git gc && git fsck"
   output = ""
