@@ -1,0 +1,33 @@
+---
+prSections:
+  - title: My Pull Requests
+    filters: is:open author:@me sort:updated-desc
+    filters:
+  - title: Needs My Review
+    filters: is:open review-requested:@me sort:updated-desc
+  - title: Mentions
+    filters: is:open mentions:@me sort:updated-desc
+
+issuesSections:
+  - title: Created
+    filters: is:open author:@me repo:found/found
+  - title: Assigned
+    filters: is:open assignee:@me repo:found/found
+
+# set global limits
+defaults:
+  prsLimit: 20
+  issuesLimit: 20
+  preview:
+    open: true
+    width: 60
+
+repoPaths:
+  # will match found/repo-name to ~/src/github.com/indie-technologies
+  found/*: ~/src/github.com/indie-technologies/*
+
+# optional
+keybindings:
+  prs:
+    - key: c
+      command: cd {{.RepoPath}}; gh pr checkout {{.PrNumber}}
