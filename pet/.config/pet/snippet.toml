@@ -362,3 +362,18 @@
   description = "[git] make faster"
   command = "git gc && git fsck"
   output = ""
+
+[[snippets]]
+  description = "[k8s] force kill terminating pods"
+  command = "kubectl get pods | grep 'Terminating' | awk '{print $1}' | xargs -I{} kubectl delete pod {} --grace-period=0 --force"
+  output = ""
+
+[[snippets]]
+  description = "[git] list all remote branches with date"
+  command = "for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format=\"%ci %cr\" $branch | head -n 1` \\\\t$branch; done"
+  output = ""
+
+[[snippets]]
+  description = "[git] delete branches formatted w/ date"
+  command = "cat branches.txt | awk 'NF>1{print $NF}' | cut -d '/' -f 2- | xargs git push origin --delete"
+  output = ""

@@ -1,9 +1,9 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
-  "plugins": ["react"],
+  "extends": ["plugin:react/recommended", "airbnb", "plugin:storybook/recommended"],
+  "plugins": ["react", "unused-imports"],
   "parserOptions": {
-    "ecmaVersion": 7,
+    "ecmaVersion": 12,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
@@ -11,7 +11,8 @@
   },
   "env": {
     "browser": true,
-    "jest": true
+    "jest": true,
+    "es2021": true
   },
   "globals": {},
   "rules": {
@@ -20,5 +21,10 @@
       2,
       { "multiline": true }
     ]
+  },
+  "settings": {
+    "jest": {
+      "version": 26
+    }
   }
 }
