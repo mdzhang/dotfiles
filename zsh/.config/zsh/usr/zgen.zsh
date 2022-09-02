@@ -8,7 +8,7 @@ export DEFAULT_USER="mdzhang"
 if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
   source "$XDG_CONFIG_HOME/zsh/opt/zgen/zgen.zsh"
 
-  # if the init scipt doesn't exist
+  # if the init scipt doesn't exist (normally ~/.local/share/zgen/init.zsh)
   if ! zgen saved; then
     ###################
     # Prezto
@@ -114,6 +114,7 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
     #
     # :(
     zgen load $XDG_CONFIG_HOME/zsh/usr/plugins/shrink-path.zsh
+    zgen load $XDG_CONFIG_HOME/zsh/usr/plugins/kube-ps1.zsh
 
     # generate the init script from plugins above
     zgen save
