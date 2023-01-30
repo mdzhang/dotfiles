@@ -34,6 +34,7 @@ done
 ctools=( openssl curl readline bison libiconv bzip2 zlib libpq )
 for pkg in "${ctools[@]}"
 do
+  export CFLAGS="-O2 -g -fno-stack-check $CFLAGS"
   export CFLAGS="-I/usr/local/opt/$pkg/include $CFLAGS"
   export LDFLAGS="-L/usr/local/opt/$pkg/lib $LDFLAGS"
   export CPPFLAGS="-I/usr/local/opt/$pkg/include $CPPFLAGS"
