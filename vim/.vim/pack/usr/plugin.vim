@@ -82,8 +82,7 @@ let g:python_highlight_all = 1
 let g:vim_markdown_new_list_item_indent = 2
 " syntax highlight code within code fences
 let g:vim_markdown_conceal = 0
-" TODO: this slows editing on markdown files w/ many code blocks
-"let g:vim_markdown_fenced_languages = ['python']
+let g:vim_markdown_fenced_languages = ['ex=elixir']
 
 " ----------
 " Plugin 'Yggdroot/indentLine'
