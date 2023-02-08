@@ -145,10 +145,9 @@
 
   options = --highlight --line-numbers
 
-[difftool "sourcetree"]
+[difftool "vscode"]
 
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path =
+  cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
 
 [difftool "icdiff"]
 
@@ -158,6 +157,10 @@
 
   tool = vimdiff
   renameLimit = 999999
+
+[mergetool "vscode"]
+
+  cmd = code --wait $MERGED
 
 [ghq "https://gitlab.com/repos/"]
 
