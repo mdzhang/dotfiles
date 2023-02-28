@@ -20,4 +20,8 @@ if which vocab > /dev/null; then
   vocab
 fi
 
+if which gt &> /dev/null; then
+  eval "$(gt completion)"
+fi
+
 # zprof
