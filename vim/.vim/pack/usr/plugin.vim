@@ -82,7 +82,7 @@ let g:python_highlight_all = 1
 let g:vim_markdown_new_list_item_indent = 2
 " syntax highlight code within code fences
 let g:vim_markdown_conceal = 0
-let g:vim_markdown_fenced_languages = ['ex=elixir']
+let g:vim_markdown_fenced_languages = ['ex=elixir', 'cyp=cypher']
 
 " ----------
 " Plugin 'Yggdroot/indentLine'

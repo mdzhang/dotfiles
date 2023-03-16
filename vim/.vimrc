@@ -170,6 +170,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'itkq/fluentd-vim'
 
   "
+  " Neo4j/Cypher
+  "
+  "
+  Plug 'neo4j-contrib/cypher-vim-syntax'
+
+  "
   " Terraform
   "
   " for autocompletion and linting

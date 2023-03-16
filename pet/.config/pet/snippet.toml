@@ -377,3 +377,8 @@
   description = "[git] delete branches formatted w/ date"
   command = "cat branches.txt | awk 'NF>1{print $NF}' | cut -d '/' -f 2- | xargs git push origin --delete"
   output = ""
+
+[[snippets]]
+  description = "[graphite] start branch"
+  command = "gt branch create -a -m \"GTKF: Desktop\" mdz/gtkf-desktop"
+  output = ""
