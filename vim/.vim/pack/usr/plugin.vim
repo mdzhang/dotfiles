@@ -235,6 +235,7 @@ let g:tagbar_type_yaml = {
 
 " avoid cursor disappearing when on lines w/ errors/warnings
 let g:ale_echo_cursor = 0
+let g:ale_virtualtext_cursor = 'disabled'
 
 let g:ale_open_list = 1
 let g:ale_fix_on_save = 1
@@ -254,7 +255,7 @@ let g:ale_linters = {
   \ 'markdown': ['markdownlint'],
   \ 'rst': ['rstcheck', 'proselint', 'write-good'],
   \ 'ruby': ['rubocop', 'solargraph', 'sorbet'],
-  \ 'sql': ['sqlint'],
+  \ 'sql': ['sqlint', 'sqlfluff'],
   \ 'vim': ['vint'],
   \ 'javascript': ['eslint', 'prettier'],
   \ 'javascriptreact':  ['eslint'],
