@@ -9,5 +9,5 @@ if [ -d /opt/homebrew/bin/ ]; then
   export KERL_CONFIGURE_OPTIONS="$KERL_CONFIGURE_OPTIONS --with-ssl=$(brew --prefix openssl)"
 fi
 
-# for global ruby packages, else use rbenv
+# for global ruby packages, else use asdf
 export PATH="$HOME/.local/share/gem/bin:$PATH"

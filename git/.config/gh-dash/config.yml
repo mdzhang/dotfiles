@@ -2,7 +2,6 @@
 prSections:
   - title: My Pull Requests
     filters: is:open author:@me sort:updated-desc
-    filters:
   - title: Needs My Review
     filters: is:open review-requested:@me sort:updated-desc
   - title: Mentions

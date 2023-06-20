@@ -12,9 +12,6 @@ brew_update() {
   brew update
   brew upgrade
 
-  brew cask doctor
-  brew cask upgrade
-
   brew cleanup
 }
 
@@ -41,10 +38,6 @@ do
   # export PKG_CONFIG_PATH="/usr/local/opt/$pkg/lib/pkgconfig"
   export PATH="/usr/local/opt/$pkg/bin:$PATH"
 done
-
-# Fix for zlib issue on Mojave
-# https://github.com/pyenv/pyenv/issues/530
-export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include $CFLAGS"
 
 # NB: do this _after_ homebrew packages added to path, since gnu-bin replaces
 #     a few commands and makes them more linux-y, which grc wants
