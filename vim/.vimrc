@@ -187,6 +187,11 @@ call plug#begin('~/.vim/plugged')
   " testing
   Plug 'junegunn/vader.vim'
 
+  "
+  " AI
+  "
+  Plug 'github/copilot.vim'
+
 " vim-plugin plugins must be added before this line
 call plug#end()
 

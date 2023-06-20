@@ -2,6 +2,7 @@ export JAVA_OPTS="--illegal-access=warn --add-opens java.base/java.util=ALL-UNNA
 
 # android
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+export ANDROID_HOME="$ANDROID_SDK_ROOT"
 export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools/"
 export PATH="$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/"
 export PATH="$PATH:$ANDROID_SDK_ROOT/emulator/"
