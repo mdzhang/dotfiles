@@ -307,6 +307,7 @@ augroup vimrc_base
   au BufNewFile,BufRead .eslintrc,.esprintrc,.arcconfig,.arclint,.prettierrc set filetype=json
 
   au BufNewFile,BufRead Brewfile set filetype=ruby
+  au BufNewFile,BufRead *Dangerfile set filetype=ruby
   au BufNewFile,BufRead *_test.rb set filetype=rspec
   au BufNewFile,BufRead .envrc set filetype=sh
 

@@ -382,3 +382,13 @@
   description = "[graphite] start branch"
   command = "gt branch create -a -m \"GTKF: Desktop\" mdz/gtkf-desktop"
   output = ""
+
+[[snippets]]
+  description = "Only add files I care about"
+  command = "git diff --name-only | grep -v sql | grep -v kard | xargs -I{} git add {}"
+  output = ""
+
+[[snippets]]
+  description = "dasel -r json -w csv -f data/in.json > data/out.csv"
+  command = "JSON to CSV"
+  output = ""

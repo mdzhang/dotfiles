@@ -133,6 +133,8 @@ call plug#begin('~/.vim/plugged')
   "
   Plug 'leafgarland/typescript-vim'
   Plug 'mogelbrod/vim-jsonpath'
+  Plug 'prisma/vim-prisma'
+  Plug 'wuelnerdotexe/vim-astro'
 
   "
   " Python

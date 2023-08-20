@@ -183,3 +183,7 @@
   #   by the local ones
 
   path = ~/.gitconfig.local
+
+[init]
+
+  defaultBranch = main
