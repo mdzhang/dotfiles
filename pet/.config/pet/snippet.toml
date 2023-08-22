@@ -389,6 +389,6 @@
   output = ""
 
 [[snippets]]
-  description = "dasel -r json -w csv -f data/in.json > data/out.csv"
-  command = "JSON to CSV"
+  command = "dasel -r json -w csv -f data/in.json > data/out.csv"
+  description = "JSON to CSV"
   output = ""
