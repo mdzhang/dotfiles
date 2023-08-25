@@ -47,3 +47,5 @@ if [ -f "$HOMEBREW_PREFIX/share/google-cloud-sdk/path.$SHELL_NAME.inc" ]; then
 fi
 
 [ -f "/usr/local/etc/grc.$SHELL_NAME" ] && . "/usr/local/etc/grc.$SHELL_NAME"
+
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"

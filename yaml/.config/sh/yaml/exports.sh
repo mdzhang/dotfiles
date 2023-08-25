@@ -1,0 +1,1 @@
+export YAMLFIX_CONFIG_PATH="$XDG_CONFIG_HOME/yamlfix"
