@@ -14,10 +14,6 @@ if [ -f ~/.asdf/plugins/java/set-java-home.$SHELL_NAME ]; then
   . ~/.asdf/plugins/java/set-java-home.$SHELL_NAME
 fi
 
-if which asdf &> /dev/null && [ -d $(asdf where terraform) ]; then
-  complete -C "$(asdf where terraform)/bin/terraform" terraform
-fi
-
 if [ -d ~/.pulumi/bin ]; then
   export PATH="$HOME/.pulumi/bin:$PATH"
 fi

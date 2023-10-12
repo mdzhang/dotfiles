@@ -194,6 +194,21 @@ cscope*
 node_modules/
 jspm_packages/
 .serverless/
+storybook-static/
+
+### yarn ###
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+
+.yarn/*
+!.yarn/releases
+!.yarn/patches
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# if you are NOT using Zero-installs, then:
+# comment the following lines
+!.yarn/cache
 
 # Python
 *$py.class
