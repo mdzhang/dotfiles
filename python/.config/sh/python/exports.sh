@@ -3,6 +3,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 export PATH="$HOME/.poetry/bin:$PATH"
 export PIPENV_IGNORE_VIRTUALENV=1
+export POETRY_CACHE_DIR="$XDG_CACHE_HOME/pypoetry"
 
 # Anaconda
 if [ "$(uname)" = "Darwin" ]; then

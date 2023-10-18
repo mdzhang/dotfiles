@@ -49,6 +49,7 @@
 *.vcf
 *.mim
 *.eml
+*.rdb
 # *.xml
 pgdata/
 
@@ -221,6 +222,8 @@ storybook-static/
 .tox/
 .pytest_cache/
 __pycache__/
+.ruff_cache/
+.mypy_cache/
 develop-eggs/
 docs/_build/
 eggs/

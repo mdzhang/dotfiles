@@ -389,6 +389,11 @@
   output = ""
 
 [[snippets]]
-  command = "dasel -r json -w csv -f data/in.json > data/out.csv"
   description = "JSON to CSV"
+  command = "dasel -r json -w csv -f data/in.json > data/out.csv"
+  output = ""
+
+[[snippets]]
+  description = "Generate password"
+  command = "openssl rand -hex 32"
   output = ""
