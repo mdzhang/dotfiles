@@ -249,7 +249,7 @@ let g:ale_linter_aliases = {'rspec': ['ruby']}
 " collision w/ vim-go
 " \ 'go': ['gopls', 'govet', 'staticcheck', 'golangci', 'golint'],
 let g:ale_linters = {
-  \ 'python': ['flake8', 'ruff'],
+  \ 'python': ['ruff'],
   \ 'json': ['jsonlint'],
   \ 'css': ['csslint'],
   \ 'yaml': ['yamllint', 'prettier', 'spectral'],
