@@ -120,6 +120,7 @@
   editor = vim
   excludesfile = ~/.ignore
   pager = less -XRF
+  attributesfile = ~/.gitattributes
 
 [pull]
 

@@ -49,3 +49,9 @@ fi
 [ -f "/usr/local/etc/grc.$SHELL_NAME" ] && . "/usr/local/etc/grc.$SHELL_NAME"
 
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+
+# scala - coursier
+if command -v cs &> /dev/null; then
+  export COURSIER_INSTALL_DIR="$XDG_DATA_HOME/coursier/bin"
+  export PATH="$PATH:$COURSIER_INSTALL_DIR"
+fi
