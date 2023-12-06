@@ -1,1 +1,1 @@
-export SBT_OPTS="-XX:+CMSClassUnloadingEnabled"
+export SBT_OPTS=""

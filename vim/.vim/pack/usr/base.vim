@@ -1,4 +1,5 @@
-" For vanilla vim configuration
+" For vanilla vim configuration;
+" These are also loaded by Neovim; separate anything else into another file
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
@@ -45,35 +46,6 @@ function! ConvertWildIgnores(ignores)
 endfunction
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Test shorthand
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-function! s:vim_tests()
-  if expand('%:e') == 'vim'
-    let testfile = printf('%s/%s.vader', expand('%:p:h'),
-          \ tr(expand('%:p:h:t'), '-', '_'))
-    if !filereadable(testfile)
-      echoerr 'File does not exist: '. testfile
-      return
-    endif
-    source %
-    execute 'Vader' testfile
-  else
-    let sourcefile = printf('%s/%s.vim', expand('%:p:h'),
-          \ tr(expand('%:p:h:t'), '-', '_'))
-    if !filereadable(sourcefile)
-      echoerr 'File does not exist: '. sourcefile
-      return
-    endif
-    execute 'source' sourcefile
-    Vader
-  endif
-endfunction
-
-autocmd BufRead *.{vader,vim}
-      \ command! -buffer Test call s:vim_tests()
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -100,6 +72,9 @@ set directory=~/.vim/swaps
 
 if !has('nvim')
   set viminfo+='1000,n~/.vim/viminfo
+
+  " speed up laggy scrolling
+  set lazyredraw
 endif
 
 try
@@ -166,8 +141,6 @@ set tags=./tags,./TAGS,tags,TAGS,.tags,./.tags,tags;/
 set scrolloff=999
 " scrolling in iterm
 set mouse=nicr
-" speed up laggy scrolling
-set lazyredraw
 
 "
 " Display
@@ -261,13 +234,6 @@ if $COLORTERM == 'truecolor'
   set t_Co=256
 endif
 
-try
-  " let g:ayucolor='light'
-  let g:purify_italic = 0
-  colorscheme purify
-catch
-endtry
-
 if has("gui_running")
     set guioptions-=T
     set guioptions-=e
@@ -329,11 +295,15 @@ augroup END
 " => Key mappings
 """"""""""""""""""""""""""""""
 
-" override default leader key for custom commands
-let mapleader = ","
-let maplocalleader = ","
+if !has('nvim')
+  " override default leader key for custom commands;
+  " prefer default <space> in neovim
+  let mapleader = ","
+  let maplocalleader = ","
 
-nnoremap <space> za
+  " alias code fold command to spacebar
+  nnoremap <space> za
+endif
 
 " shorcut for using PCRE substitution instead of weird vim substitution
 cabbrev pld perldo

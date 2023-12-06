@@ -58,6 +58,6 @@ Add to `sh/.config/sh/general/secrets.sh`
 
 ## License
 
-Copyright (c) 2013-2023 m d zhang. MIT Licensed, see [LICENSE](LICENSE) for details.
+Copyright (c) 2013-2023 m d zhang. MIT Licensed, see [LICENSE](./LICENSE) for details.
 
 [stow]: https://www.gnu.org/software/stow/manual/stow.html

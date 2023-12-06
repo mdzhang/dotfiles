@@ -257,6 +257,10 @@ bundle/
 project/project
 project/target
 target
+### Metals ###
+.metals/
+.bloop/
+**/project/**/metals.sbt
 
 # Elixir
 /_build

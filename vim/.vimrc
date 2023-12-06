@@ -37,19 +37,14 @@ call plug#begin('~/.vim/plugged')
   " show file content outline
   Plug 'preservim/tagbar'
   " vim themes
-  Plug 'drewtempelmeyer/palenight.vim'
-  Plug 'cocopon/iceberg.vim'
   Plug 'ayu-theme/ayu-vim'
   Plug 'kyoz/purify', {'rtp': 'vim'}
-  Plug 'arcticicestudio/nord-vim'
   " rainbow bracket highlighting
   Plug 'luochen1990/rainbow'
   " show whitespace
   Plug 'Yggdroot/indentLine'
   " autocompletion
   Plug 'ervandew/supertab'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
   " scratch pad
   Plug 'mtth/scratch.vim'
   " file system explorer
@@ -99,17 +94,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'peitalin/vim-jsx-typescript'
   " alignment
   Plug 'junegunn/vim-easy-align'
-  " todo list plugin
-  Plug 'lukaszkorecki/workflowish'
-  " interactive scratchpad that shows output as right side comment
-  Plug 'metakirby5/codi.vim'
   " show markers in sidebar
   Plug 'kshenoy/vim-signature'
-  " kick off commands
-  Plug 'tpope/vim-dispatch'
-  " database
-  Plug 'tpope/vim-dadbod'
-  Plug 'kristijanhusak/vim-dadbod-ui'
 
   "
   " Prose writing
@@ -130,7 +116,6 @@ call plug#begin('~/.vim/plugged')
   "
   " JS/TS
   "
-  "
   Plug 'leafgarland/typescript-vim'
   Plug 'mogelbrod/vim-jsonpath'
   Plug 'prisma/vim-prisma'
@@ -139,7 +124,6 @@ call plug#begin('~/.vim/plugged')
   "
   " Python
   "
-
   " code folding
   Plug 'tmhedberg/SimpylFold'
   " auto indentation
@@ -150,7 +134,6 @@ call plug#begin('~/.vim/plugged')
   "
   " Yaml
   "
-
   " code folding
   Plug 'pedrohdz/vim-yaml-folds'
   " autoformatting
@@ -174,7 +157,6 @@ call plug#begin('~/.vim/plugged')
   "
   " Neo4j/Cypher
   "
-  "
   Plug 'neo4j-contrib/cypher-vim-syntax'
 
   "
@@ -185,9 +167,6 @@ call plug#begin('~/.vim/plugged')
 
   " devicons and glyphs (must be last)
   Plug 'ryanoasis/vim-devicons'
-
-  " testing
-  Plug 'junegunn/vader.vim'
 
   "
   " AI

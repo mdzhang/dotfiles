@@ -1,6 +1,16 @@
 " For plugin configuration
 
 " ----------
+" Plugin 'kyoz/purify'
+" ----------
+try
+  let g:purify_italic = 0
+  colorscheme purify
+catch
+endtry
+
+
+" ----------
 " Plugin 'junegunn/fzf'
 " ----------
 
