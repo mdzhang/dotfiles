@@ -65,10 +65,17 @@ return {
     },
   },
 
+  { "RRethy/nvim-treesitter-endwise" },
+
   -- add more treesitter parsers
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
+      configs = {
+        endwise = {
+          enable = true,
+        },
+      },
       ensure_installed = {
         "bash",
         "html",
