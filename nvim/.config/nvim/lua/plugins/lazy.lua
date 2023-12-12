@@ -1,6 +1,11 @@
 -- loaded by lazy.nvim via init.lua
--- customize LazyVim plugins
+-- customize LazyVim
 return {
+  --
+  -- LAYOUT
+  --
+
+  -- file tree explorer
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
@@ -18,9 +23,33 @@ return {
   {
     "simrat39/symbols-outline.nvim",
     cmd = "SymbolsOutline",
-    keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
+    keys = {
+      {
+        "<leader>cs",
+        "<cmd>SymbolsOutline<cr>",
+        desc = "Symbols Outline",
+      },
+    },
     config = true,
   },
+
+  -- bottom tray to show issues
+  {
+    "folke/trouble.nvim",
+    opts = {
+      use_diagnostic_signs = true,
+      auto_open = true, -- pin
+    },
+  },
+
+  -- layout manager; must import before aerial
+  { import = "lazyvim.plugins.extras.ui.edgy" },
+  -- code outline
+  { import = "lazyvim.plugins.extras.editor.aerial" },
+
+  --
+  -- SEARCH
+  --
 
   -- change some telescope options and a keymap to browse plugin files
   {
@@ -30,8 +59,26 @@ return {
       -- stylua: ignore
       {
         "<leader>fp",
-        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
+        function()
+          require("telescope.builtin").find_files({
+            cwd = require("lazy.core.config").options.root
+          })
+        end,
         desc = "Find Plugin File",
+      },
+      {
+        "<leader>fg",
+        function()
+          require("telescope.builtin").live_grep()
+        end,
+        desc = "Find string",
+      },
+      {
+        "<leader>fz",
+        function()
+          require("telescope").extensions.zoxide.list()
+        end,
+        desc = "Find with zoxide",
       },
     },
     -- change some options
@@ -57,15 +104,20 @@ return {
     },
   },
 
+  -- add telescope-zoxide
   {
-    "folke/trouble.nvim",
-    opts = {
-      use_diagnostic_signs = true,
-      auto_open = true, -- show issues in bottom try
+    "telescope.nvim",
+    dependencies = {
+      "jvgrootveld/telescope-zoxide",
+      config = function()
+        require("telescope").load_extension("zoxide")
+      end,
     },
   },
 
-  { "RRethy/nvim-treesitter-endwise" },
+  --
+  -- SYNTAX, LINTING, FORMATTING, etc.
+  --
 
   -- add more treesitter parsers
   {
@@ -95,13 +147,36 @@ return {
     },
   },
 
+  -- docstring scaffolding
+  {
+    "danymat/neogen",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("neogen").setup({
+        enabled = true,
+      })
+
+      vim.keymap.set(
+        { "n" },
+        "<leader>nc",
+        ":lua require('neogen').generate({ type = 'class' })<CR>",
+        { noremap = true, silent = true, desc = "Generate [c]lass annotations" }
+      )
+      vim.keymap.set(
+        { "n" },
+        "<leader>nf",
+        ":lua require('neogen').generate()<CR>",
+        { noremap = true, silent = true, desc = "Generate [f]unction annotations" }
+      )
+    end,
+  },
+
+  -- improved Ruby block behavior
+  { "RRethy/nvim-treesitter-endwise" },
+
   -- load LazyVim extras
   -- see https://github.com/LazyVim/LazyVim/tree/main/lua/lazyvim/plugins/extras
   { import = "lazyvim.plugins.extras.coding.copilot" },
-  -- layout manager; must import before aerial
-  { import = "lazyvim.plugins.extras.ui.edgy" },
-  -- code outline
-  { import = "lazyvim.plugins.extras.editor.aerial" },
   -- language specific
   { import = "lazyvim.plugins.extras.lang.docker" },
   { import = "lazyvim.plugins.extras.lang.go" },
@@ -124,6 +199,7 @@ return {
         "shellcheck",
         "shfmt",
         "ruff",
+        "solargraph",
       },
     },
   },
