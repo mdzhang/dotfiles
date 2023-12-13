@@ -2,6 +2,14 @@
 -- customize LazyVim
 return {
   --
+  -- MOVEMENT
+  --
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+  },
+
+  --
   -- LAYOUT
   --
 
@@ -201,6 +209,17 @@ return {
         "ruff",
         "solargraph",
       },
+    },
+  },
+
+  --
+  -- VCS
+  --
+  {
+    "lewis6991/gitsigns.nvim",
+    event = "LazyFile",
+    opts = {
+      current_line_blame = true, -- show git blame inline
     },
   },
 }
