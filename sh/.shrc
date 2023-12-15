@@ -12,15 +12,13 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 _load_settings() {
   _dir="$1"
-  if [ -d "$_dir" ];
-  then
+  if [ -d "$_dir" ]; then
     for config in $_dir/*; do
       if [ -f "$config" ]; then
         . "$config"
       fi
     done
-  elif [ -f "$_dir" ];
-  then
+  elif [ -f "$_dir" ]; then
     . "$_dir"
   else
     echo "Could not load setting $_dir"
@@ -37,11 +35,10 @@ else
   local_modules="$local_modules nix"
 fi
 
-for local_module in $local_modules
-do
+for local_module in $local_modules; do
   _load_settings "$XDG_CONFIG_HOME/sh/$local_module"
 done
 
 if [ -f "$HOME/.shrc.local" ]; then
-  . "$HOME/.shrc.local";
+  . "$HOME/.shrc.local"
 fi

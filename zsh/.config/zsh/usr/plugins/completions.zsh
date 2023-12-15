@@ -5,6 +5,7 @@
 # if [ $commands[helm] ]; then
 #   source <(helm completion zsh)
 # fi
-if which asdf &> /dev/null && [ -d $(asdf where terraform) ]; then
-  complete -C "$(asdf where terraform)/bin/terraform" terraform
-fi
+#
+# if which asdf &> /dev/null && [ -d $(asdf where terraform) ]; then
+#   complete -C "$(asdf where terraform)/bin/terraform" terraform
+# fi

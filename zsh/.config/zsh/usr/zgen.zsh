@@ -113,8 +113,6 @@ if [[ -d "$XDG_CONFIG_HOME/zsh/opt/zgen" ]]; then
     # }
     #
     # :(
-    zgen load $XDG_CONFIG_HOME/zsh/usr/plugins/shrink-path.zsh
-    zgen load $XDG_CONFIG_HOME/zsh/usr/plugins/kube-ps1.zsh
 
     # generate the init script from plugins above
     zgen save
