@@ -1,6 +1,3 @@
-" For vanilla vim configuration;
-" These are also loaded by Neovim; separate anything else into another file
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

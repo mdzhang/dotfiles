@@ -157,6 +157,7 @@ hint-report/
 .idea/
 *.iml
 .scratch.vim
+Session.vim
 *.sublime-workspace
 .netrwhist
 
