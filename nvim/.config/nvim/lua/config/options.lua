@@ -1,23 +1,23 @@
 -- loaded before lazy.nvim startup
-vim.opt.relativenumber = false
+vim.o.relativenumber = false
 
-vim.opt.foldmethod = "syntax"
+vim.o.foldmethod = "syntax"
 
 -- do not keep backups or swapfiles
-vim.opt.nobackup = true
-vim.opt.nowritebackup = true
-vim.opt.noswapfile = true
+vim.o.nobackup = true
+vim.o.nowritebackup = true
+vim.o.noswapfile = true
 
 -- ignore case when searching
-vim.opt.ignorecase = true
+vim.o.ignorecase = true
 -- do incremental searching i.e. highlight as pattern typed
-vim.opt.incsearch = true
+vim.o.incsearch = true
 
 -- replace tab with spaces, except for makefiles
-vim.opt.expandtab = true
-vim.opt.autoindent = true
-vim.opt.nosmartindent = true
-vim.opt.softtabstop = 2
+vim.o.expandtab = true
+vim.o.autoindent = true
+vim.o.nosmartindent = true
+vim.o.softtabstop = 2
 
 local function read_ignore(file)
   local f = io.open(file, "rb")

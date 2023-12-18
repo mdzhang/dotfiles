@@ -73,6 +73,12 @@
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+  runs = "!f() { \
+      watch_gha_runs $@ \
+          \"$(git config --get remote.origin.url | awk -F'/' '{printf(\"https://github.com/%s/%s\", $4, $5) }')\" \
+          \"$(git rev-parse --abbrev-ref HEAD)\"; \
+  }; f"
+
 [color "branch"]
 
   current = green bold
