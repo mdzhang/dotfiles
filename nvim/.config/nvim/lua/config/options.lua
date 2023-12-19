@@ -2,6 +2,7 @@
 vim.o.relativenumber = false
 
 vim.o.foldmethod = "syntax"
+vim.o.clipboard = "unnamed"
 
 -- do not keep backups or swapfiles
 vim.o.nobackup = true
@@ -40,6 +41,3 @@ end
 
 local ignorefile = os.getenv("HOME") .. "/.ignore"
 vim.opt.wildignore = read_ignore(ignorefile)
-
--- exit terminal mode using Esc
-vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])

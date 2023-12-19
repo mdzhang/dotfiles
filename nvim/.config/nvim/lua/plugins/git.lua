@@ -9,4 +9,14 @@ return {
     },
     config = true,
   },
+  {
+    "Almo7aya/openingh.nvim",
+    keys = {
+      {
+        "<leader>go",
+        "<cmd>OpenInGHFile<cr>",
+        desc = "Open in GitHub",
+      },
+    },
+  },
 }
