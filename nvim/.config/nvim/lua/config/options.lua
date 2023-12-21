@@ -3,6 +3,9 @@ vim.o.relativenumber = false
 
 vim.o.clipboard = "unnamed"
 
+-- enable project-specific .nvimrc
+vim.o.exrc = true
+
 -- do not keep backups or swapfiles
 vim.o.nobackup = true
 vim.o.nowritebackup = true

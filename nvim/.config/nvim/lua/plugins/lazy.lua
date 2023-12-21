@@ -179,9 +179,6 @@ return {
     end,
   },
 
-  -- improved Ruby block behavior
-  { "RRethy/nvim-treesitter-endwise" },
-
   -- load LazyVim extras
   -- see https://github.com/LazyVim/LazyVim/tree/main/lua/lazyvim/plugins/extras
   { import = "lazyvim.plugins.extras.coding.copilot" },
@@ -208,6 +205,42 @@ return {
         "shfmt",
         "ruff",
         "solargraph",
+      },
+    },
+  },
+
+  --
+  -- TESTING
+  --
+  { import = "lazyvim.plugins.extras.test.core" },
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "olimorris/neotest-rspec",
+    },
+    opts = {
+      adapters = {
+        ["neotest-rspec"] = {
+          rspec_cmd = function()
+            return vim.tbl_flatten({
+              "docker",
+              "compose",
+              "exec",
+              "-i",
+              "api-backend",
+              "bundle",
+              "exec",
+              "rspec",
+            })
+          end,
+
+          transform_spec_path = function(path)
+            local prefix = require("neotest-rspec").root(path)
+            return string.sub(path, string.len(prefix) + 2, -1)
+          end,
+
+          results_path = "tmp/rspec.output",
+        },
       },
     },
   },
