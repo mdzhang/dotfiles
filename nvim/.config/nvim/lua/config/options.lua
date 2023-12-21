@@ -1,7 +1,6 @@
 -- loaded before lazy.nvim startup
 vim.o.relativenumber = false
 
-vim.o.foldmethod = "syntax"
 vim.o.clipboard = "unnamed"
 
 -- do not keep backups or swapfiles

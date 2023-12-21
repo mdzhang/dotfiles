@@ -3,6 +3,7 @@ return {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
   opts = function()
+    -- mdzhang: show my name, instead of lazy vim
     local logo = [[
          ███╗   ███╗ ███████╗  ███████╗ ████████╗ ██╗  ██╗
          ████╗ ████║ ██╔════╝  ██╔════╝ ██╔═════╝ ██║  ██║
