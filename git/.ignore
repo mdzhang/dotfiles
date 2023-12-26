@@ -153,6 +153,7 @@ hint-report/
 
 # Editors and IDEs #
 ####################
+.obsidian/
 .idea/
 *.iml
 *.sublime-workspace
