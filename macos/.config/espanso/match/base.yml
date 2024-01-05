@@ -1,0 +1,101 @@
+# Handy utilities, for use with Espanso, the open source cross-platform text expander
+
+matches:
+  # Outputs the current time (24hr)
+  - trigger: :time
+    replace: "{{time}}"
+    vars:
+      - name: time
+        type: date
+        params:
+          format: "%H:%M"
+
+  # Outputs todays date (dd/mm/yy)
+  - trigger: :date
+    replace: "{{date}}"
+    vars:
+      - name: date
+        type: date
+        params:
+          format: "%d/%m/%y"
+
+  # Outputs the month and year (e.g. January 2020)
+  - trigger: :month
+    replace: "{{date}}"
+    vars:
+      - name: date
+        type: date
+        params:
+          format: "%B %Y"
+
+  # Easily inputs ASCII emojis from a dropdown
+  - trigger: :lenny
+    form: "[[smileys]]"
+    form_fields:
+      smileys:
+        type: choice
+        values:
+          - '¯\\_(ツ)_/¯'
+          - "(╯°□°）╯︵ ┻━┻"
+          - "( ͡ಠ ʖ̯ ͡ಠ)"
+          - "☉ ‿ ⚆"
+          - "ʕ•ᴥ•ʔ"
+          - "⋆｡˚ ☁︎ ˚｡⋆｡˚☽˚｡⋆"
+          - "◤◢◣◥◤◢◣◥"
+          - "(づᵔ◡ᵔ)づ"
+          - "|ᵔ‿ᵔ|"
+          - "⤜(*﹏*)⤏"
+          - "ツ"
+
+  # Quick search, formulates the URL params for searching a given website
+  - triggers: [:srch-gh, :search-github]
+    replace: "https://github.com/search?q="
+  - triggers: [:srch-wa, :search-wolframalpha]
+    replace: "https://www.wolframalpha.com/input/?i="
+  - triggers: [:srch-goo, :search-google]
+    replace: "https://google.com/search?q="
+
+  # Outputs public IP address
+  - trigger: ":ip"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "curl 'https://api.ipify.org'"
+
+  # Outputs the current weather for your location
+  - trigger: ":weather"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "curl 'http://wttr.in/?format=3'"
+
+  # Get a random hex string of given length
+  - regex: ":hrand(?P<num>\\d+)"
+    replace: "{{result}}"
+    vars:
+      - name: result
+        type: shell
+        params:
+          cmd: "openssl rand -hex $ESPANSO_NUM"
+
+  # Get a random number
+  - regex: ":nrand"
+    replace: "{{result}}"
+    vars:
+      - name: result
+        type: shell
+        params:
+          cmd: "echo $RANDOM"
+
+  # Get a generated password
+  - regex: ":pass"
+    replace: "{{result}}"
+    vars:
+      - name: result
+        type: shell
+        params:
+          cmd: xkcdpass -n 3 | tr ' ' '-' | xargs -I{} echo "{}-$RANDOM"

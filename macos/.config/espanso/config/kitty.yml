@@ -1,0 +1,4 @@
+filter_exec: "kitty"
+
+extra_includes:
+  - "../match/_code_snippets.yml"

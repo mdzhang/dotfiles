@@ -133,7 +133,8 @@ return {
     opts = {
       configs = {
         endwise = {
-          enable = true,
+          -- RRethy/nvim-treesitter-endwise not working as expected
+          enable = false,
         },
       },
       ensure_installed = {
@@ -147,6 +148,7 @@ return {
         "python",
         "query",
         "regex",
+        "ruby",
         "tsx",
         "typescript",
         "vim",

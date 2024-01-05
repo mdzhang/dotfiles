@@ -1,0 +1,12 @@
+matches:
+  - trigger: :be
+    replace: bundle exec
+
+  - trigger: :bxr
+    replace: bundle exec rspec
+
+  - trigger: :byb
+    replace: "require 'byebug'; byebug"
+
+  - trigger: :pdb
+    replace: import pdb; pdb.set_trace()
