@@ -153,6 +153,7 @@ hint-report/
 
 # Editors and IDEs #
 ####################
+!.obsidian/app.json
 .obsidian/
 .idea/
 *.iml

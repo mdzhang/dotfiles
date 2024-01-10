@@ -91,6 +91,15 @@ matches:
         params:
           cmd: "echo $RANDOM"
 
+  # Get a random western name
+  - regex: ":rname"
+    replace: "{{result}}"
+    vars:
+      - name: result
+        type: shell
+        params:
+          cmd: "curl -L pseudorandom.name"
+
   # Get a generated password
   - regex: ":pass"
     replace: "{{result}}"

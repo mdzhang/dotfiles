@@ -14,6 +14,12 @@ if [ -d ~/.pulumi/bin ]; then
   export PATH="$HOME/.pulumi/bin:$PATH"
 fi
 
+# Chalk AI
+if [ -d ~/.chalk/bin ]; then
+  export CHALK_INSTALL="$HOME/.chalk"
+  export PATH="$CHALK_INSTALL/bin:$PATH"
+fi
+
 if which direnv &>/dev/null; then
   eval "$(direnv hook $SHELL_NAME)"
 fi
