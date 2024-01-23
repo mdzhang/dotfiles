@@ -46,7 +46,6 @@ return {
     "folke/trouble.nvim",
     opts = {
       use_diagnostic_signs = true,
-      auto_open = true, -- pin
     },
   },
 
@@ -191,7 +190,6 @@ return {
   { import = "lazyvim.plugins.extras.lang.markdown" },
   { import = "lazyvim.plugins.extras.lang.python" },
   { import = "lazyvim.plugins.extras.lang.ruby" },
-  { import = "lazyvim.plugins.extras.lang.rust" },
   { import = "lazyvim.plugins.extras.lang.terraform" },
   { import = "lazyvim.plugins.extras.lang.typescript" },
   { import = "lazyvim.plugins.extras.lang.yaml" },

@@ -6,10 +6,6 @@
 	path = fish/.local/share/omf
 	url = git@github.com:oh-my-fish/oh-my-fish.git
 	ignore = dirty
-[submodule "zsh/.config/zsh/opt/zgen"]
-	path = zsh/.config/zsh/opt/zgen
-	url = git@github.com:tarjoilija/zgen.git
-	ignore = dirty
 [submodule "fish/.local/share/fisherman"]
 	path = fish/.local/share/fisherman
 	url = git@github.com:fisherman/fisherman.git
@@ -17,3 +13,6 @@
 [submodule "asdf/.local/share/asdf"]
 	path = asdf/.local/share/asdf
 	url = https://github.com/asdf-vm/asdf.git
+[submodule "zsh/.config/zsh/opt/zgen"]
+	path = zsh/.config/zsh/opt/zgen
+	url = https://github.com/tarjoilija/zgen

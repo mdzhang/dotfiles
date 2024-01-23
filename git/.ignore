@@ -111,7 +111,7 @@ secrets/
 env/
 venv/
 ENV/
-.*-version
+#.*-version
 
 # Generic ignore directories #
 ##############################
@@ -308,3 +308,4 @@ erl_crash.dump
 .git/
 .hg/
 .svn/
+

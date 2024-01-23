@@ -40,4 +40,25 @@ return {
       npairs.add_rules(require("nvim-autopairs.rules.endwise-ruby"))
     end,
   },
+
+  -- ai
+  {
+    "jackMort/ChatGPT.nvim",
+    event = "VeryLazy",
+    opts = {
+      popup_input = {
+        submit_n = "<C-Enter>",
+        submit = "<Enter>",
+      },
+    },
+    config = function()
+      require("chatgpt").setup()
+    end,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "folke/trouble.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
+  },
 }

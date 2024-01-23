@@ -137,15 +137,12 @@
 [fetch]
 
   prune = true
-  fsckobjects = true
 
 [transfer]
 
-  fsckobjects = true
 
 [receive]
 
-  fsckobjects = true
 
 [pull]
 
