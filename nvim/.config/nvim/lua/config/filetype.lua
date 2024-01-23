@@ -25,3 +25,9 @@ vim.filetype.add({
     ["*_test.rb"] = "rspec",
   },
 })
+
+vim.filetype.add({
+  extension = {
+    astro = "astro",
+  },
+})
