@@ -107,6 +107,10 @@
     #                     │        └─ decorations (branch, heads or tags)
     #                     └─ hash (abbreviated)
 
+[init]
+
+  defaultBranch = main
+
 [user]
 
   name = m d zhang
@@ -126,7 +130,22 @@
   editor = vim
   excludesfile = ~/.ignore
   pager = less -XRF
+  # pager = delta
   attributesfile = ~/.gitattributes
+  autocrlf = false
+
+[fetch]
+
+  prune = true
+  fsckobjects = true
+
+[transfer]
+
+  fsckobjects = true
+
+[receive]
+
+  fsckobjects = true
 
 [pull]
 
@@ -135,14 +154,24 @@
 [rebase]
 
   instructionFormat = "[%an] %s"
+  autosquash = true
+  autostash = true
+  updateRefs = true
+  missingCommitsCheck = error
+
+[rerere]
+
+  enabled = true
 
 [push]
 
   default = current
+  autoSetupRemote = true
 
 [diff]
 
   tool = icdiff
+  algorithm = histogram
 
 [difftool]
 
@@ -164,10 +193,16 @@
 
   tool = vimdiff
   renameLimit = 999999
+  keepbackup = false
+  tool = nvim
 
 [mergetool "vscode"]
 
   cmd = code --wait $MERGED
+
+[branch]
+
+  sort = -committerdate
 
 [ghq "https://gitlab.com/repos/"]
 
@@ -190,7 +225,3 @@
   #   by the local ones
 
   path = ~/.gitconfig.local
-
-[init]
-
-  defaultBranch = main
