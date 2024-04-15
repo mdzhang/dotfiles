@@ -224,6 +224,7 @@ node_modules/
 jspm_packages/
 .serverless/
 storybook-static/
+vite.config.mjs.timestamp-*
 
 ### yarn ###
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
