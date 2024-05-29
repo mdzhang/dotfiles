@@ -397,3 +397,8 @@
   description = "Generate password"
   command = "openssl rand -hex 32"
   output = ""
+
+[[snippets]]
+  description = "convert html to pdf using latex"
+  command = "pandoc prior-employer.html -o prior-employer.pdf --wrap=preserve -V colorlinks=true"
+  output = ""
