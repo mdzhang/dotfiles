@@ -171,7 +171,7 @@ call plug#begin('~/.vim/plugged')
   "
   " AI
   "
-  Plug 'github/copilot.vim'
+  " Plug 'github/copilot.vim'
 
 " vim-plugin plugins must be added before this line
 call plug#end()
