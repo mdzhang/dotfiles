@@ -1,4 +1,4 @@
--- customize default dashboard-nvim w/ my name :)
+-- customize alpha-nvim w/ my name :)
 return {
   "goolord/alpha-nvim",
   event = "VimEnter",

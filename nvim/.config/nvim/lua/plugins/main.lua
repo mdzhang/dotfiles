@@ -25,20 +25,6 @@ return {
     },
   },
 
-  -- code outline
-  {
-    "simrat39/symbols-outline.nvim",
-    cmd = "SymbolsOutline",
-    keys = {
-      {
-        "<leader>cs",
-        "<cmd>SymbolsOutline<cr>",
-        desc = "Symbols Outline",
-      },
-    },
-    config = true,
-  },
-
   -- bottom tray to show issues
   {
     "folke/trouble.nvim",
