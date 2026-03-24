@@ -309,3 +309,6 @@ erl_crash.dump
 .hg/
 .svn/
 
+# AI #
+######
+.claude/

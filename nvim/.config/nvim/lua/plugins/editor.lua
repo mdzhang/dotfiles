@@ -22,22 +22,19 @@ return {
 
   -- ai
   {
-    "jackMort/ChatGPT.nvim",
+    "yetone/avante.nvim",
     event = "VeryLazy",
+    version = false,
     opts = {
-      popup_input = {
-        submit_n = "<C-Enter>",
-        submit = "<Enter>",
-      },
+      provider = "claude",
     },
-    config = function()
-      require("chatgpt").setup()
-    end,
+    build = "make",
     dependencies = {
-      "MunifTanjim/nui.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "stevearc/dressing.nvim",
       "nvim-lua/plenary.nvim",
-      "folke/trouble.nvim",
-      "nvim-telescope/telescope.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons",
     },
   },
 }
