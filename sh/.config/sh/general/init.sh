@@ -10,22 +10,12 @@ elif which brew >/dev/null && [ -f "$(brew --prefix asdf)/libexec/asdf.sh" ]; th
   . "$(brew --prefix asdf)/libexec/asdf.sh"
 fi
 
-if [ -d ~/.pulumi/bin ]; then
-  export PATH="$HOME/.pulumi/bin:$PATH"
-fi
-
-# Chalk AI
-if [ -d ~/.chalk/bin ]; then
-  export CHALK_INSTALL="$HOME/.chalk"
-  export PATH="$CHALK_INSTALL/bin:$PATH"
-fi
-
 if which direnv &>/dev/null; then
   eval "$(direnv hook $SHELL_NAME)"
 fi
 
-if which anyenv &>/dev/null; then
-  eval "$(anyenv init -)"
+if which atuin &>/dev/null; then
+  eval "$(atuin init $SHELL_NAME)"
 fi
 
 if which basher &>/dev/null; then
