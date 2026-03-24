@@ -129,10 +129,18 @@
 
   editor = vim
   excludesfile = ~/.ignore
-  pager = less -XRF
-  # pager = delta
+  pager = delta
   attributesfile = ~/.gitattributes
   autocrlf = false
+
+[interactive]
+
+  diffFilter = delta --color-only
+
+[delta]
+
+  navigate = true  # use n and N to move between diff sections
+  dark = true      # or light = true, or omit for auto-detection
 
 [fetch]
 
@@ -167,35 +175,19 @@
 
 [diff]
 
-  tool = icdiff
   algorithm = histogram
 
 [difftool]
 
   prompt = false
 
-[icdiff]
-
-  options = --highlight --line-numbers
-
-[difftool "vscode"]
-
-  cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
-
-[difftool "icdiff"]
-
-  cmd = icdiff $LOCAL $REMOTE
-
 [merge]
 
+  conflictStyle = zdiff3
   tool = vimdiff
   renameLimit = 999999
   keepbackup = false
   tool = nvim
-
-[mergetool "vscode"]
-
-  cmd = code --wait $MERGED
 
 [branch]
 

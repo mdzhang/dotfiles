@@ -311,4 +311,6 @@ erl_crash.dump
 
 # AI #
 ######
-.claude/
+!.claude/
+.claude/*
+!.claude/skills/**

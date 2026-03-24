@@ -1,7 +1,29 @@
-statsig
-todos
-debug
-shell-snapshots
-projects
-history.jsonl
-*.lock
+**/*.jsonl
+# tmp state
+.claude/statsig
+.claude/todos
+.claude/debug
+.claude/shell-snapshots/
+.claude/session-env/
+.claude/sessions/
+.claude/file-history/
+.claude/paste-cache/
+.claude/plans/
+.claude/ide/
+.claude/backups/
+.claude/cache/
+.claude/downloads/
+.claude/history.jsonl
+.claude/*.lock
+
+# plugin marketplace content (fetched from upstream, like node_modules)
+.claude/plugins/marketplaces/
+# in setup.sh
+.claude/plugins/known_marketplaces.json
+.claude/plugins/blocklist.json
+
+# project session data — keep memory/, ignore everything else
+.claude/projects/
+.claude/.claude.json
+
+.agents/.skill-lock.json
