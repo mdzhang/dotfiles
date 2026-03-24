@@ -20,8 +20,11 @@ if which vocab > /dev/null; then
   vocab
 fi
 
+# graphite
 if which gt &> /dev/null; then
   eval "$(gt completion)"
 fi
+
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
 # zprof

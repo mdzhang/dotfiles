@@ -36,7 +36,6 @@ export EMAIL=md.zhang.aka@gmail.com
 export FULL_NAME="m d zhang"
 
 export GHQ_ROOT="$HOME/src"
-export PATH="$ANYENV_ROOT/bin:$PATH"
 export PATH="$HOME/.basher/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"

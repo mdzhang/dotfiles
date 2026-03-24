@@ -1,3 +1,3 @@
-alias xa='exa -l --git'
-alias xat='exa -l --git -T'
-alias x='exa -1'
+alias xa='eza -l --git'
+alias xat='eza -l --git -T'
+alias x='eza -1'

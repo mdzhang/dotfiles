@@ -26,7 +26,13 @@ return {
     event = "VeryLazy",
     version = false,
     opts = {
-      provider = "claude",
+      provider = "ollama",
+      providers = {
+        ollama = {
+          endpoint = "http://127.0.0.1:11434",
+          model = "qwen2.5-coder:7b",
+        },
+      },
     },
     build = "make",
     dependencies = {

@@ -1,4 +1,8 @@
 -- loaded before lazy.nvim startup
+
+-- use telescope instead of snacks.picker
+vim.g.lazyvim_picker = "telescope"
+
 vim.o.relativenumber = false
 
 vim.o.clipboard = "unnamed"

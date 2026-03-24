@@ -20,8 +20,5 @@ alias brews='brew search'
 alias brewu='brew update && brew upgrade'
 alias brewx='brew remove'
 
-# launch kitty
-alias lkitty='/Applications/kitty.app/Contents/MacOS/kitty'
-
 # launch Typora markdown reader
 alias typora="open -a typora"
