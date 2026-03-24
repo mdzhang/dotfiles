@@ -10,9 +10,6 @@
 	path = fish/.local/share/fisherman
 	url = git@github.com:fisherman/fisherman.git
 	ignore = dirty
-[submodule "asdf/.local/share/asdf"]
-	path = asdf/.local/share/asdf
-	url = https://github.com/asdf-vm/asdf.git
 [submodule "zsh/.config/zsh/opt/zgenom"]
 	path = zsh/.config/zsh/opt/zgenom
 	url = https://github.com/jandamm/zgenom
