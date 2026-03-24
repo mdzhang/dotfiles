@@ -13,6 +13,6 @@
 [submodule "asdf/.local/share/asdf"]
 	path = asdf/.local/share/asdf
 	url = https://github.com/asdf-vm/asdf.git
-[submodule "zsh/.config/zsh/opt/zgen"]
-	path = zsh/.config/zsh/opt/zgen
-	url = https://github.com/tarjoilija/zgen
+[submodule "zsh/.config/zsh/opt/zgenom"]
+	path = zsh/.config/zsh/opt/zgenom
+	url = https://github.com/jandamm/zgenom
