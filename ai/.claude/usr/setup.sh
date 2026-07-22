@@ -3,7 +3,7 @@
 set -ex
 
 mcp_add() { claude mcp get "$1" &>/dev/null || claude mcp add "${@}"; }
-plugin_add() { claude plugin add "$1" 2>/dev/null || true; }
+plugin_add() { claude plugin install "$1" 2>/dev/null || true; }
 plugin_marketplace_add() { claude plugin marketplace add "$1" 2>/dev/null || true; }
 
 # MCP
@@ -35,6 +35,7 @@ plugin_add anthropics/claude-code/claude-md-management # /revise-claude-md
 plugin_add anthropics/claude-code/test-generation
 plugin_add anthropics/claude-code/infra-review
 plugin_add anthropics/claude-code/data-analysis
+# plugin_add superpowers@claude-plugins-official
 
 # Skills
 npx playbooks add skill davila7/claude-code-templates --skill prompt-engineer -y -g

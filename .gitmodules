@@ -13,6 +13,6 @@
 [submodule "zsh/.config/zsh/opt/zgenom"]
 	path = zsh/.config/zsh/opt/zgenom
 	url = https://github.com/jandamm/zgenom
-[submodule "claude/.claude/plugins/marketplaces/claude-plugins-official"]
-	path = claude/.claude/plugins/marketplaces/claude-plugins-official
+[submodule "ai/.claude/plugins/marketplaces/claude-plugins-official"]
+	path = ai/.claude/plugins/marketplaces/claude-plugins-official
 	url = https://github.com/anthropics/claude-plugins-official

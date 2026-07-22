@@ -1,0 +1,26 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/Users/meesh.zhang/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-07-24T18:58:08.436Z"
+  },
+  "claude-code-plugins": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-code"
+    },
+    "installLocation": "/Users/meesh.zhang/.claude/plugins/marketplaces/claude-code-plugins",
+    "lastUpdated": "2026-07-24T18:58:08.392Z"
+  },
+  "calendly": {
+    "source": {
+      "source": "github",
+      "repo": "calendly/skills"
+    },
+    "installLocation": "/Users/meesh.zhang/.claude/plugins/marketplaces/calendly",
+    "lastUpdated": "2026-07-22T14:06:52.842Z"
+  }
+}

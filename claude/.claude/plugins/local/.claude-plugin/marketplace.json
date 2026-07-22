@@ -1,6 +1,0 @@
-{
-  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "mdzhang-local",
-  "description": "Personal plugins",
-  "plugins": []
-}

@@ -1,12 +1,4 @@
 {
-  "extraKnownMarketplaces": {
-    "claude-code-plugins": {
-      "source": {
-        "source": "github",
-        "repo": "anthropics/claude-code"
-      }
-    }
-  },
   "permissions": {
     "allow": [
       "Bash(git status:*)",
@@ -79,5 +71,17 @@
       "Bash(curl:* | bash:*)",
       "Bash(wget:* | bash:*)"
     ]
-  }
+  },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-code-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-code"
+      }
+    }
+  },
+  "theme": "auto"
 }

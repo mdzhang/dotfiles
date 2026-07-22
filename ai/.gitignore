@@ -1,0 +1,20 @@
+# claude
+.claude/*.json
+.claude/*.jsonl
+.claude/.*
+.claude/plugins/**/*
+
+!.claude/settings.json
+!.claude/plugins/known_marketplaces.json
+!.claude/plugins/installed_plugins.json
+!.claude/plugins/blocklist.json
+!.claude/plugins/local/.claude-plugin/marketplace.json
+!.claude/plugins/marketplaces/claude-plugins-official
+
+.claude/backups/**/*
+.claude/file-history/**/*
+.claude/paste-cache/**/*
+.claude/projects/**/*
+.claude/sessions/**/*
+.claude/shell-snapshots/**/*
+.claude/telemetry/**/*

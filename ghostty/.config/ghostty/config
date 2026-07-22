@@ -1,0 +1,4 @@
+keybind = opt+shift+h=goto_split:left
+keybind = opt+shift+j=goto_split:bottom
+keybind = opt+shift+k=goto_split:top
+keybind = opt+shift+l=goto_split:right

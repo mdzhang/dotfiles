@@ -9,11 +9,15 @@
 .claude/file-history/
 .claude/paste-cache/
 .claude/plans/
+.claude/plugins/
 .claude/ide/
 .claude/backups/
 .claude/cache/
 .claude/downloads/
 .claude/history.jsonl
+.claude/telemetry/
+.claude/.last-cleanup
+.claude/*.json
 .claude/*.lock
 
 # plugin marketplace content (fetched from upstream, like node_modules)

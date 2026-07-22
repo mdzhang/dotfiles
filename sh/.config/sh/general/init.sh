@@ -24,6 +24,8 @@ if which zoxide &>/dev/null; then
   eval "$(zoxide init $SHELL_NAME)"
 fi
 
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
 [ -f ~/.fzf.$SHELL_NAME ] && source ~/.fzf.$SHELL_NAME
 
 [ -f "/etc/grc.$SHELL_NAME" ] && source /etc/grc.$SHELL_NAME

@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "plugins": {
+    "superpowers@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/meesh.zhang/.claude/plugins/cache/claude-plugins-official/superpowers/6.2.0",
+        "version": "6.2.0",
+        "installedAt": "2026-07-22T14:04:47.296Z",
+        "lastUpdated": "2026-07-24T18:58:08.941Z",
+        "gitCommitSha": "d884ae04edebef577e82ff7c4e143debd0bbec99"
+      }
+    ],
+    "calendly@calendly": [
+      {
+        "scope": "user",
+        "installPath": "/Users/meesh.zhang/.claude/plugins/cache/calendly/calendly/0.1.0",
+        "version": "0.1.0",
+        "installedAt": "2026-07-22T14:06:56.348Z",
+        "lastUpdated": "2026-07-22T14:06:56.348Z",
+        "gitCommitSha": "c4d9656b6b5cac2112889896c85f91a67dee3bb4"
+      }
+    ]
+  }
+}
